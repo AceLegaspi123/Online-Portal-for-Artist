@@ -4,9 +4,7 @@
 export default function RegisterPage() {
   return (
     <div>
-      Register page
-      Modified
-      Helloworld
+      Try lang
     </div>
   );
 }
