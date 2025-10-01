@@ -2,7 +2,7 @@
 import logoIcon from "/public/logo.png"
 import { BsSearch } from 'react-icons/bs';
 import { useRouter } from 'next/navigation';
-
+import Logo from "./Logo";
 
 type HeaderProps = {
   logo?: string
@@ -26,10 +26,7 @@ export default function Header() {
   return (
     <header className="border-b-1 flex w-full justify-center items-center mb-10 px-4">
       <div className="w-[50%] flex gap-8 items-center">
-        <div className="flex items-center cursor-pointer" onClick={handleHomeClick}>
-            <img src="/logo.png" alt="Logo" className="w-20" />
-            <h2 className="font-black text-base/6">Artistry<br/>Hub</h2>
-        </div>
+      <Logo/>
 
         <p>Shop</p>
         <div className="flex relative">
