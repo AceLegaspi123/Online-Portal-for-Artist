@@ -1,12 +1,13 @@
 import { FaInstagram } from "react-icons/fa";
 import { RiGithubLine } from "react-icons/ri";
 import { FiFacebook } from "react-icons/fi";
+import Logo from "./Logo";
 
 export default function Footer(){
     return(
         <footer className="flex justify-between absolute bottom-0 w-full">
             <div>
-                <h1>ArtistryHub</h1>
+                <Logo/>
                 <div>
                     <input type="text" name="" id="" placeholder="Enter your email" className="bg-white text-center text-slate-600 p-3 py-4"/>
                     <button className="bg-blue-500 text-white p-3 py-4 cursor-pointer">Subscribe</button>
