@@ -2,10 +2,11 @@ import { FaInstagram } from "react-icons/fa";
 import { RiGithubLine } from "react-icons/ri";
 import { FiFacebook } from "react-icons/fi";
 import Logo from "./Logo";
+import Link from "next/link";
 
 export default function Footer(){
     return(
-        <footer className="flex justify-between absolute bottom-0 w-full">
+        <footer className="flex justify-between ">
             <div>
                 <Logo/>
                 <div>
@@ -18,26 +19,26 @@ export default function Footer(){
                 <div>
                     <h2>Learn More</h2>
                     <ul>
-                        <li>About Us</li>
-                        <li>FAQ</li>
-                        <li>Privacy Policy</li>
+                        <li><Link href="/about">About Us</Link></li>
+                        <li><Link href="">FAQ</Link></li>
+                        <li><Link href="">Privacy Policy</Link></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h2>Contact Us</h2>
+                    <h2><Link href="">Contact Us</Link></h2>
                     <ul>
-                        <li>Contact Number</li>
-                        <li>Email Address</li>
+                        <li><Link href="">Contact Number</Link></li>
+                        <li><Link href="">Email Address</Link></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h2>Social Media</h2>
+                    <h2><Link href="">Social Media</Link></h2>
                     <div className="flex gap-2">
-                        <FaInstagram />
-                        <RiGithubLine/>
-                        <FiFacebook />
+                        <Link href=""><FaInstagram /></Link>
+                        <Link href=""><RiGithubLine/></Link>
+                        <Link href=""><FiFacebook /></Link>
                     </div>
                 </div>
             </div>
