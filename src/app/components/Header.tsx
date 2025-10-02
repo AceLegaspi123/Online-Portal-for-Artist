@@ -1,34 +1,15 @@
 'use client';
-import logoIcon from "/public/logo.png"
 import { BsSearch } from 'react-icons/bs';
-import { useRouter } from 'next/navigation';
 import Logo from "./Logo";
-
-type HeaderProps = {
-  logo?: string
-}
+import Link from 'next/link';
 
 export default function Header() {
-  const router = useRouter();
-
-  const handleSignUpClick = () => {
-    router.push('/register'); 
-  };
-
-  const handleLoginClick = () => {
-    router.push('/login'); 
-  };
-
-  const handleHomeClick = () => {
-    router.push('/'); 
-  };
-
   return (
-    <header className="border-b-1 flex w-full justify-center items-center mb-10 px-4">
+    <header className="relative border-b-1 flex w-full justify-center items-center mb-10 px-4 p-2">
       <div className="w-[50%] flex gap-8 items-center">
-      <Logo/>
+      <Link href="#"><Logo/></Link>
 
-        <p>Shop</p>
+        <p><Link href="shop">Shop</Link></p>
         <div className="flex relative">
           <BsSearch className="opacity-80 text-xl absolute top-4 left-4"/>
           <input
@@ -41,8 +22,8 @@ export default function Header() {
       </div>
 
       <div className="w-[50%] text-right flex justify-end gap-10">
-        <button onClick={handleSignUpClick} className="cursor-pointer">Sign up</button>
-        <button onClick={handleLoginClick} className="bg-blue-600 cursor-pointer text-white px-10 py-2 rounded-full">Log in</button>
+        <button className="cursor-pointer"><Link href="/register">Sign up</Link></button>
+        <button className="bg-blue-600 cursor-pointer text-white px-10 py-2 rounded-full"><Link href="/login">Log in</Link></button>
       </div>
     </header>
   )
