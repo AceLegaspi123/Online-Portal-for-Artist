@@ -7,7 +7,7 @@ import { CiLock } from "react-icons/ci";
 export default function RegisterPage() {
   return (
     <div className="max-w-screen-2xl m-auto flex flex-col min-h-screen mt-20">
-            <div className="flex justify-center h-[40em] w-[55em] m-auto bg-red-200 mb-20 rounded-md overflow-hidden">
+            <div className="flex justify-center h-[40em] w-[55em] m-auto mb-20 rounded-md overflow-hidden">
               <div className="w-1/2 bg-cover p-8 pt-24 leading-6" style={{backgroundImage: `url(form-background.jpg)`}}>
                 <h1 className="text-5xl text-start font-bold leading-[1.2em]">JOIN THE <br />FUTURE OF <br /> ART & <br />CREATIVITY</h1>
                 <p className="text-lg text-start mt-8 leading-[2em] pr-8">Showcase your talent, connect with fellow <br /> artist, and open door to opportunities. <br /> Whether you're a traditional or digital artist, <br />share your work, gain appreciation, and build meaningful collaboration.</p>
