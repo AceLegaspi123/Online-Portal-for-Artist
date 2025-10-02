@@ -1,10 +1,15 @@
 import ProfileLayout from "@/app/components/ProfileLayout";
+import AboutList from "@/app/components/AboutList";
+import AboutContent from "@/app/components/AboutContent";
 
 const AboutPage = () => {
   return (
     <ProfileLayout>
-      <h1 className="text-2xl font-bold">About</h1>
-      <p>Here are all the artworks...</p>
+      <div  className="flex gap-20">
+        <AboutList/>
+        <AboutContent/>
+      </div>
+
     </ProfileLayout>
   );
 };
