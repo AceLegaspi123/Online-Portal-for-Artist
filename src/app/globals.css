@@ -34,3 +34,7 @@ h2{
 footer{
   padding:1em 2em;
 }
+
+.shop-card{
+  border:1px solid rgba(255, 255, 255, 0.155)
+}

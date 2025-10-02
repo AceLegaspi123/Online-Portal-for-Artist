@@ -1,9 +1,10 @@
 import React from 'react'
+import ShopCard from '../components/ShopCard'
 
 const page = () => {
   return (
     <div>
-        SHop
+        <ShopCard />
     </div>
   )
 }
