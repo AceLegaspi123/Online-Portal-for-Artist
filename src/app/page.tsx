@@ -1,6 +1,8 @@
 import Footer from "./components/Footer"
 import ArtList from "./components/ArtList";
 import FeauturedArt from "./components/FeauturedArt";
+import TopSellers from "./components/TopSellers";
+import Suggestion from "./components/Suggestion";
 
 export default function Home() {
   return (
@@ -14,6 +16,9 @@ export default function Home() {
         <div>
           <hr className="bg-white h-[1px] opacity-10 w-full"/>
         </div>        
+
+        <TopSellers />
+        <Suggestion />
       </div>
       
 
