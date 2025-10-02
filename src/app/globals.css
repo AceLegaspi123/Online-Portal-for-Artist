@@ -35,6 +35,11 @@ footer{
   padding:1em 2em;
 }
 
+
+.shop-card{
+  border:1px solid rgba(255, 255, 255, 0.155)
+}
+
 .artcard-gradient{
 background: #000000;
 background: linear-gradient(90deg, rgb(14, 14, 14) 1%, rgba(0, 0, 0, 0.56) 78%, rgba(0, 0, 0, 0.03) 100%);
@@ -44,3 +49,4 @@ background: linear-gradient(90deg, rgb(14, 14, 14) 1%, rgba(0, 0, 0, 0.56) 78%, 
   background: #000000;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.456) 35%, rgb(17, 16, 16) 100%);
   }
+
