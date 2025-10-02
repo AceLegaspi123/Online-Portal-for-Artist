@@ -1,14 +1,11 @@
-import Header from "./components/Header"
 import Footer from "./components/Footer"
 import ArtList from "./components/ArtList";
 
 
 export default function Home() {
-
-
   return (
-  <div className=""> 
-    <main className="flex justify-between items-center">
+  <div className="max-w-screen-2xl m-auto flex flex-col min-h-screen"> 
+    <main className="flex justify-between items-start gap-10 flex-grow">
       <ArtList />
       <ArtList />
       <ArtList />

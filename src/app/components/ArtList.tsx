@@ -1,8 +1,8 @@
 export default function ArtList(){
     return(
-        <div>
-            <div>
-                <img src="https://tse3.mm.bing.net/th/id/OIP.NTL-39zdrmgI0lZX4ZH3bQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="" />
+        <div className="w-full">
+            <div className="h-80">
+                <img src="https://i.pinimg.com/736x/03/fc/a1/03fca128c37771e015804df115361e98.jpg" alt="" className="h-full w-full object-cover"/>
             </div>
 
             <div className="flex justify-between w-full mt-2">
