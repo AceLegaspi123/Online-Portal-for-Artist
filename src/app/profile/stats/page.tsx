@@ -1,11 +1,12 @@
-import React from 'react'
+import ProfileLayout from "@/app/components/ProfileLayout";
 
 const StatsPage = () => {
   return (
-    <div>
-        Stats
-    </div>
-  )
-}
+    <ProfileLayout>
+      <h1 className="text-2xl font-bold">Stats</h1>
+      <p>Here are all the artworks...</p>
+    </ProfileLayout>
+  );
+};
 
-export default StatsPage
+export default StatsPage;
