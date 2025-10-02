@@ -2,6 +2,7 @@ import React from 'react'
 import ArtList from './ArtList';
 import { MdKeyboardArrowLeft } from "react-icons/md";import { IoArrowForwardCircleSharp } from "react-icons/io5";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import FeauturedPagination from './FeauturedPagination';
 
 const FeauturedArt = () => {
   return (
@@ -15,11 +16,15 @@ const FeauturedArt = () => {
             <ArtList />
         </div>
 
-        <div className='absolute h-72 bg-white left-0 top-11 text-5xl opacity-50 hover:opacity-100 cursor-pointer'>
-             <MdKeyboardArrowLeft />
+        <FeauturedPagination />
+
+        <div className='artcard-gradient absolute h-73  left-0 top-11 text-5xl hover:opacity-100 cursor-pointer w-28'>
+             <MdKeyboardArrowLeft className='translate-y-31 opacity-40 hover:opacity-100 cursor-pointer'/>
         </div>
         
-        <MdKeyboardArrowRight />
+        <div className='artcard-gradient right absolute h-73  right-0 top-11 text-5xl hover:opacity-100 cursor-pointer w-28'>
+             <MdKeyboardArrowRight className='translate-y-31 ml-12 opacity-40 hover:opacity-100 cursor-pointer'/>
+        </div>
     </div>
   )
 }

@@ -5,12 +5,18 @@ import FeauturedArt from "./components/FeauturedArt";
 export default function Home() {
   return (
   <div className="max-w-screen-2xl m-auto flex flex-col min-h-screen"> 
-    <main className="flex justify-between items-start gap-10 flex-grow">
-      <FeauturedArt />
-      <h1>Featured artworks</h1>
-      <ArtList />
-      <ArtList />
-      <ArtList />
+    <main className="flex flex-col justify-between items-start gap-10 flex-grow">
+      <div className=" w-full flex flex-col gap-12">
+        <div>
+          <FeauturedArt />
+        </div>
+      
+        <div>
+          <hr className="bg-white h-[1px] opacity-10 w-full"/>
+        </div>        
+      </div>
+      
+
     </main>
     <Footer/>
   </div>
