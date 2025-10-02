@@ -1,12 +1,9 @@
 'use client';
 import { BsSearch } from 'react-icons/bs';
-import { useRouter } from 'next/navigation';
 import Logo from "./Logo";
 import Link from 'next/link';
 
 export default function Header() {
-
-
   return (
     <header className="border-b-1 flex w-full justify-center items-center mb-10 px-4 p-2">
       <div className="w-[50%] flex gap-8 items-center">
