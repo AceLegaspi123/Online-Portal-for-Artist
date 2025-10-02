@@ -1,11 +1,12 @@
-import React from 'react'
+import ProfileLayout from "@/app/components/ProfileLayout";
 
 const ShopPage = () => {
   return (
-    <div>
-        Shop Page
-    </div>
-  )
-}
+    <ProfileLayout>
+      <h1 className="text-2xl font-bold">About</h1>
+      <p>Here are all the artworks...</p>
+    </ProfileLayout>
+  );
+};
 
-export default ShopPage
+export default ShopPage;

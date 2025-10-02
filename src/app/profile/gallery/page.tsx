@@ -1,11 +1,12 @@
-import React from 'react'
+import ProfileLayout from "@/app/components/ProfileLayout";
 
 const GalleryPage = () => {
   return (
-    <div>
-        Gallery Page
-    </div>
-  )
-}
+    <ProfileLayout>
+      <h1 className="text-2xl font-bold">Gallery</h1>
+      <p>Here are all the artworks...</p>
+    </ProfileLayout>
+  );
+};
 
-export default GalleryPage
+export default GalleryPage;
