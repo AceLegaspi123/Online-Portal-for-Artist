@@ -1,7 +1,5 @@
 import { FaHeart } from "react-icons/fa";
 import { MdOutlineComment } from "react-icons/md";
-import { IoArrowBackCircleSharp } from "react-icons/io5";
-import { IoArrowForwardCircleSharp } from "react-icons/io5";
 
 export default function ArtList(){
     return(
