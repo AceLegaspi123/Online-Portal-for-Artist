@@ -13,9 +13,7 @@ export default function Home() {
       
         <div>
           <hr className="bg-white h-[1px] opacity-10 w-full"/>
-        </div>
-
-        
+        </div>        
       </div>
       
 
