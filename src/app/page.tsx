@@ -1,5 +1,4 @@
 import Footer from "./components/Footer"
-import ArtList from "./components/ArtList";
 import FeauturedArt from "./components/FeauturedArt";
 import TopSellers from "./components/TopSellers";
 import Suggestion from "./components/Suggestion";
