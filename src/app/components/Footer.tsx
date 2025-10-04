@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Footer(){
     return(
-        <footer className="flex justify-between mt-[20em]">
+        <footer className="flex justify-between mt-[10em]">
             <div>
                 <Logo/>
                 <div>
