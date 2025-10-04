@@ -4,13 +4,15 @@ import { MdOutlineComment } from "react-icons/md";
 export default function ArtList(){
     return(
         <div className="w-full">
-            <div className="h-72 mb-4 bg-[#1c1c1c]">
+            <div className="h-72 mb-4 bg-primary">
                 {/* <img src="https://i.pinimg.com/736x/03/fc/a1/03fca128c37771e015804df115361e98.jpg" alt="" className="h-full w-full object-cover"/> */}
             </div>
 
             <div className="flex justify-between w-full mt-2">
                 <div className="flex gap-2 items-center">
-                    <img className="w-10 h-10 object-cover rounded-full" src="https://community.wacom.com/en-us/wp-content/uploads/sites/40/2023/07/Sam-Does-Art-headshot.jpg" alt="" />
+                    <div className="w-10 h-10 object-cover rounded-full bg-primary">
+                        {/* <img src="https://community.wacom.com/en-us/wp-content/uploads/sites/40/2023/07/Sam-Does-Art-headshot.jpg" alt="" /> */}
+                    </div>
                     <p>SamDoesArt</p>
                 </div>
 

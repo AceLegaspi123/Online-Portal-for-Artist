@@ -3,11 +3,13 @@ import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { TfiEmail } from "react-icons/tfi";
 import { CiLock } from "react-icons/ci";
+import Logo from "../components/Logo";
+
 
 export default function LoginPage() {
   return (
-    <div className="max-w-screen-2xl m-auto flex flex-col min-h-screen mt-20">
-        <div className="flex justify-center h-[40em] w-[55em] m-auto mb-20 rounded-md overflow-hidden">
+    <div className="w-full relative shadow-xl border-white border-2 shadow-white flex flex-col justify-center items-center h-[100dvh] bg-[url('https://static.vecteezy.com/system/resources/previews/006/595/713/non_2x/silhouettes-of-panoramic-mountains-view-landscape-vector.jpg')] bg-cover bg-center h-64 w-full)">
+        <div className="z-20 flex justify-center h-[40em] w-[55em] rounded-md overflow-hidden">
           <div className="w-1/2 bg-cover p-8 pt-24 leading-6" style={{backgroundImage: `url(form-background.jpg)`}}>
             <h1 className="text-5xl text-start font-bold leading-[1.2em]">JOIN THE <br />FUTURE OF <br /> ART & <br />CREATIVITY</h1>
             <p className="text-lg text-start mt-8 leading-[2em] pr-8">Showcase your talent, connect with fellow <br /> artist, and open door to opportunities. <br /> Whether you're a traditional or digital artist, <br />share your work, gain appreciation, and build meaningful collaboration.</p>
@@ -45,10 +47,14 @@ export default function LoginPage() {
                 <a className="text-blue-600" href="#">Forgot Password?</a>
               </div>
 
-              <button className="border p-5 bg-gradient-to-r from-violet-900 via-blue-800 to-blue-300 rounded-xl" type="submit">Login</button>
+              <button className="border p-5 bg-gradient-primary  rounded-xl" type="submit">Login</button>
               <p className="text-center text-black">Don't have an account? <Link className="text-blue-600" href="/register">Create an account</Link></p>
             </form>
           </div>
+        </div>
+
+        <div className="absolute top-12 left-12 text-white">
+          <Logo />
         </div>
       </div>
   );
