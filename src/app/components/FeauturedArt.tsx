@@ -1,6 +1,6 @@
 import React from 'react'
 import ArtList from './ArtList';
-import { MdKeyboardArrowLeft } from "react-icons/md";import { IoArrowForwardCircleSharp } from "react-icons/io5";
+import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import FeauturedPagination from './FeauturedPagination';
 

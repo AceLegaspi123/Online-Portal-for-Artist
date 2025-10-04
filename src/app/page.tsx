@@ -1,7 +1,7 @@
 import Footer from "./components/Footer"
 import FeauturedArt from "./components/FeauturedArt";
 import TopSellers from "./components/TopSellers";
-import Suggestion from "./components/Suggestion";
+import ExploreLayout from "./components/ExploreLayout";
 
 export default function Home() {
   return (
@@ -12,15 +12,14 @@ export default function Home() {
           <FeauturedArt />
         </div>
       
-        <div>
-          <hr className="bg-white h-[1px] opacity-10 w-full"/>
-        </div>        
+          <hr className="bg-line h-[1px] opacity-10 w-full"/>    
 
         <TopSellers />
-        <Suggestion />
-      </div>
-      
 
+        <hr className="bg-line h-[1px] opacity-10 w-full mt-3"/> 
+        <ExploreLayout/>
+
+      </div>
     </main>
     <Footer/>
   </div>
