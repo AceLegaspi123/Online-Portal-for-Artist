@@ -18,7 +18,7 @@ const ProfileLayout = ({ children }: ProfileLayoutProps)  => {
           <div className="h-32 w-32 bg-[#1c1c1c] rounded-full"></div>
           <div className="flex flex-col gap-1">
             <h3 className="text-3xl font-bold">ChristianJay69</h3>
-            <p>Christian Jay Escasa</p>
+            <p>Christian Jay </p>
             <div>
               <ul className="flex gap-4">
                 <li>1.8m followers</li>
