@@ -41,13 +41,14 @@ export default function LoginPage() {
 
               <div className="flex justify-between">
                 <div>
-                  <input type="checkbox" id="remember"/>
-                  <label className="text-black" htmlFor="remember"> Remember me</label>
+                  <input type="checkbox" id="i agree to the"/>
+                  <label className="text-black" htmlFor="i agree to the"> I agree to the</label>
+                  <a className="text-blue-600" href="#"> Terms & Conditions</a>
                 </div>
               </div>
 
-              <button className="border p-5 bg-gradient-primary  rounded-xl" type="submit">Login</button>
-              <p className="text-center text-black">Don't have an account? <Link className="text-blue-600" href="/login">Log in</Link></p>
+              <button className="border p-5 bg-gradient-primary  rounded-xl" type="submit">Sign up</button>
+              <p className="text-center text-black">Already have an account? <Link className="text-blue-600" href="/login">Log in</Link></p>
             </form>
           </div>
         </div>
