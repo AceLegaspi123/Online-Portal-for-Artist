@@ -1,5 +1,4 @@
 'use client';
-import { IoIosNotifications } from "react-icons/io";
 import { BsSearch } from 'react-icons/bs';
 import Logo from "./Logo";
 import Link from 'next/link';
@@ -11,9 +10,6 @@ export default function Header() {
       <Link href="/"><Logo/></Link>
 
         <p className='border-x-2 border-primary-line px-8'><Link href="shop">Shop</Link></p>
-        <div className=" border-primary-line border-r-2 text-2xl pr-8">
-           <IoIosNotifications/>
-        </div>
 
         <div className="flex relative">
           <BsSearch className="opacity-80 text-xl absolute top-4 left-4"/>
