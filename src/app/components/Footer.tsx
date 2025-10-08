@@ -6,16 +6,16 @@ import Link from "next/link";
 
 export default function Footer(){
     return(
-        <footer className="flex justify-between mt-[10em]">
+        <footer className="max-w-screen-2xl  mx-auto flex justify-between mt-[10em]">
             <div>
                 <Logo/>
                 <div>
                     <input type="text" name="" id="" placeholder="Enter your email" className="bg-white text-center text-slate-600 p-3 py-4"/>
-                    <button className="bg-gradient-primary text-white p-3 py-4 cursor-pointer">Subscribe</button>
+                    <button className="bg-gradient-primary  p-3 py-4 cursor-pointer">Subscribe</button>
                 </div>
             </div>
 
-            <div className="text-white flex gap-12 leading-10">
+            <div className=" flex gap-12 leading-10">
                 <div>
                     <h2>Learn More</h2>
                     <ul>
