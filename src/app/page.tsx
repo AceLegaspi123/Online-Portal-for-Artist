@@ -1,4 +1,3 @@
-import Footer from "./components/Footer"
 import FeauturedArt from "./components/FeauturedArt";
 import TopSellers from "./components/TopSellers";
 import ExploreLayout from "./components/ExploreLayout";
@@ -21,7 +20,6 @@ export default function Home() {
 
       </div>
     </main>
-    <Footer/>
   </div>
   );
 }
