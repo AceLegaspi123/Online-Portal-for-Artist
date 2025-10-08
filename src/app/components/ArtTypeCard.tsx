@@ -2,7 +2,7 @@ import React from 'react'
 
 const ArtTypeCard = () => {
   return (
-    <div className='bg-primary border-2 border-primary-line px-4 py-2 rounded-sm'>
+    <div className='bg-primary border-2 border-primary-line px-4 py-2 rounded-sm text-sm'>
       Digital Art
     </div>
   )
