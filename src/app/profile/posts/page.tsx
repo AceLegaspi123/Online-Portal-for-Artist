@@ -38,17 +38,26 @@ const PostPage = () => {
               </div>
               <h3>my arts</h3>
               <div className="w-full h-[400px] bg-secondary">
-                
-              </div>
-              <div className="flex gap-8 items-center">
-                 <div className="flex gap-2 items-center">
-                  <AiOutlineMessage />
-                   <p>Reply</p>
-                 </div>
-                 <div className="flex gap-2 items-center">
-                  <TiHeartOutline />
-                  <p>10</p>
-                 </div>
+                  
+                </div>
+                <div className="flex gap-8 items-center">
+                  <div className="flex gap-2 items-center">
+                    <AiOutlineMessage />
+                    <p>Reply</p>
+                  </div>
+                  
+                  <div className="flex gap-2 items-center">
+                    <TiHeartOutline />
+                    <p>10</p>
+                  </div>
+                </div>
+
+                   <hr className="border-t border-gray-600  my-4 gap-1 " />
+                 <div className="flex gap-4 text-sm text-gray-300">
+                <div className="border border-r-gray-300 rounded-md bg-[#21272B] w-400 p-5 m-10">
+                  Add a new comment...
+                </div>
+
               </div>
               <div></div>
            </div>
