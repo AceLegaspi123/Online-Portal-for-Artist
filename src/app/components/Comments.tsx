@@ -5,11 +5,11 @@ import ProfileIcon from './ProfileIcon';
 
 const Comments = () => {
   return (
-    <div className='flex gap-4'>
+    <div className='flex gap-4 text-sm'>
         <ProfileIcon />
 
-        <div className='flex flex-col gap-2 w-[90%]'>
-            <div className='bg-primary border-2 border-primary-line p-4 rounded-md'>
+        <div className='flex flex-col gap-4 w-[90%]'>
+            <div className='bg-primary border-2 border-primary-line p-4 rounded-md flex flex-col gap-2'>
                 <h4 className='font-bold'>Username <span className='font-light opacity-50 ml-2'>5 days ago</span></h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum corrupti magni vero reiciendis, eveniet minima cum perspiciatis, nemo culpa dolor perferendis accusantium consequatur doloribus quos a inventore molestiae, omnis pariatur.</p>
             </div>
