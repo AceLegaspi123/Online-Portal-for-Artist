@@ -1,11 +1,11 @@
 import { FaHeart } from "react-icons/fa";
 import { MdOutlineComment } from "react-icons/md";
 
-export default function ArtList(){
+export default function ArtList({children, imgSrc}: {children?: React.ReactNode, imgSrc?: string}) {
     return(
         <div className="w-full">
             <div className="h-72 mb-4 bg-primary">
-                {/* <img src="https://i.pinimg.com/736x/03/fc/a1/03fca128c37771e015804df115361e98.jpg" alt="" className="h-full w-full object-cover"/> */}
+                <img src={imgSrc} alt="" className="h-full w-full object-cover"/>
             </div>
 
             <div className="flex justify-between w-full mt-2">
