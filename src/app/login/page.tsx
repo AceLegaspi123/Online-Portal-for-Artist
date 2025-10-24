@@ -53,7 +53,7 @@ export default function LoginPage() {
           </div>
         </div>
 
-        <div className="absolute top-12 left-12 text-white hidden md:block">
+        <div className="absolute top-12 left-1/2 transform -translate-x-1/2 -translate-y-1/2  md:top-12 md:left-22 text-white  md:block">
           <Logo />
         </div>
       </div>
