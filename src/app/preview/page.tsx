@@ -6,13 +6,20 @@ import { BsThreeDots } from "react-icons/bs";
 import ArtTypeCard from '../components/ArtTypeCard';
 import Comments from '../components/Comments';
 import ProfileIcon from '../components/ProfileIcon';
+import { Sidebar } from '../components/preview/Sidebar';
+import { IoIosArrowForward } from "react-icons/io";
+import { MdKeyboardArrowLeft } from "react-icons/md";
 
 const ArtPreview = () => {
   return (
-    <div className='max-w-screen-2xl mx-auto md:flex gap-10'>
-      <div className='md:w-[80%] '>
-        <div className='w-full h-[700px] bg-primary flex items-center'>
-            {/* <img src="" alt="" /> */}
+    <div className=' max-w-screen-2xl mx-auto md:flex gap-18'>
+      <div className='md:w-[80%] relative'>
+        <div className='w-full h-[700px] bg-primary flex items-center justify-center'>
+            <img 
+              src="https://images.hdqwalls.com/download/women-with-sword-hair-blowing-in-the-wind-mj-3840x2160.jpg"
+              alt=""
+              className='object-cover h-full rounded-sm'  
+            />
         </div>
 
         <div className='flex flex-col gap-8 py-4'>
@@ -50,7 +57,7 @@ const ArtPreview = () => {
               <div className='flex items-center justify-between w-full'>
                   <div className='flex items-center gap-4'>
                     <div>
-                      <h3>Artist name</h3>
+                      <h3 className='font-bold'>Artist name</h3>
                       <p className='text-xs opacity-50 -mt-1'>128 followers</p>
                     </div>
 
@@ -58,7 +65,7 @@ const ArtPreview = () => {
                     <p className='text-blue-500'>Follow</p>
                   </div>
 
-                  <p className='opacity-50 w-fit'>Upload 5 minutes ago</p>
+                  <p className='opacity-50 w-fit text-sm'>Upload 5 minutes ago</p>
                 </div>
               </div>
 
@@ -81,9 +88,13 @@ const ArtPreview = () => {
           </div>
         </div>
 
+          <IoIosArrowForward className='absolute top-[9em] text-4xl -right-10 opacity-50 hover:opacity-100 transition ease-in-out duration-200 cursor-pointer'/>
+          <MdKeyboardArrowLeft className='absolute top-[9em] text-4xl -left-10 opacity-50 hover:opacity-100 transition ease-in-out duration-200 cursor-pointer'/>
       </div>
 
-      <div className='md:w-[20%] bg-blue-400'>ds</div>
+      <div className='md:w-[20%]'>
+        <Sidebar />
+      </div>
     </div>
   )
 }

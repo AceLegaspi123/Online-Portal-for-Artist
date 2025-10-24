@@ -12,6 +12,8 @@
 
   --primary-line: #3A3939 !important;
   --primary-blue: #1E86D8;
+
+  --primary-border: rgba(255,255,255,0.3);
 }
 
 
@@ -35,6 +37,7 @@
   --color-tertiary: var(--tertiary);
   --color-primary-line: var(--primary-line);
   --color-primary-blue: var(--primary-blue);
+  --color-primary-border: var(--primary-border);
 }
 
 /* Custom Utilities */

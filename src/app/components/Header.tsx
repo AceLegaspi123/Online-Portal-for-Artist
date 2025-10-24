@@ -1,5 +1,4 @@
 'use client';
-import { IoIosNotifications } from "react-icons/io";
 import { BsSearch } from 'react-icons/bs';
 import Logo from "./Logo";
 import Link from 'next/link';
