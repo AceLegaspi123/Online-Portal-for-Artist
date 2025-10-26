@@ -30,12 +30,12 @@ export default function LoginPage() {
               </div>
               
               <div className="relative w-full">
-                <TfiEmail className="absolute left-4 top-6 text-2xl"/>
+                <TfiEmail className="absolute left-4 top-6 text-2xl text-gray-500"/>
                 <input className="flex border border-cyan-500 p-5 pl-14 w-full rounded-lg text-black outline-none" type="email" placeholder="Email" />
               </div>
               
               <div className="relative w-full">
-                <CiLock className="absolute left-4 top-6 text-2xl"/>
+                <CiLock className="absolute left-4 top-6 text-2xl text-gray-700"/>
                 <input className="flex border border-cyan-500 p-5 pl-14 w-full rounded-lg text-black outline-none" type="password" placeholder="Password" />
               </div>
 
