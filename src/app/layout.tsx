@@ -3,15 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import LayoutWrapper from "./components/LayoutWrapper";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "ArtistryHub",
@@ -26,9 +17,9 @@ export default function RootLayout({
 
 {
   return (
-  <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+  <html lang="en">
     <body className="antialiased">
-      <LayoutWrapper>{children}</LayoutWrapper>
+      {children}
     </body>
   </html>
   );
