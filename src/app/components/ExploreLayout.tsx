@@ -8,7 +8,7 @@ const ExploreLayout = () => {
         <h3 className="text-1xl font-bold ">Explore Arts</h3>
         <Suggestion />
 
-        <div className='grid grid-cols-4 gap-4 gap-y-10 mt-4'>
+        <div className='grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 gap-x-8 gap-y-14 mt-4'>
             <ArtList imgSrc='https://www.funtalk.ai/funtalk/category/cartoon/female/avatar/janie.jpg'/>
             <ArtList imgSrc='https://images.hdqwalls.com/download/anime-art-girl-portrait-5k-78-1280x2120.jpg'/>
             <ArtList imgSrc='https://media.licdn.com/dms/image/C5622AQFpLlSL3Mxuow/feedshare-shrink_800/0/1679240444976?e=2147483647&v=beta&t=C5oHhOw_Kvj9DhtiZ4uvA_883e-KEuniGGRUMGsMtxk'/>

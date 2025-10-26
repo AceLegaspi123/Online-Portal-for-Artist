@@ -3,9 +3,9 @@ import { MdOutlineComment } from "react-icons/md";
 
 export default function ArtList({children, imgSrc}: {children?: React.ReactNode, imgSrc?: string}) {
     return(
-        <div className="w-full">
-            <div className="h-72 mb-4 bg-primary">
-                <img src={imgSrc} alt="" className="h-full w-full object-cover"/>
+        <div className="w-full overflow-hidden">
+            <div className="h-72 mb-4 bg-primary ">
+                <img src={imgSrc} alt="" className="h-full w-full object-cover  rounded-md"/>
             </div>
 
             <div className="flex justify-between w-full mt-2">

@@ -12,7 +12,9 @@ export default function TopSellers() {
         </div> 
             
         
-    <div className="mt-3 flex flex-wrap gap-6 justify-between"> 
+    <div className="mt-3 flex justify-between w-[100%] gap-4 overflow-hidden"> 
+        <TopSellersCard />
+        <TopSellersCard />
         <TopSellersCard />
         <TopSellersCard />
         <TopSellersCard />
