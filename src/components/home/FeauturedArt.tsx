@@ -2,23 +2,52 @@ import React from 'react'
 import ArtList from '../shared/ArtList';
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import Link from 'next/link';
+
+
+const artListObj = [
+  {
+    src: "https://i.pinimg.com/originals/4e/f0/d7/4ef0d7022735af8676d0663a9576812a.png",
+    alt: "Picture of arts",
+    user: "SamDoesArt",
+    avatar: "https://i.pinimg.com/736x/76/84/b7/7684b7cbf34ac441c6f377f359fb6868.jpg"
+  },
+  {
+    src: "https://images.hdqwalls.com/download/anime-art-girl-portrait-5k-78-1280x2120.jpg",
+    alt: "Picture of arts",
+    user: "Jeaven",
+    avatar: "https://www.catconworldwide.com/wp-content/uploads/2023/01/Jiji-1-1017x1024.jpg"
+  },
+  {
+    src: "https://media.licdn.com/dms/image/C5622AQFpLlSL3Mxuow/feedshare-shrink_800/0/1679240444976?e=2147483647&v=beta&t=C5oHhOw_Kvj9DhtiZ4uvA_883e-KEuniGGRUMGsMtxk",
+    alt: "Picture of arts",
+    user: "Koolen",
+    avatar: "https://a.storyblok.com/f/178900/750x422/c23ab48c5c/nyaight_of_the_living_cat_header.jpg/m/filters:quality(95)format(webp)"
+  },
+  {
+    src: "https://i.pinimg.com/originals/ae/3f/15/ae3f15ef5d7503e49acb31b337d0d14e.jpg",
+    alt: "Picture of arts",
+    user: "BroDraw",
+    avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVoatzXKKv3j1CQJMdbOUIzlfO0v763f4Sdw&s"
+  },
+  {
+    src: "https://i.pinimg.com/736x/0b/70/a0/0b70a0c1cf42c938dc941a648eae1091.jpg",
+    alt: "Picture of arts",
+    user: "Capitano",
+    avatar: "https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/w9bpqfuxrvm99gujxuvi.jpg"
+  }
+];
 
 const FeauturedArt = () => {
   return (
-    <div>
-      <div className='w-full flex flex-col gap-4 relative'>
-          <h2>Featured Art of the Week</h2>
+    <div className='relative'>
+      <div className='w-full flex flex-col gap-4 relative z-10'>
+        <h2>Featured Art of the Week</h2>
 
-          <div className='grid grid-cols-3 lg:grid-cols-5 gap-10'>
-              <Link href="/preview">
-                <ArtList imgSrc="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/12042484-31ca-45b6-9b46-82ead8ba919b/df7qepj-50a8e213-0a75-43aa-b424-ca8b9a4bdcbc.png/v1/fill/w_1280,h_1494,q_80,strp/samdoesarts_study_by_zacleonardi_df7qepj-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTQ5NCIsInBhdGgiOiJcL2ZcLzEyMDQyNDg0LTMxY2EtNDViNi05YjQ2LTgyZWFkOGJhOTE5YlwvZGY3cWVwai01MGE4ZTIxMy0wYTc1LTQzYWEtYjQyNC1jYThiOWE0YmRjYmMucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.amBCylC-Fc5uabMZCMY69eIVdYgRdk3kNESimUZ0OVc"/>
-              </Link>
-              <ArtList imgSrc='https://tse2.mm.bing.net/th/id/OIP.qhyeezSpvnIAzjep7aqo8QHaHa?cb=12&w=626&h=626&rs=1&pid=ImgDetMain&o=7&rm=3'/>
-              <ArtList imgSrc='https://preview.redd.it/published-my-samdoesarts-model-please-check-it-out-v0-w66plpmhbi2a1.png?width=512&format=png&auto=webp&s=c3a06ba49b1ed727a5f99108237639e7f4e78251'/>
-              <ArtList imgSrc='https://tse1.mm.bing.net/th/id/OIP.jzd2nISXXveWKwuBKGEDkAHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3'/>
-              <ArtList imgSrc='https://tse1.mm.bing.net/th/id/OIP.jzd2nISXXveWKwuBKGEDkAHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3'/>
-          </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 3xl:grid-cols-6 gap-x-8 gap-y-14 mt-4">
+          {artListObj.map((art) => (
+            <ArtList art={art} key={art.src} />
+          ))}
+        </div>
 
 
         <div className='w-fit m-auto mt-4'>
@@ -32,16 +61,18 @@ const FeauturedArt = () => {
           </ul>
        </div>
 
-          <div className='artcard-gradient absolute h-73  left-0 top-11 text-5xl hover:opacity-100 cursor-pointer w-28'>
-              <MdKeyboardArrowLeft className='translate-y-31 opacity-40 hover:opacity-100 cursor-pointer'/>
+          <div className='absolute h-73  -left-14 top-11 text-5xl hover:opacity-100 w-28'>
+              <MdKeyboardArrowLeft className='translate-y-31 opacity-40 hover:opacity-100 cursor-pointer bg-primary rounded-full transition ease-in-out duration-200'/>
           </div>
           
-          <div className='artcard-gradient right absolute h-73  right-0 top-11 text-5xl hover:opacity-100 cursor-pointer w-28'>
-              <MdKeyboardArrowRight className='translate-y-31 ml-12 opacity-40 hover:opacity-100 cursor-pointer'/>
+          <div className='absolute h-73  -right-18 top-11 text-5xl hover:opacity-100 w-28'>
+              <MdKeyboardArrowRight className='translate-y-31 ml-12 opacity-40 hover:opacity-100 cursor-pointer bg-primary rounded-full'/>
           </div>
       </div>
 
+          {/* <div className='absolute -top-4 left-0 bg-secondary w-[100vw] h-[98%] z-0'>
 
+          </div> */}
     </div>
 
   )

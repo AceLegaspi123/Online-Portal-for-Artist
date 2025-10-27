@@ -3,14 +3,14 @@
 /* Theme Variants */
 
 :root {
-  --background: #06070D !important;
+  --background: #101011 !important;
   --foreground: #fcf5f5 !important;
 
   --primary: #161A1F !important;
   --secondary: #21272B !important;
   --tertiary: #21272B !important;
 
-  --primary-line: #3A3939 !important;
+  --primary-line: #565656 !important;
   --primary-blue: #1E86D8;
 
   --primary-border: rgba(255,255,255,0.3);
@@ -103,11 +103,27 @@ footer {
   border: 1px solid rgba(255, 255, 255, 0.155);
 }
 
+
+.art-list-card:hover{
+  transition: all 1s ease-in-out;
+}
+
+.art-list-card:hover .art-info{
+  background-color: rgba(0, 0, 0, 0.27);
+  display: flex !important;
+
+}
+
+.art-info {
+  display: none; 
+  transition: all 1s ease-in-out;
+}
+
 .artcard-gradient {
   background: linear-gradient(
     90deg,
-    rgb(14, 14, 14) 1%,
-    rgba(0, 0, 0, 0.56) 78%,
+    rgba(14, 14, 14, 0.309) 1%,
+    rgba(0, 0, 0, 0.168) 78%,
     rgba(0, 0, 0, 0.03) 100%
   );
 }
