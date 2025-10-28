@@ -64,6 +64,20 @@
     /* required to actually use the image as the border */
     border-image-slice: 1;
   }
+
+  .border-b-gradient-primary {
+    /* set width + style */
+    border-bottom: 3px solid transparent;
+    /* gradient for the border */
+    border-image-source: linear-gradient(
+      90deg,
+      #6d449f 0%,
+      #417a9e 50%,
+      #3896e0 93%
+    );
+    /* required to actually use the image as the border */
+    border-image-slice: 1;
+  }
 }
 
 /* Example of scoped theme */
