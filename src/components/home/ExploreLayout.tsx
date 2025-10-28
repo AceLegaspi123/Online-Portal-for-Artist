@@ -4,6 +4,7 @@ import React from "react";
 import ArtList from "../shared/ArtList";
 import Suggestion from "./Suggestion";
 import { BsSearch } from 'react-icons/bs';
+import FilterIcon from "../ui/FilterIcon";
 
 const artListObj = [
   {
@@ -83,19 +84,20 @@ const artListObj = [
 const ExploreLayout = () => {
   return (
     <div className="flex flex-col gap-4">
-      <h3 className="text-xl font-bold">Explore Arts</h3>
+      <h3 className="text-lg font-bold">Explore Arts</h3>
     
       <div className="flex gap-4 items-center space-between">
-        <div className="w-[10%] bg-secondary flex items-center justify-center">
+        <div className="bg-secondary flex items-center border-1 border-primary-line justify-center gap-2 py-3 px-8 cursor-pointer rounded-full">
+            <FilterIcon />
             <p>Filter</p>
         </div>
 
-        <div className="w-[95%] flex relative">
+        <div className="grow flex relative">
           <BsSearch className="opacity-80 text-xl absolute top-4 left-4"/>
           <input
             type="text"
             placeholder={`Search arts/artist in ArtistryHub`}
-            className="bg-secondary opacity-80 font-normal py-4 pl-14 w-full rounded-full active:outline-0 focus:outline-red-400"
+            className="border-1 border-primary-line bg-secondary opacity-80 font-normal py-4 pl-14 w-full rounded-full active:outline-0 "
           />
         </div>
       </div>

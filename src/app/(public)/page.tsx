@@ -4,7 +4,7 @@ import ExploreLayout from "@/components/home/ExploreLayout";
 
 export default function Home() {
   return (
-  <div className="mx-10 lg:mx-20 flex flex-col min-h-screen "> 
+  <div className="mx-5 md:mx-10 lg:mx-20 flex flex-col min-h-screen "> 
     <main className="flex flex-col justify-between items-start gap-10 flex-grow">
       <div className=" w-full flex flex-col gap-12">
         <div>
