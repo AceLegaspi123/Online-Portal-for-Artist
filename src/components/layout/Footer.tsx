@@ -6,8 +6,8 @@ import Link from "next/link";
 
 export default function Footer(){
     return(
-        <footer className="max-w-screen-2xl  mx-auto flex justify-between mt-[10em]">
-            <div>
+        <footer className="z-10 max-w-screen-2xl relative mx-auto flex justify-between mt-[10em]">
+            <div className="z-10">
                 <Logo/>
                 <div>
                     <input type="text" name="" id="" placeholder="Enter your email" className="bg-white text-center text-slate-600 p-3 py-4"/>
@@ -15,7 +15,7 @@ export default function Footer(){
                 </div>
             </div>
 
-            <div className=" flex gap-12 leading-10">
+            <div className=" flex gap-12 leading-10 z-10">
                 <div>
                     <h2>Learn More</h2>
                     <ul>
@@ -42,6 +42,8 @@ export default function Footer(){
                     </div>
                 </div>
             </div>
+
+            <div className="z-0 absolute bottom-0 left-0 w-full h-50"></div>
         </footer>
     );
 };
