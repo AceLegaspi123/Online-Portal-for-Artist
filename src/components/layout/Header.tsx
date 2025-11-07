@@ -9,6 +9,8 @@ import { useState } from "react";
 import clsx from 'clsx';
 import ProfileMenu from '../Menu/ProfileMenu';
 import { BsSearch } from 'react-icons/bs';
+import { FaHome } from "react-icons/fa";
+import { SiZincsearch } from "react-icons/si";
 
 export default function Header() {
   const [isLogin, setIsLogin] = useState(true);
@@ -39,13 +41,32 @@ export default function Header() {
           </div>  */}
       </div>
 
-      <div className="flex items-center gap-4">
+
+      <div className="flex gap-4">
+        <Link href="shop">
+              <div className='flex items-center gap-4 px-8'>
+                  <FaHome />
+                  <p>Home</p>
+              </div>
+        </Link>
+
+        <Link href="shop">
+              <div className='flex items-center gap-4 px-8'>
+                  <SiZincsearch />
+                  <p>Explore</p>
+              </div>
+        </Link>
+
         <Link href="shop">
               <div className='flex items-center gap-4 px-8'>
                   <FaShoppingBag />
                   <p>Shop</p>
               </div>
         </Link>
+      </div>
+
+      <div className="flex items-center gap-4">
+
 
         <CgMail className="text-3xl"/>
 
