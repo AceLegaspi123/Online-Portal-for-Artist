@@ -28,7 +28,7 @@ export default function LoginPage() {
         </div>
 
         <div className="w-[95dvw] md:w-1/2 bg-white py-10">
-          <form className="flex flex-col gap-5 p-10">
+          <form className="grid gap-5 p-10">
             <h3 className="text-3xl font-bold text-center text-black">
               Create an account
             </h3>

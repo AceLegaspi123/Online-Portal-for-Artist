@@ -94,10 +94,12 @@ body {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
   }
+
+  background-image: url(https://wallpaperaccess.com/full/340452.png);
 }
 
 /* Dark mode override */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;

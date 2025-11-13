@@ -3,7 +3,6 @@ import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import { ReactNode } from "react";
 
-
 export const metadata: Metadata = {
   title: "ArtistryHub",
   description: "Connect artists and clients through commissions",
