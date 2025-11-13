@@ -17,12 +17,20 @@
 }
 
 
+.dark {
+  --background: #06070D;
+  --foreground: #ffffff;
+
+  --primary: #1D1E22;
+  --secondary: #343438;
+}
+
 
 .light {
   --background: #FFFFFF;
-  --foreground: #030303;
+  --foreground: #000000;
 
-  --primary: #F3F4F6;
+  --primary: #F2F2F2;
   --secondary: #D4F6FF;
 }
 
