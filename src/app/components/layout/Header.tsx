@@ -8,9 +8,9 @@ import Image from 'next/image';
 import { useState } from "react";
 import clsx from 'clsx';
 import ProfileMenu from '../Menu/ProfileMenu';
-import { BsSearch } from 'react-icons/bs';
 import { FaHome } from "react-icons/fa";
-import { SiZincsearch } from "react-icons/si";
+import { GoGlobe } from "react-icons/go";
+import { FaRegUser } from "react-icons/fa";
 
 export default function Header() {
   const [isLogin, setIsLogin] = useState(true);
@@ -43,24 +43,31 @@ export default function Header() {
 
 
       <div className="flex gap-4">
-        <Link href="shop">
+        <Link href="/">
               <div className='flex items-center gap-4 px-8'>
                   <FaHome />
                   <p>Home</p>
               </div>
         </Link>
 
-        <Link href="shop">
+        <Link href="/explore">
               <div className='flex items-center gap-4 px-8'>
-                  <SiZincsearch />
+                  <GoGlobe />
                   <p>Explore</p>
               </div>
         </Link>
 
-        <Link href="shop">
+        <Link href="/shop">
               <div className='flex items-center gap-4 px-8'>
                   <FaShoppingBag />
                   <p>Shop</p>
+              </div>
+        </Link>
+
+        <Link href="/commission">
+              <div className='flex items-center gap-4 px-8'>
+                  <FaRegUser />
+                  <p>Commission</p>
               </div>
         </Link>
       </div>
@@ -68,7 +75,7 @@ export default function Header() {
       <div className="flex items-center gap-4">
 
 
-        <CgMail className="text-3xl"/>
+        <Link href="/mail"><CgMail className="text-3xl"/></Link>
 
         <div 
           onClick={() => handleProfileMenu()}
