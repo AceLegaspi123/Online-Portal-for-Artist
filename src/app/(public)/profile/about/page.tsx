@@ -1,5 +1,5 @@
-import AboutList from "@/components/profile/about/AboutList";
-import AboutContent from "@/components/profile/about/AboutContent";
+import AboutList from "@/app/components/profile/about/AboutList";
+import AboutContent from "@/app/components/profile/about/AboutContent";
 
 const AboutPage = () => {
   return (

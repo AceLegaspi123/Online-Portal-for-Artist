@@ -4,7 +4,7 @@ import { MdImage } from "react-icons/md";
 
 const ImgRef = () => {
   return (
-    <div className=' flex flex-col text-center rounded-md w-130    mx-auto p-10 bg-[#FFFFFF1A]'>
+    <div className='flex flex-col text-center rounded-md w-130    mx-auto p-10 bg-[#FFFFFF1A]'>
         <h4 className='text-left font-bold text-2xl  '>Upload a new reference</h4>
 
         <p className='text-left text-sm opacity-50 mt-2'>Provide visual references to guide the artist in creating your artwork</p>

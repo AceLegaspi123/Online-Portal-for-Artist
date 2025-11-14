@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import LayoutWrapper from "@/components/LayoutWrapper";
+import LayoutWrapper from "@/app/components/LayoutWrapper";
 import { ReactNode } from "react";
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export default function RootLayout({ children }: {children: ReactNode}) {
   return (
     <html lang="en">
       <body className="antialiased">
-        <LayoutWrapper>{children}</LayoutWrapper>
+        {children}
       </body>
     </html>
   );

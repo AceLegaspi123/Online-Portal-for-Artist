@@ -1,4 +1,4 @@
-import ProfileIcon from "@/components/ui/ProfileIcon";
+import ProfileIcon from "@/app/components/ui/ProfileIcon";
 import { IoIosArrowDown } from "react-icons/io";
 import { AiOutlineMessage } from "react-icons/ai";
 import { TiHeartOutline } from "react-icons/ti";
