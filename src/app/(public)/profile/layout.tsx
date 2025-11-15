@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import NavLinks from "@/components/profile/NavLinks";
+import NavLinks from "@/app/components/profile/NavLinks";
 
 function layout({ children }: { children: ReactNode }) {
   return (

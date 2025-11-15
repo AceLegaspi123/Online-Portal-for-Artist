@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { TfiEmail } from "react-icons/tfi";
 import { CiLock } from "react-icons/ci";
-import Logo from "@/components/ui/Logo";
+import Logo from "@/app/components/ui/Logo";
 
 
 export default function LoginPage() {

@@ -1,6 +1,6 @@
 import React from 'react'
-import ImgRef from '@/components/commission/ImgRef'
-import Details from '@/components/commission/Details'
+import ImgRef from '@/app/components/commission/ImgRef'
+import Details from '@/app/components/commission/Details'
 
 const page = () => {
   return (

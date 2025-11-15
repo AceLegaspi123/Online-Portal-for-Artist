@@ -1,4 +1,4 @@
-import ShopCard from "@/components/profile/shop/ShopCard";
+import ShopCard from "@/app/components/profile/shop/ShopCard";
 
 const ShopPage = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
-import ShopCard from '@/components/profile/shop/ShopCard'
-import ShopHeader from '@/components/profile/shop/ShopHeader'
+import ShopCard from '@/app/components/profile/shop/ShopCard'
+import ShopHeader from '@/app/components/profile/shop/ShopHeader'
 
 const page = () => {
   return (

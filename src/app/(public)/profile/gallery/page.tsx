@@ -1,4 +1,4 @@
-import GalleryCard from "@/components/profile/gallery/GalleryCard";
+import GalleryCard from "@/app/components/profile/gallery/GalleryCard";
 
 const GalleryPage = () => {
   return (

@@ -1,11 +1,11 @@
 import React from 'react'
 
-const page = () => {
+const Mail = () => {
   return (
     <div>
-      
+        <h1>Mail</h1>
     </div>
   )
 }
 
-export default page
+export default Mail
