@@ -9,7 +9,7 @@ const LayoutWrapper = ({children} : {children: React.ReactNode}) => {
 
         <div className='flex gap-4'>
           <Navbar />
-          <div className='ml-[22vw]'>
+          <div className='ml-[22em]'>
              {children}
           </div>
         </div>
