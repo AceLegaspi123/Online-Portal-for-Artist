@@ -3,17 +3,21 @@
 /* Theme Variants */
 
 :root {
-  --background: #101011 !important;
+  --background: #101828 !important;
   --foreground: #fcf5f5 !important;
 
-  --primary: #161A1F !important;
-  --secondary: #21272B !important;
+  --primary: #171F2F !important;
+  --secondary: #1D2939 !important;
   --tertiary: #21272B !important;
 
-  --primary-line: #565656 !important;
+  --primary-line: #2b394a !important;
   --primary-blue: #1E86D8;
 
   --primary-border: rgba(255,255,255,0.3);
+
+    /* dashboard */
+  --text-active: #7895ff;
+  --bg-active: #172142;
 }
 
 
@@ -46,6 +50,8 @@
   --color-primary-line: var(--primary-line);
   --color-primary-blue: var(--primary-blue);
   --color-primary-border: var(--primary-border);
+  --color-text-active: var(--text-active);
+  --color-bg-active: var(--bg-active);
 }
 
 /* Custom Utilities */

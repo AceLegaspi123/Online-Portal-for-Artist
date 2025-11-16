@@ -6,13 +6,20 @@ const LayoutWrapper = ({children} : {children: React.ReactNode}) => {
   return (
     <div className=''>
         <Header />
+        <Navbar />
 
-        <div className='flex gap-4'>
-          <Navbar />
-          <div className='ml-[22em]'>
-             {children}
-          </div>
-        </div>
+          <main
+        className="
+          pt-[0rem]          
+          pl-[20em]          
+          w-full
+          max-w-[1700px]
+          mx-auto
+          px-6
+        "
+      >
+        {children}
+      </main>
     </div>
   )
 }
