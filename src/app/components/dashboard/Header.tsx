@@ -21,7 +21,7 @@ export default function Header() {
 
   console.log(isLogin);
   return (
-    <header className="z-0 border-b-1 sticky top-0 h-20 left-0 w-full border-b-primary-line flex justify-between items-center mb-10 md:px-10 lg:px-10">
+    <header className="z-0 border-b-1 sticky top-0 h-17 left-0 w-full bg-background border-b-primary-line flex justify-between items-center mb-10 md:px-10 lg:px-10">
       <div></div>
       <div className="flex items-center gap-4">
 
@@ -36,7 +36,7 @@ export default function Header() {
               height={50}
               src="https://i.pinimg.com/736x/76/84/b7/7684b7cbf34ac441c6f377f359fb6868.jpg"
               alt="Picture of the author"
-              className={clsx('rounded-full w-12 h-12 ml-6 object-cover', {
+              className={clsx('rounded-full w-11 h-11 ml-6 object-cover', {
                 "block" : isLogin,
                 "hidden" : !isLogin
               })}

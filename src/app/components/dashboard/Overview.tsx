@@ -7,7 +7,10 @@ import { IoGlobeOutline } from "react-icons/io5";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { MdReport } from "react-icons/md";
 import ThreeColTable from './ThreeColsTable';
+import ReportedSummary from './ReportedSummary';
 import clsx from 'clsx';
+
+import ReportedUser from "../../../../data/reportedUser.json";
 
 const summaryData = [
     {
@@ -34,7 +37,7 @@ const summaryData = [
 
 const Overview = () => {
   return (
-    <div>
+    <div className='flex flex-col gap-10'>
         <ul className="grid grid-cols-4 gap-8">
             {
                 summaryData.map((item, index) => (
@@ -59,7 +62,13 @@ const Overview = () => {
             }
         </ul>
 
-        <ThreeColTable title="New Sign-ups" />
+        <div className='grid grid-cols-2 gap-4'>
+            <ThreeColTable title="New Sign-ups" />
+            <ThreeColTable title="Top Artists" />
+        </div>
+
+        <ReportedSummary jsonData={ReportedUser} header="List of Reported Users"/>
+        <ReportedSummary jsonData={ReportedUser} header="List of Arts Users"/>
 
     </div>
   )
