@@ -81,11 +81,11 @@ export default function Header() {
           onClick={() => handleProfileMenu()}
           className='cursor-pointer'>
             <Image
-              width={50}
-              height={50}
+              width={40}
+              height={40}
               src="https://i.pinimg.com/736x/76/84/b7/7684b7cbf34ac441c6f377f359fb6868.jpg"
               alt="Picture of the author"
-              className={clsx('rounded-full w-12 h-12 ml-6 object-cover', {
+              className={clsx('rounded-full w-11 h-11 ml-6 object-cover border-2 border-white', {
                 "block" : isLogin,
                 "hidden" : !isLogin
               })}

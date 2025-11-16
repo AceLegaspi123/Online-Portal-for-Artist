@@ -79,33 +79,36 @@ const artListObj = [
     user: "BroonyJames",
     avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiBH-QVQZpxo7kbjRO-JsEp6c-9I35cJsBkw&s"
   },
+  
 ];
 
 const ExploreLayout = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <h3 className="text-lg font-bold">Explore Arts</h3>
-    
-      <div className="flex gap-4 items-center space-between">
-        <div className="bg-secondary flex items-center border-1 border-primary-line justify-center gap-2 py-3 px-8 cursor-pointer rounded-full">
-            <FilterIcon />
-            <p>Filter</p>
-        </div>
+    <div className="flex flex-col gap-4 relative">
+      {/* <h3 className="text-lg font-bold">Explore Arts</h3> */}
+      <div className="sticky top-15 left-0 w-full bg-background z-10 pt-10 pb-3 border-b-1 border-primary-line">
+          <div className="flex gap-4 items-center space-between">
+            <div className="bg-secondary flex items-center border-1 border-primary-line justify-center gap-2 py-3 px-8 cursor-pointer rounded-full">
+                <FilterIcon />
+                <p>Filter</p>
+            </div>
 
-        <div className="grow flex relative">
-          <BsSearch className="opacity-80 text-xl absolute top-4 left-4"/>
-          <input
-            type="text"
-            placeholder={`Search arts/artist in ArtistryHub`}
-            className="border-1 border-primary-line bg-secondary opacity-80 font-normal py-4 pl-14 w-full rounded-full active:outline-0 "
-          />
-        </div>
+            <div className="grow flex relative">
+              <BsSearch className="opacity-80 text-xl absolute top-4 left-4"/>
+              <input
+                type="text"
+                placeholder={`Search arts/artist in ArtistryHub`}
+                className="border-1 border-primary-line bg-secondary opacity-80 font-normal py-3 pl-14 w-full rounded-full active:outline-0 "
+              />
+            </div>
+          </div>
+      
+
+          <Suggestion />
       </div>
-   
+     
 
-      <Suggestion />
-
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 3xl:grid-cols-6 gap-x-8 gap-y-14 mt-4 cursor-pointer">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 3xl:grid-cols-6 gap-x-8 gap-y-14 mt-4 cursor-pointer">
         {artListObj.map((art) => (
           <ArtList art={art} key={art.src} />
         ))}
