@@ -1,4 +1,4 @@
-import users  from "../../../../data/users.json" assert { type: "json" };
+import users  from "@/data/users.json";
 import { User } from "@/types/User";
 import { IoIosArrowDown } from "react-icons/io";
 
