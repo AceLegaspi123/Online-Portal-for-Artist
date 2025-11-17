@@ -1,5 +1,4 @@
 'use client';
-import classNames from 'clsx';
 
 import Link from "next/link";
 import { FaRegCircleUser } from "react-icons/fa6";
@@ -9,8 +8,10 @@ import { MdReport } from "react-icons/md";
 import ThreeColTable from './ThreeColsTable';
 import ReportedSummary from './ReportedSummary';
 import clsx from 'clsx';
+// import Chart from "./Chart"
 
-import ReportedUser from "../../../../data/reportedUser.json";
+
+import ReportedUser from "@/data/reportedUser.json"
 
 const summaryData = [
     {
@@ -45,23 +46,16 @@ const Overview = () => {
                         key={index}
                         className="h-55 border border-primary-line p-4 bg-primary rounded-2xl">
                         <Link href="#">
-                            <div className="flex justify-between ">
-                                <h4>{item?.name}</h4>
-                                <div className={clsx('content-center p-2 rounded-full', {
-                                    "bg-green-400" : index == 0,
-                                    "bg-white text-black" : index == 1,
-                                    "bg-yellow-400 text-black": index == 2,
-                                    "bg-red-400" : index == 3,
-                                })}> {item?.icon}</div>
-                            </div>
-                            
-                            <p className="mx-auto w-fit mt-[2.3em] font-bold text-2xl">{item?.countData}</p>
+                            <div className={clsx('bg-secondary w-fit p-4 text-4xl rounded-md')}> {item?.icon}</div>
+                            <h4 className='font-semibold mt-8 opacity-70'>{item?.name}</h4>
+                            <p className="w-fit font-bold text-4xl">{item?.countData}</p>
                         </Link>
                     </li>
                 ))
             }
         </ul>
 
+        {/* <Chart /> */}
         <div className='grid grid-cols-2 gap-4'>
             <ThreeColTable title="New Sign-ups" />
             <ThreeColTable title="Top Artists" />
