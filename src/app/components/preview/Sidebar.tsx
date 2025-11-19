@@ -1,10 +1,30 @@
 import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
 import { CardFeatured } from "./CardFeatured";
+import { FaPaperclip } from "react-icons/fa";
+import { MdProductionQuantityLimits } from "react-icons/md";
+import { HiOutlineComputerDesktop } from "react-icons/hi2";
 
 export function Sidebar(){
     return(
         <div>
+            <div className="w-full p-4 rounded-md border-1 border-primary-line flex flex-col gap-4 bg-primary mb-10">
+                <button className="bg-secondary p-2 rounded-full cursor-pointer">Buy for $10</button>
+                <div className="flex items-center gap-2">
+                    <FaPaperclip />
+                    <p>1 attached file</p>
+                </div>
+
+                <div className="flex items-center gap-2">
+                   <MdProductionQuantityLimits />
+                    <p>310 Available stocks</p>
+                </div>
+
+                <div className="flex items-center gap-2">
+                   <HiOutlineComputerDesktop />
+                    <p>Digital Art</p>
+                </div>
+            </div>
             <div className="flex justify-between items-center">
                 <h3>More arts by <Link href="#" className="font-bold">SamDoesArt</Link></h3>
                 <IoIosArrowForward />
