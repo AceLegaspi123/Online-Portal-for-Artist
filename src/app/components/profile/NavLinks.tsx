@@ -43,9 +43,8 @@ const links = [
 const NavLinks = () => {
   const pathname = usePathname();
 
-  console.log(pathname);
   return (
-    <ul className="flex gap-5 items-center bg-[#161A1F] h-17 w-full mt-4 px-10 pl-18">
+    <ul className="flex gap-5 items-center bg-primary h-17 w-full mt-4 px-10 pl-18">
       {links.map((item, index) => (
         <li 
             className={clsx('opacity-50 text-base px-8 py-1 rounded-full hover:opacity-100 transition duration-300 ease-in-out', {

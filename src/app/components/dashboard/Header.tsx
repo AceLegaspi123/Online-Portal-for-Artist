@@ -1,12 +1,9 @@
 'use client';
 
 import Logo from "../ui/Logo";
-import Link from 'next/link';
-import { CgMail } from "react-icons/cg";
 import Image from 'next/image';
 import { useState } from "react";
 import clsx from 'clsx';
-import ProfileMenu from '../Menu/ProfileMenu';
 import { IoNotifications } from "react-icons/io5";
 
 export default function Header() {
@@ -24,29 +21,27 @@ export default function Header() {
 
   console.log(isLogin);
   return (
-    <header className="z-20 bg-primary sticky top-0 h-20 left-0 w-full border-b-primary-line flex justify-between items-center mb-10 px-5 md:px-10 lg:px-20">
-      <div className="flex gap-8 items-center">
-          <Logo/>
-      </div>
-
+    <header className="z-0 border-b-1 sticky top-0 h-17 left-0 w-full bg-background border-b-primary-line flex justify-between items-center mb-10 md:px-10 lg:px-10">
+      <div></div>
       <div className="flex items-center gap-4">
 
 
-        <IoNotifications />
+        <IoNotifications className="text-2xl"/>
 
         <div 
           onClick={() => handleProfileMenu()}
-          className='cursor-pointer'>
+          className='cursor-pointer flex items-center gap-4'>
             <Image
               width={50}
               height={50}
               src="https://i.pinimg.com/736x/76/84/b7/7684b7cbf34ac441c6f377f359fb6868.jpg"
               alt="Picture of the author"
-              className={clsx('rounded-full w-12 h-12 ml-6 object-cover', {
+              className={clsx('rounded-full w-11 h-11 ml-6 object-cover', {
                 "block" : isLogin,
                 "hidden" : !isLogin
               })}
             />
+            <p>Admin</p>
         </div>
 
       </div>

@@ -27,7 +27,7 @@ export default function Header() {
 
   console.log(isLogin);
   return (
-    <header className="z-20 bg-primary sticky top-0 h-20 left-0 w-full border-b-primary-line flex justify-between items-center mb-10 px-5 md:px-10 lg:px-20">
+    <header className="z-20 bg-background border-1 sticky top-0 h-20 left-0 w-full border-b-primary-line flex justify-between items-center mb-10 px-5 md:px-10 lg:px-20">
       <div className="flex gap-8 items-center">
           <Logo/>
 
@@ -81,11 +81,11 @@ export default function Header() {
           onClick={() => handleProfileMenu()}
           className='cursor-pointer'>
             <Image
-              width={50}
-              height={50}
+              width={40}
+              height={40}
               src="https://i.pinimg.com/736x/76/84/b7/7684b7cbf34ac441c6f377f359fb6868.jpg"
               alt="Picture of the author"
-              className={clsx('rounded-full w-12 h-12 ml-6 object-cover', {
+              className={clsx('rounded-full w-11 h-11 ml-6 object-cover border-2 border-white', {
                 "block" : isLogin,
                 "hidden" : !isLogin
               })}
