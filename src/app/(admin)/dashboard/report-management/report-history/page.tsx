@@ -19,7 +19,7 @@ type summaryData = {
 const History = ({children} : summaryData) => {
   return (
    <div className="w-full ">
-         <h2 className="mb-4">List of reported Artwork</h2>
+         <h2 className="mb-4">Violation History</h2>
    
          <table className="bg-primary p-4 w-full border-collapse overflow-hidden rounded-xl">
            <thead className="text-left rounded-t-md border-b-1 border-b-primary-line">

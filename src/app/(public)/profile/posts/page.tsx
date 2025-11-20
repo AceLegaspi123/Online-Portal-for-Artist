@@ -7,7 +7,7 @@ const PostPage = () => {
   return (
     <div>
       <div className="flex flex-col  justify-center ">
-        <div className="flex gap-10 text-left w-full  w-[800px] mb-2 max-w-screen-xl mx-auto translate-x-[13.4em]">
+        <div className="flex gap-10 text-left w-full  mb-2 max-w-screen-xl mx-auto translate-x-[7.4em]">
           <p>All Post 3 </p>
           <div className="flex gap-2">
             <p> Newest </p>
@@ -16,14 +16,14 @@ const PostPage = () => {
         </div>
         
         <div className="w-[800px] mx-auto">
-            <div className="border-1 border-primary-line  items-center p-4 flex justify-center bg-[#161A1F] rounded-md ">
+            <div className="border-1 border-primary-line  items-center p-4 flex justify-center bg-primary rounded-md ">
               < ProfileIcon/> 
               
-              <input type="text" placeholder="What's on your mind, ChristianJay69?" className="border-1 border-primary-line rounded-md bg-[#21272B] w-[90%] py-4 ml-4 px-4" />
+              <input type="text" placeholder="What's on your mind, ChristianJay69?" className="border-1 border-primary-line rounded-md bg-secondary w-[90%] py-4 ml-4 px-4" />
 
             </div> <br />
             
-            <div className="border border-primary-line  h-[630px] bg-primary mx-auto p-4">
+            <div className="border border-primary-line  h-[630px] bg-primary mx-auto p-4 rounded-md">
                 <div className="flex justify-between items-center">
                   <div className="flex gap-4 ">
                     < ProfileIcon/> 

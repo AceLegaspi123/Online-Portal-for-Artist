@@ -9,8 +9,8 @@ const Favorites = () => {
             <h2>Collections</h2>
           </div>
         <div className="flex gap-5">
-          <div className="border w-96 h-64 p-4 bg-[#FFFFFF33] border-[#3896E0]">
-            <div className="bg-blue-500 w-full h-48 mb-2"></div>
+          <div className="w-96 h-64 p-4 bg-primary border-1 border-primary-line">
+            <div className="bg-secondary w-full h-48 mb-2"></div>
             <div className="flex justify-between items-center">
               <p>All</p>
               <div className="flex gap-3 items-center">
@@ -20,7 +20,7 @@ const Favorites = () => {
             </div>
           </div>
 
-          <div className="flex border w-96 h-64 p-4 items-center justify-center bg-[#FFFFFF33]">
+          <div className="flex border-1 border-primary-line w-96 h-64 p-4 items-center justify-center bg-primary">
              <p>+ New Collection</p>
           </div>
         </div> <br />
@@ -31,11 +31,11 @@ const Favorites = () => {
             <RiArrowDownSLine />
           </div>
           <div className="flex gap-5">
-            <div className="border w-96 h-64 p-4 bg-[#FFFFFF33]"></div>
-            <div className="border w-96 h-64 p-4 bg-[#FFFFFF33]"></div>
-            <div className="border w-96 h-64 p-4 bg-[#FFFFFF33]"></div>
-            <div className="border w-96 h-64 p-4 bg-[#FFFFFF33]"></div>
-            <div className="border w-96 h-64 p-4 bg-[#FFFFFF33]"></div>
+            <div className="border-1 border-primary-line w-96 h-64 p-4 bg-primary"></div>
+            <div className="border-1 border-primary-line w-96 h-64 p-4 bg-primary"></div>
+            <div className="border-1 border-primary-line w-96 h-64 p-4 bg-primary"></div>
+            <div className="border-1 border-primary-line w-96 h-64 p-4 bg-primary"></div>
+            <div className="border-1 border-primary-line w-96 h-64 p-4 bg-primary"></div>
           </div>
         </div>
       </div>

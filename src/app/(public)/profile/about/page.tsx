@@ -4,11 +4,10 @@ import AboutContent from "@/app/components/profile/about/AboutContent";
 const AboutPage = () => {
   return (
     <div>
-      <div  className="flex gap-20">
+      <div  className="flex gap-20 relative">
         <AboutList/>
         <AboutContent/>
       </div>
-
     </div>
   );
 };
