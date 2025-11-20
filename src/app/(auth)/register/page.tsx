@@ -79,7 +79,7 @@ export default function LoginPage() {
               className="border p-5 bg-gradient-primary  rounded-xl"
               type="submit"
             >
-              Sign up
+              <Link href="/register/profile-setup">Sign up</Link>
             </button>
             <p className="text-center text-black">
               Already have an account?{" "}

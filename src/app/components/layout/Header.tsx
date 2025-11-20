@@ -75,7 +75,10 @@ export default function Header() {
       <div className="flex items-center gap-4">
 
 
-        <Link href="/mail"><CgMail className="text-3xl"/></Link>
+        {
+          isLogin &&  <Link href="/mail"><CgMail className="text-3xl"/></Link>
+        }
+       
 
         <div 
           onClick={() => handleProfileMenu()}

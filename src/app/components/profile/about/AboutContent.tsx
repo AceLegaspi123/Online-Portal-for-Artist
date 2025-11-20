@@ -2,17 +2,18 @@ import { LuPencil } from "react-icons/lu";
 
 const AboutContent = () => {
   return (
-    <div>
-      <div className="bg-[#161A1F] rounded-md p-12 m-4">
-        <div className="flex items-center mb-4 gap-4 text-3xl">
+    <div className="w-full xl:max-w-[120em] mx-auto">
+      <div className="bg-primary rounded-md p-12 m-4 w-full ">
+        <div  id="basic-information" className="flex items-center mb-4 gap-4 text-3xl">
           <h3>Basic Information </h3>
           <LuPencil className="text-lg" />
         </div>
-        <div className="flex gap-6 ">
+
+        <div className="flex gap-6">
           <div>
             <label htmlFor="">First Name</label> <br />
             <input
-              className="bg-[#2A2A2A] p-4 w-90 border-1 border-[#FFFFFF33] mt-2"
+              className="bg-secondary p-4 w-90 border-1 border-primary-line mt-2"
               type="text"
               placeholder="Christian  Jay"
             />
@@ -21,7 +22,7 @@ const AboutContent = () => {
             <div>
               <label htmlFor="">Last Name</label> <br />
               <input
-                className="bg-[#2A2A2A] p-4 w-90 border-1 border-[#FFFFFF33] mt-2"
+                className="bg-secondary p-4 w-90 border-1 border-primary-line mt-2"
                 type="text"
                 placeholder="Escasa"
               />
@@ -32,7 +33,7 @@ const AboutContent = () => {
           <div>
             <label htmlFor="">User Name</label> <br />
             <input
-              className="bg-[#2A2A2A] p-4 w-90 border-1 border-[#FFFFFF33] mt-2"
+              className="bg-secondary p-4 w-90 border-1 border-primary-line mt-2"
               type="text"
               placeholder="Christian Jay"
             />
@@ -40,7 +41,7 @@ const AboutContent = () => {
         </div>
       </div>
 
-      <div className="bg-[#161A1F] p-6 rounded-md p-12 m-4">
+      <div id="address" className="bg-primary rounded-md p-12 m-4 w-full">
         <div className="flex items-center mb-4 gap-4 text-3xl">
           <h3>Address </h3>
           <LuPencil className="text-lg" />
@@ -49,7 +50,7 @@ const AboutContent = () => {
           <div>
             <label htmlFor="">Country</label> <br />
             <input
-              className="bg-[#2A2A2A] p-4 w-90 border-1 border-[#FFFFFF33] mt-2"
+              className="bg-secondary p-4 border-1 border-primary-line mt-2"
               type="text"
               placeholder="Philippines"
             />
@@ -58,7 +59,7 @@ const AboutContent = () => {
             <div>
               <label htmlFor="">City</label> <br />
               <input
-                className="bg-[#2A2A2A] p-4 w-90 border-1 border-[#FFFFFF33] mt-2"
+                className="bg-secondary p-4 w-90 border-1 border-primary-line mt-2"
                 type="text"
                 placeholder="Atimonan"
               />
@@ -69,7 +70,7 @@ const AboutContent = () => {
           <div>
             <label htmlFor="">Province</label> <br />
             <input
-              className="bg-[#2A2A2A] p-4 w-90 border-1 border-[#FFFFFF33] mt-2"
+              className="bg-secondary p-4 w-90 border-1 border-primary-line mt-2"
               type="text"
               placeholder="Quezon"
             />
@@ -77,7 +78,7 @@ const AboutContent = () => {
         </div>
       </div>
 
-      <div className="bg-[#161A1F] p-6 rounded-md p-12 m-4">
+      <div id="contact" className="bg-primary rounded-md p-12 m-4 w-full">
         <div className="flex items-center mb-4 gap-4 text-3xl">
           <h3>Contact </h3>
           <LuPencil className="text-lg" />
@@ -86,7 +87,7 @@ const AboutContent = () => {
           <div>
             <label htmlFor="">Gmail Address</label> <br />
             <input
-              className="bg-[#2A2A2A] p-4 w-300 h-15 border-1 border-[#FFFFFF33] mt-2"
+              className="bg-secondary p-4 w-full h-15 border-1 border-primary-line mt-2"
               type="text"
               placeholder="christianjay692gmail.com"
             />
@@ -96,7 +97,7 @@ const AboutContent = () => {
           <div>
             <label htmlFor="">Phone Number</label> <br />
             <input
-              className="bg-[#2A2A2A] p-4 w-150 border-1 border-[#FFFFFF33] mt-2"
+              className="bg-secondary p-4 w-150 border-1 border-primary-line mt-2"
               type="text"
               placeholder="09**********"
             />
@@ -104,7 +105,7 @@ const AboutContent = () => {
         </div>
       </div>
 
-      <div className="bg-[#161A1F] rounded-md p-12 m-4">
+      <div id="about-me" className="bg-primary rounded-md p-12 m-4 w-full">
         <div className="flex items-center mb-4 gap-4 text-3xl">
           <h3>About Me </h3>
           <LuPencil className="text-lg" />
@@ -113,20 +114,16 @@ const AboutContent = () => {
           <div>
             <label htmlFor="">Section Title</label> <br />
             <input
-              className="bg-[#2A2A2A] p-4 w-300 h-15 border-1 border-[#FFFFFF33] mt-2"
+              className="bg-secondary p-4 w-full h-15 border-1 border-primary-line mt-2"
               type="text"
               placeholder="About"
             />
           </div>
         </div>
         <div className="flex gap-6 mt-4">
-          <div>
+          <div className="w-full">
             <label htmlFor="">Description</label> <br />
-            <input
-              className="bg-[#2A2A2A] p-4 w-300 h-30 border-1 border-[#FFFFFF33] mt-2 text-top"
-              type="text"
-              placeholder="Bio"
-            />
+            <textarea name="" id="" placeholder="text here" className="bg-secondary w-full"></textarea>
           </div>
         </div>
       </div>

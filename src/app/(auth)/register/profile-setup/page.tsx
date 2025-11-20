@@ -1,5 +1,6 @@
 import React from 'react'
-import Logo from '@/app/components/Logo'
+import Logo from '@/app/components/ui/Logo'
+import Link from 'next/link'
 
 const ProfileSetup = () => {
   return (
@@ -62,7 +63,7 @@ const ProfileSetup = () => {
                 </div>
               </div>
 
-                  <button className="border p-5 bg-gradient-primary  rounded-xl" type="submit">Continue</button>
+                  <button className="border p-5 bg-gradient-primary  rounded-xl" type="submit"><Link href="/register/profile-setup/get-started">Continue</Link></button>
                 </form>
               </div>
             </div>

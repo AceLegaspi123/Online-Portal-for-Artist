@@ -9,7 +9,7 @@ import ProfileIcon from '@/app/components/ui/ProfileIcon';
 import { Sidebar } from '@/app/components/preview/Sidebar';
 import { IoIosArrowForward } from "react-icons/io";
 import { MdKeyboardArrowLeft } from "react-icons/md";
-
+import { FcSalesPerformance } from "react-icons/fc";
 const ArtPreview = () => {
   return (
     <div className=' max-w-screen-2xl mx-auto md:flex gap-18'>
@@ -41,7 +41,14 @@ const ArtPreview = () => {
               </li>
             </ul>
 
-            <BsThreeDots />
+            <div className='flex gap-4 items-center'>
+              <div className='flex items-center gap-2'>
+                <FcSalesPerformance />
+                 <p>190 Sold arts</p>
+              </div>
+             
+               <BsThreeDots />
+            </div>
           </div>
           
           <div className='flex flex-col gap-4'>
