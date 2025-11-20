@@ -27,18 +27,18 @@ const DatePicker = () => {
   }, []);
 
   // Handlers
-  const handleYearChange = (event) => {
+  const handleYearChange = (event: any) => {
     const newYear = parseInt(event.target.value);
     setSelectedDate(selectedDate.year(newYear));
   };
 
-  const handleMonthChange = (event) => {
+  const handleMonthChange = (event: any) => {
     const newMonthName = event.target.value;
     const newMonthIndex = availableMonths.findIndex(m => m === newMonthName);
     setSelectedDate(selectedDate.month(newMonthIndex));
   };
 
-  const handleSearchChange = (event) => {
+  const handleSearchChange = (event: any) => {
     setSearchTerm(event.target.value);
   };
 
