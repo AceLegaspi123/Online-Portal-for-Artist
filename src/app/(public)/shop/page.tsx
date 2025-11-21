@@ -1,12 +1,27 @@
 import React from 'react'
-import ShopCard from '@/app/components/profile/shop/ShopCard'
 import ShopHeader from '@/app/components/profile/shop/ShopHeader'
+import Shop from '@/app/components/ui/Shop'
+import artwork from "@/data/artlist.json"
 
 const page = () => {
   return (
-    <div>
+    <div >
         <ShopHeader />
-        <ShopCard />
+
+        <div className='max-w-7xl w-full m-auto p-4 flex flex-col gap-8 mt-4'>
+          <div>
+            <h4 className='font-semibold text-2xl '>Browse featured shop</h4>
+            <p>Browse trending creations from other artists.</p>
+          </div>
+
+            <div className='flex flex-col gap-10'>
+              {
+                artwork.map((item, key) => (
+                  <Shop artDetails={item} key={key} />
+                ))
+              }
+            </div>
+        </div>
     </div>
   )
 }
