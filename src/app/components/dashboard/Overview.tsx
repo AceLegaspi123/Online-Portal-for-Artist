@@ -10,7 +10,6 @@ import ReportedSummary from './ReportedSummary';
 import clsx from 'clsx';
 // import Chart from "./Chart"
 
-
 import ReportedUser from "@/data/reportedUser.json"
 
 const summaryData = [
@@ -44,9 +43,14 @@ const Overview = () => {
                 summaryData.map((item, index) => (
                     <li 
                         key={index}
-                        className="h-55 border border-primary-line p-4 bg-primary rounded-2xl">
+                        className={clsx('h-55 border border-primary-line p-4 rounded-2xl', {
+                            "bg-violet-400" : index == 0,
+                            "bg-blue-400" : index == 1,
+                            "bg-green-400" : index == 2,
+                            "bg-yellow-400" : index == 3
+                        })}>
                         <Link href="#">
-                            <div className={clsx('bg-secondary w-fit p-4 text-4xl rounded-md')}> {item?.icon}</div>
+                            <div className={'w-fit p-4 text-4xl rounded-md'}> {item?.icon}</div>
                             <h4 className='font-semibold mt-8 opacity-70'>{item?.name}</h4>
                             <p className="w-fit font-bold text-4xl">{item?.countData}</p>
                         </Link>
@@ -56,6 +60,8 @@ const Overview = () => {
         </ul>
 
         {/* <Chart /> */}
+
+        
         <div className='grid grid-cols-2 gap-4'>
             <ThreeColTable title="New Sign-ups" />
             <ThreeColTable title="Top Artists" />

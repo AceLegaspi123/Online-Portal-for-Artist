@@ -1,3 +1,5 @@
+import artlist from "@/data/artlist.json"
+
 import React from 'react'
 import { FaRegStar } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
@@ -11,13 +13,16 @@ import { IoIosArrowForward } from "react-icons/io";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { FcSalesPerformance } from "react-icons/fc";
 
-const ArtPreview = () => {
+const ArtPreview = ({ params }: { params: { id: string } }) => {
+  const artId = Number(params.id);
+  const art = artlist.find(item => item.id === artId);
+
   return (
     <div className=' max-w-screen-2xl mx-auto md:flex gap-18'>
       <div className='md:w-[80%] relative'>
         <div className='w-full h-[700px] bg-primary flex items-center justify-center'>
             <img 
-              src="https://images.hdqwalls.com/download/women-with-sword-hair-blowing-in-the-wind-mj-3840x2160.jpg"
+              src={art?.src}
               alt=""
               className='object-cover h-full rounded-sm'  
             />

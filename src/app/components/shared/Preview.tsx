@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaRegStar } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegCommentAlt } from "react-icons/fa";
@@ -11,13 +10,17 @@ import { IoIosArrowForward } from "react-icons/io";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { FcSalesPerformance } from "react-icons/fc";
 
-const ArtPreview = () => {
+import artList from "@/data/artlist.json"
+
+const ArtPreview = ({artId} : {artId: Number}) => {
+  const art = artList.find(item => item.id === artId)
+
   return (
     <div className=' max-w-screen-2xl mx-auto md:flex gap-18'>
       <div className='md:w-[80%] relative'>
         <div className='w-full h-[700px] bg-primary flex items-center justify-center'>
             <img 
-              src="https://images.hdqwalls.com/download/women-with-sword-hair-blowing-in-the-wind-mj-3840x2160.jpg"
+              src={art?.src}
               alt=""
               className='object-cover h-full rounded-sm'  
             />
@@ -60,12 +63,12 @@ const ArtPreview = () => {
 
 
             <div className='flex items-center gap-4 w-full'>
-              <ProfileIcon />
+              <ProfileIcon/>
 
               <div className='flex items-center justify-between w-full'>
                   <div className='flex items-center gap-4'>
                     <div>
-                      <h3 className='font-bold'>Artist name</h3>
+                      <h3 className='font-bold'>{art?.user}</h3>
                       <p className='text-xs opacity-50 -mt-1'>128 followers</p>
                     </div>
 
