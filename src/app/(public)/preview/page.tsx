@@ -10,6 +10,7 @@ import { Sidebar } from '@/app/components/preview/Sidebar';
 import { IoIosArrowForward } from "react-icons/io";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { FcSalesPerformance } from "react-icons/fc";
+
 const ArtPreview = () => {
   return (
     <div className=' max-w-screen-2xl mx-auto md:flex gap-18'>
