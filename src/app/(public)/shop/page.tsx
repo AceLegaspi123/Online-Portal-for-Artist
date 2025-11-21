@@ -2,6 +2,7 @@ import React from 'react'
 import ShopHeader from '@/app/components/profile/shop/ShopHeader'
 import Shop from '@/app/components/ui/Shop'
 import artwork from "@/data/artlist.json"
+import { Link } from 'lucide-react'
 
 const page = () => {
   return (
@@ -16,8 +17,8 @@ const page = () => {
 
             <div className='flex flex-col gap-10'>
               {
-                artwork.map((item, key) => (
-                  <Shop artDetails={item} key={key} />
+                artwork.map((item, key) => (           
+                     <Shop artDetails={item} key={key} />
                 ))
               }
             </div>
