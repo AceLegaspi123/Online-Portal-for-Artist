@@ -2,21 +2,16 @@ import React from "react";
 import { FaHeart } from "react-icons/fa";
 import { MdOutlineComment } from "react-icons/md";
 import Image from "next/image";
+import {artList} from "@/types/User"
 
-type ArtItem = {
-  src: string;
-  alt: string;
-  user: string;
-  avatar: string
-};
-
-export default function ArtList({art, children,}: { art: ArtItem; children?: React.ReactNode;}) {   
+export default function ArtList({art}: { art: artList}) {   
+  console.log(art)
   return (
-    <div className="w-full overflow-hidden text-sm">
+    <div className="w-full overflow-hidden text-sm ">
       <div className="art-list-card relative h-55 lg:h-55 hover:shadow-xl transition duration-700 ease-in-out  xl:h-65 mb-4 overflow-hidden  cursor-pointer group">
-        {art?.src ? (
+        {art.src ? (
             <Image
-                src={art?.avatar}
+                src={art?.src}
                 alt={"User avatar"}
                 width={400}
                 height={200}
@@ -36,9 +31,9 @@ export default function ArtList({art, children,}: { art: ArtItem; children?: Rea
           <div className="w-8 h-8 rounded-full bg-primary overflow-hidden">
             {/* <img src={art?.avatar} alt="user avatar" className="w-full h-full object-cover"/> */}
 
-            {art?.src ? (
+            {art?.avatar ? (
                 <Image
-                    src={art?.src}
+                    src={art?.avatar}
                     alt={"User avatar"}
                     width={40}
                     height={40}
@@ -50,7 +45,7 @@ export default function ArtList({art, children,}: { art: ArtItem; children?: Rea
 
 
           </div>
-          <p className="font-semibold text-sm">{art?.user}</p>
+          <p className="font-semibold text-sm">User #</p>
         </div>
 
         <div className="flex gap-4 opacity-70 text-xs">
