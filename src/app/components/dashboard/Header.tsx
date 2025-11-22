@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useState } from "react";
 import clsx from 'clsx';
 import { IoNotifications } from "react-icons/io5";
+import { MdOutlineLightMode } from "react-icons/md";
 
 export default function Header() {
   const [isLogin, setIsLogin] = useState(true);
@@ -27,7 +28,10 @@ export default function Header() {
 
 
         <IoNotifications className="text-2xl"/>
-
+        <div className="p-2 border-1 border-primary-line rounded-full hover:bg-white hover:text-black cursor-pointer hover:opacity-80">
+            <MdOutlineLightMode />
+        </div>
+                 
         <div 
           onClick={() => handleProfileMenu()}
           className='cursor-pointer flex items-center gap-4'>
