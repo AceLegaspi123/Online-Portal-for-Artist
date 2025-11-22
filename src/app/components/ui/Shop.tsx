@@ -11,16 +11,16 @@ const Shop = ({artDetails}: {artDetails: artList}) => {
 
         <div className='flex flex-col gap-6 w-full '>
             <div>
-                <h4>{artDetails.user}</h4>
+                <h4 className="font-semibold">{artDetails.user}</h4>
                 <p className="opacity-70">39 followers</p>
             </div>
 
             
             <ul className='flex gap-4'>
-                <li className='py-2 px-4 border-1 border-primary-line'>Digital Art</li>
-                <li className='py-2 px-4 border-1 border-primary-line'>Pixel Art</li>
-                <li className='py-2 px-4 border-1 border-primary-line'>Fantasy</li>
-                <li className='py-2 px-4 border-1 border-primary-line'>Anime</li>
+                <li className='py-2 px-4 border-1 border-primary-line rounded-md'>Digital Art</li>
+                <li className='py-2 px-4 border-1 border-primary-line rounded-md'>Pixel Art</li>
+                <li className='py-2 px-4 border-1 border-primary-line rounded-md'>Fantasy</li>
+                <li className='py-2 px-4 border-1 border-primary-line rounded-md'>Anime</li>
             </ul>
 
             <div className="flex justify-between">
