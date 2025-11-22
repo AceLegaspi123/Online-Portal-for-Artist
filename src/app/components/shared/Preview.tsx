@@ -9,6 +9,7 @@ import { Sidebar } from '@/app/components/preview/Sidebar';
 import { IoIosArrowForward } from "react-icons/io";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { FcSalesPerformance } from "react-icons/fc";
+import ArtistProfileIcon from "../ui/ArtistProfileIcon";
 
 import artList from "@/data/artlist.json"
 
