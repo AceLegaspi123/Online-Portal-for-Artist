@@ -1,27 +1,40 @@
 import { IoIosArrowDown } from "react-icons/io";
 import clsx from 'clsx';
 import jsonData from "@/data/reportedUser.json"
-
-type ReportedItem = {
-  id: string;
-  user: string;
-  reportDate: string;
-  reportedBy: string;
-  reason: string;
-  action: string;
-  status: string;
-};
+import { RiArrowRightSLine } from "react-icons/ri";
+import Link from "next/link";
+import DatePicker from "@/app/components/ui/DatePicker"
 
 type summaryData = {
   children?: React.ReactNode
 }
 
-const History = ({children} : summaryData) => {
+const ReportedHistory = ({children} : summaryData) => {
   return (
-   <div className="w-full ">
-         <h2 className="mb-4">List of reported Artwork</h2>
+    <div className="flex flex-col gap-10">
+      <div className="flex font-semibold">
+        <h1 className="text-2xl font-semibold">Report Management</h1>
+
+        <div className="flex gap-4 items-center ml-auto">
+          <p className="opacity-70"><Link href="/dashboard">Home</Link></p>
+          <RiArrowRightSLine className="opacity-70"/>
+          <p>Reported Users</p>
+        </div>
+      </div>
+
+     <div className="w-full bg-primary p-10 pt-6 rounded-2xl sticky">
+      <div className="flex justify-between items-center">
+        <div className="mb-10">
+          <h4  className="font-bold text-xl">List of reported Artwork</h4>
+          <p className="opacity-70">21 items</p>
+        </div>
+         <div className="text-white">
+           <DatePicker />
+         </div>
+      </div>
+  
    
-         <table className="bg-primary p-4 w-full border-collapse overflow-hidden rounded-xl">
+         <table className="bg-secondary p-4 w-full border-collapse overflow-hidden rounded-xl">
            <thead className="text-left rounded-t-md border-b-1 border-b-primary-line">
              <tr>
                <th  className="p-4 text-center">Id</th>
@@ -30,7 +43,7 @@ const History = ({children} : summaryData) => {
                <th  className="p-4 text-center">Reported by</th>
                <th  className="p-4 text-center">Reason</th>
                <th  className="p-4 text-center">Status</th>
-               <th  className="p-4 text-center">Take Action</th>
+               <th  className="p-4 text-center">Action</th>
              </tr>
            </thead>
    
@@ -64,8 +77,12 @@ const History = ({children} : summaryData) => {
              </tr>
            </tfoot>
          </table>
+
+         <div className="absolute top-23 left-0 w-full bg-primary-line h-[2px]"></div>
        </div>
+    </div>
+  
   )
 }
 
-export default History;
+export default ReportedHistory;
