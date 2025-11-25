@@ -3,7 +3,7 @@ import NavLinks from "@/app/components/profile/NavLinks";
 
 function layout({ children }: { children: ReactNode }) {
   return (
-    <div className="">
+    <div className="relative z-10">
       {/* Profile Header */}
       <div
         className="h-[23rem] w-full -mt-10 relative background-cover "

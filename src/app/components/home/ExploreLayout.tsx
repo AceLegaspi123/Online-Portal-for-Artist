@@ -13,7 +13,7 @@ const ExploreLayout = () => {
   return (
     <div className="flex flex-col gap-4 relative">
       {/* <h3 className="text-lg font-bold">Explore Arts</h3> */}
-      <div className="w-full bg-background z-10 pt-10 pb-3 border-b-1 border-primary-line">
+      <div className="w-full z-10 pt-10 pb-3 border-b-1 border-primary-line">
           <div className="flex gap-4 items-center space-between">
             <div className="bg-secondary flex items-center border-1 border-primary-line justify-center gap-2 py-3 px-8 cursor-pointer rounded-full">
                 <FilterIcon />
@@ -25,7 +25,7 @@ const ExploreLayout = () => {
               <input
                 type="text"
                 placeholder={`Search arts/artist in ArtistryHub`}
-                className="border-1 border-primary-line bg-secondary opacity-80 font-normal py-3 pl-14 w-full rounded-full active:outline-0 "
+                className="border-1 border-primary-line bg-primary opacity-80 font-normal py-3 pl-14 w-full rounded-full active:outline-0 "
               />
             </div>
           </div>
