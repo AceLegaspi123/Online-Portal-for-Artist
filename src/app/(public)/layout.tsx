@@ -1,10 +1,25 @@
 import React from 'react'
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
+import LightRays from '../components/ui/LightRays';
 
 const layout = ({children}: {children: React.ReactNode}) => {
   return (
-    <div className='relative min-h-[100dvh]'>
+    <div className='relative min-h-screen'>
+      <div className='fixed inset-0 top-0 min-h-screen z-[-1]'>
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#00ffff"
+          raysSpeed={1.5}
+          lightSpread={0.8}
+          rayLength={1.2}
+          followMouse={true}
+          mouseInfluence={0.1}
+          noiseAmount={0.1}
+          distortion={0.05}
+          className="custom-rays"
+        />
+      </div>
       <Header />
         {children}
       <Footer />
