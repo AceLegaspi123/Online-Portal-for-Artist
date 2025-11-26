@@ -26,7 +26,7 @@ export default function Suggestion() {
           {suggestion.map((list, i) => (
             <li
               className={classNames(
-                "text-center border-1 border-primary-line bg-primary rounded-sm py-2 justify-center mx-auto w-full text-sm",
+                "text-center border-1 border-primary-line bg-transparent backdrop-blur-2xl rounded-sm py-2 justify-center mx-auto w-full text-sm",
                 {
                   "border-2 border-gradient-primary": list == "All",
                 }

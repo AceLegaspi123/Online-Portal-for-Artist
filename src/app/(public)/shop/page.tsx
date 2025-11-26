@@ -2,7 +2,6 @@ import React from 'react'
 import ShopHeader from '@/app/components/profile/shop/ShopHeader'
 import Shop from '@/app/components/ui/Shop'
 import artwork from "@/data/artlist.json"
-import { Link } from 'lucide-react'
 
 const page = () => {
   return (
