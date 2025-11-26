@@ -6,7 +6,7 @@ import LightRays from '../components/ui/LightRays';
 const layout = ({children}: {children: React.ReactNode}) => {
   return (
     <div className='relative min-h-screen'>
-      <div className='fixed inset-0 top-0 min-h-screen z-[-1]'>
+      <div className='fixed inset-0 top-0 min-h-screen z-[-10]'>
         <LightRays
           raysOrigin="top-center"
           raysColor="#0af759"
