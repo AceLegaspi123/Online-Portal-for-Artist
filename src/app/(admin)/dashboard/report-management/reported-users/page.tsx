@@ -25,7 +25,7 @@ const ReportedHistory = ({children} : summaryData) => {
      <div className="w-full bg-primary p-10 pt-6 rounded-2xl sticky">
       <div className="flex justify-between items-center">
         <div className="mb-10">
-          <h4  className="font-bold text-xl">List of reported Artwork</h4>
+          <h4  className="font-bold text-xl">List of reported Artists</h4>
           <p className="opacity-70">21 items</p>
         </div>
          <div className="text-white">
