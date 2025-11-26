@@ -9,14 +9,14 @@ const layout = ({children}: {children: React.ReactNode}) => {
       <div className='fixed inset-0 top-0 min-h-screen z-[-1]'>
         <LightRays
           raysOrigin="top-center"
-          raysColor="#00ffff"
-          raysSpeed={1.5}
+          raysColor="#0af759"
+          raysSpeed={1.0}
           lightSpread={0.8}
-          rayLength={1.2}
+          rayLength={3}
           followMouse={true}
           mouseInfluence={0.1}
           noiseAmount={0.1}
-          distortion={0.05}
+          distortion={0.1}
           className="custom-rays"
         />
       </div>
