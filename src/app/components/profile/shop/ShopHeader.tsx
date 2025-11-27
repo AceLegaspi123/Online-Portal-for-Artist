@@ -2,7 +2,7 @@ import { BiSearch } from "react-icons/bi";
 
 export default function ShopHeader(){
     return(
-        <div className="h-72"  style={{backgroundImage: `url(profile-background.png)`}}>
+        <div className="h-72 z-10 relative"  style={{backgroundImage: `url(profile-background.png)`}}>
             <div className="align-center text-center -mt-10 text-4xl p-20 font-bold">
                 <h1>Explore and purchase artworks from your favorite creators</h1>
             </div>
