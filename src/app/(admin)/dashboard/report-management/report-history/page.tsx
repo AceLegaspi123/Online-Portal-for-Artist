@@ -1,88 +1,111 @@
-import { IoIosArrowDown } from "react-icons/io";
 import clsx from 'clsx';
+import { MdArrowForwardIos } from "react-icons/md";
 import jsonData from "@/data/reportedUser.json"
+import DatePicker from '@/app/components/ui/DatePicker';
+import { div } from 'framer-motion/client';
+import Link from 'next/link';
 import { RiArrowRightSLine } from "react-icons/ri";
-import Link from "next/link";
-import DatePicker from "@/app/components/ui/DatePicker"
+import { PiImageSquareLight } from "react-icons/pi";
+import Violations from "@/data/ViolationHistory.json"
 
-type summaryData = {
-  children?: React.ReactNode
-}
+type ReportedItem = {
+  id: string;
+  user: string;
+  gmail: string;
+  profileIcon: string;
+  reportDate: string;
+  reportedBy: string;
+  reason: string;
+  action: string;
+  status: string;
+};
 
-const ReportedHistory = ({children} : summaryData) => {
+
+
+const ReportedUserSummary = () => {
   return (
-    <div className="flex flex-col gap-10">
-      <div className="flex font-semibold">
+   <div className=''>
+       <div className="flex font-semibold mb-10">
         <h1 className="text-2xl font-semibold">Report Management</h1>
 
         <div className="flex gap-4 items-center ml-auto">
           <p className="opacity-70"><Link href="/dashboard">Home</Link></p>
           <RiArrowRightSLine className="opacity-70"/>
-          <p>Reported History</p>
+          <p>Violation History</p>
         </div>
       </div>
+    <div className="w-full bg-primary py-10 px-10 rounded-md">
+          <div className="flex justify-between items-center px-2 mb-4 ">
+            <div>
+                <h5 className='text-2xl '>Latest list of violations</h5>
+                <p>32 items</p>
+            </div>
 
-     <div className="w-full bg-primary p-10 pt-6 rounded-2xl sticky">
-      <div className="flex justify-between items-center">
-        <div className="mb-10">
-          <h4  className="font-bold text-xl">List of violations history</h4>
-          <p className="opacity-70">21 items</p>
-        </div>
-         <div className="text-white">
-           <DatePicker />
-         </div>
+              <DatePicker />
+          </div>
+    
+          <table className="bg-secondary p-4 w-full border-collapse overflow-hidden rounded-xl">
+            <thead className="text-left rounded-t-md border-b-1 border-b-primary-line">
+              <tr>
+                <th  className="p-4 text-center">Report Id</th>
+                <th  className="p-4 text-center">Reference Id</th>
+                <th  className="p-4 text-center">Reported User</th>
+                <th  className="p-4 text-center">Reported by</th>
+                <th  className="p-4 text-center">Date issued</th>
+                <th  className="p-4 text-center">Violation Type</th>
+                <th  className="p-4 text-center">Action Taken</th>
+                <th  className="p-4 text-center">Duration</th>
+                <th  className="p-4 text-center">Notes</th>
+              </tr>
+            </thead>
+    
+            <tbody className="">
+              {Violations.slice(0, 10).map((u) => (
+                <tr className="" key={u.USER_ID}>
+                  <td className="p-4 text-center ">{u.USER_ID}</td>
+                  <td className="p-4 text-center ">{u.USER_ID}</td>
+                  <td  className="p-4 text-center">
+                      <div className="flex gap-4 text-left ">
+                      <img src="https://i.pravatar.cc/150?u=Koolen" alt="profile icon" className="w-12 h-12 rounded-full"/>
+                        <div>
+                          <p className='font-semibold'>{u.reported_user.name}</p>
+                          <p className="opacity-50 -mt-2">{u.reported_user.gmail}</p>
+                        </div>
+                      </div>
+                  </td>
+
+                  <td  className="p-4 text-center">
+                      <div className="flex gap-4 text-left ">
+                        <img src="https://i.pravatar.cc/150?u=BroDraw" alt="profile icon" className="w-12 h-12 rounded-full"/>
+                        <div>
+                          <p>{u.reported_by.name}</p>
+                          <p className="opacity-50 -mt-2">{u.reported_by.gmail}</p>
+                        </div>
+
+                      </div>
+                  </td>
+
+                  <td  className="p-4 text-center">{u.DATE_ISSUED}</td>
+                  <td  className="p-4 text-center">{u.VIOLATION_TYPE}</td>
+                  <td  className="p-4 text-center">
+                    <p className={clsx('rounded-md font-semibold text-sm py-1', {
+                      "bg-red-400 text-white" : u.ACTION_TAKEN == "Permanent Ban",
+                      "bg-yellow-300 text-black" :u.ACTION_TAKEN == "Warning",
+                      "bg-red-600 text-red-300" : u.ACTION_TAKEN == "Temporary Suspension",
+                      "bg-green-400 " : u.ACTION_TAKEN == "Cleared"
+                    })}>{u.ACTION_TAKEN}</p>
+                  </td>
+                  
+                  <td  className="p-4 text-center">{u.Duration}</td>
+                  <td  className=" text-center">Action</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
       </div>
-  
-   
-         <table className="bg-secondary p-4 w-full border-collapse overflow-hidden rounded-xl">
-           <thead className="text-left rounded-t-md border-b-1 border-b-primary-line">
-             <tr>
-               <th  className="p-4 text-center">Id</th>
-               <th  className="p-4 text-center">Name</th>
-               <th  className="p-4 text-center">Report Date</th>
-               <th  className="p-4 text-center">Reported by</th>
-               <th  className="p-4 text-center">Reason</th>
-               <th  className="p-4 text-center">Status</th>
-               <th  className="p-4 text-center">Action</th>
-             </tr>
-           </thead>
-   
-           <tbody className="">
-             {jsonData.map((u) => (
-               <tr className="" key={u.id}>
-                 <td className="p-4 text-center">{u.id}</td>
-                 <td  className="p-4 text-center">{u.user}</td>
-                 <td  className="p-4 text-center">{u.reportDate}</td>
-                 <td  className="p-4 text-center">{u.reportedBy}</td>
-                 <td  className="p-4 text-center">{u.reason}</td>
-                 <td  className="p-4 text-center">
-                  <p className={clsx('rounded-full font-semibold text-sm py-1', {
-                    "bg-orange-600 text-orange-300" : u.status == "pending",
-                    "bg-red-600 text-red-300" : u.status == "warned"
-                  })}>{u.status}</p>
-                 </td>
-                 <td  className=" text-center">Action</td>
-               </tr>
-             ))}
-           </tbody>
-   
-           <tfoot className="border-t-1 border-t-primary-line opacity-50 hover:opacity-100">
-             <tr>
-               <td colSpan={7} className="py-2">
-                 <div className="w-full flex items-center gap-2 justify-center cursor-pointer hover:underline">
-                   <p>See all</p>
-                   <IoIosArrowDown className="translate-y-1"/>
-                 </div>
-               </td>
-             </tr>
-           </tfoot>
-         </table>
-
-         <div className="absolute top-23 left-0 w-full bg-primary-line h-[2px]"></div>
-       </div>
-    </div>
-  
+   </div>
+ 
   )
 }
 
-export default ReportedHistory;
+export default ReportedUserSummary

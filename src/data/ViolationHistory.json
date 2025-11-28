@@ -1,0 +1,212 @@
+[
+    {
+      "HISTORY_ID": "HIS001",
+      "USER_ID": "USR001",
+      "reported_user": {
+        "gmail": "user_alpha@gmail.com",
+        "profile_icon": "https://i.imgur.com/KzDq2Uv.png",
+        "name": "Alpha User"
+      },
+      "reported_by": {
+        "gmail": "reporter_beta@gmail.com",
+        "profile_icon": "https://i.imgur.com/6Pqj4iL.png",
+        "name": "Beta Reporter"
+      },
+      "VIOLATION_TYPE": "User Conduct Violation",
+      "VIOLATION_LOG_ID": "LOG001",
+      "ACTION_TAKEN": "Temporary Suspension",
+      "Duration": "7 days",
+      "NOTES": "Inappropriate language used in public chat.",
+      "DATE_ISSUED": "2025-11-20",
+      "EXPIRATION": "2025-11-27"
+    },
+    {
+      "HISTORY_ID": "HIS002",
+      "USER_ID": "USR002",
+      "reported_user": {
+        "gmail": "user_charlie@gmail.com",
+        "profile_icon": "https://i.imgur.com/J8YQv8L.png",
+        "name": "Charlie C."
+      },
+      "reported_by": {
+        "gmail": "reporter_delta@gmail.com",
+        "profile_icon": "https://i.imgur.com/r5Iq2m8.png",
+        "name": "Delta Admin"
+      },
+      "VIOLATION_TYPE": "Artwork Violation",
+      "VIOLATION_LOG_ID": "LOG002",
+      "ACTION_TAKEN": "Warning",
+      "Duration": "N/A",
+      "NOTES": "Minor copyright infringement claim on uploaded artwork. Artwork removed.",
+      "DATE_ISSUED": "2025-11-25",
+      "EXPIRATION": null
+    },
+    {
+      "HISTORY_ID": "HIS003",
+      "USER_ID": "USR003",
+      "reported_user": {
+        "gmail": "user_echo@gmail.com",
+        "profile_icon": "https://i.imgur.com/V7wG8O1.png",
+        "name": "Echo Artist"
+      },
+      "reported_by": {
+        "gmail": "reporter_foxtrot@gmail.com",
+        "profile_icon": "https://i.imgur.com/w8qX1Jz.png",
+        "name": "Foxtrot Mod"
+      },
+      "VIOLATION_TYPE": "User Conduct Violation",
+      "VIOLATION_LOG_ID": "LOG003",
+      "ACTION_TAKEN": "Permanent Ban",
+      "Duration": "Permanent",
+      "NOTES": "Severe harassment of multiple users. Repeat offender.",
+      "DATE_ISSUED": "2025-11-10",
+      "EXPIRATION": null
+    },
+    {
+      "HISTORY_ID": "HIS004",
+      "USER_ID": "USR004",
+      "reported_user": {
+        "gmail": "user_golf@gmail.com",
+        "profile_icon": "https://i.imgur.com/gTfG6y4.png",
+        "name": "Golf G."
+      },
+      "reported_by": {
+        "gmail": "reporter_hotel@gmail.com",
+        "profile_icon": "https://i.imgur.com/0uB5cQY.png",
+        "name": "Hotel Admin"
+      },
+      "VIOLATION_TYPE": "Artwork Violation",
+      "VIOLATION_LOG_ID": "LOG004",
+      "ACTION_TAKEN": "Temporary Suspension",
+      "Duration": "30 days",
+      "NOTES": "Posting of explicit content flagged by automated system.",
+      "DATE_ISSUED": "2025-11-01",
+      "EXPIRATION": "2025-12-01"
+    },
+    {
+      "HISTORY_ID": "HIS005",
+      "USER_ID": "USR005",
+      "reported_user": {
+        "gmail": "user_india@gmail.com",
+        "profile_icon": "https://i.imgur.com/E8bY5jZ.png",
+        "name": "India I."
+      },
+      "reported_by": {
+        "gmail": "reporter_juliet@gmail.com",
+        "profile_icon": "https://i.imgur.com/o1uN1Zf.png",
+        "name": "Juliet Admin"
+      },
+      "VIOLATION_TYPE": "User Conduct Violation",
+      "VIOLATION_LOG_ID": "LOG005",
+      "ACTION_TAKEN": "Cleared",
+      "Duration": "N/A",
+      "NOTES": "Initial report determined to be false/misunderstanding. No action taken.",
+      "DATE_ISSUED": "2025-11-28",
+      "EXPIRATION": null
+    },
+    {
+      "HISTORY_ID": "HIS006",
+      "USER_ID": "USR006",
+      "reported_user": {
+        "gmail": "user_kilo@gmail.com",
+        "profile_icon": "https://i.imgur.com/t4fD7yM.png",
+        "name": "Kilo User"
+      },
+      "reported_by": {
+        "gmail": "reporter_lima@gmail.com",
+        "profile_icon": "https://i.imgur.com/0uB5cQY.png",
+        "name": "Lima Mod"
+      },
+      "VIOLATION_TYPE": "Artwork Violation",
+      "VIOLATION_LOG_ID": "LOG006",
+      "ACTION_TAKEN": "Warning",
+      "Duration": "N/A",
+      "NOTES": "Uploaded artwork had improperly sourced elements (low resolution, non-original).",
+      "DATE_ISSUED": "2025-11-22",
+      "EXPIRATION": null
+    },
+    {
+      "HISTORY_ID": "HIS007",
+      "USER_ID": "USR007",
+      "reported_user": {
+        "gmail": "user_mike@gmail.com",
+        "profile_icon": "https://i.imgur.com/r5Iq2m8.png",
+        "name": "Mike M."
+      },
+      "reported_by": {
+        "gmail": "reporter_november@gmail.com",
+        "profile_icon": "https://i.imgur.com/KzDq2Uv.png",
+        "name": "November R."
+      },
+      "VIOLATION_TYPE": "User Conduct Violation",
+      "VIOLATION_LOG_ID": "LOG007",
+      "ACTION_TAKEN": "Temporary Suspension",
+      "Duration": "1 day",
+      "NOTES": "Minor instance of spamming in a group forum.",
+      "DATE_ISSUED": "2025-11-29",
+      "EXPIRATION": "2025-11-30"
+    },
+    {
+      "HISTORY_ID": "HIS008",
+      "USER_ID": "USR008",
+      "reported_user": {
+        "gmail": "user_oscar@gmail.com",
+        "profile_icon": "https://i.imgur.com/J8YQv8L.png",
+        "name": "Oscar O."
+      },
+      "reported_by": {
+        "gmail": "reporter_papa@gmail.com",
+        "profile_icon": "https://i.imgur.com/V7wG8O1.png",
+        "name": "Papa Admin"
+      },
+      "VIOLATION_TYPE": "Artwork Violation",
+      "VIOLATION_LOG_ID": "LOG008",
+      "ACTION_TAKEN": "Permanent Ban",
+      "Duration": "Permanent",
+      "NOTES": "Distribution of malicious links disguised as artwork downloads.",
+      "DATE_ISSUED": "2025-10-15",
+      "EXPIRATION": null
+    },
+    {
+      "HISTORY_ID": "HIS009",
+      "USER_ID": "USR009",
+      "reported_user": {
+        "gmail": "user_quebec@gmail.com",
+        "profile_icon": "https://i.imgur.com/w8qX1Jz.png",
+        "name": "Quebec Q."
+      },
+      "reported_by": {
+        "gmail": "reporter_romeo@gmail.com",
+        "profile_icon": "https://i.imgur.com/gTfG6y4.png",
+        "name": "Romeo R."
+      },
+      "VIOLATION_TYPE": "User Conduct Violation",
+      "VIOLATION_LOG_ID": "LOG009",
+      "ACTION_TAKEN": "Cleared",
+      "Duration": "N/A",
+      "NOTES": "Reported for vote manipulation, investigation found insufficient evidence.",
+      "DATE_ISSUED": "2025-11-18",
+      "EXPIRATION": null
+    },
+    {
+      "HISTORY_ID": "HIS010",
+      "USER_ID": "USR010",
+      "reported_user": {
+        "gmail": "user_sierra@gmail.com",
+        "profile_icon": "https://i.imgur.com/0uB5cQY.png",
+        "name": "Sierra S."
+      },
+      "reported_by": {
+        "gmail": "reporter_tango@gmail.com",
+        "profile_icon": "https://i.imgur.com/E8bY5jZ.png",
+        "name": "Tango T."
+      },
+      "VIOLATION_TYPE": "Artwork Violation",
+      "VIOLATION_LOG_ID": "LOG010",
+      "ACTION_TAKEN": "Temporary Suspension",
+      "Duration": "14 days",
+      "NOTES": "Second instance of minor-level copyright infringement.",
+      "DATE_ISSUED": "2025-11-15",
+      "EXPIRATION": "2025-11-29"
+    }
+  ]

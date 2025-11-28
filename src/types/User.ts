@@ -35,3 +35,31 @@ export interface artwork  {
   updated_at: string;
   artist_avatar: string;
 };
+
+
+//For violations history
+interface UserProfile {
+  gmail: string;
+  profile_icon: string;
+  name: string;
+}
+
+type ViolationType = "Artwork Violation" | "User Conduct Violation";
+
+type ActionTaken = "Warning" | "Temporary Suspension" | "Permanent Ban" | "Cleared";
+
+interface ViolationHistoryEntry {
+  HISTORY_ID: string;
+  USER_ID: string;
+  reported_user: UserProfile;
+  reported_by: UserProfile;
+  VIOLATION_TYPE: ViolationType;
+  VIOLATION_LOG_ID: string;
+  ACTION_TAKEN: ActionTaken;
+  Duration: string;
+  NOTES: string;
+  DATE_ISSUED: string;
+  EXPIRATION: string | null;
+}
+
+type ViolationHistory = ViolationHistoryEntry[];
