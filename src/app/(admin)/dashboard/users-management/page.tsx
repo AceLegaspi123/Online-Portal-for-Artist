@@ -1,30 +1,14 @@
 import clsx from 'clsx';
-import { MdArrowForwardIos } from "react-icons/md";
 import jsonData from "@/data/reportedUser.json"
 import DatePicker from '@/app/components/ui/DatePicker';
 import Link from 'next/link';
 import { RiArrowRightSLine } from "react-icons/ri";
-import Violations from "@/data/ViolationHistory.json"
-
-type ReportedItem = {
-  id: string;
-  user: string;
-  gmail: string;
-  profileIcon: string;
-  reportDate: string;
-  reportedBy: string;
-  reason: string;
-  action: string;
-  status: string;
-};
-
-
 
 const ReportedUserSummary = () => {
   return (
    <div className=''>
        <div className="flex font-semibold mb-10">
-        <h1 className="text-2xl font-semibold">Report Management</h1>
+        <h1 className="text-2xl font-semibold">Users Management</h1>
 
         <div className="flex gap-4 items-center ml-auto">
           <p className="opacity-70"><Link href="/dashboard">Home</Link></p>

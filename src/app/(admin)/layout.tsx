@@ -13,7 +13,7 @@ const LayoutWrapper = ({children} : {children: React.ReactNode}) => {
           pt-[0rem]          
           pl-[20em]          
           w-full
-          max-w-[2000px]
+          max-w-[2500px]
           mx-auto
           px-6
         "

@@ -19,7 +19,7 @@ const FeaturedArtwork = () => {
   return (
    <div className='w-full relative'>
        <div className="flex font-semibold mb-10">
-        <h1 className="text-2xl font-semibold">Report Management</h1>
+        <h1 className="text-2xl font-semibold">Featured Artwork</h1>
 
         <div className="flex gap-4 items-center ml-auto">
           <p className="opacity-70"><Link href="/dashboard">Home</Link></p>
@@ -42,7 +42,7 @@ const FeaturedArtwork = () => {
     
           <table className="border-spacing-2.5 bg-secondary p-4 w-full border-collapse overflow-hidden rounded-xl">
             <thead className="text-left rounded-t-md border-b-1 border-b-primary-line">
-              <tr className=''>
+              <tr className='gap-8'>
                 <th  className="p-4 text-center">Featured ID</th>
                 <th  className="p-4 text-center">Artwork</th>
                 <th  className="p-4 text-center">Artist</th>
