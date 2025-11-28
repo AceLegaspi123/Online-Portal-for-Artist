@@ -39,6 +39,7 @@ const f = () => {
               <input
                 className="flex p-2 w-full opacity-50 bg-secondary"
                 type="date"
+                required
                 id="FeaturedStartAt"
               />
             </div>
@@ -49,6 +50,7 @@ const f = () => {
               <input
                 className="flex p-2 w-full opacity-50 bg-secondary"
                 type="date"
+                required
                 id="FeaturedEndsAt"
               />
             </div>
@@ -60,6 +62,7 @@ const f = () => {
                 className="flex w-full p-2 bg-secondary"
                 name="FeaturedTitle"
                 placeholder="Description"
+                required
                 id="FeaturedTitle"
               />
             </div>
