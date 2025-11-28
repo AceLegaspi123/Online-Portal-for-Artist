@@ -9,13 +9,14 @@ import ThreeColTable from './ThreeColsTable';
 import ReportedSummary from './ReportedSummary';
 import clsx from 'clsx';
 import BarChart from "./Barchart";
+import { AiOutlineUser } from "react-icons/ai";
 
 import ReportedUser from "@/data/reportedUser.json"
 
 const summaryData = [
     {
         name: "Total Users",
-        icon: <FaRegCircleUser />,
+        icon: <AiOutlineUser />,
         countData: `1,320`
     },
     {
@@ -61,14 +62,11 @@ const Overview = () => {
                 summaryData.map((item, index) => (
                     <li 
                         key={index}
-                        className={clsx('h-55 border border-primary-line p-4 rounded-2xl', {
-                            "bg-violet-400" : index == 0,
+                        className={clsx('h-55 bg-primary border border-primary-line p-4 rounded-2xl', {
                             "bg-blue-400" : index == 1,
-                            "bg-green-400" : index == 2,
-                            "bg-yellow-400" : index == 3
                         })}>
                         <Link href="#">
-                            <div className={'w-fit p-4 text-4xl rounded-md'}> {item?.icon}</div>
+                            <div className={'w-fit p-4 text-2xl rounded-full bg-yellow-300 text-black'}> {item?.icon}</div>
                             <h4 className='font-semibold mt-8 opacity-70'>{item?.name}</h4>
                             <p className="w-fit font-bold text-4xl">{item?.countData}</p>
                         </Link>

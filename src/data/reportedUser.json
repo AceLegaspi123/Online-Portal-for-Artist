@@ -1,93 +1,112 @@
 [
-    {
-      "id": "RPT001",
-      "user": "SamDoesArt",
-      "reportDate": "2024-10-01",
-      "reportedBy": "Jeaven",
-      "reason": "Harassment in comments",
-      "action": "pending",
-      "status": "pending"
-    },
-    {
-      "id": "RPT002",
-      "user": "Koolen",
-      "reportDate": "2024-10-03",
-      "reportedBy": "Lianne",
-      "reason": "Posting inappropriate content",
-      "action": "pending",
-      "status": "pending"
-    },
-    {
-      "id": "RPT003",
-      "user": "BroDraw",
-      "reportDate": "2024-10-05",
-      "reportedBy": "Celine",
-      "reason": "Spam messages sent to multiple users",
-      "action": "pending",
-      "status": "warned"
-    },
-    {
-      "id": "RPT004",
-      "user": "Ace",
-      "reportDate": "2024-10-06",
-      "reportedBy": "Kristena",
-      "reason": "Copyright infringement",
-      "action": "pending",
-      "status": "pending"
-    },
-    {
-      "id": "RPT005",
-      "user": "Mika",
-      "reportDate": "2024-10-07",
-      "reportedBy": "Theo",
-      "reason": "Repeated rule violations",
-      "action": "pending",
-      "status": "pending"
-    },
-    {
-      "id": "RPT006",
-      "user": "Luna",
-      "reportDate": "2024-10-08",
-      "reportedBy": "Harvey",
-      "reason": "Offensive language",
-      "action": "pending",
-      "status": "pending"
-    },
-    {
-      "id": "RPT007",
-      "user": "Jasper",
-      "reportDate": "2024-10-09",
-      "reportedBy": "Renz",
-      "reason": "Threatening behavior",
-      "action": "pending",
-      "status": "pending"
-    },
-    {
-      "id": "RPT008",
-      "user": "Celine",
-      "reportDate": "2024-10-10",
-      "reportedBy": "Luna",
-      "reason": "Manipulating ratings",
-      "action": "pending",
-      "status": "pending"
-    },
-    {
-      "id": "RPT009",
-      "user": "Theo",
-      "reportDate": "2024-10-12",
-      "reportedBy": "Ace",
-      "reason": "Scamming potential buyers",
-      "action": "pending",
-      "status": "pending"
-    },
-    {
-      "id": "RPT010",
-      "user": "Harvey",
-      "reportDate": "2024-10-13",
-      "reportedBy": "Mika",
-      "reason": "False advertising in service listing",
-      "action": "pending",
-      "status": "pending"
-    }
-  ]
-  
+  {
+    "id": "RPT001",
+    "user": "SamDoesArt",
+    "gmail": "samdoesart@gmail.com",
+    "profileIcon": "https://i.pravatar.cc/150?u=SamDoesArt",
+    "reportDate": "2024-10-01",
+    "reportedBy": "Jeaven",
+    "reason": "Harassment in comments",
+    "action": "pending",
+    "status": "pending"
+  },
+  {
+    "id": "RPT002",
+    "user": "Koolen",
+    "gmail": "koolen@gmail.com",
+    "profileIcon": "https://i.pravatar.cc/150?u=Koolen",
+    "reportDate": "2024-10-03",
+    "reportedBy": "Lianne",
+    "reason": "Posting inappropriate content",
+    "action": "pending",
+    "status": "pending"
+  },
+  {
+    "id": "RPT003",
+    "user": "BroDraw",
+    "gmail": "brodraw@gmail.com",
+    "profileIcon": "https://i.pravatar.cc/150?u=BroDraw",
+    "reportDate": "2024-10-05",
+    "reportedBy": "Celine",
+    "reason": "Spam messages sent to multiple users",
+    "action": "pending",
+    "status": "warned"
+  },
+  {
+    "id": "RPT004",
+    "user": "Ace",
+    "gmail": "ace@gmail.com",
+    "profileIcon": "https://i.pravatar.cc/150?u=Ace",
+    "reportDate": "2024-10-06",
+    "reportedBy": "Kristena",
+    "reason": "Copyright infringement",
+    "action": "pending",
+    "status": "pending"
+  },
+  {
+    "id": "RPT005",
+    "user": "Mika",
+    "gmail": "mika@gmail.com",
+    "profileIcon": "https://i.pravatar.cc/150?u=Mika",
+    "reportDate": "2024-10-07",
+    "reportedBy": "Theo",
+    "reason": "Repeated rule violations",
+    "action": "pending",
+    "status": "pending"
+  },
+  {
+    "id": "RPT006",
+    "user": "Luna",
+    "gmail": "luna@gmail.com",
+    "profileIcon": "https://i.pravatar.cc/150?u=Luna",
+    "reportDate": "2024-10-08",
+    "reportedBy": "Harvey",
+    "reason": "Offensive language",
+    "action": "pending",
+    "status": "pending"
+  },
+  {
+    "id": "RPT007",
+    "user": "Jasper",
+    "gmail": "jasper@gmail.com",
+    "profileIcon": "https://i.pravatar.cc/150?u=Jasper",
+    "reportDate": "2024-10-09",
+    "reportedBy": "Renz",
+    "reason": "Threatening behavior",
+    "action": "pending",
+    "status": "pending"
+  },
+  {
+    "id": "RPT008",
+    "user": "Celine",
+    "gmail": "celine@gmail.com",
+    "profileIcon": "https://i.pravatar.cc/150?u=Celine",
+    "reportDate": "2024-10-10",
+    "reportedBy": "Luna",
+    "reason": "Manipulating ratings",
+    "action": "pending",
+    "status": "pending"
+  },
+  {
+    "id": "RPT009",
+    "user": "Theo",
+    "gmail": "theo@gmail.com",
+    "profileIcon": "https://i.pravatar.cc/150?u=Theo",
+    "reportDate": "2024-10-12",
+    "reportedBy": "Ace",
+    "reason": "Scamming potential buyers",
+    "action": "pending",
+    "status": "pending"
+  },
+  {
+    "id": "RPT010",
+    "user": "Harvey",
+    "gmail": "harvey@gmail.com",
+    "profileIcon": "https://i.pravatar.cc/150?u=Harvey",
+    "reportDate": "2024-10-13",
+    "reportedBy": "Mika",
+    "reason": "False advertising in service listing",
+    "action": "pending",
+    "status": "pending"
+  }
+]
