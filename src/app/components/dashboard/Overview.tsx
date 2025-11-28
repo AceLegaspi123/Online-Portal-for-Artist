@@ -88,7 +88,7 @@ const Overview = () => {
             </section>
 
             <section>
-               <ThreeColTable title="New Sign-ups" />
+               <ThreeColTable/>
             </section>
         </div>
 
