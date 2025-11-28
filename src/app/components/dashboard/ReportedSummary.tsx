@@ -1,9 +1,12 @@
 import { IoIosArrowDown } from "react-icons/io";
 import clsx from 'clsx';
+import { MdArrowForwardIos } from "react-icons/md";
 
 type ReportedItem = {
   id: string;
   user: string;
+  gmail: string;
+  profileIcon: string;
   reportDate: string;
   reportedBy: string;
   reason: string;
@@ -20,15 +23,21 @@ type summaryData = {
 const ReportedUserSummary = ({jsonData, header, children} : summaryData) => {
   return (
    <div className="w-full ">
-         <h2 className="mb-4">{header}</h2>
+        <div className="flex justify-between items-center px-2">
+          <h2 className="mb-4">{header}</h2>
+          <div className="flex gap-2 items-center">
+            <p>View All</p>
+            <MdArrowForwardIos />
+          </div>
+        </div>
    
          <table className="bg-primary p-4 w-full border-collapse overflow-hidden rounded-xl">
            <thead className="text-left rounded-t-md border-b-1 border-b-primary-line">
              <tr>
                <th  className="p-4 text-center">Report Id</th>
-               <th  className="p-4 text-center">Name</th>
-               <th  className="p-4 text-center">Report Date</th>
-               <th  className="p-4 text-center">Reported by</th>
+               <th  className="p-4 text-center">User</th>
+               <th  className="p-4 text-center">Report by</th>
+               <th  className="p-4 text-center">Reported Date</th>
                <th  className="p-4 text-center">Reason</th>
                <th  className="p-4 text-center">Status</th>
                <th  className="p-4 text-center">Take Action</th>
@@ -40,9 +49,27 @@ const ReportedUserSummary = ({jsonData, header, children} : summaryData) => {
                <tr className="" key={u.id}>
                  <td className="p-4 text-center">{u.id}</td>
                  <td  className="p-4 text-center">
-                    div{u.user}</td>
+                    <div className="flex gap-4 text-left ">
+                      <img src={u.profileIcon} alt="profile icon" className="w-12 h-12 rounded-full"/>
+                      <div>
+                         <p>{u.user}</p>
+                         <p className="opacity-50 -mt-2">{u.gmail}</p>
+                      </div>
+                    </div>
+                </td>
+
+                <td  className="p-4 text-center">
+                    <div className="flex gap-4 text-left ">
+                      <img src={u.profileIcon} alt="profile icon" className="w-12 h-12 rounded-full"/>
+                      <div>
+                         <p>{u.user}</p>
+                         <p className="opacity-50 -mt-2">{u.gmail}</p>
+                      </div>
+
+                    </div>
+                </td>
+
                  <td  className="p-4 text-center">{u.reportDate}</td>
-                 <td  className="p-4 text-center">{u.reportedBy}</td>
                  <td  className="p-4 text-center">{u.reason}</td>
                  <td  className="p-4 text-center">
                   <p className={clsx('rounded-full font-semibold text-sm py-1', {
@@ -50,21 +77,11 @@ const ReportedUserSummary = ({jsonData, header, children} : summaryData) => {
                     "bg-red-600 text-red-300" : u.status == "warned"
                   })}>{u.status}</p>
                  </td>
+                 
                  <td  className=" text-center">Action</td>
                </tr>
              ))}
            </tbody>
-   
-           <tfoot className="border-t-1 border-t-primary-line opacity-50 hover:opacity-100">
-             <tr>
-               <td colSpan={7} className="py-2">
-                 <div className="w-full flex items-center gap-2 justify-center cursor-pointer hover:underline">
-                   <p>See all</p>
-                   <IoIosArrowDown className="translate-y-1"/>
-                 </div>
-               </td>
-             </tr>
-           </tfoot>
          </table>
        </div>
   )

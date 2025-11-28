@@ -1,0 +1,162 @@
+[
+    {
+      "FEATURED_ID": "FEA001",
+      "ARTWORK_ID": "ART011",
+      "USER_PROFILE_ID": "USR011",
+      "artist_profile": {
+        "gmail": "artist_lyra@gmail.com",
+        "profileIcon": "https://i.imgur.com/KzDq2Uv.png",
+        "name": "Lyra Star"
+      },
+      "FEATURED_TITLE": "Cosmic Drift",
+      "FEATURED_DESCRIPTION": "A breathtaking abstract piece using deep blues and vibrant nebulae.",
+      "FEATURED_START": "2025-11-01",
+      "FEATURED_END": "2025-11-30",
+      "STATUS": "Expired",
+      "DATE_FEATURED": "2025-10-28T10:00:00Z"
+    },
+    {
+      "FEATURED_ID": "FEA002",
+      "ARTWORK_ID": "ART012",
+      "USER_PROFILE_ID": "USR012",
+      "artist_profile": {
+        "gmail": "artist_zen@gmail.com",
+        "profileIcon": "https://i.imgur.com/6Pqj4iL.png",
+        "name": "Zenith Studio"
+      },
+      "FEATURED_TITLE": "Portrait of Resilience",
+      "FEATURED_DESCRIPTION": "Stunning photorealism capturing emotion and strength.",
+      "FEATURED_START": "2025-12-15",
+      "FEATURED_END": "2026-01-15",
+      "STATUS": "Active",
+      "DATE_FEATURED": "2025-12-10T14:30:00Z"
+    },
+    {
+      "FEATURED_ID": "FEA003",
+      "ARTWORK_ID": "ART013",
+      "USER_PROFILE_ID": "USR013",
+      "artist_profile": {
+        "gmail": "artist_aether@gmail.com",
+        "profileIcon": "https://i.imgur.com/J8YQv8L.png",
+        "name": "Aether Light"
+      },
+      "FEATURED_TITLE": "The Gilded City",
+      "FEATURED_DESCRIPTION": "Detailed digital landscape of a futuristic metropolis.",
+      "FEATURED_START": "2025-10-01",
+      "FEATURED_END": "2025-10-31",
+      "STATUS": "Expired",
+      "DATE_FEATURED": "2025-09-25T08:15:00Z"
+    },
+    {
+      "FEATURED_ID": "FEA004",
+      "ARTWORK_ID": "ART014",
+      "USER_PROFILE_ID": "USR014",
+      "artist_profile": {
+        "gmail": "artist_brook@gmail.com",
+        "profileIcon": "https://i.imgur.com/r5Iq2m8.png",
+        "name": "Brook R."
+      },
+      "FEATURED_TITLE": "Whispers of the Forest",
+      "FEATURED_DESCRIPTION": "Traditional watercolor showcasing soft light and deep shadows.",
+      "FEATURED_START": "2025-12-01",
+      "FEATURED_END": "2025-12-31",
+      "STATUS": "Active",
+      "DATE_FEATURED": "2025-11-28T17:00:00Z"
+    },
+    {
+      "FEATURED_ID": "FEA005",
+      "ARTWORK_ID": "ART015",
+      "USER_PROFILE_ID": "USR015",
+      "artist_profile": {
+        "gmail": "artist_kai@gmail.com",
+        "profileIcon": "https://i.imgur.com/V7wG8O1.png",
+        "name": "Kai Drawman"
+      },
+      "FEATURED_TITLE": "Mechanical Heartbeat",
+      "FEATURED_DESCRIPTION": "Intricate steampunk design and technical drafting.",
+      "FEATURED_START": "2025-09-10",
+      "FEATURED_END": "2025-09-24",
+      "STATUS": "Expired",
+      "DATE_FEATURED": "2025-09-05T11:00:00Z"
+    },
+    {
+      "FEATURED_ID": "FEA006",
+      "ARTWORK_ID": "ART016",
+      "USER_PROFILE_ID": "USR016",
+      "artist_profile": {
+        "gmail": "artist_flora@gmail.com",
+        "profileIcon": "https://i.imgur.com/w8qX1Jz.png",
+        "name": "Flora V."
+      },
+      "FEATURED_TITLE": "Untitled Study #4",
+      "FEATURED_DESCRIPTION": "Powerful monochrome photography focusing on natural textures.",
+      "FEATURED_START": "2025-11-15",
+      "FEATURED_END": "2025-12-15",
+      "STATUS": "Active",
+      "DATE_FEATURED": "2025-11-12T09:45:00Z"
+    },
+    {
+      "FEATURED_ID": "FEA007",
+      "ARTWORK_ID": "ART017",
+      "USER_PROFILE_ID": "USR017",
+      "artist_profile": {
+        "gmail": "artist_hiko@gmail.com",
+        "profileIcon": "https://i.imgur.com/gTfG6y4.png",
+        "name": "Hiko Arts"
+      },
+      "FEATURED_TITLE": "Samurai's Journey",
+      "FEATURED_DESCRIPTION": "Highly stylized manga illustration with dynamic action.",
+      "FEATURED_START": "2025-08-01",
+      "FEATURED_END": "2025-08-14",
+      "STATUS": "Expired",
+      "DATE_FEATURED": "2025-07-28T16:20:00Z"
+    },
+    {
+      "FEATURED_ID": "FEA008",
+      "ARTWORK_ID": "ART018",
+      "USER_PROFILE_ID": "USR018",
+      "artist_profile": {
+        "gmail": "artist_nova@gmail.com",
+        "profileIcon": "https://i.imgur.com/0uB5cQY.png",
+        "name": "Nova O."
+      },
+      "FEATURED_TITLE": "Deep Sea Flora",
+      "FEATURED_DESCRIPTION": "Vibrant digital painting using bioluminescent colors and textures.",
+      "FEATURED_START": "2026-01-01",
+      "FEATURED_END": "2026-01-31",
+      "STATUS": "Active",
+      "DATE_FEATURED": "2025-11-20T12:00:00Z"
+    },
+    {
+      "FEATURED_ID": "FEA009",
+      "ARTWORK_ID": "ART019",
+      "USER_PROFILE_ID": "USR019",
+      "artist_profile": {
+        "gmail": "artist_pierre@gmail.com",
+        "profileIcon": "https://i.imgur.com/E8bY5jZ.png",
+        "name": "Pierre P."
+      },
+      "FEATURED_TITLE": "Sunstone Sculpture",
+      "FEATURED_DESCRIPTION": "3D render showcasing masterful use of reflective materials and lighting.",
+      "FEATURED_START": "2025-11-05",
+      "FEATURED_END": "2025-11-19",
+      "STATUS": "Expired",
+      "DATE_FEATURED": "2025-11-01T13:30:00Z"
+    },
+    {
+      "FEATURED_ID": "FEA010",
+      "ARTWORK_ID": "ART020",
+      "USER_PROFILE_ID": "USR020",
+      "artist_profile": {
+        "gmail": "artist_tali@gmail.com",
+        "profileIcon": "https://i.imgur.com/o1uN1Zf.png",
+        "name": "Tali T."
+      },
+      "FEATURED_TITLE": null,
+      "FEATURED_DESCRIPTION": "An experimental piece focusing on movement and chaotic patterns.",
+      "FEATURED_START": "2025-12-05",
+      "FEATURED_END": "2025-12-20",
+      "STATUS": "Active",
+      "DATE_FEATURED": "2025-12-01T15:00:00Z"
+    }
+  ]
