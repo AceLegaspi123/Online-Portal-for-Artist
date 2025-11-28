@@ -43,8 +43,8 @@ const DatePicker = () => {
   };
 
   return (
-    <form className='-translate-y-5'>
-      <div className="flex items-center space-x-4 p-4 rounded-lg shadow-md text-black">
+    <form className=''>
+      <div className="flex items-center space-x-4  rounded-lg shadow-md text-black">
         
         {/* Date Selector */}
         <div className="flex items-center bg-secondary text-white py-3 px-4 rounded-lg p-2 space-x-2 shadow-inner">
