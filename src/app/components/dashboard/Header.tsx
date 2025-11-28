@@ -1,6 +1,6 @@
 'use client';
 
-import Logo from "../ui/Logo";
+import logo from "@/app/logo-dark.png"
 import Image from 'next/image';
 import { useState } from "react";
 import clsx from 'clsx';
@@ -22,8 +22,9 @@ export default function Header() {
 
   console.log(isLogin);
   return (
-    <header className="z-0 border-b-1 sticky top-0 h-17 left-0 w-full bg-background border-b-primary-line flex justify-between items-center mb-10 md:px-10 lg:px-10">
-      <div></div>
+    <header className="z-0 bg-primary border-b-1 sticky top-0 h-17 left-0 w-full border-b-primary-line flex justify-between items-center mb-10 md:px-10 lg:px-10">
+      <div>
+      </div>
       <div className="flex items-center gap-4">
 
 

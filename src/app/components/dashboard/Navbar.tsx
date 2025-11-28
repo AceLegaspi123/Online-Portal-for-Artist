@@ -8,11 +8,13 @@ import { RxDashboard } from "react-icons/rx";
 import { TbReportSearch } from "react-icons/tb";
 import { FaRegStar, FaRegUserCircle } from "react-icons/fa";
 import { CgLogOut } from "react-icons/cg";
-import Logo from "../ui/Logo";
+import logo from "@/app/logo-dark.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { LuClipboardList } from "react-icons/lu";
 import { RiShieldUserLine } from "react-icons/ri";
 import { SiMedibangpaint } from "react-icons/si";
+import Image from "next/image";
+
 
 const links = [
   { name: "Dashboard", href: "/dashboard", icon: <RxDashboard /> },
@@ -53,10 +55,15 @@ const Navbar = () => {
   
 
   return (
-    <nav className="fixed bg-background top-0 bottom-0 left-0 w-[20em] border-r border-primary-line px-2 pt-5 flex flex-col justify-between z-10">
+    <nav className="fixed bg-primary top-0 bottom-0 left-0 w-[20em] border-r-1 border-primary-line px-2 -pt-10 flex flex-col justify-between z-10 mt-16">
+        <Image
+          height={100}
+          width={100}
+          src={logo}
+          alt="logo"
+          className="w-fit h-12 -translate-y-2 -mt-10 ml-2"
+        />
       <div>
-        <Logo />
-
         <ul className="flex flex-col gap-4 mt-8">
           {links.map((item) => {
             const dropdownOpen = open === item.name;

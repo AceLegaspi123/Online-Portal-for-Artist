@@ -25,7 +25,7 @@ const ReportedUserSummary = ({jsonData, header, children} : summaryData) => {
          <table className="bg-primary p-4 w-full border-collapse overflow-hidden rounded-xl">
            <thead className="text-left rounded-t-md border-b-1 border-b-primary-line">
              <tr>
-               <th  className="p-4 text-center">Id</th>
+               <th  className="p-4 text-center">Report Id</th>
                <th  className="p-4 text-center">Name</th>
                <th  className="p-4 text-center">Report Date</th>
                <th  className="p-4 text-center">Reported by</th>
@@ -39,7 +39,8 @@ const ReportedUserSummary = ({jsonData, header, children} : summaryData) => {
              {jsonData.slice(0, 5).map((u) => (
                <tr className="" key={u.id}>
                  <td className="p-4 text-center">{u.id}</td>
-                 <td  className="p-4 text-center">{u.user}</td>
+                 <td  className="p-4 text-center">
+                    div{u.user}</td>
                  <td  className="p-4 text-center">{u.reportDate}</td>
                  <td  className="p-4 text-center">{u.reportedBy}</td>
                  <td  className="p-4 text-center">{u.reason}</td>

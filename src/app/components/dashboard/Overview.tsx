@@ -8,7 +8,7 @@ import { MdReport } from "react-icons/md";
 import ThreeColTable from './ThreeColsTable';
 import ReportedSummary from './ReportedSummary';
 import clsx from 'clsx';
-// import Chart from "./Chart"
+import BarChart from "./Barchart";
 
 import ReportedUser from "@/data/reportedUser.json"
 
@@ -34,6 +34,24 @@ const summaryData = [
         countData: `30 pending`
     }
 ]
+
+const labels = [
+    "Jan",
+    "Feb",
+    "March",
+    "Apr",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  
+const values = [12, 19, 3, 5, 9, 14, 20, 17, 11, 8, 6, 15];
+  
 
 const Overview = () => {
   return (
@@ -61,15 +79,22 @@ const Overview = () => {
 
         {/* <Chart /> */}
 
-        
-        <div className='grid grid-cols-2 gap-4'>
-            <ThreeColTable title="New Sign-ups" />
-            <ThreeColTable title="Top Artists" />
+        <div className="grid grid-cols-2 gap-4">
+            <section>
+                <h4 className="mb-4 text-lg font-semibold">Monthly User Login Report</h4>
+                <div className="bg-primary p-4 rounded-md py-7">
+                    <BarChart labels={labels} values={values} />
+                </div>
+            </section>
+
+            <section>
+               <ThreeColTable title="New Sign-ups" />
+            </section>
         </div>
+
 
         <ReportedSummary jsonData={ReportedUser} header="List of Reported Users"/>
         <ReportedSummary jsonData={ReportedUser} header="List of Arts Users"/>
-
     </div>
   )
 }
