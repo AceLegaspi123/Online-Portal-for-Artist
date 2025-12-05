@@ -236,3 +236,9 @@ footer {
 .word {
   display: inline-block;
 }
+
+
+/* hero section */
+.card-section2{
+  box-shadow: -.8em 5px 10px rgba(2, 18, 2, 0.43);
+}

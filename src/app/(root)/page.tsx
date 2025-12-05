@@ -1,5 +1,6 @@
 import HeroSection from "../components/ui/HeroSection";
 import LightRays from '../components/ui/LightRays';
+import Section2 from "../components/home/Section2";
 
 const Homepage = () => {
   return (
@@ -18,8 +19,9 @@ const Homepage = () => {
           className="custom-rays"
         />
       </div>
-      <main className="flex justify-center">
+      <main className="flex flex-col justify-center">
           <HeroSection />
+          <Section2 />
       </main>
     </div>
   )
