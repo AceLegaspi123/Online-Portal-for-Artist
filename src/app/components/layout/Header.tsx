@@ -29,13 +29,13 @@ export default function Header() {
 
   console.log(isLogin);
   return (
-    <header className="z-20  border-b-1 sticky top-0 h-20 left-0 w-full border-b-primary-line flex justify-between items-center mb-10 px-5 md:px-10 lg:px-20">
+    <header className="z-30 bg-background border-b-1 sticky top-0 h-17 left-0 w-full border-b-primary-line flex justify-between items-center mb-10 px-5 md:px-10 lg:px-20">
       <div className="flex gap-8 items-center">
           <Image
             height={100}
             width={100}
             alt="logo"
-            className="h-full w-full object-contain"
+            className="h-12 w-full object-contain"
             src={LogoDark}
           />
       </div>

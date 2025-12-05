@@ -1,4 +1,5 @@
 "use client";
+import clsx from 'clsx';
 
 import React from "react";
 import ArtList from "../shared/ArtList";
@@ -8,40 +9,37 @@ import FilterIcon from "../ui/FilterIcon";
 import { ImSpinner2 } from "react-icons/im";
 import artworks from "@/data/artlist.json"
 import Link from "next/link";
+import SearchHeader from '../ui/SearchHeader';
+
 
 const ExploreLayout = () => {
+  const Suggestion : string[] = ["All", "Digital Art", "Traditional Art", "Illustration", "Portrait", "3d Art"]
+  
   return (
-    <div className="flex flex-col gap-4 relative">
-      {/* <h3 className="text-lg font-bold">Explore Arts</h3> */}
-      <div className="w-full z-10 pt-10 pb-3 border-b-1 border-primary-line">
-          <div className="flex gap-4 items-center space-between">
-            <div className="bg-secondary flex items-center border-1 border-primary-line justify-center gap-2 py-3 px-8 cursor-pointer rounded-full">
-                <FilterIcon />
-                <p>Filter</p>
-            </div>
-
-            <div className="grow flex relative">
-              <BsSearch className="opacity-80 text-xl absolute top-4 left-4"/>
-              <input
-                type="text"
-                placeholder={`Search arts/artist in ArtistryHub`}
-                className="border-1 border-primary-line bg-primary opacity-80 font-normal py-3 pl-14 w-full rounded-full active:outline-0 "
-              />
-            </div>
-          </div>
-      
-
-          <Suggestion />
+    <div className="flex flex-col gap-4 relative mt-10">
+      <div className='fixed top-15 left-20 right-20 z-20 bg-background py-5 pt-8 '>
+        <div className='relative'>
+          <input 
+            type="text" 
+            placeholder='Search' 
+            className='pl-15 h-[5vh] text-white w-full bg-primary rounded-md'
+          />
+          <BsSearch className='absolute top-4 left-5'/>
+        </div>
       </div>
-     
 
-      <div className="max-w-[1680px] w-full mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 3xl:grid-cols-6 gap-x-8 gap-y-14 mt-4 cursor-pointer">
+      <SearchHeader />
+        
+      <div className="w-full mx-auto
+        columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 min-2xl:columns-7
+        gap-4 mt-35">
         {artworks.map((art) => (
-          <Link href={`/explore/${art.id}`} key={art.id}>
-            <ArtList art={art}  />
+          <Link href={`/explore/${art.id}`} key={art.id} className="break-inside-avoid">
+            <ArtList art={art} />
           </Link>
         ))}
       </div>
+
 
 
       <div className="flex justify-center mt-6">

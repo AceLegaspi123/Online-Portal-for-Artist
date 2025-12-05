@@ -134,14 +134,19 @@ footer {
 }
 
 
-.art-list-card:hover{
-  transition: all 1s ease-in-out;
+.art-item-wrapper:hover .artlist-description {
+    visibility: visible;
+    opacity: 1;
 }
 
 .art-list-card:hover .art-info{
   background-color: rgba(0, 0, 0, 0.27);
-  display: flex !important;
+  display: flex;
+}
 
+.art-list-card:hover > img{
+  transition: all 450ms ease-in-out;
+  transform: scale(1.1);
 }
 
 .art-info {
@@ -168,6 +173,13 @@ footer {
 }
 
 
+.artlist-description{
+  visibility: hidden;
+  opacity: 1;
+  background: #000000;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.47) 52%, rgba(0, 0, 0, 0) 100%);
+  transition: all 0.5s ease-in, visibility 0.5s ease-in-out;
+}
 
 /* React Bits styles */
 
