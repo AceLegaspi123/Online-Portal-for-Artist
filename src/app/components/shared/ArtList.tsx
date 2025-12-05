@@ -19,8 +19,8 @@ export default function ArtList({ art }: { art: artList }) {
         )}
 
         <div className="artlist-description absolute bottom-0 left-0  text-white p-2 text-sm w-full">
-          <h6 className="font-semibold text-md">{art.alt || "Abstract Dreams"}</h6>
-          <div className="flex items-center gap-2">
+          <h6 className="font-semibold text-md mb-2">{art.alt || "Abstract Dreams"}</h6>
+          <div className="flex items-center gap-2 mb-2">
             <Image
               width={150}
               height={150}
