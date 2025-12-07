@@ -1,0 +1,504 @@
+[
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b101",
+      "UserProfileId": "6571b7f0c1840000a0e9b102",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b103",
+      "commissionToProfile": {
+        "name": "Arty_Galore",
+        "clientName": "Emily Johnson"
+      },
+      "References": [
+        "ref_char_pose_1.png",
+        "moodboard_v1.jpg"
+      ],
+      "Title": "Cyberpunk Street Scene",
+      "Description": "A detailed digital painting of a rainy, neon-lit street in a futuristic city, featuring two main characters.",
+      "ArtType": "Digital Art",
+      "Deadline": "12/25/2025",
+      "Tags": [
+        "Cyberpunk",
+        "Digital",
+        "Sci-Fi",
+        "Landscape"
+      ],
+      "Budget": 5000,
+      "Status": "Ongoing",
+      "CreatedAt": "12/07/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b104",
+      "UserProfileId": "6571b7f0c1840000a0e9b105",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b106",
+      "commissionToProfile": {
+        "name": "Pixel_Master",
+        "clientName": "David Chen"
+      },
+      "References": [
+        "pixel_concept_v1.png"
+      ],
+      "Title": "Retro Game Character Sprite",
+      "Description": "A set of 8-bit pixel sprites for a main character, including idle, run, and attack animations.",
+      "ArtType": "Digital Art",
+      "Deadline": "12/15/2025",
+      "Tags": [
+        "Pixel",
+        "8-bit",
+        "Retro",
+        "Sprite"
+      ],
+      "Budget": 1500,
+      "Status": "Completed",
+      "CreatedAt": "12/01/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b107",
+      "UserProfileId": "6571b7f0c1840000a0e9b108",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b109",
+      "commissionToProfile": {
+        "name": "Oil_Brush_King",
+        "clientName": "Sarah Lee"
+      },
+      "References": [
+        "family_photo_src.jpg"
+      ],
+      "Title": "Family Portrait in Oil",
+      "Description": "A traditional oil painting portrait of a family of four. Realistic style, 18x24 inches.",
+      "ArtType": "Physical Art",
+      "Deadline": "01/30/2026",
+      "Tags": [
+        "Oil",
+        "Portrait",
+        "Realistic",
+        "Traditional"
+      ],
+      "Budget": 15000,
+      "Status": "On hold",
+      "CreatedAt": "11/20/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b10a",
+      "UserProfileId": "6571b7f0c1840000a0e9b10b",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b10c",
+      "commissionToProfile": {
+        "name": "Manga_Shonen",
+        "clientName": "Kenji Tanaka"
+      },
+      "References": [
+        "manga_char_sheet.jpg",
+        "action_pose_ref.png"
+      ],
+      "Title": "Shonen Manga Style Illustration",
+      "Description": "Full-body illustration of an original character in a dynamic action pose, clean line art.",
+      "ArtType": "Digital Art",
+      "Deadline": "12/10/2025",
+      "Tags": [
+        "Manga",
+        "Anime",
+        "Illustration",
+        "Lineart"
+      ],
+      "Budget": 3000,
+      "Status": "Rejected",
+      "CreatedAt": "12/03/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b10d",
+      "UserProfileId": "6571b7f0c1840000a0e9b10e",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b10f",
+      "commissionToProfile": {
+        "name": "The_Sculptor",
+        "clientName": "Mark Stevens"
+      },
+      "References": [
+        "concept_model_1.jpeg"
+      ],
+      "Title": "Abstract Resin Sculpture",
+      "Description": "A small-scale abstract sculpture made of clear and colored resin.",
+      "ArtType": "Physical Art",
+      "Deadline": "01/15/2026",
+      "Tags": [
+        "Sculpture",
+        "Resin",
+        "Abstract",
+        "3D"
+      ],
+      "Budget": 8000,
+      "Status": "Pending",
+      "CreatedAt": "12/07/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b110",
+      "UserProfileId": "6571b7f0c1840000a0e9b111",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b112",
+      "commissionToProfile": {
+        "name": "Arty_Galore",
+        "clientName": "Olivia White"
+      },
+      "References": [
+        "pet_photo_ref.jpg"
+      ],
+      "Title": "Digital Pet Portrait (Cat)",
+      "Description": "A cute, stylized portrait of my ginger cat, Mittens, with a flower crown.",
+      "ArtType": "Digital Art",
+      "Deadline": "12/20/2025",
+      "Tags": [
+        "Pet",
+        "Portrait",
+        "Stylized",
+        "Furry"
+      ],
+      "Budget": 2000,
+      "Status": "Ongoing",
+      "CreatedAt": "12/05/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b113",
+      "UserProfileId": "6571b7f0c1840000a0e9b114",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b115",
+      "commissionToProfile": {
+        "name": "Pixel_Master",
+        "clientName": "Kevin Rodriguez"
+      },
+      "References": [
+        "platformer_map_sketch.png"
+      ],
+      "Title": "Platformer Background Tileset",
+      "Description": "A complete 16x16 pixel tileset for a forest level.",
+      "ArtType": "Digital Art",
+      "Deadline": "12/18/2025",
+      "Tags": [
+        "Pixel",
+        "Tileset",
+        "Game Art",
+        "Nature"
+      ],
+      "Budget": 2500,
+      "Status": "Completed",
+      "CreatedAt": "11/28/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b116",
+      "UserProfileId": "6571b7f0c1840000a0e9b117",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b118",
+      "commissionToProfile": {
+        "name": "Oil_Brush_King",
+        "clientName": "Jessica Taylor"
+      },
+      "References": [
+        "seascape_inspo.jpg"
+      ],
+      "Title": "Impressionist Seascape",
+      "Description": "A medium-sized acrylic painting of a stormy ocean scene.",
+      "ArtType": "Physical Art",
+      "Deadline": "02/14/2026",
+      "Tags": [
+        "Acrylic",
+        "Seascape",
+        "Impressionism",
+        "Nature"
+      ],
+      "Budget": 9500,
+      "Status": "Ongoing",
+      "CreatedAt": "11/15/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b119",
+      "UserProfileId": "6571b7f0c1840000a0e9b11a",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b11b",
+      "commissionToProfile": {
+        "name": "Manga_Shonen",
+        "clientName": "Michael Brown"
+      },
+      "References": [
+        "char_design_v2.png"
+      ],
+      "Title": "Anime Chibi Mascot Design",
+      "Description": "A cute, chibi-style design of my brand's mascot. Two poses required.",
+      "ArtType": "Digital Art",
+      "Deadline": "12/28/2025",
+      "Tags": [
+        "Anime",
+        "Chibi",
+        "Mascot",
+        "Digital"
+      ],
+      "Budget": 2800,
+      "Status": "Pending",
+      "CreatedAt": "12/06/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b11c",
+      "UserProfileId": "6571b7f0c1840000a0e9b11d",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b11e",
+      "commissionToProfile": {
+        "name": "The_Sculptor",
+        "clientName": "Sofia Gomez"
+      },
+      "References": [
+        "fantasy_creature_sketch.jpg"
+      ],
+      "Title": "Polymer Clay Fantasy Figurine",
+      "Description": "A small, detailed figurine of a dragon hatchling.",
+      "ArtType": "Physical Art",
+      "Deadline": "01/01/2026",
+      "Tags": [
+        "Sculpture",
+        "Polymer Clay",
+        "Fantasy",
+        "Figurine"
+      ],
+      "Budget": 4000,
+      "Status": "On hold",
+      "CreatedAt": "11/25/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b11f",
+      "UserProfileId": "6571b7f0c1840000a0e9b120",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b121",
+      "commissionToProfile": {
+        "name": "Arty_Galore",
+        "clientName": "Alex Rivera"
+      },
+      "References": [
+        "minimalist_design_ref.png"
+      ],
+      "Title": "Minimalist Logo Design",
+      "Description": "Simple and modern logo for a tech startup. Vector format required.",
+      "ArtType": "Digital Art",
+      "Deadline": "12/12/2025",
+      "Tags": [
+        "Design",
+        "Logo",
+        "Minimalist",
+        "Vector"
+      ],
+      "Budget": 4500,
+      "Status": "Ongoing",
+      "CreatedAt": "12/04/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b122",
+      "UserProfileId": "6571b7f0c1840000a0e9b123",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b124",
+      "commissionToProfile": {
+        "name": "Pixel_Master",
+        "clientName": "Liam Walker"
+      },
+      "References": [
+        "spaceship_concept_art.jpg"
+      ],
+      "Title": "Isometric Pixel Spaceship",
+      "Description": "Detailed pixel art illustration of a spaceship from an isometric view.",
+      "ArtType": "Digital Art",
+      "Deadline": "01/05/2026",
+      "Tags": [
+        "Pixel",
+        "Isometric",
+        "Spaceship",
+        "Sci-Fi"
+      ],
+      "Budget": 3200,
+      "Status": "Pending",
+      "CreatedAt": "12/07/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b125",
+      "UserProfileId": "6571b7f0c1840000a0e9b126",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b127",
+      "commissionToProfile": {
+        "name": "Oil_Brush_King",
+        "clientName": "Nancy Hill"
+      },
+      "References": [
+        "still_life_setup.png"
+      ],
+      "Title": "Charcoal Still Life",
+      "Description": "A monochromatic charcoal drawing of a fruit bowl and a vase. Highly realistic shading.",
+      "ArtType": "Physical Art",
+      "Deadline": "12/31/2025",
+      "Tags": [
+        "Charcoal",
+        "Still Life",
+        "Monochrome",
+        "Realistic"
+      ],
+      "Budget": 6000,
+      "Status": "Completed",
+      "CreatedAt": "11/01/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b128",
+      "UserProfileId": "6571b7f0c1840000a0e9b129",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b12a",
+      "commissionToProfile": {
+        "name": "Manga_Shonen",
+        "clientName": "Ethan Wong"
+      },
+      "References": [
+        "webtoon_panel_example.jpg"
+      ],
+      "Title": "Webtoon Character Full Color",
+      "Description": "A single full-color illustration of my webtoon's main character, used for promotional material.",
+      "ArtType": "Digital Art",
+      "Deadline": "12/23/2025",
+      "Tags": [
+        "Webtoon",
+        "Anime",
+        "Full Color",
+        "Character"
+      ],
+      "Budget": 3500,
+      "Status": "Ongoing",
+      "CreatedAt": "12/02/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b12b",
+      "UserProfileId": "6571b7f0c1840000a0e9b12c",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b12d",
+      "commissionToProfile": {
+        "name": "The_Sculptor",
+        "clientName": "Maria Perez"
+      },
+      "References": [
+        "jewelry_design_sketch.png"
+      ],
+      "Title": "Custom Clay Earrings",
+      "Description": "Three pairs of small, geometric polymer clay earrings in pastel colors.",
+      "ArtType": "Physical Art",
+      "Deadline": "12/17/2025",
+      "Tags": [
+        "Jewelry",
+        "Clay",
+        "Geometric",
+        "Physical"
+      ],
+      "Budget": 1800,
+      "Status": "Rejected",
+      "CreatedAt": "12/01/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b12e",
+      "UserProfileId": "6571b7f0c1840000a0e9b12f",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b130",
+      "commissionToProfile": {
+        "name": "Arty_Galore",
+        "clientName": "Daniel Kim"
+      },
+      "References": [
+        "fantasy_forest_ref.jpg"
+      ],
+      "Title": "Fantasy Book Cover Art",
+      "Description": "A high-resolution, painted cover featuring an elven character standing in a magical forest.",
+      "ArtType": "Digital Art",
+      "Deadline": "02/28/2026",
+      "Tags": [
+        "Fantasy",
+        "Book Cover",
+        "Elven",
+        "Digital Painting"
+      ],
+      "Budget": 12000,
+      "Status": "On hold",
+      "CreatedAt": "11/10/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b131",
+      "UserProfileId": "6571b7f0c1840000a0e9b132",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b133",
+      "commissionToProfile": {
+        "name": "Pixel_Master",
+        "clientName": "Rachel Green"
+      },
+      "References": [
+        "social_media_icon_ref.png"
+      ],
+      "Title": "Animated Pixel PFP",
+      "Description": "A small, looping pixel animation for a profile picture. Character waving.",
+      "ArtType": "Digital Art",
+      "Deadline": "12/16/2025",
+      "Tags": [
+        "Pixel",
+        "Animation",
+        "PFP",
+        "Gif"
+      ],
+      "Budget": 1000,
+      "Status": "Completed",
+      "CreatedAt": "12/03/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b134",
+      "UserProfileId": "6571b7f0c1840000a0e9b135",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b136",
+      "commissionToProfile": {
+        "name": "Oil_Brush_King",
+        "clientName": "Tom Baker"
+      },
+      "References": [
+        "landscape_photo_mountain.jpg"
+      ],
+      "Title": "Watercolour Mountain Landscape",
+      "Description": "A loose, expressive watercolor painting of a specific mountain range.",
+      "ArtType": "Physical Art",
+      "Deadline": "01/20/2026",
+      "Tags": [
+        "Watercolor",
+        "Landscape",
+        "Traditional",
+        "Nature"
+      ],
+      "Budget": 7500,
+      "Status": "Pending",
+      "CreatedAt": "12/07/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b137",
+      "UserProfileId": "6571b7f0c1840000a0e9b138",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b139",
+      "commissionToProfile": {
+        "name": "Manga_Shonen",
+        "clientName": "Grace Lee"
+      },
+      "References": [
+        "gaming_team_logo_idea.png"
+      ],
+      "Title": "Esports Team Logo",
+      "Description": "A dynamic, anime-inspired logo for an esports team. Needs a fierce animal mascot.",
+      "ArtType": "Digital Art",
+      "Deadline": "12/19/2025",
+      "Tags": [
+        "Logo",
+        "Esports",
+        "Anime",
+        "Mascot"
+      ],
+      "Budget": 4800,
+      "Status": "Ongoing",
+      "CreatedAt": "12/05/2025"
+    },
+    {
+      "CommissionId": "6571b7f0c1840000a0e9b13a",
+      "UserProfileId": "6571b7f0c1840000a0e9b13b",
+      "IdOfCommissionTo": "6571b7f0c1840000a0e9b13c",
+      "commissionToProfile": {
+        "name": "The_Sculptor",
+        "clientName": "Henry Clark"
+      },
+      "References": [
+        "old_toy_remodel.jpeg"
+      ],
+      "Title": "Restoration of Vintage Figurine",
+      "Description": "Repair and repaint a small, damaged vintage action figure.",
+      "ArtType": "Physical Art",
+      "Deadline": "01/10/2026",
+      "Tags": [
+        "Restoration",
+        "Figurine",
+        "Physical",
+        "Repair"
+      ],
+      "Budget": 2200,
+      "Status": "Completed",
+      "CreatedAt": "11/22/2025"
+    }
+  ]

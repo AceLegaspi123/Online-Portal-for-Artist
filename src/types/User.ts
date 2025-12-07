@@ -63,3 +63,23 @@ interface ViolationHistoryEntry {
 }
 
 type ViolationHistory = ViolationHistoryEntry[];
+
+
+export interface CommissionRequest {
+  CommissionId: string;
+  UserProfileId: string;
+  IdOfCommissionTo: string;
+  commissionToProfile: {
+    name: string;
+    clientName: string;
+  };
+  References: string[];
+  Title: string;
+  Description?: string;
+  ArtType: string;
+  Deadline: string;
+  Tags: string[];
+  Budget: number;
+  Status: string;
+  CreatedAt: string;
+}
