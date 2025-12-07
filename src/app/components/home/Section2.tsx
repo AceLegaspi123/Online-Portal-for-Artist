@@ -27,7 +27,7 @@ const cardSection = [
 
 const Section2 = () => {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between h-[100vh]">
       <section className="flex flex-col gap-8">
         <h3 className="text-6xl font-semibold">
           Showcase, Sell,
