@@ -19,7 +19,7 @@ const CommissionNav = () => {
  }
 
   return (
-    <nav className="bg-primary w-fit text-left p-2 rounded-lg mt-10">
+    <nav className="bg-primary w-fit text-left p-2 rounded-lg my-10">
         <ul className="flex gap-3">
             {link.map(item => (
                 <li 

@@ -5,7 +5,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { MdOutlineCallMissedOutgoing } from "react-icons/md";
 import { FaHandHolding } from "react-icons/fa6";
-import CommissionNav from "@/app/components/commission/CommissionNav";
+import MyClients from "@/app/components/commission/MyClients";
 
 const metrics = [
   {title: "Total Requests", total: 5, added: `+12 this months`, icons: <BsGraphUp className="text-orange-500"/>},
@@ -30,7 +30,7 @@ const Commission = () => {
         }
       </div>
 
-      <CommissionNav />
+      <MyClients />
     </main>
   )
 }
