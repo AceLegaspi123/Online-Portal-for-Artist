@@ -7,6 +7,7 @@ import { MdOutlineCallMissedOutgoing } from "react-icons/md";
 import { FaHandHolding } from "react-icons/fa6";
 import MyClients from "@/app/components/commission/MyClients";
 
+
 const metrics = [
   {title: "Total Requests", total: 5, added: `+12 this months`, icons: <BsGraphUp className="text-orange-500"/>},
   {title: "Pending", total: 15, added: `+12 this months`, icons: <FaRegClock className="text-blue-500"/>},
@@ -22,7 +23,7 @@ const Commission = () => {
       <h1 className="text-3xl font-bold">Commission <span className="text-green-500">Requests</span></h1>
       <p className="text-sm opacity-80">Manage your incoming art commission requests from clients</p>
     
-      <div className="flex flex-row gap-4  flex-wrap mt-10 text-sm">
+      <div className="flex flex-row gap-4 flex-wrap mt-10 text-sm">
         {
           metrics.map(item => (
             <Metrics {...item} key={item.title}/>
@@ -31,6 +32,7 @@ const Commission = () => {
       </div>
 
       <MyClients />
+
     </main>
   )
 }

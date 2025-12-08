@@ -1,4 +1,5 @@
 import Image from "next/image";
+import classNames from 'clsx';
 import { CiCalendarDate } from "react-icons/ci";
 import {CommissionRequest} from "@/types/User"
 
@@ -17,7 +18,13 @@ const CommissionCard = ({
     CreatedAt
 } : CommissionRequest) => {
   return (
-    <section className="commission-card p-4 rounded-md border-t-4 border-t-orange-500 bg-primary flex flex-col gap-4 w-100">
+    <section className={classNames('commission-card p-4 rounded-md border-t-4  bg-primary flex flex-col gap-4 w-100', {
+        "border-t-blue-500" : Status == "Pending",
+        "border-t-orange-500" : Status == "On hold",
+        "border-t-blue-200" : Status == "Ongoing",
+        "border-t-green-500" : Status == "Completed",
+        "border-t-red-500" : Status == "Rejected",
+    })}>
         <div className="flex justify-between">
             <div className="flex items-center gap-4">
                 <Image
@@ -34,7 +41,13 @@ const CommissionCard = ({
                 </div>
             </div>
 
-         <p className="text-sm font-bold px-2 bg-orange-200 text-orange-500 border-1 border-orange-500 h-fit rounded-full">{Status}</p>
+         <p className={classNames('text-sm font-bold px-2  border-1 h-fit rounded-full', {
+                    "border-blue-600 bg-blue-300 text-blue-600" : Status == "Pending",
+                    "border-orange-600 bg-orange-300 text-orange-600" : Status == "On hold",
+                    "border-blue-400 bg-blue-300 text-blue-500" : Status == "Ongoing",
+                    "border-green-600 bg-green-300 text-green-600" : Status == "Completed",
+                    "border-red-600 bg-red-300 text-red-600" : Status == "Rejected",
+         })}>{Status}</p>
         </div>
 
         <h3 className="text-xl font-semibold">{Title}</h3>
@@ -46,7 +59,7 @@ const CommissionCard = ({
             <p>${Budget}</p>
             <div className="flex items-center gap-2">
               <CiCalendarDate />
-              <p>December 12, 2025</p>
+              <p>{}</p>
             </div>
         </div>
 

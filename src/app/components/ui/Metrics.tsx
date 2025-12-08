@@ -20,12 +20,12 @@ const Metrics = ({title, total, added, icons }: Props) => {
         <div className="flex justify-between items-center">
              <h3 className="text-lg font-semibold opacity-80">{title}</h3>
              
-             <div className="text-2xl bg-secondary p-4 rounded-md">
+             <div className="text-2xl bg-secondary p-2 rounded-md">
                 {icons}
              </div>
         </div>
         <p className="text-4xl font-bold -mt-4">{total}</p>
-        <p>{added}</p>
+        <p className='text-green-400'>{added}</p>
     </section>
   )
 }
