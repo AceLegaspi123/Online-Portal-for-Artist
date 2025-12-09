@@ -20,10 +20,10 @@ const CommissionCard = ({
   return (
     <section className={classNames('commission-card p-4 rounded-md border-t-4  bg-primary flex flex-col gap-4 w-100', {
         "border-t-blue-500" : Status == "Pending",
-        "border-t-orange-500" : Status == "On hold",
+        "border-t-orange-500" : Status == "On Hold",
         "border-t-blue-200" : Status == "Ongoing",
         "border-t-green-500" : Status == "Completed",
-        "border-t-red-500" : Status == "Rejected",
+        "border-t-red-500" : Status == "Declined",
     })}>
         <div className="flex justify-between">
             <div className="flex items-center gap-4">
@@ -41,22 +41,22 @@ const CommissionCard = ({
                 </div>
             </div>
 
-         <p className={classNames('text-sm font-bold px-2  border-1 h-fit rounded-full', {
+         <p className={classNames('text-xs font-semibold px-2  border-1 h-fit rounded-full', {
                     "border-blue-600 bg-blue-300 text-blue-600" : Status == "Pending",
-                    "border-orange-600 bg-orange-300 text-orange-600" : Status == "On hold",
+                    "border-orange-600 bg-orange-300 text-orange-600" : Status == "On Hold",
                     "border-blue-400 bg-blue-300 text-blue-500" : Status == "Ongoing",
                     "border-green-600 bg-green-300 text-green-600" : Status == "Completed",
-                    "border-red-600 bg-red-300 text-red-600" : Status == "Rejected",
+                    "border-red-600 bg-red-300 text-red-600" : Status == "Declined",
          })}>{Status}</p>
         </div>
 
         <h3 className="text-xl font-semibold">{Title}</h3>
         <p className="text-sm opacity-50">{Description}</p>
     
-        <p className="text-sm font-semibold px-4 py-1 bg-primary w-fit rounded-full">{ArtType}</p>
+        <p className="text-xs font-semibold px-4 py-1 bg-primary w-fit rounded-full">{ArtType}</p>
         
         <div className="flex items-center gap-4">
-            <p>${Budget}</p>
+            <p className="font-bold text-green-500">${Budget}</p>
             <div className="flex items-center gap-2">
               <CiCalendarDate />
               <p>{}</p>
@@ -65,7 +65,7 @@ const CommissionCard = ({
 
         <hr className="bg-primary-line opacity-20"/>
 
-        <ul className="flex flex-row gap-4 flex-nowrap overflow-x-hidden">
+        <ul className="flex flex-row gap-4 flex-nowrap overflow-x-hidden text-xs">
             {
                 Tags.map(li => (
                     <li key={li} className="bg-primary px-4 py-1 rounded-full text-nowrap"><p>#{li}</p></li>

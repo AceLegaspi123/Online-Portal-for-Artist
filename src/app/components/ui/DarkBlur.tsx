@@ -1,6 +1,6 @@
 const DarkBlur = () => {
   return (
-    <div className='fixed inset-0 z-30 bg-black blur-2xl opacity-40'>
+    <div className='fixed inset-0 z-30 bg-black  opacity-40 pointer-events-none '>
       
     </div>
   )

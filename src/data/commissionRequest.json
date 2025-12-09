@@ -72,7 +72,7 @@
         "Traditional"
       ],
       "Budget": 15000,
-      "Status": "On hold",
+      "Status": "On Hold",
       "CreatedAt": "11/20/2025"
     },
     {
@@ -98,7 +98,7 @@
         "Lineart"
       ],
       "Budget": 3000,
-      "Status": "Rejected",
+      "Status": "Declined",
       "CreatedAt": "12/03/2025"
     },
     {
@@ -248,7 +248,7 @@
         "Figurine"
       ],
       "Budget": 4000,
-      "Status": "On hold",
+      "Status": "On Hold",
       "CreatedAt": "11/25/2025"
     },
     {
@@ -373,7 +373,7 @@
         "Physical"
       ],
       "Budget": 1800,
-      "Status": "Rejected",
+      "Status": "Declined",
       "CreatedAt": "12/01/2025"
     },
     {
@@ -398,7 +398,7 @@
         "Digital Painting"
       ],
       "Budget": 12000,
-      "Status": "On hold",
+      "Status": "On Hold",
       "CreatedAt": "11/10/2025"
     },
     {
