@@ -12,7 +12,8 @@ const MyClients = () => {
   const [modalIsActive, setModalsActive] = useState(false);
   const [filterRequest, setFilterRequest] = useState("All Request");
   const [filterCommission, setFilterCommission] = useState<CommissionRequest[]>(commissionRequest);
-
+  const [modalData, setModalData] = useState<CommissionRequest | undefined>(undefined);
+  
   const handleNavActive = (title: string) => {
     let filtered: CommissionRequest[];
     
@@ -31,14 +32,21 @@ const MyClients = () => {
     setFilterRequest(title); // This can be last, as the filtering no longer depends on it
 }
 
+  const handleModalFunc = (id: string) => {
+    const foundData = commissionRequest.find(i => i.CommissionId == id);
+
+    setModalData(foundData)
+    setModalsActive(i => !i)
+  }
+
   return (
     <div className="relative pb-10">
         <CommissionNav isActive={filterRequest} func={handleNavActive}/>
 
-        <div className="grid xl:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-3 xl:grid-cols-4 gap-8">
         {
             filterCommission.map(item => (
-            <li  key={item.CommissionId} onClick={() => setModalsActive(i => !i)}>
+            <li  key={item.CommissionId} onClick={() => handleModalFunc(item.CommissionId)}>
               <CommissionCard {...item}/>
             </li>)
 
@@ -46,7 +54,7 @@ const MyClients = () => {
         }
         </div>
         
-        <CommissionModal modal={modalIsActive} modalFunc={setModalsActive}/>
+        <CommissionModal data={modalData} modal={modalIsActive} modalFunc={setModalsActive}/>
 
         {
           modalIsActive && 

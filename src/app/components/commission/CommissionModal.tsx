@@ -1,4 +1,5 @@
 "use client";
+import classNames from 'clsx';
 import Image from "next/image"
 import { IoClose } from "react-icons/io5";
 import { IoDocumentTextOutline } from "react-icons/io5";
@@ -6,15 +7,19 @@ import { HiMiniPaintBrush } from "react-icons/hi2";
 import { IoLogoUsd } from "react-icons/io5";
 import { FaRegCalendarTimes } from "react-icons/fa";
 import { MdAccessTime } from "react-icons/md";
+import {CommissionRequest} from "@/types/User"
+import { FiExternalLink } from "react-icons/fi";
 
 interface CommissionModalProps {
+    data: CommissionRequest | undefined;
     modal: boolean;
     modalFunc: React.Dispatch<React.SetStateAction<boolean>>;
   }
 
 const tags = ["Anime", "Pixel Art", "Cute girl"]
 
-const CommissionModal = ({modal, modalFunc}: CommissionModalProps) => {
+const CommissionModal = ({data, modal, modalFunc}: CommissionModalProps) => {
+ console.log(data)
   return (
     <section className={` ${modal ? "visible mt-4 opacity-100" : "invisible mt-0 opacity-0 none"} transition-all duration-400 ease-in-out z-50 text-xs overflow-hidden fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-primary border-1 border-primary-line w-full max-w-160 h-160 rounded-xl pb-20`}>
         <header className="mb-4 p-4 ">
@@ -30,17 +35,23 @@ const CommissionModal = ({modal, modalFunc}: CommissionModalProps) => {
 
                     <div>
                         <p className="opacity-50">From </p>
-                        <p className="text-md font-bold">Alex Morgan</p>
+                        <p className="text-md font-bold">{data?.commissionToProfile.clientName}</p>
                     </div>
                 </div>
 
-                <p className="bg-orange-300 text-orange-600 text-xs rounded-full py-1 px-4">Pending </p>
+                <p className={classNames('text-xs font-semibold px-2  border-1 h-fit rounded-full', {
+                            "border-blue-600 bg-blue-300 text-blue-600" : data?.Status == "Pending",
+                            "border-orange-600 bg-orange-300 text-orange-600" : data?.Status == "On Hold",
+                            "border-blue-400 bg-blue-300 text-blue-500" : data?.Status == "Ongoing",
+                            "border-green-600 bg-green-300 text-green-600" : data?.Status == "Completed",
+                            "border-red-600 bg-red-300 text-red-600" : data?.Status == "Declined",
+                })}>{data?.Status}</p>
                 <IoClose 
                     onClick={() => modalFunc(i => !i)}
                     className="absolute top-2 right-2 cursor-pointer opacity-50 hover:opacity-100 transition-opacity duration-100 ease-in"/>
             </div>
 
-            <h3 className="text-xl font-semibold">Fantasy Character Portrait</h3>
+            <h3 className="text-xl font-semibold">{data?.Title}</h3>
         </header>
 
         <main className="p-4 h-[79%] overflow-scroll">
@@ -52,7 +63,7 @@ const CommissionModal = ({modal, modalFunc}: CommissionModalProps) => {
                    
                     <div>
                         <h5 className="opacity-80 font-semibold mb-1">DESCRIPTION</h5>
-                        <p className="">I would like a detailed portrait of my D&D character - an elven ranger with silver hair and emerald eyes. She should be wearing leather armor with nature motifs. The background should be a mystical forest at twilight.</p>
+                        <p className="">{data?.Description}</p>
                     </div>
                 </li>
 
@@ -63,7 +74,7 @@ const CommissionModal = ({modal, modalFunc}: CommissionModalProps) => {
                    
                     <div>
                         <h5 className="opacity-80 font-semibold  mb-1">ART TYPE</h5>
-                        <p className="bg-secondary px-4 py-1 rounded-full font-semibold">Digital Art</p>
+                        <p className="bg-secondary px-4 py-1 rounded-full font-semibold">{data?.ArtType}</p>
                     </div>
                 </li>
 
@@ -74,7 +85,7 @@ const CommissionModal = ({modal, modalFunc}: CommissionModalProps) => {
                    
                     <div>
                         <h5 className="opacity-80 font-semibold  mb-1">BUDGET</h5>
-                        <p className="text-xl font-semibold text-green-400">$250</p>
+                        <p className="text-xl font-semibold text-green-400">${data?.Budget}</p>
                     </div>
                 </li>
 
@@ -85,7 +96,7 @@ const CommissionModal = ({modal, modalFunc}: CommissionModalProps) => {
                    
                     <div>
                         <h5 className="opacity-80 font-semibold  mb-1">DEADLINE</h5>
-                       <p>December 13, 2025</p>
+                       <p>{data?.Deadline}</p>
                     </div>
                 </li>
 
@@ -96,7 +107,7 @@ const CommissionModal = ({modal, modalFunc}: CommissionModalProps) => {
                    
                     <div>
                         <h5 className="opacity-80 font-semibold  mb-1">CREATED AT</h5>
-                       <p>December 13, 2025</p>
+                       <p>{data?.CreatedAt}</p>
                     </div>
                 </li>
 
@@ -109,7 +120,7 @@ const CommissionModal = ({modal, modalFunc}: CommissionModalProps) => {
                         <h5 className="opacity-80 font-semibold  mb-1">TAGS</h5>
                       <ul className="flex gap-4 ">
                         {
-                            tags.map(i => (
+                            data?.Tags.map(i => (
                                 <li key={i} className="bg-secondary px-4  rounded-full text-nowrap py-1">#{i}</li>
                             ))
                         }  
@@ -127,8 +138,12 @@ const CommissionModal = ({modal, modalFunc}: CommissionModalProps) => {
                         <h5 className="opacity-80 font-semibold  mb-1">REFERENCES</h5>
                       <ul className="flex gap-4 ">
                         {
-                            tags.map(i => (
-                                <li key={i} className="bg-secondary px-4  rounded-md text-nowrap py-1 h-35 w-35">1 </li>
+                            data?.References.map(i => (
+                                <li key={i} className="relative bg-secondary hover:opacity-50 cursor-pointer overflow-hidden rounded-md text-nowrap h-35 w-35 group">
+                                    <img src={i} alt={`Art Reference ${i}`} className='object-cover '/>
+
+                                    <FiExternalLink className='absolute text-2xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white hidden group-hover:block'/>
+                                </li>
                             ))
                         }  
                       </ul>
