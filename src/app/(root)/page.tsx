@@ -1,11 +1,11 @@
-import React from 'react'
-import Header from '../components/layout/Header';
-import Footer from '../components/layout/Footer';
+import HeroSection from "../components/ui/HeroSection";
 import LightRays from '../components/ui/LightRays';
+import Section2 from "../components/home/Section2";
+import Section3 from "../components/home/Section3";
 
-const layout = ({children}: {children: React.ReactNode}) => {
+const Homepage = () => {
   return (
-    <div className='relative min-h-screen'>
+    <div className="max-w-[1680px] w-full mx-auto">
       <div className='fixed inset-0 top-0 min-h-screen z-[-10]'>
         <LightRays
           raysOrigin="top-center"
@@ -20,15 +20,13 @@ const layout = ({children}: {children: React.ReactNode}) => {
           className="custom-rays"
         />
       </div>
-      <Header />
-        {children}
-      <Footer />
-     
-
-      {/* <div className='bg-secondary absolute -bottom-10 w-[100vw] h-60'>
-      </div> */}
+      <main className="flex flex-col justify-center gap-20">
+          <HeroSection />
+          <Section2 />
+          <Section3 />
+      </main>
     </div>
   )
 }
 
-export default layout
+export default Homepage;

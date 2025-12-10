@@ -134,14 +134,19 @@ footer {
 }
 
 
-.art-list-card:hover{
-  transition: all 1s ease-in-out;
+.art-item-wrapper:hover .artlist-description {
+    visibility: visible;
+    opacity: 1;
 }
 
 .art-list-card:hover .art-info{
   background-color: rgba(0, 0, 0, 0.27);
-  display: flex !important;
+  display: flex;
+}
 
+.art-list-card:hover > img{
+  transition: all 450ms ease-in-out;
+  transform: scale(1.1);
 }
 
 .art-info {
@@ -168,6 +173,13 @@ footer {
 }
 
 
+.artlist-description{
+  visibility: hidden;
+  opacity: 1;
+  background: #000000;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.47) 52%, rgba(0, 0, 0, 0) 100%);
+  transition: all 0.5s ease-in, visibility 0.5s ease-in-out;
+}
 
 /* React Bits styles */
 
@@ -205,6 +217,13 @@ footer {
   }
 }
 
+
+ul {
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+}
+
 .shiny-text.disabled {
   animation: none;
 }
@@ -223,4 +242,34 @@ footer {
 
 .word {
   display: inline-block;
+}
+
+
+/* hero section */
+.card-section2{
+  box-shadow: -.8em 5px 10px rgba(2, 18, 2, 0.43);
+}
+
+/* commision */
+.metrics{
+  background-image: linear-gradient(to top, #1d2939, #1b2637, #1a2434, #182132, #171f2f);
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.156);
+  transition: box-shadow 200ms ease-in-out;
+}
+
+.metrics:hover{
+  border-block-style: 4px solid green;
+  box-shadow: 0px 0px 5px 3px rgba(137, 246, 91, 0.322);
+}
+
+.commission-card{
+  background-image: linear-gradient(to top, #1d2939, #1b2637, #1a2434, #182132, #171f2f);
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.156);
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.commission-card:hover{
+  box-shadow: 0px 0px 5px rgba(67, 244, 18, 0.489);
+  transform: translateY(-4px);
 }

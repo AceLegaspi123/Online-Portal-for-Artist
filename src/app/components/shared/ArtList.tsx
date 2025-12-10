@@ -1,67 +1,65 @@
-import React from "react";
-import { FaHeart } from "react-icons/fa";
-import { MdOutlineComment } from "react-icons/md";
 import Image from "next/image";
 import {artList} from "@/types/User"
+import { FaRegHeart } from "react-icons/fa";
+import { LiaCommentDotsSolid } from "react-icons/lia";
+import { IoCartOutline } from "react-icons/io5";
 
-export default function ArtList({art}: { art: artList}) {   
-  console.log(art)
+export default function ArtList({ art }: { art: artList }) {
   return (
-    <div className="w-full overflow-hidden text-sm ">
-      <div className="art-list-card relative h-55 lg:h-55 hover:shadow-xl transition duration-700 ease-in-out  xl:h-65 mb-4 overflow-hidden  cursor-pointer group">
-        {art.src ? (
-            <Image
-                src={art?.src}
-                alt={"User avatar"}
-                width={400}
-                height={200}
-                className="images object-cover h-full w-full rounded-md border-primary-line border-1 "
-            />
-            ) : (
-         <div className="" />
+    <div className="mb-4 w-full break-inside-avoid relative">
+      <div className="art-item-wrapper rounded-md overflow-hidden relative group ">
+        {art.src && (
+          <Image
+            src={art.src}
+            alt={art.alt || "Artwork"}
+            width={400}
+            height={400}
+            className="artlist-card w-full h-auto rounded-md transition-transform duration-700 group-hover:scale-105"
+          />
         )}
-   
-        <div className="art-info transition duration-700 ease-in-out   font-bold items-end p-2 text-sm absolute bottom-0 left-0 w-full h-[100%]">
-            <h6>Art Cats Here</h6>
-        </div>
-      </div>
- 
-      <div className="flex justify-between items-center w-full px-1">
-        <div className="flex gap-2 items-center">
-          <div className="w-8 h-8 rounded-full bg-primary overflow-hidden">
-            {/* <img src={art?.avatar} alt="user avatar" className="w-full h-full object-cover"/> */}
 
-            {art?.avatar ? (
-                <Image
-                    src={art?.avatar}
-                    alt={"User avatar"}
-                    width={40}
-                    height={40}
-                    className="object-cover h-full w-full hover:scale-3d"
-                />
-                ) : (
-                <div className="" />
-                )}
+        <div className="artlist-description absolute bottom-0 left-0  text-white p-2 text-sm w-full">
+          <h6 className="font-semibold text-md mb-2">{art.alt || "Abstract Dreams"}</h6>
+          <div className="flex items-center gap-2 mb-2">
+            <Image
+              width={150}
+              height={150}
+              src={art.avatar}
+              alt={art.avatar}
+              className="h-6 w-6 object-cover rounded-full"
+            />
 
-
-          </div>
-          <p className="font-semibold text-sm">User #</p>
-        </div>
-
-        <div className="flex gap-4 opacity-70 text-xs">
-          <div className="flex gap-2 items-center"> 
-            <FaHeart />
-            <p>221</p>
+            <p className="text-xs ">{art.user}</p>
           </div>
 
-          <div className="flex gap-2 items-center">
-            <MdOutlineComment />
-            <p>20</p>
+        <section className="flex justify-between text-xs">
+          <section className="flex items-center gap-4 opacity-60">
+            <div className="flex items-center gap-2">
+              <FaRegHeart />
+              <p>321</p> 
+            </div>
+
+            <div className="flex items-center gap-2">
+              <LiaCommentDotsSolid />
+              <p>321</p> 
+            </div>
+          </section>
+
+
+
+          <div className="flex items-center gap-2 bg-orange-600 w-fit px-2 rounded-full py-1 text-xs">
+              <IoCartOutline />
+              <p>321</p> 
           </div>
-        </div>
+        </section>
       </div>
 
-
+      <div className="absolute top-2 right-2">
+        <p className="bg-orange-500 py-1 px-2 rounded-full text-xs text-black">
+          For sale
+        </p>
+      </div>
+    </div>
     </div>
   );
 }

@@ -22,9 +22,9 @@ export interface artwork  {
   art_file: string;
   artwork_title: string;
   description: string;
-  artwork_type: 'Digital' | 'Physical';
+  artwork_type: string;
   tags: string[];
-  status: 'For Sale' | 'Not for Sale';
+  status: string;
   price: number;
   stocks: number;
   sold: number;
@@ -63,3 +63,23 @@ interface ViolationHistoryEntry {
 }
 
 type ViolationHistory = ViolationHistoryEntry[];
+
+
+export interface CommissionRequest {
+  CommissionId: string;
+  UserProfileId: string;
+  IdOfCommissionTo: string;
+  commissionToProfile: {
+    name: string;
+    clientName: string;
+  };
+  References: string[];
+  Title: string;
+  Description?: string;
+  ArtType: string;
+  Deadline: string;
+  Tags: string[];
+  Budget: number;
+  Status: string;
+  CreatedAt: string;
+}

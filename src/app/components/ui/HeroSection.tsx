@@ -11,13 +11,13 @@ const cardSection : string[] = [
 
 const HeroSection = () => {
   return (
-    <section className="w-full min-h-[80vh] flex flex-col gap-8 items-center justify-center">
+    <section className="w-full h-[100vh] flex flex-col gap-8 items-center justify-center">
         <BlurText
-            text="A place to display your masterpiece."
+            text="A place to display your masterpiece"
             delay={150}
             animateBy="words"
             direction="top"
-            className="mb-8 text-7xl font-lg w-[70%] mx-auto font-semibold"
+            className="mb-8 text-7xl -mt-40 font-lg w-[68%] mx-auto font-semibold"
         />
 
         <ul className="flex gap-5 justify-center">
