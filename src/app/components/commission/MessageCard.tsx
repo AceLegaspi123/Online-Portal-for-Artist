@@ -1,6 +1,6 @@
 import { BsPatchCheckFill } from "react-icons/bs";
 
-export function Message() {
+export function MessageCard() {
   return (
     <div className="w-[350px] h-[300px] bg-primary border border-gray-600 rounded-lg text-center p-8 flex flex-col gap-3   ">
       <BsPatchCheckFill className="text-9xl mx-auto text-green-600" />
