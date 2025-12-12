@@ -5,7 +5,6 @@ import { CgProfile } from "react-icons/cg";
 import { SlActionRedo } from "react-icons/sl";
 import { RiBallPenLine } from "react-icons/ri";
 
-
 const page = () => {
   return (
     <div className="flex">
