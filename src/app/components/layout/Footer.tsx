@@ -43,7 +43,7 @@ export default function Footer(){
                 </div>
             </div>
 
-            <div className="z-0 absolute bottom-0 left-0 w-full h-50"></div>
+            <div className="z-0 absolute bottom-0 left-0 w-full h-50 bg-primary"></div>
         </footer>
     );
 };

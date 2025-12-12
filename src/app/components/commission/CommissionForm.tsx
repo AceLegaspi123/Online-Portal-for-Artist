@@ -5,7 +5,7 @@ import Details from "./Details";
 import ImgRef from "./ImgRef";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { useState } from "react";
-
+import Review from './Review';
 
 const nav = [
     {number: 1, name: "Upload Reference Image"},
@@ -55,7 +55,7 @@ const CommissionForm = () => {
 
   const handleSubmitDetails = () => {
     console.log("Full Data:", { ...formData, tags });
-    setIsActive(1); // move to the next slide
+    setIsActive(2);
   };
   return (
     <section>
@@ -99,10 +99,18 @@ const CommissionForm = () => {
             goBack={() => setIsActive(0)}
           />
          </div>
+
+         <div className={classNames('absolute top-18 w-full max-w-[50em] transition-all duration-1000 z-10 linear ', {
+          "-right-[52em]" : isActive == 1 || isActive == 0,
+          "left-25" : isActive == 2
+         })}>
+            <Review 
+                formData={formData}
+                images={images}
+                goBack={() => setIsActive(1)}
+            />
+         </div>
       </div>
-
-
-     
     </section>
   )
 }
