@@ -13,6 +13,7 @@ import { GoGlobe } from "react-icons/go";
 import { FaRegUser } from "react-icons/fa";
 import LogoLight from "@/app/logo-light.png"
 import LogoDark from "@/app/logo-dark.png"
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function Header() {
   const [isLogin, setIsLogin] = useState(true);
@@ -63,17 +64,26 @@ export default function Header() {
               </div>
         </Link>
 
-        <Link href="/commission">
-              <div className='flex items-center gap-4 px-8'>
-                  <FaRegUser />
-                  <p>Commission</p>
+          <div className='relative flex items-center gap-4 px-8 group'>
+              <FaRegUser />
+              <p>Commission</p>
+              <IoIosArrowDown />
+
+              <div className="absolute top-5 left-0 w-50 rounded-md  transition-all hidden duration-400 ease-in-out group-hover:block group-hover:opacity-100">
+                <div className=" bg-primary border-1 border-primary-line p-2 mt-4 rounded-md flex flex-col">
+                  <Link href="/my-client" className="hover:text-green-500 hover:font-semibold cursor-pointer rounded-md opacity-80 hover:opacity-100 hover:block transition-all ease-in-out duration-200  p-2">
+                    My Client
+                  </Link>
+                  <Link href="/my-request" className="hover:text-green-500 hover:font-semibold rounded-md opacity-80 hover:opacity-100 hover:block  transition-all ease-in-out  duration-200 border-white p-2">
+                    My Request
+                  </Link>
+                </div>
               </div>
-        </Link>
+            
+          </div>
       </div>
 
       <div className="flex items-center gap-4">
-
-
         {
           isLogin &&  <Link href="/mail"><CgMail className="text-3xl"/></Link>
         }
