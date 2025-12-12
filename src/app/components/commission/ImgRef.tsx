@@ -3,8 +3,20 @@ import { useEffect, useState } from "react";
 import { TbFolderUp } from "react-icons/tb";
 import { MdImage } from "react-icons/md";
 
-const ImgRef = () => {
-  const [images, setImages] = useState<{ file: File; url: string }[]>([]);
+
+interface ImgRefProps {
+  images: { file: File; url: string }[];
+  setImages: React.Dispatch<React.SetStateAction<{ file: File; url: string }[]>>;
+  goNext: React.Dispatch<React.SetStateAction<number>>;
+}
+
+
+const ImgRef = ({
+    images,
+    setImages,
+    goNext
+  }: ImgRefProps) => {
+ 
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
 
@@ -42,15 +54,16 @@ const ImgRef = () => {
     setImages((prev) => prev.filter((_, i) => i !== index));
   };
 
-  const handleSubmitForm = () => {
-    
+  const handleSubmitForm = (e: React.FormEvent) => {
+    e.preventDefault();
+    goNext(1)
   }
 
 //   useEffect(() => {
 //     console.log(images)
 //   }, [images])
   return (
-    <div className="flex flex-col text-center rounded-md w-130 mx-auto p-10 bg-secondary">
+    <div className="flex flex-col text-center rounded-md w-130 mx-auto p-8 bg-secondary">
       <h4 className="text-left font-bold text-2xl">Upload a new reference</h4>
 
       <p className="text-left text-sm opacity-50 mt-2">
@@ -58,8 +71,9 @@ const ImgRef = () => {
       </p>
 
       <form 
-      onSubmit={handleSubmitForm}
-      className="mt-10 p-4 py-6 rounded-xl">
+        method="get"
+        onSubmit={handleSubmitForm}
+        className="mt-5 p-4 py-6 rounded-xl">
         {/* Upload Section */}
         <div className="bg-primary">
           <label className="h-full cursor-pointer w-full p-4" htmlFor="img-reference">
@@ -109,13 +123,13 @@ const ImgRef = () => {
         </div>
 
         {/* Buttons */}
-        <div className="flex justify-between">
+        <div className="flex justify-between mt-8">
           <button 
             type="button"
-            className="text-sm p-2 border w-35 mt-5 rounded-sm">Cancel</button>
+            className="text-sm p-2 border w-35  rounded-sm transition hover:opacity-80 cursor-pointer">Cancel</button>
           <button 
             type="submit"
-            className="text-sm p-2 font-bold border w-35 mt-5 rounded-sm bg-white text-black">
+            className="text-sm p-2 font-bold border w-35 hover:opacity-80 transition rounded-sm bg-white text-black cursor-pointer">
             Next Step
           </button>
         </div>
