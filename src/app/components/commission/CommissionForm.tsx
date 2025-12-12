@@ -24,8 +24,8 @@ const CommissionForm = () => {
         </div>
 
       <div className="max-w-5xl w-full mx-auto mt-4 p-4 flex relative bg-primary h-155 justify-center">
-         <Details  />
-         {/* <ImgRef /> */}
+         {/* <Details  /> */}
+         <ImgRef />
       </div>
 
 
