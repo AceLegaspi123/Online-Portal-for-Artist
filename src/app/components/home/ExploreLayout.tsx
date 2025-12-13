@@ -17,8 +17,8 @@ const ExploreLayout = () => {
   
   return (
     <div className="flex flex-col gap-4 relative mt-10">
-      <div className='fixed top-15 left-20 right-20 z-20 bg-background py-5 pt-8 '>
-        <div className='relative'>
+      <div className='fixed top-0  left-20 right-20 z-20 bg-background py-5 '>
+        <div className='relative z-20  pt-16 bg-background'>
           <input 
             type="text" 
             placeholder='Search' 
@@ -26,13 +26,15 @@ const ExploreLayout = () => {
           />
           <BsSearch className='absolute top-4 left-5'/>
         </div>
+
+        <SearchHeader />
       </div>
 
-      <SearchHeader />
+     
         
       <div className="w-full mx-auto
         columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 min-2xl:columns-7
-        gap-4 mt-35">
+        gap-4 mt-30">
         {artworks.map((art) => (
           <Link href={`/explore/${art.artwork_id}`} key={art.artwork_id} className="break-inside-avoid">
             <ArtList art={art} />
