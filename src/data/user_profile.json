@@ -1,0 +1,1292 @@
+[
+    {
+      "id": "USR001",
+      "account_id": "ACC001",
+      "first_name": "Ethan",
+      "last_name": "Rivera",
+      "username": "ethanrivera",
+      "profile_picture": "/profiles/user001.png",
+      "background_cover": "/covers/cover001.png",
+      "gender": "Female",
+      "birthdate": "1998-03-13",
+      "address": {
+        "country": "Philippines",
+        "street": "42 Sample Street",
+        "apartment": "Unit 8C",
+        "city": "Quezon City",
+        "state": "Province",
+        "postal_code": "8936"
+      },
+      "contact": {
+        "gmail": "ethan.rivera@gmail.com",
+        "phoneNumber": "09805306303"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/ethanrivera",
+        "https://twitter.com/ethan_rivera"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP001",
+        "user_profile_id": "USR001",
+        "country": "Philippines",
+        "street_address": "79 Sample Street",
+        "apartment": "Unit 4C",
+        "city": "Quezon City",
+        "state": "Province",
+        "postal_code": "8102"
+      }
+    },
+    {
+      "id": "USR002",
+      "account_id": "ACC002",
+      "first_name": "Ava",
+      "last_name": "Lopez",
+      "username": "avalopez",
+      "profile_picture": "/profiles/user002.png",
+      "background_cover": "/covers/cover002.png",
+      "gender": "Male",
+      "birthdate": "1997-05-25",
+      "address": {
+        "country": "Philippines",
+        "street": "63 Sample Street",
+        "apartment": "Unit 9B",
+        "city": "Manila",
+        "state": "Province",
+        "postal_code": "7433"
+      },
+      "contact": {
+        "gmail": "ava.lopez@gmail.com",
+        "phoneNumber": "09583903542"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/avalopez",
+        "https://twitter.com/ava_lopez"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP002",
+        "user_profile_id": "USR002",
+        "country": "Philippines",
+        "street_address": "24 Sample Street",
+        "apartment": "Unit 8B",
+        "city": "Manila",
+        "state": "Province",
+        "postal_code": "3703"
+      }
+    },
+    {
+      "id": "USR003",
+      "account_id": "ACC003",
+      "first_name": "Liam",
+      "last_name": "Santos",
+      "username": "liamsantos",
+      "profile_picture": "/profiles/user003.png",
+      "background_cover": "/covers/cover003.png",
+      "gender": "Prefer not to say",
+      "birthdate": "1996-09-13",
+      "address": {
+        "country": "Philippines",
+        "street": "99 Sample Street",
+        "apartment": "Unit 5C",
+        "city": "Pasig",
+        "state": "Province",
+        "postal_code": "9872"
+      },
+      "contact": {
+        "gmail": "liam.santos@gmail.com",
+        "phoneNumber": "09549862946"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/liamsantos",
+        "https://twitter.com/liam_santos"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP003",
+        "user_profile_id": "USR003",
+        "country": "Philippines",
+        "street_address": "83 Sample Street",
+        "apartment": "Unit 5A",
+        "city": "Pasig",
+        "state": "Province",
+        "postal_code": "7332"
+      }
+    },
+    {
+      "id": "USR004",
+      "account_id": "ACC004",
+      "first_name": "Mia",
+      "last_name": "Torres",
+      "username": "miatorres",
+      "profile_picture": "/profiles/user004.png",
+      "background_cover": "/covers/cover004.png",
+      "gender": "Male",
+      "birthdate": "1997-02-22",
+      "address": {
+        "country": "Philippines",
+        "street": "56 Sample Street",
+        "apartment": "Unit 4C",
+        "city": "Cavite",
+        "state": "Province",
+        "postal_code": "4946"
+      },
+      "contact": {
+        "gmail": "mia.torres@gmail.com",
+        "phoneNumber": "09892322966"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/miatorres",
+        "https://twitter.com/mia_torres"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP004",
+        "user_profile_id": "USR004",
+        "country": "Philippines",
+        "street_address": "50 Sample Street",
+        "apartment": "Unit 5A",
+        "city": "Cavite",
+        "state": "Province",
+        "postal_code": "4396"
+      }
+    },
+    {
+      "id": "USR005",
+      "account_id": "ACC005",
+      "first_name": "Noah",
+      "last_name": "Garcia",
+      "username": "noahgarcia",
+      "profile_picture": "/profiles/user005.png",
+      "background_cover": "/covers/cover005.png",
+      "gender": "Prefer not to say",
+      "birthdate": "1996-03-21",
+      "address": {
+        "country": "Philippines",
+        "street": "89 Sample Street",
+        "apartment": "Unit 4C",
+        "city": "Taguig",
+        "state": "Province",
+        "postal_code": "1205"
+      },
+      "contact": {
+        "gmail": "noah.garcia@gmail.com",
+        "phoneNumber": "09615117238"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/noahgarcia",
+        "https://twitter.com/noah_garcia"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP005",
+        "user_profile_id": "USR005",
+        "country": "Philippines",
+        "street_address": "64 Sample Street",
+        "apartment": "Unit 1A",
+        "city": "Taguig",
+        "state": "Province",
+        "postal_code": "4433"
+      }
+    },
+    {
+      "id": "USR006",
+      "account_id": "ACC006",
+      "first_name": "Sophia",
+      "last_name": "Dizon",
+      "username": "sophiadizon",
+      "profile_picture": "/profiles/user006.png",
+      "background_cover": "/covers/cover006.png",
+      "gender": "Male",
+      "birthdate": "1997-06-13",
+      "address": {
+        "country": "Philippines",
+        "street": "93 Sample Street",
+        "apartment": "Unit 5B",
+        "city": "Laguna",
+        "state": "Province",
+        "postal_code": "1048"
+      },
+      "contact": {
+        "gmail": "sophia.dizon@gmail.com",
+        "phoneNumber": "09917425255"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/sophiadizon",
+        "https://twitter.com/sophia_dizon"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP006",
+        "user_profile_id": "USR006",
+        "country": "Philippines",
+        "street_address": "78 Sample Street",
+        "apartment": "Unit 9C",
+        "city": "Laguna",
+        "state": "Province",
+        "postal_code": "8346"
+      }
+    },
+    {
+      "id": "USR007",
+      "account_id": "ACC007",
+      "first_name": "Lucas",
+      "last_name": "Martinez",
+      "username": "lucasmartinez",
+      "profile_picture": "/profiles/user007.png",
+      "background_cover": "/covers/cover007.png",
+      "gender": "Prefer not to say",
+      "birthdate": "1996-09-16",
+      "address": {
+        "country": "Philippines",
+        "street": "79 Sample Street",
+        "apartment": "Unit 1A",
+        "city": "Makati",
+        "state": "Province",
+        "postal_code": "2865"
+      },
+      "contact": {
+        "gmail": "lucas.martinez@gmail.com",
+        "phoneNumber": "09916641362"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/lucasmartinez",
+        "https://twitter.com/lucas_martinez"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP007",
+        "user_profile_id": "USR007",
+        "country": "Philippines",
+        "street_address": "89 Sample Street",
+        "apartment": "Unit 9B",
+        "city": "Makati",
+        "state": "Province",
+        "postal_code": "4755"
+      }
+    },
+    {
+      "id": "USR008",
+      "account_id": "ACC008",
+      "first_name": "Chloe",
+      "last_name": "Tan",
+      "username": "chloetan",
+      "profile_picture": "/profiles/user008.png",
+      "background_cover": "/covers/cover008.png",
+      "gender": "Female",
+      "birthdate": "1997-07-18",
+      "address": {
+        "country": "Philippines",
+        "street": "66 Sample Street",
+        "apartment": "Unit 4B",
+        "city": "Pasay",
+        "state": "Province",
+        "postal_code": "4450"
+      },
+      "contact": {
+        "gmail": "chloe.tan@gmail.com",
+        "phoneNumber": "09676693487"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/chloetan",
+        "https://twitter.com/chloe_tan"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP008",
+        "user_profile_id": "USR008",
+        "country": "Philippines",
+        "street_address": "67 Sample Street",
+        "apartment": "Unit 8A",
+        "city": "Pasay",
+        "state": "Province",
+        "postal_code": "4757"
+      }
+    },
+    {
+      "id": "USR009",
+      "account_id": "ACC009",
+      "first_name": "Jacob",
+      "last_name": "Cruz",
+      "username": "jacobcruz",
+      "profile_picture": "/profiles/user009.png",
+      "background_cover": "/covers/cover009.png",
+      "gender": "Prefer not to say",
+      "birthdate": "1995-01-18",
+      "address": {
+        "country": "Philippines",
+        "street": "14 Sample Street",
+        "apartment": "Unit 9A",
+        "city": "Bulacan",
+        "state": "Province",
+        "postal_code": "3813"
+      },
+      "contact": {
+        "gmail": "jacob.cruz@gmail.com",
+        "phoneNumber": "09124041245"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/jacobcruz",
+        "https://twitter.com/jacob_cruz"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP009",
+        "user_profile_id": "USR009",
+        "country": "Philippines",
+        "street_address": "27 Sample Street",
+        "apartment": "Unit 4C",
+        "city": "Bulacan",
+        "state": "Province",
+        "postal_code": "5724"
+      }
+    },
+    {
+      "id": "USR010",
+      "account_id": "ACC010",
+      "first_name": "Ella",
+      "last_name": "Reyes",
+      "username": "ellareyes",
+      "profile_picture": "/profiles/user010.png",
+      "background_cover": "/covers/cover010.png",
+      "gender": "Prefer not to say",
+      "birthdate": "1999-04-24",
+      "address": {
+        "country": "Philippines",
+        "street": "32 Sample Street",
+        "apartment": "Unit 3A",
+        "city": "Cebu",
+        "state": "Province",
+        "postal_code": "5623"
+      },
+      "contact": {
+        "gmail": "ella.reyes@gmail.com",
+        "phoneNumber": "09802458704"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/ellareyes",
+        "https://twitter.com/ella_reyes"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP010",
+        "user_profile_id": "USR010",
+        "country": "Philippines",
+        "street_address": "75 Sample Street",
+        "apartment": "Unit 8B",
+        "city": "Cebu",
+        "state": "Province",
+        "postal_code": "1954"
+      }
+    },
+    {
+      "id": "USR011",
+      "account_id": "ACC011",
+      "first_name": "Caleb",
+      "last_name": "Vargas",
+      "username": "calebvargas",
+      "profile_picture": "/profiles/user011.png",
+      "background_cover": "/covers/cover011.png",
+      "gender": "Prefer not to say",
+      "birthdate": "1999-02-28",
+      "address": {
+        "country": "Philippines",
+        "street": "97 Sample Street",
+        "apartment": "Unit 5B",
+        "city": "Bacolod",
+        "state": "Province",
+        "postal_code": "1683"
+      },
+      "contact": {
+        "gmail": "caleb.vargas@gmail.com",
+        "phoneNumber": "09434678902"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/calebvargas",
+        "https://twitter.com/caleb_vargas"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP011",
+        "user_profile_id": "USR011",
+        "country": "Philippines",
+        "street_address": "45 Sample Street",
+        "apartment": "Unit 7A",
+        "city": "Bacolod",
+        "state": "Province",
+        "postal_code": "7416"
+      }
+    },
+    {
+      "id": "USR012",
+      "account_id": "ACC012",
+      "first_name": "Isabella",
+      "last_name": "Navarro",
+      "username": "isabellanavarro",
+      "profile_picture": "/profiles/user012.png",
+      "background_cover": "/covers/cover012.png",
+      "gender": "Other",
+      "birthdate": "1995-07-27",
+      "address": {
+        "country": "Philippines",
+        "street": "97 Sample Street",
+        "apartment": "Unit 1C",
+        "city": "Davao",
+        "state": "Province",
+        "postal_code": "3724"
+      },
+      "contact": {
+        "gmail": "isabella.navarro@gmail.com",
+        "phoneNumber": "09551674391"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/isabellanavarro",
+        "https://twitter.com/isabella_navarro"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP012",
+        "user_profile_id": "USR012",
+        "country": "Philippines",
+        "street_address": "46 Sample Street",
+        "apartment": "Unit 8A",
+        "city": "Davao",
+        "state": "Province",
+        "postal_code": "4741"
+      }
+    },
+    {
+      "id": "USR013",
+      "account_id": "ACC013",
+      "first_name": "Zane",
+      "last_name": "Lim",
+      "username": "zanelim",
+      "profile_picture": "/profiles/user013.png",
+      "background_cover": "/covers/cover013.png",
+      "gender": "Female",
+      "birthdate": "1995-03-20",
+      "address": {
+        "country": "Philippines",
+        "street": "78 Sample Street",
+        "apartment": "Unit 9C",
+        "city": "Batangas",
+        "state": "Province",
+        "postal_code": "9940"
+      },
+      "contact": {
+        "gmail": "zane.lim@gmail.com",
+        "phoneNumber": "09683482851"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/zanelim",
+        "https://twitter.com/zane_lim"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP013",
+        "user_profile_id": "USR013",
+        "country": "Philippines",
+        "street_address": "41 Sample Street",
+        "apartment": "Unit 8B",
+        "city": "Batangas",
+        "state": "Province",
+        "postal_code": "3967"
+      }
+    },
+    {
+      "id": "USR014",
+      "account_id": "ACC014",
+      "first_name": "Harper",
+      "last_name": "DelosSantos",
+      "username": "harperdelossantos",
+      "profile_picture": "/profiles/user014.png",
+      "background_cover": "/covers/cover014.png",
+      "gender": "Female",
+      "birthdate": "1999-06-17",
+      "address": {
+        "country": "Philippines",
+        "street": "59 Sample Street",
+        "apartment": "Unit 9C",
+        "city": "Rizal",
+        "state": "Province",
+        "postal_code": "4177"
+      },
+      "contact": {
+        "gmail": "harper.delossantos@gmail.com",
+        "phoneNumber": "09378898814"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/harperdelossantos",
+        "https://twitter.com/harper_delossantos"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP014",
+        "user_profile_id": "USR014",
+        "country": "Philippines",
+        "street_address": "84 Sample Street",
+        "apartment": "Unit 1B",
+        "city": "Rizal",
+        "state": "Province",
+        "postal_code": "5412"
+      }
+    },
+    {
+      "id": "USR015",
+      "account_id": "ACC015",
+      "first_name": "Mason",
+      "last_name": "Soriano",
+      "username": "masonsoriano",
+      "profile_picture": "/profiles/user015.png",
+      "background_cover": "/covers/cover015.png",
+      "gender": "Other",
+      "birthdate": "1995-04-19",
+      "address": {
+        "country": "Philippines",
+        "street": "41 Sample Street",
+        "apartment": "Unit 1A",
+        "city": "Pampanga",
+        "state": "Province",
+        "postal_code": "7676"
+      },
+      "contact": {
+        "gmail": "mason.soriano@gmail.com",
+        "phoneNumber": "09698284138"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/masonsoriano",
+        "https://twitter.com/mason_soriano"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP015",
+        "user_profile_id": "USR015",
+        "country": "Philippines",
+        "street_address": "74 Sample Street",
+        "apartment": "Unit 6A",
+        "city": "Pampanga",
+        "state": "Province",
+        "postal_code": "2595"
+      }
+    },
+    {
+      "id": "USR016",
+      "account_id": "ACC016",
+      "first_name": "Layla",
+      "last_name": "Castro",
+      "username": "laylacastro",
+      "profile_picture": "/profiles/user016.png",
+      "background_cover": "/covers/cover016.png",
+      "gender": "Male",
+      "birthdate": "1997-01-19",
+      "address": {
+        "country": "Philippines",
+        "street": "86 Sample Street",
+        "apartment": "Unit 9A",
+        "city": "Baguio",
+        "state": "Province",
+        "postal_code": "1774"
+      },
+      "contact": {
+        "gmail": "layla.castro@gmail.com",
+        "phoneNumber": "09965283247"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/laylacastro",
+        "https://twitter.com/layla_castro"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP016",
+        "user_profile_id": "USR016",
+        "country": "Philippines",
+        "street_address": "61 Sample Street",
+        "apartment": "Unit 3A",
+        "city": "Baguio",
+        "state": "Province",
+        "postal_code": "7556"
+      }
+    },
+    {
+      "id": "USR017",
+      "account_id": "ACC017",
+      "first_name": "Owen",
+      "last_name": "Campos",
+      "username": "owencampos",
+      "profile_picture": "/profiles/user017.png",
+      "background_cover": "/covers/cover017.png",
+      "gender": "Male",
+      "birthdate": "1997-02-17",
+      "address": {
+        "country": "Philippines",
+        "street": "23 Sample Street",
+        "apartment": "Unit 8B",
+        "city": "Iloilo",
+        "state": "Province",
+        "postal_code": "5531"
+      },
+      "contact": {
+        "gmail": "owen.campos@gmail.com",
+        "phoneNumber": "09873570238"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/owencampos",
+        "https://twitter.com/owen_campos"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP017",
+        "user_profile_id": "USR017",
+        "country": "Philippines",
+        "street_address": "16 Sample Street",
+        "apartment": "Unit 4B",
+        "city": "Iloilo",
+        "state": "Province",
+        "postal_code": "4999"
+      }
+    },
+    {
+      "id": "USR018",
+      "account_id": "ACC018",
+      "first_name": "Zara",
+      "last_name": "Aquino",
+      "username": "zaraaquino",
+      "profile_picture": "/profiles/user018.png",
+      "background_cover": "/covers/cover018.png",
+      "gender": "Prefer not to say",
+      "birthdate": "1996-09-16",
+      "address": {
+        "country": "Philippines",
+        "street": "38 Sample Street",
+        "apartment": "Unit 4A",
+        "city": "Tarlac",
+        "state": "Province",
+        "postal_code": "8666"
+      },
+      "contact": {
+        "gmail": "zara.aquino@gmail.com",
+        "phoneNumber": "09782512346"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/zaraaquino",
+        "https://twitter.com/zara_aquino"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP018",
+        "user_profile_id": "USR018",
+        "country": "Philippines",
+        "street_address": "99 Sample Street",
+        "apartment": "Unit 8B",
+        "city": "Tarlac",
+        "state": "Province",
+        "postal_code": "6470"
+      }
+    },
+    {
+      "id": "USR019",
+      "account_id": "ACC019",
+      "first_name": "Leo",
+      "last_name": "Flores",
+      "username": "leoflores",
+      "profile_picture": "/profiles/user019.png",
+      "background_cover": "/covers/cover019.png",
+      "gender": "Male",
+      "birthdate": "1995-04-11",
+      "address": {
+        "country": "Philippines",
+        "street": "26 Sample Street",
+        "apartment": "Unit 5A",
+        "city": "Leyte",
+        "state": "Province",
+        "postal_code": "9997"
+      },
+      "contact": {
+        "gmail": "leo.flores@gmail.com",
+        "phoneNumber": "09671074695"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/leoflores",
+        "https://twitter.com/leo_flores"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP019",
+        "user_profile_id": "USR019",
+        "country": "Philippines",
+        "street_address": "51 Sample Street",
+        "apartment": "Unit 2C",
+        "city": "Leyte",
+        "state": "Province",
+        "postal_code": "2181"
+      }
+    },
+    {
+      "id": "USR020",
+      "account_id": "ACC020",
+      "first_name": "Aria",
+      "last_name": "Mendoza",
+      "username": "ariamendoza",
+      "profile_picture": "/profiles/user020.png",
+      "background_cover": "/covers/cover020.png",
+      "gender": "Other",
+      "birthdate": "1996-07-28",
+      "address": {
+        "country": "Philippines",
+        "street": "62 Sample Street",
+        "apartment": "Unit 1A",
+        "city": "Zamboanga",
+        "state": "Province",
+        "postal_code": "2631"
+      },
+      "contact": {
+        "gmail": "aria.mendoza@gmail.com",
+        "phoneNumber": "09117351999"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/ariamendoza",
+        "https://twitter.com/aria_mendoza"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP020",
+        "user_profile_id": "USR020",
+        "country": "Philippines",
+        "street_address": "68 Sample Street",
+        "apartment": "Unit 3A",
+        "city": "Zamboanga",
+        "state": "Province",
+        "postal_code": "3687"
+      }
+    },
+    {
+      "id": "USR021",
+      "account_id": "ACC021",
+      "first_name": "Jayden",
+      "last_name": "Bautista",
+      "username": "jaydenbautista",
+      "profile_picture": "/profiles/user021.png",
+      "background_cover": "/covers/cover021.png",
+      "gender": "Male",
+      "birthdate": "1998-04-11",
+      "address": {
+        "country": "Philippines",
+        "street": "44 Sample Street",
+        "apartment": "Unit 1C",
+        "city": "General Santos",
+        "state": "Province",
+        "postal_code": "4770"
+      },
+      "contact": {
+        "gmail": "jayden.bautista@gmail.com",
+        "phoneNumber": "09355007508"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/jaydenbautista",
+        "https://twitter.com/jayden_bautista"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP021",
+        "user_profile_id": "USR021",
+        "country": "Philippines",
+        "street_address": "93 Sample Street",
+        "apartment": "Unit 5A",
+        "city": "General Santos",
+        "state": "Province",
+        "postal_code": "4753"
+      }
+    },
+    {
+      "id": "USR022",
+      "account_id": "ACC022",
+      "first_name": "Mila",
+      "last_name": "Gonzales",
+      "username": "milagonzales",
+      "profile_picture": "/profiles/user022.png",
+      "background_cover": "/covers/cover022.png",
+      "gender": "Other",
+      "birthdate": "1996-06-24",
+      "address": {
+        "country": "Philippines",
+        "street": "53 Sample Street",
+        "apartment": "Unit 8B",
+        "city": "Cagayan",
+        "state": "Province",
+        "postal_code": "5335"
+      },
+      "contact": {
+        "gmail": "mila.gonzales@gmail.com",
+        "phoneNumber": "09158248873"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/milagonzales",
+        "https://twitter.com/mila_gonzales"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP022",
+        "user_profile_id": "USR022",
+        "country": "Philippines",
+        "street_address": "25 Sample Street",
+        "apartment": "Unit 5C",
+        "city": "Cagayan",
+        "state": "Province",
+        "postal_code": "8627"
+      }
+    },
+    {
+      "id": "USR023",
+      "account_id": "ACC023",
+      "first_name": "Kai",
+      "last_name": "Fuentes",
+      "username": "kaifuentes",
+      "profile_picture": "/profiles/user023.png",
+      "background_cover": "/covers/cover023.png",
+      "gender": "Prefer not to say",
+      "birthdate": "1996-09-13",
+      "address": {
+        "country": "Philippines",
+        "street": "41 Sample Street",
+        "apartment": "Unit 9C",
+        "city": "La Union",
+        "state": "Province",
+        "postal_code": "3760"
+      },
+      "contact": {
+        "gmail": "kai.fuentes@gmail.com",
+        "phoneNumber": "09668295879"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/kaifuentes",
+        "https://twitter.com/kai_fuentes"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP023",
+        "user_profile_id": "USR023",
+        "country": "Philippines",
+        "street_address": "82 Sample Street",
+        "apartment": "Unit 4C",
+        "city": "La Union",
+        "state": "Province",
+        "postal_code": "5254"
+      }
+    },
+    {
+      "id": "USR024",
+      "account_id": "ACC024",
+      "first_name": "Nova",
+      "last_name": "Ramos",
+      "username": "novaramos",
+      "profile_picture": "/profiles/user024.png",
+      "background_cover": "/covers/cover024.png",
+      "gender": "Female",
+      "birthdate": "1999-08-26",
+      "address": {
+        "country": "Philippines",
+        "street": "46 Sample Street",
+        "apartment": "Unit 3B",
+        "city": "Palawan",
+        "state": "Province",
+        "postal_code": "5542"
+      },
+      "contact": {
+        "gmail": "nova.ramos@gmail.com",
+        "phoneNumber": "09773355490"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/novaramos",
+        "https://twitter.com/nova_ramos"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP024",
+        "user_profile_id": "USR024",
+        "country": "Philippines",
+        "street_address": "75 Sample Street",
+        "apartment": "Unit 6C",
+        "city": "Palawan",
+        "state": "Province",
+        "postal_code": "6760"
+      }
+    },
+    {
+      "id": "USR025",
+      "account_id": "ACC025",
+      "first_name": "Elijah",
+      "last_name": "Marquez",
+      "username": "elijahmarquez",
+      "profile_picture": "/profiles/user025.png",
+      "background_cover": "/covers/cover025.png",
+      "gender": "Other",
+      "birthdate": "1997-05-25",
+      "address": {
+        "country": "Philippines",
+        "street": "91 Sample Street",
+        "apartment": "Unit 3A",
+        "city": "Ilocos",
+        "state": "Province",
+        "postal_code": "3315"
+      },
+      "contact": {
+        "gmail": "elijah.marquez@gmail.com",
+        "phoneNumber": "09256313488"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/elijahmarquez",
+        "https://twitter.com/elijah_marquez"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP025",
+        "user_profile_id": "USR025",
+        "country": "Philippines",
+        "street_address": "81 Sample Street",
+        "apartment": "Unit 2B",
+        "city": "Ilocos",
+        "state": "Province",
+        "postal_code": "3256"
+      }
+    },
+    {
+      "id": "USR026",
+      "account_id": "ACC026",
+      "first_name": "Riley",
+      "last_name": "Salazar",
+      "username": "rileysalazar",
+      "profile_picture": "/profiles/user026.png",
+      "background_cover": "/covers/cover026.png",
+      "gender": "Male",
+      "birthdate": "1996-05-24",
+      "address": {
+        "country": "Philippines",
+        "street": "39 Sample Street",
+        "apartment": "Unit 6C",
+        "city": "Nueva Ecija",
+        "state": "Province",
+        "postal_code": "8860"
+      },
+      "contact": {
+        "gmail": "riley.salazar@gmail.com",
+        "phoneNumber": "09634358005"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/rileysalazar",
+        "https://twitter.com/riley_salazar"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP026",
+        "user_profile_id": "USR026",
+        "country": "Philippines",
+        "street_address": "57 Sample Street",
+        "apartment": "Unit 1A",
+        "city": "Nueva Ecija",
+        "state": "Province",
+        "postal_code": "7665"
+      }
+    },
+    {
+      "id": "USR027",
+      "account_id": "ACC027",
+      "first_name": "Axel",
+      "last_name": "Santiago",
+      "username": "axelsantiago",
+      "profile_picture": "/profiles/user027.png",
+      "background_cover": "/covers/cover027.png",
+      "gender": "Prefer not to say",
+      "birthdate": "1995-09-23",
+      "address": {
+        "country": "Philippines",
+        "street": "49 Sample Street",
+        "apartment": "Unit 3C",
+        "city": "Tuguegarao",
+        "state": "Province",
+        "postal_code": "3946"
+      },
+      "contact": {
+        "gmail": "axel.santiago@gmail.com",
+        "phoneNumber": "09481928912"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/axelsantiago",
+        "https://twitter.com/axel_santiago"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP027",
+        "user_profile_id": "USR027",
+        "country": "Philippines",
+        "street_address": "78 Sample Street",
+        "apartment": "Unit 4B",
+        "city": "Tuguegarao",
+        "state": "Province",
+        "postal_code": "2758"
+      }
+    },
+    {
+      "id": "USR028",
+      "account_id": "ACC028",
+      "first_name": "Sky",
+      "last_name": "Valdez",
+      "username": "skyvaldez",
+      "profile_picture": "/profiles/user028.png",
+      "background_cover": "/covers/cover028.png",
+      "gender": "Other",
+      "birthdate": "1997-09-23",
+      "address": {
+        "country": "Philippines",
+        "street": "81 Sample Street",
+        "apartment": "Unit 8B",
+        "city": "Albay",
+        "state": "Province",
+        "postal_code": "7589"
+      },
+      "contact": {
+        "gmail": "sky.valdez@gmail.com",
+        "phoneNumber": "09438625204"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/skyvaldez",
+        "https://twitter.com/sky_valdez"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP028",
+        "user_profile_id": "USR028",
+        "country": "Philippines",
+        "street_address": "64 Sample Street",
+        "apartment": "Unit 1A",
+        "city": "Albay",
+        "state": "Province",
+        "postal_code": "8121"
+      }
+    },
+    {
+      "id": "USR029",
+      "account_id": "ACC029",
+      "first_name": "Evan",
+      "last_name": "Romero",
+      "username": "evanromero",
+      "profile_picture": "/profiles/user029.png",
+      "background_cover": "/covers/cover029.png",
+      "gender": "Other",
+      "birthdate": "1998-07-26",
+      "address": {
+        "country": "Philippines",
+        "street": "26 Sample Street",
+        "apartment": "Unit 2B",
+        "city": "Catanduanes",
+        "state": "Province",
+        "postal_code": "9903"
+      },
+      "contact": {
+        "gmail": "evan.romero@gmail.com",
+        "phoneNumber": "09753510427"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/evanromero",
+        "https://twitter.com/evan_romero"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP029",
+        "user_profile_id": "USR029",
+        "country": "Philippines",
+        "street_address": "79 Sample Street",
+        "apartment": "Unit 7C",
+        "city": "Catanduanes",
+        "state": "Province",
+        "postal_code": "9234"
+      }
+    },
+    {
+      "id": "USR030",
+      "account_id": "ACC030",
+      "first_name": "Talia",
+      "last_name": "Pascual",
+      "username": "taliapascual",
+      "profile_picture": "/profiles/user030.png",
+      "background_cover": "/covers/cover030.png",
+      "gender": "Male",
+      "birthdate": "1999-01-27",
+      "address": {
+        "country": "Philippines",
+        "street": "46 Sample Street",
+        "apartment": "Unit 3C",
+        "city": "Samar",
+        "state": "Province",
+        "postal_code": "5097"
+      },
+      "contact": {
+        "gmail": "talia.pascual@gmail.com",
+        "phoneNumber": "09889253676"
+      },
+      "about_me": "Artist exploring creativity through digital and traditional mediums.",
+      "link_accounts": [
+        "https://instagram.com/taliapascual",
+        "https://twitter.com/talia_pascual"
+      ],
+      "skills": [
+        "Digital Art",
+        "Sketching",
+        "Coloring"
+      ],
+      "shipping_address": {
+        "shipping_id": "SHIP030",
+        "user_profile_id": "USR030",
+        "country": "Philippines",
+        "street_address": "32 Sample Street",
+        "apartment": "Unit 4A",
+        "city": "Samar",
+        "state": "Province",
+        "postal_code": "1740"
+      }
+    }
+  ]

@@ -20,7 +20,7 @@ const metrics = [
 const Commission = () => {
   return (
     <main className="max-w-[1880px] mx-auto md:px-10">
-      <h1 className="text-3xl font-bold">Commission <span className="text-green-500">Requests</span></h1>
+      <h1 className="text-3xl font-bold">My Client <span className="text-green-500">Requests</span></h1>
       <p className="text-sm opacity-80">Manage your incoming art commission requests from clients</p>
     
       <div className="flex flex-row gap-4 flex-wrap mt-10 text-sm">
