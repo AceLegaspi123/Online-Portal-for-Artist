@@ -9,7 +9,7 @@ function layout({ children }: { children: ReactNode }) {
         className="h-[23rem] w-full -mt-10 relative background-cover "
         style={{ backgroundImage: "url('/profile-background.png')" }}
       >
-        <div className="flex gap-4 pt-40 items-center px-10 pl-12">
+        <div className="flex gap-4 pt-50 items-center px-10 pl-12">
           <div className="h-32 w-32 bg-[#1c1c1c] rounded-full"></div>
           <div className="flex flex-col gap-1">
             <h3 className="text-3xl font-bold">ChristianJay69</h3>

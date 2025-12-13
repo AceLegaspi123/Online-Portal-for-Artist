@@ -7,7 +7,7 @@ import Suggestion from "./Suggestion";
 import { BsSearch } from 'react-icons/bs';
 import FilterIcon from "../ui/FilterIcon";
 import { ImSpinner2 } from "react-icons/im";
-import artworks from "@/data/artlist.json"
+import artworks from "@/data/artwork.json"
 import Link from "next/link";
 import SearchHeader from '../ui/SearchHeader';
 
@@ -34,7 +34,7 @@ const ExploreLayout = () => {
         columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 min-2xl:columns-7
         gap-4 mt-35">
         {artworks.map((art) => (
-          <Link href={`/explore/${art.id}`} key={art.id} className="break-inside-avoid">
+          <Link href={`/explore/${art.artwork_id}`} key={art.artwork_id} className="break-inside-avoid">
             <ArtList art={art} />
           </Link>
         ))}

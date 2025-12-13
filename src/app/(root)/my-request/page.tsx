@@ -32,7 +32,6 @@ const Commission = () => {
       </div>
 
       <MyClients />
-
     </main>
   )
 }

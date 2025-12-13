@@ -4,8 +4,10 @@ import { CiLocationOn } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
 import { SlActionRedo } from "react-icons/sl";
 import { RiBallPenLine } from "react-icons/ri";
+import userProfile from "@/data/user_profile.json"
 
-const page = () => {
+const page = async({params}: {params: {userId: string}}) => {
+  // const user = await userProfile(params.userId)
   return (
     <div className="flex">
      <div>
