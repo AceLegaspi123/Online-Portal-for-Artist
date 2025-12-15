@@ -15,8 +15,8 @@ interface ProfileMenuProps {
 
 const ProfileMenu = ({children, handleLogOut, handleMenu } : ProfileMenuProps) => {
   const owner = UserProfile.find(user => user.id === LOGGED_IN_USER_ID);
-  const credential = credentials.find(cred => cred.account_id === LOGGED_IN_USER_ID);
-  console.log(owner);
+  const credential = credentials.find(cred => cred.account_id === owner?.account_id);
+  console.log(credential);
 
   return (
     <div className="flex items-center justify-center">
@@ -41,7 +41,7 @@ const ProfileMenu = ({children, handleLogOut, handleMenu } : ProfileMenuProps) =
         <div className="text-center pb-6 p-3 gap-2 flex flex-col">
           <h1 className="text-3xl font-bold">{`${owner?.first_name} ${owner?.last_name}`}</h1>
           <p className="text-sm text-gray-300">
-            {/* {owner?.credential} */}
+            {credential?.gmail}
           </p>
         </div>
 
