@@ -13,8 +13,7 @@ import SearchHeader from '../ui/SearchHeader';
 
 
 const ExploreLayout = () => {
-  const Suggestion : string[] = ["All", "Digital Art", "Traditional Art", "Illustration", "Portrait", "3d Art"]
-  
+
   return (
     <div className="flex flex-col gap-4 relative mt-10">
       <div className='fixed top-0  left-20 right-20 z-20 bg-background py-5 '>
@@ -41,8 +40,6 @@ const ExploreLayout = () => {
           </Link>
         ))}
       </div>
-
-
 
       <div className="flex justify-center mt-6">
         <span className="loading loading-dots loading-xl bg-foreground"></span>

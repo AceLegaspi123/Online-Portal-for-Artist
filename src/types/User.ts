@@ -16,7 +16,7 @@ export interface artList {
 }
 
 export interface artwork  {
-  artwork_id: number;
+  artwork_id: string;
   user_profile_id: string;
   cover_photo: string;
   art_file: string;

@@ -11,8 +11,6 @@ export default function ArtList({ art }: { art: artwork }) {
   const user = userProfile.find(
     (u) => u.id === art.user_profile_id
   );
-
-  console.log(user)
   return (
     <div className="mb-4 w-full break-inside-avoid relative">
       <div className="art-item-wrapper rounded-md overflow-hidden relative group ">

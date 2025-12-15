@@ -6,8 +6,11 @@ import { SlActionRedo } from "react-icons/sl";
 import { RiBallPenLine } from "react-icons/ri";
 import userProfile from "@/data/user_profile.json"
 
-const page = async({params}: {params: {userId: string}}) => {
-  // const user = await userProfile(params.userId)
+async function Page({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const user = userProfile.find(u => u.id == id)
+
+  // console.log(user)
   return (
     <div className="flex">
      <div>
@@ -23,7 +26,6 @@ const page = async({params}: {params: {userId: string}}) => {
               <p className='text-sm opacity-50'>Submit your art to your gallery for featuring and display.</p>
             <button className='bg-gradient-primary  rounded-md p-1 w-40 mx-auto'>Submit Now</button>
           </div>
-           
         </div>
       </div>
 
@@ -101,4 +103,4 @@ const page = async({params}: {params: {userId: string}}) => {
   )
 }
 
-export default page
+export default Page

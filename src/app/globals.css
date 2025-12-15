@@ -129,6 +129,11 @@ footer {
   padding: 1em 2em;
 }
 
+.banner{
+  background: #000000;
+  background: linear-gradient(179deg, rgba(0, 0, 0, 0.32) 0%, rgba(3, 3, 3, 0.79) 100%);
+}
+
 .shop-card {
   border: 1px solid rgba(255, 255, 255, 0.155);
 }
