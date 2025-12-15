@@ -16,12 +16,12 @@ const ExploreLayout = () => {
 
   return (
     <div className="flex flex-col gap-4 relative mt-10">
-      <div className='fixed top-0  left-20 right-20 z-20 bg-background py-5 '>
-        <div className='relative z-20  pt-16 bg-background'>
+      <div className='fixed top-10 left-20 right-20 z-20 bg-background py-5 pt-10'>
+        <div className='relative z-20 '>
           <input 
             type="text" 
             placeholder='Search' 
-            className='pl-15 h-[5vh] text-white w-full bg-primary rounded-md'
+            className='pl-15 h-[4em] text-white w-full bg-primary rounded-md'
           />
           <BsSearch className='absolute top-4 left-5'/>
         </div>
