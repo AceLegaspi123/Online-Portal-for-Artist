@@ -13,6 +13,7 @@ import useProfile from "@/data/user_profile.json"
 import GoBackBtn from "@/app/components/ui/GoBackBtn";
 import comments from "@/data/comments.json"
 import { MdKeyboardArrowDown } from "react-icons/md";
+import CollectionModal from "@/app/components/ui/CollectionModal";
 
 const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
   const {id} = await params;
@@ -30,6 +31,10 @@ const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
               className='object-contain h-full w-full'  
             />
         </div>
+
+      <div className="absolute bottom-50 w-50 bg-white right-5">
+        <CollectionModal />
+      </div>
 
         <div className='flex flex-col gap-8 py-4 max-w-[1280px] w-full mx-auto'>
           <div className='flex justify-between items-center w-full'>
@@ -124,6 +129,8 @@ const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
       </div>
 
         <GoBackBtn/>
+
+ 
     </div>
   )
 }
