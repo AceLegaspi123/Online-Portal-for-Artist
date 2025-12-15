@@ -16,7 +16,7 @@ export interface artList {
 }
 
 export interface artwork  {
-  artwork_id: number;
+  artwork_id: string;
   user_profile_id: string;
   cover_photo: string;
   art_file: string;
@@ -38,7 +38,7 @@ export interface artwork  {
 
 
 //For violations history
-interface UserProfile {
+interface userProfile {
   gmail: string;
   profile_icon: string;
   name: string;
@@ -51,8 +51,8 @@ type ActionTaken = "Warning" | "Temporary Suspension" | "Permanent Ban" | "Clear
 interface ViolationHistoryEntry {
   HISTORY_ID: string;
   USER_ID: string;
-  reported_user: UserProfile;
-  reported_by: UserProfile;
+  reported_user: userProfile;
+  reported_by: userProfile;
   VIOLATION_TYPE: ViolationType;
   VIOLATION_LOG_ID: string;
   ACTION_TAKEN: ActionTaken;
@@ -82,4 +82,54 @@ export interface CommissionRequest {
   Budget: number;
   Status: string;
   CreatedAt: string;
+}
+
+
+// USER PROFILE
+// Address (used for home & shipping)
+export interface Address {
+  country: string;
+  street?: string;
+  street_address?: string;
+  apartment?: string;
+  city: string;
+  state: string;
+  postal_code: string;
+}
+
+// Contact info
+export interface Contact {
+  gmail: string;
+  phoneNumber: string;
+}
+
+// Shipping Address
+export interface ShippingAddress {
+  shipping_id: string;
+  user_profile_id: string;
+  country: string;
+  street_address: string;
+  apartment?: string;
+  city: string;
+  state: string;
+  postal_code: string;
+}
+
+// Main User Profile
+export interface UserProfile {
+  id: string;
+  account_id: string;
+  first_name: string;
+  last_name: string;
+  username: string;
+  profile_picture: string;
+  background_cover: string;
+  gender: "Male" | "Female" | "Other";
+  birthdate: string; // ISO date string
+  address: Address;
+  contact: Contact;
+  about_me: string;
+  link_accounts: string[];
+  skills: string[];
+  shipping_address: ShippingAddress;
 }

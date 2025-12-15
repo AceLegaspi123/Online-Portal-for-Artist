@@ -4,8 +4,13 @@ import { CiLocationOn } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
 import { SlActionRedo } from "react-icons/sl";
 import { RiBallPenLine } from "react-icons/ri";
+import userProfile from "@/data/user_profile.json"
 
-const page = () => {
+async function Page({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const user = userProfile.find(u => u.id == id)
+
+  // console.log(user)
   return (
     <div className="flex">
      <div>
@@ -21,7 +26,6 @@ const page = () => {
               <p className='text-sm opacity-50'>Submit your art to your gallery for featuring and display.</p>
             <button className='bg-gradient-primary  rounded-md p-1 w-40 mx-auto'>Submit Now</button>
           </div>
-           
         </div>
       </div>
 
@@ -99,4 +103,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

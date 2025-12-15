@@ -1,34 +1,37 @@
-import artlist from "@/data/artlist.json"
-
-import React from 'react'
 import { FaRegStar } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegCommentAlt } from "react-icons/fa";
 import { BsThreeDots } from "react-icons/bs";
-import ArtTypeCard from '@/app/components/preview/ArtTypeCard';
 import Comments from '@/app/components/shared/Comments';
 import ProfileIcon from '@/app/components/ui/ProfileIcon';
 import { Sidebar } from '@/app/components/preview/Sidebar';
 import { IoIosArrowForward } from "react-icons/io";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { FcSalesPerformance } from "react-icons/fc";
+import artwork from "@/data/artwork.json";
+import useProfile from "@/data/user_profile.json"
+import GoBackBtn from "@/app/components/ui/GoBackBtn";
+import comments from "@/data/comments.json"
+import { MdKeyboardArrowDown } from "react-icons/md";
 
-const ArtPreview = ({ params }: { params: { id: string } }) => {
-  const artId = Number(params.id);
-  const art = artlist.find(item => item.id === artId);
-
+const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
+  const {id} = await params;
+  const art = artwork.find((u) => u.artwork_id == id);
+  const user = useProfile.find((u) => u.id === art?.user_profile_id);
+  const comment = comments.filter((u) => u.artworkId == art?.artwork_id)
+  
   return (
-    <div className=' max-w-screen-2xl mx-auto md:flex gap-18'>
-      <div className='md:w-[80%] relative'>
-        <div className='w-full h-[700px] bg-primary flex items-center justify-center'>
+    <div className='px-10 -mt-10 lg:flex gap-18 '>
+      <div className='md:w-full relative'>
+        <div className='w-full h-[50em] bg-primary flex items-center justify-center'>
             <img 
-              src={art?.src}
-              alt=""
-              className='object-cover h-full rounded-sm'  
+              src={art?.art_file}
+              alt={art?.artwork_title}
+              className='object-contain h-full w-full'  
             />
         </div>
 
-        <div className='flex flex-col gap-8 py-4'>
+        <div className='flex flex-col gap-8 py-4 max-w-[1280px] w-full mx-auto'>
           <div className='flex justify-between items-center w-full'>
             <ul className='flex gap-8'>
               <li className='flex items-center gap-2'>
@@ -38,19 +41,19 @@ const ArtPreview = ({ params }: { params: { id: string } }) => {
 
               <li className='flex items-center gap-2'>
                 <FaRegHeart />
-                <p>10</p>
+                <p>{art?.likes_count}</p>
               </li>
 
               <li className='flex items-center gap-2'>
                 <FaRegCommentAlt />
-                <p>Comments</p>
+                <p>12</p>
               </li>
             </ul>
 
             <div className='flex gap-4 items-center'>
               <div className='flex items-center gap-2'>
                 <FcSalesPerformance />
-                 <p>190 Sold arts</p>
+                 <p>{art?.sold} Sold arts</p>
               </div>
              
                <BsThreeDots />
@@ -59,45 +62,56 @@ const ArtPreview = ({ params }: { params: { id: string } }) => {
           
           <div className='flex flex-col gap-4'>
             <div>
-                <h2>Arts title</h2>
-                <p>A warm, glowing sunset sets the backdrop for a solitary car, evoking feelings of solitude and adventure</p>
+                <h2>{art?.artwork_title}</h2>
+                <p>{art?.description}</p>
             </div>
 
 
             <div className='flex items-center gap-4 w-full'>
-              <ProfileIcon />
+              <ProfileIcon id={user?.id} profile={user?.profile_picture}/>
 
               <div className='flex items-center justify-between w-full'>
                   <div className='flex items-center gap-4'>
                     <div>
-                      <h3 className='font-bold'>Artist name</h3>
-                      <p className='text-xs opacity-50 -mt-1'>128 followers</p>
+                      <h3 className='font-bold'>{`${user?.first_name} ${user?.last_name}`}</h3>
+                      <p className='text-xs opacity-50 -mt-1'>20 followers</p>
                     </div>
 
                     <div className='h-1 w-1 rounded-full m-auto bg-white'></div>
                     <p className='text-blue-500'>Follow</p>
                   </div>
 
-                  <p className='opacity-50 w-fit text-sm'>Upload 5 minutes ago</p>
+                  <p className='opacity-50 w-fit text-sm'>{art?.created_at}</p>
                 </div>
               </div>
 
             <div className='flex gap-4 my-4'>
-                <ArtTypeCard />
-                <ArtTypeCard />
-                <ArtTypeCard />
+              {
+                art?.tags.map((u, i) => (
+                  <p key={i} className="py-2 px-4 bg-primary border-1 border-primary-line rounded-md">{u}</p>
+                ))
+              }
             </div>
+
 
             <hr className='text-primary-line'/>
           </div>
         </div>
 
 
-        <div className='my-4'>
+        <div className='my-4 max-w-[1280px] w-full mx-auto'>
+
           <div className='flex flex-col gap-8'>
-            <Comments />
-            <Comments />
-            <Comments />
+            <div className="flex gap-4 cursor-pointer items-center">
+               <p>{comment.length} Comment</p>
+               <MdKeyboardArrowDown />
+            </div>
+            
+            {
+              comment.map(i => (
+                <Comments key={i.id} {...i}/>
+              ))
+            }
           </div>
         </div>
 
@@ -105,9 +119,11 @@ const ArtPreview = ({ params }: { params: { id: string } }) => {
           <MdKeyboardArrowLeft className='absolute top-[9em] text-4xl -left-10 opacity-50 hover:opacity-100 transition ease-in-out duration-200 cursor-pointer'/>
       </div>
 
-      <div className='md:w-[20%]'>
+      <div className='lg:w-80 ml-auto'>
         <Sidebar />
       </div>
+
+        <GoBackBtn/>
     </div>
   )
 }

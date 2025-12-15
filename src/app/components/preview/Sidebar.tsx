@@ -8,7 +8,7 @@ import { HiOutlineComputerDesktop } from "react-icons/hi2";
 export function Sidebar(){
     return(
         <div>
-            <div className="w-full p-4 rounded-md border-1 border-primary-line flex flex-col gap-4 bg-primary mb-10">
+            <div className="w-full mt-5 p-4 rounded-md border-1 border-primary-line flex flex-col gap-4 bg-primary mb-10">
                 <button className="bg-secondary p-2 rounded-full cursor-pointer">Buy for $10</button>
                 <div className="flex items-center gap-2">
                     <FaPaperclip />

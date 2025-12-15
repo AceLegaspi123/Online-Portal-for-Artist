@@ -8,13 +8,15 @@ interface ImgRefProps {
   images: { file: File; url: string }[];
   setImages: React.Dispatch<React.SetStateAction<{ file: File; url: string }[]>>;
   goNext: React.Dispatch<React.SetStateAction<number>>;
+  func: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 
 const ImgRef = ({
     images,
     setImages,
-    goNext
+    goNext,
+    func
   }: ImgRefProps) => {
  
 
@@ -126,7 +128,9 @@ const ImgRef = ({
         <div className="flex justify-between mt-8">
           <button 
             type="button"
+            onClick={() => func(true)}
             className="text-sm p-2 border w-35  rounded-sm transition hover:opacity-80 cursor-pointer">Cancel</button>
+         
           <button 
             type="submit"
             className="text-sm p-2 font-bold border w-35 hover:opacity-80 transition rounded-sm bg-white text-black cursor-pointer">

@@ -7,18 +7,17 @@ import Suggestion from "./Suggestion";
 import { BsSearch } from 'react-icons/bs';
 import FilterIcon from "../ui/FilterIcon";
 import { ImSpinner2 } from "react-icons/im";
-import artworks from "@/data/artlist.json"
+import artworks from "@/data/artwork.json"
 import Link from "next/link";
 import SearchHeader from '../ui/SearchHeader';
 
 
 const ExploreLayout = () => {
-  const Suggestion : string[] = ["All", "Digital Art", "Traditional Art", "Illustration", "Portrait", "3d Art"]
-  
+
   return (
     <div className="flex flex-col gap-4 relative mt-10">
-      <div className='fixed top-15 left-20 right-20 z-20 bg-background py-5 pt-8 '>
-        <div className='relative'>
+      <div className='fixed top-0  left-20 right-20 z-20 bg-background py-5 '>
+        <div className='relative z-20  pt-16 bg-background'>
           <input 
             type="text" 
             placeholder='Search' 
@@ -26,21 +25,21 @@ const ExploreLayout = () => {
           />
           <BsSearch className='absolute top-4 left-5'/>
         </div>
+
+        <SearchHeader />
       </div>
 
-      <SearchHeader />
+     
         
       <div className="w-full mx-auto
         columns-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 min-2xl:columns-7
-        gap-4 mt-35">
+        gap-4 mt-30">
         {artworks.map((art) => (
-          <Link href={`/explore/${art.id}`} key={art.id} className="break-inside-avoid">
+          <Link href={`/explore/${art.artwork_id}`} key={art.artwork_id} className="break-inside-avoid">
             <ArtList art={art} />
           </Link>
         ))}
       </div>
-
-
 
       <div className="flex justify-center mt-6">
         <span className="loading loading-dots loading-xl bg-foreground"></span>
