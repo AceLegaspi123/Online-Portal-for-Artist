@@ -13,10 +13,14 @@ const nav = [
     {number: 3, name: "Preview"},
 ]
 
-const CommissionForm = () => {
-  const [isActive, setIsActive] = useState(0);
-  const [images, setImages] = useState<{ file: File; url: string }[]>([]);
+interface Props {
+  func:  React.Dispatch<React.SetStateAction<boolean>>
+}
 
+const CommissionForm = ({func} : Props) => {
+  const [isActive, setIsActive] = useState(1);
+  const [images, setImages] = useState<{ file: File; url: string }[]>([]);
+  const [close, setClose] = useState(false);
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -55,15 +59,18 @@ const CommissionForm = () => {
 
   const handleSubmitDetails = () => {
     console.log("Full Data:", { ...formData, tags });
-    setIsActive(2);
+    setIsActive(3);
   };
+
   return (
     <section>
         <div className="flex justify-between max-w-3xl w-full mx-auto ">
             {
                 nav.map(i => (
                     <div className="flex gap-4 font-semibold items-center" key={i.number}>
-                        <p className="bg-green-500 p-2  px-4 rounded-full">{i.number}</p>
+                        <p className={classNames(' p-2  px-4 rounded-full', {
+                          "bg-green-500": i.number == isActive
+                        })}>{i.number}</p>
                         <p className="">{i.name}</p>
                     </div>
                 ))
@@ -72,19 +79,20 @@ const CommissionForm = () => {
 
       <div className="relative max-w-5xl w-full mx-auto mt-4 p-4 flex bg-primary h-165 justify-center gap-20 overflow-hidden">
          <div className={classNames('absolute top-6 transition-all duration-1000 linear opacity-0 z-0', {
-          "-left-[52em]" :  isActive == 1,
-          "left-58 opacity-100" : isActive == 0
+          "-left-[52em]" :  isActive == 0,
+          "left-58 opacity-100" : isActive == 1
          })}>
                  <ImgRef
                     images={images}
                     setImages={setImages}
-                    goNext={() => setIsActive(1)}
+                    goNext={() => setIsActive(2)}
+                    func={func}
                   />
          </div>  
 
          <div className={classNames('absolute opacity-0 top-6 w-full max-w-[50em] transition-all duration-1000 z-10 linear ', {
-          "-right-[52em]" : isActive == 0,
-          "left-25 opacity-100" : isActive == 1
+          "-right-[52em]" : isActive == 1,
+          "left-25 opacity-100" : isActive == 2
          })}>
           <Details
             formData={formData}
@@ -96,18 +104,18 @@ const CommissionForm = () => {
             removeTag={handleRemoveTag}
             handleChange={handleFormChange}
             submit={handleSubmitDetails}
-            goBack={() => setIsActive(0)}
+            goBack={() => setIsActive(1)}
           />
          </div>
 
          <div className={classNames('absolute top-18 w-full max-w-[50em] transition-all duration-1000 z-10 linear ', {
-          "-right-[52em]" : isActive == 1 || isActive == 0,
-          "left-25" : isActive == 2
+          "-right-[52em] hidden" : isActive == 1 || isActive == 2,
+          "left-25" : isActive == 3
          })}>
             <Review 
                 formData={formData}
                 images={images}
-                goBack={() => setIsActive(1)}
+                goBack={() => setIsActive(2)}
             />
          </div>
       </div>

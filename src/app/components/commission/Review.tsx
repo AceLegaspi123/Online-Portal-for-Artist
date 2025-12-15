@@ -101,7 +101,7 @@ const commissionInFo = [
         </div>
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 h-20 bg-primary z-20 border-t-2 border-primary-line py-4">
+      <div className="fixed -bottom-40 left-0 right-0 h-20 bg-primary z-20 border-t-2 border-primary-line py-4">
             <div className="max-w-[55em] w-full mx-auto flex justify-between items-center">
                 <p>Please review your commission details</p>
 
@@ -115,7 +115,6 @@ const commissionInFo = [
                         className="py-2 px-5 bg-white text-black rounded-md cursor-pointer text-sm transition duration-300 ease-in-out hover:opacity-80 hover:scale-102">Submit Commission</button>
                 </div>
             </div>
-    
       </div>
     </div>
   );
