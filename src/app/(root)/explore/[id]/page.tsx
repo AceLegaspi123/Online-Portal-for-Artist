@@ -1,7 +1,6 @@
 import { FaRegStar } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegCommentAlt } from "react-icons/fa";
-import { BsThreeDots } from "react-icons/bs";
 import Comments from '@/app/components/shared/Comments';
 import ProfileIcon from '@/app/components/ui/ProfileIcon';
 import { Sidebar } from '@/app/components/preview/Sidebar';
@@ -13,6 +12,7 @@ import useProfile from "@/data/user_profile.json"
 import GoBackBtn from "@/app/components/ui/GoBackBtn";
 import comments from "@/data/comments.json"
 import { MdKeyboardArrowDown } from "react-icons/md";
+import Menu from "@/app/components/preview/Menu";
 
 const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
   const {id} = await params;
@@ -56,7 +56,7 @@ const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
                  <p>{art?.sold} Sold arts</p>
               </div>
              
-               <BsThreeDots />
+               <Menu />
             </div>
           </div>
           

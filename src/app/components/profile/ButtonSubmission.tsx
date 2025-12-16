@@ -6,6 +6,7 @@ import { GoPlusCircle } from "react-icons/go";
 import { useState } from "react";
 import CommissionForm from "../commission/CommissionForm";
 import DarkBlur from "../ui/DarkBlur";
+import Menu from './Menu';
 
 interface NavLinksProps {
     userId: string;
@@ -21,6 +22,7 @@ const ButtonSubmission = ({userId}: NavLinksProps) => {
         {
         !isOwner && 
             <div className="flex gap-4 items-center">
+            <Menu />
             <button className="flex bg-white px-4 py-2 text-nowrap items-center text-black rounded-md gap-2 cursor-pointer hover:opacity-80 transition duration-200 ease-in-out hover:scale-102">
             <GoPlusCircle /> 
                 <span>Follow</span>
