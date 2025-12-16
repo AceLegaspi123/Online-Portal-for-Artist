@@ -6,7 +6,7 @@ import ProfileIcon from '@/app/components/ui/ProfileIcon';
 import { Sidebar } from '@/app/components/preview/Sidebar';
 import { IoIosArrowForward } from "react-icons/io";
 import { MdKeyboardArrowLeft } from "react-icons/md";
-import { FcSalesPerformance } from "react-icons/fc";
+
 import artwork from "@/data/artwork.json";
 import useProfile from "@/data/user_profile.json"
 import GoBackBtn from "@/app/components/ui/GoBackBtn";
@@ -15,6 +15,8 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 import Menu from "@/app/components/preview/Menu";
 import CollectionModal from "@/app/components/ui/CollectionModal";
+import { LuPlus } from "react-icons/lu";
+
 
 const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
   const {id} = await params;
@@ -33,18 +35,9 @@ const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
             />
         </div>
 
-      <div className="absolute bottom-50 w-50 bg-white right-5">
-        <CollectionModal />
-      </div>
-
         <div className='flex flex-col gap-8 py-4 max-w-[1280px] w-full mx-auto'>
           <div className='flex justify-between items-center w-full'>
             <ul className='flex gap-8'>
-              <li className='flex items-center gap-2'>
-                <FaRegStar />
-                <p>Add to favorite</p>
-              </li>
-
               <li className='flex items-center gap-2'>
                 <FaRegHeart />
                 <p>{art?.likes_count}</p>
@@ -56,14 +49,7 @@ const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
               </li>
             </ul>
 
-            <div className='flex gap-4 items-center'>
-              <div className='flex items-center gap-2'>
-                <FcSalesPerformance />
-                 <p>{art?.sold} Sold arts</p>
-              </div>
-             
-               <Menu />
-            </div>
+              <Menu art={art}/>
           </div>
           
           <div className='flex flex-col gap-4'>
