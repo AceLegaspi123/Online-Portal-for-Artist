@@ -34,7 +34,7 @@ const Menu = () => {
                 }} 
                 className="flex gap-2 items-center py-2 pr-12 pl-4 hover:bg-secondary cursor-pointer">
                <MdOutlineReport />
-                <p>Report User</p>
+                <p>Report Artwork</p>
             </div>
 
             <div 
