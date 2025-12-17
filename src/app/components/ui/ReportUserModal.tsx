@@ -36,7 +36,6 @@ const ReportUserModal = ({
 
     console.log("User Report Submitted:", reportData);
 
-    // TODO: send to API
     onClose();
   };
 
@@ -60,7 +59,7 @@ const ReportUserModal = ({
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
           
-          {/* Reason */}
+          {/* Reasons */}
           <div>
             <label className="mb-1 block text-sm text-zinc-300">
               Reason

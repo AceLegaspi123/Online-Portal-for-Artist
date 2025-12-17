@@ -24,8 +24,8 @@ const Menu = () => {
         <BsThreeDots onClick={() => setOpenMenu(i => !i)} className="text-2xl cursor-pointer hover:opacity-80 "/>
 
         <div className={classNames('absolute top-10 right-0 bg-primary border-1 text-nowrap border-primary-line rounded-md rounded-2 py-3 transition-all ', {
-            "opacity-0 hidden" : openMenu,
-            "opacity-100 block": !openMenu
+            "opacity-0 hidden" : !openMenu,
+            "opacity-100 block": openMenu
         })}>
             <div
                 onClick={() => {
