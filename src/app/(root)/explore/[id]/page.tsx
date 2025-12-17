@@ -1,18 +1,22 @@
 import { FaRegStar } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegCommentAlt } from "react-icons/fa";
-import { BsThreeDots } from "react-icons/bs";
 import Comments from '@/app/components/shared/Comments';
 import ProfileIcon from '@/app/components/ui/ProfileIcon';
 import { Sidebar } from '@/app/components/preview/Sidebar';
 import { IoIosArrowForward } from "react-icons/io";
 import { MdKeyboardArrowLeft } from "react-icons/md";
-import { FcSalesPerformance } from "react-icons/fc";
+
 import artwork from "@/data/artwork.json";
 import useProfile from "@/data/user_profile.json"
 import GoBackBtn from "@/app/components/ui/GoBackBtn";
 import comments from "@/data/comments.json"
 import { MdKeyboardArrowDown } from "react-icons/md";
+
+import Menu from "@/app/components/preview/Menu";
+import CollectionModal from "@/app/components/ui/CollectionModal";
+import { LuPlus } from "react-icons/lu";
+
 
 const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
   const {id} = await params;
@@ -35,11 +39,6 @@ const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
           <div className='flex justify-between items-center w-full'>
             <ul className='flex gap-8'>
               <li className='flex items-center gap-2'>
-                <FaRegStar />
-                <p>Add to favorite</p>
-              </li>
-
-              <li className='flex items-center gap-2'>
                 <FaRegHeart />
                 <p>{art?.likes_count}</p>
               </li>
@@ -50,14 +49,7 @@ const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
               </li>
             </ul>
 
-            <div className='flex gap-4 items-center'>
-              <div className='flex items-center gap-2'>
-                <FcSalesPerformance />
-                 <p>{art?.sold} Sold arts</p>
-              </div>
-             
-               <BsThreeDots />
-            </div>
+              <Menu art={art}/>
           </div>
           
           <div className='flex flex-col gap-4'>
@@ -124,6 +116,8 @@ const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
       </div>
 
         <GoBackBtn/>
+
+ 
     </div>
   )
 }

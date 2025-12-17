@@ -3,6 +3,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import {LOGGED_IN_USER_ID} from "@/lib/auth";
+import UserProfile from "@/data/user_profile.json";
+import credentials from "@/data/credentials.json";
 
 interface ProfileMenuProps {
   children?: React.ReactNode;
@@ -11,13 +14,17 @@ interface ProfileMenuProps {
 }
 
 const ProfileMenu = ({children, handleLogOut, handleMenu } : ProfileMenuProps) => {
+  const owner = UserProfile.find(user => user.id === LOGGED_IN_USER_ID);
+  const credential = credentials.find(cred => cred.account_id === owner?.account_id);
+  console.log(credential);
+
   return (
     <div className="flex items-center justify-center">
       <div className="relative flex flex-col bg-primary rounded-lg border-primary-line border-1 w-[350px] py-5  text-white items-center">
         <div className="flex items-center justify-center">
           <div className="p-[5px] rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 overflow-hidden">
             <Link 
-              href="/profile"
+              href={`/profile/${owner?.id}`}
               onClick={() => handleMenu()}
             >
               <Image
@@ -32,9 +39,9 @@ const ProfileMenu = ({children, handleLogOut, handleMenu } : ProfileMenuProps) =
         </div>
 
         <div className="text-center pb-6 p-3 gap-2 flex flex-col">
-          <h1 className="text-3xl font-bold">ChristianJay69</h1>
+          <h1 className="text-3xl font-bold">{`${owner?.first_name} ${owner?.last_name}`}</h1>
           <p className="text-sm text-gray-300">
-            christianjayEscasa69@gmail.com
+            {credential?.gmail}
           </p>
         </div>
 

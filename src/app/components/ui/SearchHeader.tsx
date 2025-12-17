@@ -48,9 +48,9 @@ const SearchHeader = () => {
   return (
     <div
       className={clsx(
-        'absolute top-25 left-0 w-full z-10 bg-background pt-8 transition-transform duration-500 ease-in-out',
+        'absolute top-15 left-0 w-full z-0 bg-background pt-8 transition-transform duration-500 ease-in-out',
         {
-          'transform -translate-y-[100%]': isHidden,
+          'transform -translate-y-[60%]': isHidden,
           'transform translate-y-0': !isHidden,
         }
       )}

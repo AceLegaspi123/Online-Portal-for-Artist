@@ -6,6 +6,7 @@ import Image from "next/image";
 import {LOGGED_IN_USER_ID} from "@/lib/auth"
 import { MdDownload } from "react-icons/md";
 import ButtonSubmission from "@/app/components/profile/ButtonSubmission";
+import Menu from "@/app/components/profile/Menu";
 
 interface LayoutProps {
   children: ReactNode;

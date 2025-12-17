@@ -11,7 +11,7 @@ import ProfileMenu from '../Menu/ProfileMenu';
 import { FaHome } from "react-icons/fa";
 import { GoGlobe } from "react-icons/go";
 import { FaRegUser } from "react-icons/fa";
-import LogoLight from "@/app/logo-light.png"
+// import LogoLight from "@/app/logo-light.png"
 import LogoDark from "@/app/logo-dark.png"
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -30,7 +30,7 @@ export default function Header() {
 
   console.log(isLogin);
   return (
-    <header className="z-20 bg-background border-b-1 sticky top-0 h-17 left-0 w-full border-b-primary-line flex justify-between items-center mb-10 px-5 md:px-10 lg:px-20">
+    <header className="z-30 bg-background border-b-1 sticky top-0 h-17 left-0 w-full border-b-primary-line flex justify-between items-center mb-10 px-5 md:px-10 lg:px-20">
       <div className="flex gap-8 items-center">
           <Image
             height={100}
