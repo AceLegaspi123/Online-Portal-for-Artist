@@ -54,7 +54,7 @@ const CommissionModal = ({data, modal, modalFunc}: CommissionModalProps) => {
             <h3 className="text-xl font-semibold">{data?.Title}</h3>
         </header>
 
-        <main className="p-4 h-[79%] overflow-scroll">
+        <main className="p-4 h-[79%] overflow-y-scroll">
            <ul className="flex flex-col gap-4">
                 <li className="flex gap-4 border-b-1 border-primary-line pb-4">
                     <div className="p-2 bg-secondary rounded-md text-md h-fit ">
