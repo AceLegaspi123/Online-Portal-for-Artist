@@ -1,9 +1,12 @@
 // src/app/login/page.tsx
+'use client'
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { TfiEmail } from "react-icons/tfi";
 import { CiLock } from "react-icons/ci";
 import Logo from "@/app/components/ui/Logo";
+import {login} from "@/lib/actions/auth"
+
 
 
 export default function LoginPage() {
@@ -18,7 +21,7 @@ export default function LoginPage() {
           <div className="w-[90dvw] md:w-1/2 bg-white py-10">
             <form className="flex flex-col gap-5 p-10">
               <h3 className="text-3xl font-bold text-center text-black">Welcome back</h3>
-              <button className="border border-cyan-500 p-5 text-black rounded-xl flex items-center justify-center gap-3">
+              <button onClick={() => login()} className="border border-cyan-500 p-5 text-black rounded-xl flex items-center justify-center gap-3">
                 <FcGoogle />
                 <p>Continue with Google</p>
               </button>
