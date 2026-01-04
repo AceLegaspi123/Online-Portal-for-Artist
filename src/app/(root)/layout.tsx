@@ -11,10 +11,6 @@ const layout = ({children}: {children: React.ReactNode}) => {
         {children}
       </main>
       <Footer />
-     
-
-      {/* <div className='bg-secondary absolute -bottom-10 w-[100vw] h-60'>
-      </div> */}
     </div>
   )
 }

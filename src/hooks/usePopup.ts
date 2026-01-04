@@ -36,6 +36,7 @@ export function usePopup(options?: UsePopupOptions) {
     return () => document.removeEventListener("mousedown", handleClick);
   }, [isOpen, closeOnOutsideClick]);
 
+  
   // Close on ESC
   useEffect(() => {
     if (!isOpen || !closeOnEsc) return;

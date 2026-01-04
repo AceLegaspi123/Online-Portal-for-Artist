@@ -14,8 +14,6 @@ import comments from "@/data/comments.json"
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 import Menu from "@/app/components/preview/Menu";
-import CollectionModal from "@/app/components/ui/CollectionModal";
-import { LuPlus } from "react-icons/lu";
 
 
 const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
@@ -107,8 +105,8 @@ const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
           </div>
         </div>
 
-          <IoIosArrowForward className='absolute top-[9em] text-4xl -right-10 opacity-50 hover:opacity-100 transition ease-in-out duration-200 cursor-pointer'/>
-          <MdKeyboardArrowLeft className='absolute top-[9em] text-4xl -left-10 opacity-50 hover:opacity-100 transition ease-in-out duration-200 cursor-pointer'/>
+          {/* <IoIosArrowForward className='absolute top-[9em] text-4xl -right-10 opacity-50 hover:opacity-100 transition ease-in-out duration-200 cursor-pointer'/>
+          <MdKeyboardArrowLeft className='absolute top-[9em] text-4xl -left-10 opacity-50 hover:opacity-100 transition ease-in-out duration-200 cursor-pointer'/> */}
       </div>
 
       <div className='lg:w-80 ml-auto'>
@@ -116,8 +114,6 @@ const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
       </div>
 
         <GoBackBtn/>
-
- 
     </div>
   )
 }

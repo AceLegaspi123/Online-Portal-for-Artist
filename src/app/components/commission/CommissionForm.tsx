@@ -1,126 +1,173 @@
 "use client";
-import classNames from 'clsx';
 
-import Details from "./Details";
-import ImgRef from "./ImgRef";
-import { MdKeyboardArrowRight } from "react-icons/md";
+import classNames from "clsx";
 import { useState } from "react";
-import Review from './Review';
+import ImgRef from "./ImgRef";
+import Details from "./Details";
+import Review from "./Review";
+import { notify } from "@/utils/toastHelper";
+import { getOwnerProfile, getUserProfile, getGmail } from "@/utils/getUser";
+import { FinalCommissionData } from "@/types/commission";
 
 const nav = [
-    {number: 1, name: "Upload Reference Image"},
-    {number: 2, name: "Information"},
-    {number: 3, name: "Preview"},
-]
+  { number: 1, name: "Upload" },
+  { number: 2, name: "Details" },
+  { number: 3, name: "Review" },
+];
 
 interface Props {
-  func:  React.Dispatch<React.SetStateAction<boolean>>
+  func: (value: boolean) => void;
+  userId: string;
 }
 
-const CommissionForm = ({func} : Props) => {
-  const [isActive, setIsActive] = useState(1);
-  const [images, setImages] = useState<{ file: File; url: string }[]>([]);
-  const [close, setClose] = useState(false);
-  const [formData, setFormData] = useState({
-    title: "",
-    description: "",
-    artType: "",
-    deadline: "",
-  });
+const CommissionForm = ({ func, userId }: Props) => {
+  const [step, setStep] = useState(1);
 
+  // Step data
+  const [images, setImages] = useState<{ file: File; url: string }[]>([]);
   const [tags, setTags] = useState<string[]>([]);
   const [inputValue, setInputValue] = useState("");
 
+  const [formData, setFormData] = useState({
+    title: "",
+    description: "",
+    artType: "Digital Art",
+    deadline: "",
+    budget: "",
+  });
 
-  //FORM FOR DETAILS
-  const handleTagKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  // Final review data
+  const [reviewData, setReviewData] = useState<FinalCommissionData | null>(null);
+
+  const handleTag = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      const newTag = inputValue.trim();
-
-      if (newTag && !tags.includes(newTag)) {
-        setTags((prev) => [...prev, newTag]);
+      const tag = inputValue.trim();
+      if (tag && !tags.includes(tag)) {
+        setTags((prev) => [...prev, tag]);
       }
-
       setInputValue("");
     }
   };
 
-  const handleRemoveTag = (tag: string) => {
-    setTags(tags.filter((t) => t !== tag));
+
+  const handleSubmit = () => {
+    if (tags.length < 1) {
+      notify("Add at least 1 tag to continue", "error");
+      return;
+    }
+
+    const finalData: FinalCommissionData = {
+      ...formData,
+      tags,
+      images,
+      commissionTo: getUserProfile(userId),
+      commissionFrom: getOwnerProfile(),
+      createdAt: new Date().toLocaleString(),
+    };
+
+    setReviewData(finalData);
+    setStep(3);
   };
 
-  const handleFormChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
 
-  const handleSubmitDetails = () => {
-    console.log("Full Data:", { ...formData, tags });
-    setIsActive(3);
+  // Final Submit
+  const handleFinalSubmit = (): FinalCommissionData => {
+    if (!reviewData) {
+      throw new Error("No review data found");
+    }
+
+    notify("Commission sent successfully", "success");
+
+    setTimeout(() => {
+      notify("View your order heree", "success");
+      window.location.href = "/my-request";
+    }, 1500)
+    
+    return reviewData;
   };
 
   return (
-    <section>
-        <div className="flex justify-between max-w-3xl w-full mx-auto ">
-            {
-                nav.map(i => (
-                    <div className="flex gap-4 font-semibold items-center" key={i.number}>
-                        <p className={classNames(' p-2  px-4 rounded-full', {
-                          "bg-green-500": i.number == isActive
-                        })}>{i.number}</p>
-                        <p className="">{i.name}</p>
-                    </div>
-                ))
-            }
+    <div className="fixed inset-0 z-[100] flex items-center justify-center">
+      <section className="max-w-5xl rounded-lg shadow-lg overflow-hidden bg-primary">
+
+
+        <div className="flex justify-between px-6 py-4">
+          {nav.map((item) => (
+            <div key={item.number} className="flex items-center gap-2">
+              <span
+                className={classNames(
+                  "h-8 w-8 flex items-center justify-center rounded-full text-sm font-bold",
+                  {
+                    "bg-green-500 text-black": step === item.number,
+                    "border border-primary-line opacity-80": step !== item.number,
+                  }
+                )}
+              >
+                {item.number}
+              </span>
+              <span className="hidden sm:block text-sm font-semibold">
+                {item.name}
+              </span>
+            </div>
+          ))}
         </div>
 
-      <div className="relative max-w-5xl w-full mx-auto mt-4 p-4 flex bg-primary h-165 justify-center gap-20 overflow-hidden">
-         <div className={classNames('absolute top-6 transition-all duration-1000 linear opacity-0 z-0', {
-          "-left-[52em]" :  isActive == 0,
-          "left-58 opacity-100" : isActive == 1
-         })}>
-                 <ImgRef
-                    images={images}
-                    setImages={setImages}
-                    goNext={() => setIsActive(2)}
-                    func={func}
-                  />
-         </div>  
-
-         <div className={classNames('absolute opacity-0 top-6 w-full max-w-[50em] transition-all duration-1000 z-10 linear ', {
-          "-right-[52em]" : isActive == 1,
-          "left-25 opacity-100" : isActive == 2
-         })}>
-          <Details
-            formData={formData}
-            setFormData={setFormData}
-            tags={tags}
-            inputValue={inputValue}
-            setInputValue={setInputValue}
-            handleKeyDown={handleTagKeyDown}
-            removeTag={handleRemoveTag}
-            handleChange={handleFormChange}
-            submit={handleSubmitDetails}
-            goBack={() => setIsActive(1)}
-          />
-         </div>
-
-         <div className={classNames('absolute top-18 w-full max-w-[50em] transition-all duration-1000 z-10 linear ', {
-          "-right-[52em] hidden" : isActive == 1 || isActive == 2,
-          "left-25" : isActive == 3
-         })}>
-            <Review 
-                formData={formData}
+        {/* ===== Content ===== */}
+        <div className="relative overflow-hidden rounded-md">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${(step - 1) * 100}%)` }}
+          >
+            {/* STEP 1 */}
+            <div className="w-full shrink-0 p-6">
+              <ImgRef
                 images={images}
-                goBack={() => setIsActive(2)}
-            />
-         </div>
-      </div>
-    </section>
-  )
-}
+                setImages={setImages}
+                goNext={() => setStep(2)}
+                func={func}
+              />
+            </div>
 
-export default CommissionForm
+            {/* STEP 2 */}
+            <div className="w-full shrink-0 p-6">
+              <Details
+                formData={formData}
+                tags={tags}
+                inputValue={inputValue}
+                setInputValue={setInputValue}
+                handleTag={handleTag}
+                removeTag={(tag) =>
+                  setTags((prev) => prev.filter((t) => t !== tag))
+                }
+                handleChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    [e.target.name]: e.target.value,
+                  })
+                }
+                submit={handleSubmit}
+                goBack={() => setStep(1)}
+                images={images}
+              />
+            </div>
+
+            {/* STEP 3 */}
+            <div className="w-full shrink-0 p-6">
+              {reviewData && (
+                <Review
+                  formData={reviewData}
+                  goBack={() => setStep(2)}
+                  submit={handleFinalSubmit}
+                  userId={userId}
+                />
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default CommissionForm;
