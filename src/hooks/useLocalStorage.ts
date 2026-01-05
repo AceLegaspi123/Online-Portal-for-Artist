@@ -16,7 +16,6 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
     try {
       localStorage.setItem(key, JSON.stringify(value));
     } catch {
-      // fail silently
     }
   }, [key, value]);
 

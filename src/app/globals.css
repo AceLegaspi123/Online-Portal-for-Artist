@@ -23,11 +23,11 @@
 /* Dark Mode Overrides           */
 /* ============================= */
 .dark {
-  --background: #06070d;
+  --background: #101828;
   --foreground: #ffffff;
 
-  --primary: #1d1e22;
-  --secondary: #343438;
+  --primary: #171F2F;
+  --secondary: #1D2939;
   --tertiary: #21272b;
 
   --primary-line: #2b394a;

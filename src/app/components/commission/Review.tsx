@@ -96,7 +96,7 @@ const Review = ({ formData, goBack, submit, userId }: Props) => {
           <p className="text-sm opacity-80">{formData.description}</p>
 
           <div className="flex flex-wrap gap-2">
-            
+            <p><strong>Tags: </strong></p>
             {tags?.length ? (
               tags?.map((tag) => (
                 <span
@@ -112,7 +112,7 @@ const Review = ({ formData, goBack, submit, userId }: Props) => {
           </div>
 
           {info.map((item) => (
-            <p key={item.label} className="text-sm opacity-70">
+            <p key={item.label} className="text-sm">
               <strong>{item.label}:</strong> {item.value}
             </p>
           ))}
@@ -125,12 +125,12 @@ const Review = ({ formData, goBack, submit, userId }: Props) => {
           Please review your commission details
         </p>
         <div className="flex gap-3">
-          <button onClick={goBack} className="border px-6 py-2 rounded-md text-sm">
+          <button onClick={goBack} className="border px-6 py-2 rounded-md text-sm cursor-pointer hover:opacity-80 transition-all">
             Go Back
           </button>
           <button
             onClick={submit}
-            className="bg-white text-black px-6 py-2 rounded-md text-sm font-semibold"
+            className="bg-white text-black px-6 py-2 rounded-md text-sm font-semibold cursor-pointer hover:opacity-80 transition-all"
           >
             Submit
           </button>

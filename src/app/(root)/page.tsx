@@ -3,13 +3,15 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import LightRays from "../components/ui/LightRays";
+import { getData } from "@/utils/storage";
+import { useEffect } from "react";
 
 const images = [
-  "https://i.pinimg.com/564x/af/9c/5f/af9c5f65b2e67dcfa6a85ee844eb5c35.jpg",
-  "https://i.pinimg.com/564x/33/49/7b/33497b6456c9a3b03f6bb6c2b2fef30f.jpg",
-  "https://i.pinimg.com/564x/88/7f/55/887f559e69c3b0f6c0f3c1edb9c8f4d8.jpg",
-  "https://i.pinimg.com/564x/1c/2c/56/1c2c56f27df3f56cc4e1f4a9f63b4977.jpg",
-  "https://i.pinimg.com/564x/f9/3a/43/f93a438fa57b4db8eae6f1c47cb6f52d.jpg",
+  "https://i.pinimg.com/474x/81/ff/ab/81ffab6f07d5640bf654264f7e07a9ae.jpg",
+"https://i.pinimg.com/474x/81/ff/ab/81ffab6f07d5640bf654264f7e07a9ae.jpg",
+"https://i.pinimg.com/474x/81/ff/ab/81ffab6f07d5640bf654264f7e07a9ae.jpg",
+"https://i.pinimg.com/474x/81/ff/ab/81ffab6f07d5640bf654264f7e07a9ae.jpg",
+"https://i.pinimg.com/474x/81/ff/ab/81ffab6f07d5640bf654264f7e07a9ae.jpg",
 ];
 
 const floatAnim = {
@@ -24,6 +26,10 @@ const floatAnim = {
 };
 
 const Homepage = () => {
+  useEffect(() => {
+    const data = getData("myCommissionRequest");
+    console.log("My Commission Requests:", data);
+  }, []);
   return (
     <div className="relative mx-auto w-full max-w-[1680px] overflow-hidden">
 

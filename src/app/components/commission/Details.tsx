@@ -53,7 +53,7 @@ const Details = ({
               onChange={handleChange}
               required
               className="w-full mt-1 p-3 bg-secondary border border-primary-line rounded-sm"
-              placeholder="e.g. Naruto Illustration"
+              placeholder="e.g. Illustration, character design, etc.."
             />
           </div>
 
@@ -65,6 +65,7 @@ const Details = ({
               value={formData.description}
               onChange={handleChange}
               required
+              placeholder="Your assets descriptions"
               rows={4}
               className="w-full mt-1 p-3 bg-secondary border border-primary-line rounded-sm resize-none"
             />
@@ -185,13 +186,13 @@ const Details = ({
         <button
           type="button"
           onClick={goBack}
-          className="border px-6 py-2 rounded-md text-sm"
+          className="border px-6 py-2 rounded-md text-sm cursor-pointer hover:opacity-80 transition-all"
         >
           Back
         </button>
         <button
           type="submit"
-          className="bg-white text-black px-6 py-2 rounded-md text-sm font-semibold"
+          className="bg-white text-black px-6 py-2 rounded-md text-sm font-semibold cursor-pointer hover:opacity-80 transition-all"
         >
           Review
         </button>

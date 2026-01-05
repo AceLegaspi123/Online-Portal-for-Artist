@@ -1,18 +1,20 @@
 "use client";
 
 import classNames from "clsx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ImgRef from "./ImgRef";
 import Details from "./Details";
 import Review from "./Review";
 import { notify } from "@/utils/toastHelper";
-import { getOwnerProfile, getUserProfile, getGmail } from "@/utils/getUser";
+import { getOwnerProfile, getUserProfile } from "@/utils/getUser";
 import { FinalCommissionData } from "@/types/commission";
+import { RiArrowRightSLine } from "react-icons/ri";
+import {setData, getData} from "@/utils/storage"
 
 const nav = [
-  { number: 1, name: "Upload" },
-  { number: 2, name: "Details" },
-  { number: 3, name: "Review" },
+  { number: 1, name: "Upload Reference Image" },
+  { number: 2, name: "Information" },
+  { number: 3, name: "Preview" },
 ];
 
 interface Props {
@@ -34,6 +36,7 @@ const CommissionForm = ({ func, userId }: Props) => {
     artType: "Digital Art",
     deadline: "",
     budget: "",
+    status: "Pending"
   });
 
   // Final review data
@@ -76,51 +79,63 @@ const CommissionForm = ({ func, userId }: Props) => {
     if (!reviewData) {
       throw new Error("No review data found");
     }
-
+  
+    const existing = getData<FinalCommissionData[]>("myCommissionRequest") || [];
+  
+    const updated = [...existing, reviewData];
+  
+    setData("myCommissionRequest", updated);
+  
     notify("Commission sent successfully", "success");
-
+  
     setTimeout(() => {
-      notify("View your order heree", "success");
+      notify("View your order(s) here", "success");
       window.location.href = "/my-request";
-    }, 1500)
-    
+    }, 1500);
     return reviewData;
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center">
-      <section className="max-w-5xl rounded-lg shadow-lg overflow-hidden bg-primary">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center  w-full ">
+      <section className="max-w-5xl rounded-lg shadow-lg overflow-hidden">
 
 
-        <div className="flex justify-between px-6 py-4">
+        <div className="grid grid-cols-3 px-6 py-4 max-w-[50em] w-full justify-center mx-auto">
           {nav.map((item) => (
-            <div key={item.number} className="flex items-center gap-2">
-              <span
-                className={classNames(
-                  "h-8 w-8 flex items-center justify-center rounded-full text-sm font-bold",
-                  {
-                    "bg-green-500 text-black": step === item.number,
-                    "border border-primary-line opacity-80": step !== item.number,
-                  }
-                )}
-              >
-                {item.number}
-              </span>
-              <span className="hidden sm:block text-sm font-semibold">
-                {item.name}
-              </span>
+            <div key={item.number} className="flex items-center gap-2 text-white  justify-evenly">
+              <div className="flex items-center gap-2 ">
+                <span
+                  className={classNames(
+                    "h-8 w-8 flex items-center justify-center rounded-full text-sm font-bold",
+                    {
+                      "bg-green-500 text-white": step === item.number,
+                      "border border-primary-line opacity-80 bg-primary text-black": step !== item.number,
+                    }
+                  )}
+                >
+                  {item.number}
+                </span>
+                <span className="hidden sm:block text-sm font-semibold">
+                  {item.name}
+                </span>
+              </div>
+
+                {
+                  item.number != 3 && <RiArrowRightSLine className="ml-1/2"/>
+                }
+              
             </div>
           ))}
         </div>
 
         {/* ===== Content ===== */}
-        <div className="relative overflow-hidden rounded-md">
+        <div className="relative overflow-hidden rounded-md bg-primary items-center">
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${(step - 1) * 100}%)` }}
           >
             {/* STEP 1 */}
-            <div className="w-full shrink-0 p-6">
+            <div className="w-full my-auto shrink-0 p-6">
               <ImgRef
                 images={images}
                 setImages={setImages}
@@ -130,7 +145,7 @@ const CommissionForm = ({ func, userId }: Props) => {
             </div>
 
             {/* STEP 2 */}
-            <div className="w-full shrink-0 p-6">
+            <div className={classNames('w-full shrink-0 p-6')}>
               <Details
                 formData={formData}
                 tags={tags}
@@ -153,7 +168,7 @@ const CommissionForm = ({ func, userId }: Props) => {
             </div>
 
             {/* STEP 3 */}
-            <div className="w-full shrink-0 p-6">
+            <div className="w-full shrink-0 sm:p-6 my-auto">
               {reviewData && (
                 <Review
                   formData={reviewData}
