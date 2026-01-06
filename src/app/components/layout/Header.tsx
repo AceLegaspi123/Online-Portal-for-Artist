@@ -17,7 +17,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 import ProfileMenu from "../Menu/ProfileMenu";
 import LogoDark from "@/app/logo-dark.png";
-
+import Logo from "../ui/Logo";
 
 // -------------------- CONSTANTS -------------------- //
 
@@ -47,7 +47,7 @@ export default function Header() {
   };
 
   return (
-    <header className="z-30 sticky top-0 w-full bg-background border-b border-primary-line flex justify-between items-center px-5 md:px-10 lg:px-20 h-16">
+    <header className="z-30 sticky top-0 w-full bg-background  flex justify-between items-center px-5 md:px-10 lg:px-20 h-16">
 
    
       <div className="flex items-center gap-3">
@@ -56,13 +56,10 @@ export default function Header() {
           className="cursor-pointer text-3xl lg:hidden"
         />
 
-        <Image
-          src={LogoDark}
-          alt="logo"
-          width={120}
-          height={40}
-          className="hidden lg:block"
-        />
+        <div className=" md-block">
+          <Logo />
+        </div>
+       
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex gap-4">
@@ -183,7 +180,7 @@ export default function Header() {
               alt="profile"
               width={44}
               height={44}
-              className="rounded-full border-2 border-white object-cover"
+              className="rounded-full border-2 h-12 w-12 border-white object-cover "
             />
           </div>
         )}
@@ -199,11 +196,11 @@ export default function Header() {
         )}
 
         {!isLogin && (
-          <div className="flex gap-6">
+          <div className="flex gap-6 items-center">
             <Link href="/register">Sign up</Link>
             <Link
               href="/login"
-              className="bg-gradient-primary text-white px-6 py-2 rounded-full"
+              className="bg-gradient-primary bg-green-500 text-white px-6 py-2 rounded-full"
             >
               Log in
             </Link>

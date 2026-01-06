@@ -35,7 +35,7 @@ const Homepage = () => {
 
       {/* Background */}
       <div className="fixed inset-0 z-[-10]">
-        <LightRays
+        {/* <LightRays
           raysOrigin="top-center"
           raysColor="#0af759"
           raysSpeed={1}
@@ -45,7 +45,7 @@ const Homepage = () => {
           mouseInfluence={0.1}
           noiseAmount={0.1}
           distortion={0.1}
-        />
+        /> */}
       </div>
 
       <main className="flex flex-col gap-32 px-4 py-24 md:px-10">
@@ -63,7 +63,7 @@ const Homepage = () => {
           </motion.h1>
 
           {/* Image Stack */}
-          <div className="relative flex h-[220px] w-full max-w-4xl justify-center">
+          {/* <div className="relative flex h-[220px] w-full max-w-4xl justify-center">
             {images.slice(0, 5).map((src, i) => (
               <motion.div
                 key={i}
@@ -82,7 +82,7 @@ const Homepage = () => {
                 />
               </motion.div>
             ))}
-          </div>
+          </div> */}
         </section>
 
         {/* ================= SHOWCASE ================= */}
@@ -103,8 +103,8 @@ const Homepage = () => {
             </p>
           </motion.div>
 
-          {/* Stack Right */}
-          <div className="relative flex h-[260px] justify-center">
+         
+          {/* <div className="relative flex h-[260px] justify-center">
             {images.slice(0, 4).map((src, i) => (
               <motion.div
                 key={i}
@@ -123,7 +123,7 @@ const Homepage = () => {
                 />
               </motion.div>
             ))}
-          </div>
+          </div> */}
         </section>
 
         {/* ================= FEATURED ================= */}
@@ -167,7 +167,7 @@ const Homepage = () => {
           </div>
         </section>
 
-        {/* ================= COMMUNITY ================= */}
+    {/* COMMUNITY */}
         <section className="flex flex-col items-center gap-10">
           <h2 className="text-xl font-semibold">
             You’ll find yourself <br /> among us
@@ -187,7 +187,7 @@ const Homepage = () => {
           </div>
         </section>
 
-        {/* ================= MARKETPLACE ================= */}
+        {/* MARKETPLACE */}
         <section className="space-y-8">
           <div>
             <h2 className="text-2xl font-bold">Marketplace</h2>

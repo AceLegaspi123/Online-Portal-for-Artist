@@ -18,7 +18,7 @@ const GalleryCard = (galleryData: CreateGalleryData) => {
                         height={40}
                         width={40}
                         className='rounded-md object-cover h-50 w-100 bg-secondary border-0 ' 
-                        src={galleryData?.coverImagePreview || ""}
+                        src={galleryData?.coverImagePreview || null}
                         alt="" 
                     />
                 </div>

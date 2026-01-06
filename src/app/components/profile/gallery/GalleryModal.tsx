@@ -20,7 +20,7 @@ const GalleryModal = ({
   const [createOpen, setCreateOpen] = useState(false);
 
   const handleCreateGallery = (data: CreateGalleryData) => {
-    console.log(data);
+    // console.log(data);
     onClose();
   };
 
@@ -61,7 +61,7 @@ const GalleryModal = ({
                                 height={40}
                                 width={40}
                                 className="rounded-md object-cover h-50 w-100" 
-                                src={""}
+                                src={i?.coverImagePreview || null}
                                 alt="" 
                             />
                         </div>

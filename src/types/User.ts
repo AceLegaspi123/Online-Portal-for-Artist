@@ -15,6 +15,7 @@ export interface artList {
     avatar: string;
 }
 
+// For Artwork
 export interface artwork  {
   artwork_id: string;
   user_profile_id: string;

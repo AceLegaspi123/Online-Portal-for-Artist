@@ -22,8 +22,6 @@ const GalleryPage = () => {
     }
   }, []); 
 
-  const mapData = galleryData.map(i => i)
-  console.log("hehe", galleryData);
   return (
     <div>
       <h1 className="text-xl font-bold -mt-6">Gallery</h1>
