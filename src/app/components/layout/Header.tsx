@@ -18,8 +18,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import ProfileMenu from "../Menu/ProfileMenu";
 import LogoDark from "@/app/logo-dark.png";
 import Logo from "../ui/Logo";
+import { RiNotificationLine } from "react-icons/ri";
 
-// -------------------- CONSTANTS -------------------- //
 
 export const nav_links = [
   { label: "Home", href: "/", icon: FaHome },
@@ -32,7 +32,7 @@ export const commission_links = [
   { label: "My Request", href: "/my-request" },
 ];
 
-// -------------------- HEADER COMPONENT -------------------- //
+
 
 export default function Header() {
   const [isLogin, setIsLogin] = useState(true);
@@ -168,7 +168,7 @@ export default function Header() {
       <div className="flex items-center gap-4">
         {isLogin && (
           <Link href="/mail">
-            <CgMail className="text-3xl" />
+            <RiNotificationLine className="text-2xl"/>
           </Link>
         )}
 
