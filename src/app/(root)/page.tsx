@@ -1,6 +1,6 @@
 "use client";
-import classNames from "clsx";
 
+import classNames from "clsx";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
