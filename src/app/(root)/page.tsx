@@ -1,5 +1,5 @@
 "use client";
-import classNames from 'clsx';
+import classNames from "clsx";
 
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -7,7 +7,8 @@ import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import { useState, useEffect, useCallback } from "react";
-import Stack from "@/app/components/ui/Stack"
+import Stack from "@/app/components/ui/Stack";
+import CardSwap, { Card } from "@/app/components/ui/CardSwap";
 
 const heroSectionImgs = [
   {
@@ -258,7 +259,7 @@ const page = () => {
       {/* Third Section banner */}
       <section
         id="third-banner"
-        className="h-[100dvh] flex flex-col gap-4 w-full justify-center mt-20 "
+        className="h-[100dvh] flex flex-col gap-4 w-full justify-center "
       >
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -266,7 +267,9 @@ const page = () => {
           transition={fadeTransition}
           className=" text-start flex-col space-y-4 "
         >
-          <p className="font-semibold max-md:text-sm ">ARTWORK BY JEAVEN A. PARAS</p>
+          <p className="font-semibold max-md:text-sm ">
+            ARTWORK BY JEAVEN A. PARAS
+          </p>
           <h1 className="text-4xl font-bold md:text-5xl">
             Featured Artwork <br /> of the{" "}
             <span className="text-red-500">month</span>
@@ -326,20 +329,24 @@ const page = () => {
             </div>
 
             <ul className="absolute top-5 right-5 flex gap-2">
-              {
-                [0, 1, 2, 3, 4].map(i => (
-                  <li key={i} className={classNames('h-2 w-2 rounded-full bg-slate-400', {
-                    "bg-white" : i == index
-                  })}></li>
-                ))
-              }
+              {[0, 1, 2, 3, 4].map((i) => (
+                <li
+                  key={i}
+                  className={classNames("h-2 w-2 rounded-full bg-slate-400", {
+                    "bg-white": i == index,
+                  })}
+                ></li>
+              ))}
             </ul>
           </div>
         </motion.div>
       </section>
 
       {/* Fourth Banner */}
-      <section id="third-banner" className="h-[90dvh] relative flex flex-col gap-4 justify-center mt-20 max-w-[1080px] w-full mx-auto ">
+      <section
+        id="third-banner"
+        className="h-[90dvh] relative flex flex-col gap-4 justify-center max-w-[1080px] w-full mx-auto "
+      >
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -347,24 +354,121 @@ const page = () => {
           className="flex-col space-y-4 text-center"
         >
           <h1 className="text-xl font-bold md:text-5xl">
-             Whether you’re an artist trying to sell your work / or buyer seeking <span className="text-red-500">unique</span>  pieces connects you to world of creativity commerce
+            Whether you’re an artist trying to sell your work / or buyer seeking{" "}
+            <span className="text-green-500">unique</span> pieces connects you
+            to world of creativity commerce
           </h1>
         </motion.div>
 
-        <motion.div 
-             initial={{ opacity: 0, y: 40 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             transition={fadeTransition}
-             style={{ width: 208, height: 208 }} 
-             className='absolute top-[30%]  -translate-y-1/2 w-full -translate-x-1/2 left-1/2'>
-            <Stack
-              randomRotation
-              sensitivity={300}
-              autoplay
-              autoplayDelay={2000}
-              pauseOnHover
-            />
-          </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={fadeTransition}
+          style={{ width: 208, height: 208 }}
+          className="absolute top-[15%]  -translate-y-1/2 -ml-30  -translate-x-1/2 left-1/2"
+        >
+          <Stack
+            randomRotation
+            sensitivity={300}
+            autoplay
+            autoplayDelay={2000}
+            pauseOnHover
+          />
+        </motion.div>
+      </section>
+
+      {/* Sixth Banner */}
+      <section
+        id="third-banner"
+        className="h-[100dvh] md:flex gap-4 justify-center md:justify-between items-center md:flex-row-reverse max-md:flex-col-reverse max-w-[1280px] w-full mx-auto"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={fadeTransition}
+          className="text max-md:flex justify-center max-md:translate-x-10 items-center w-full md:w-1/2 text-black md:-mt-30 mb-30"
+        >
+          <div style={{ height: "600px", position: "relative" }}>
+            <CardSwap cardDistance={50}>
+              <Card style={{ backgroundColor: "#FE8A8C" }}>
+                <div className="flex flex-col justify-center items-center text-2xl font-bold">
+                  <Image
+                    height={700}
+                    width={700}
+                    alt="sell_art_png"
+                    src="/sell-art.png"
+                    className="h-70 object-contain"
+                  />
+                  <h3>Sell Art</h3>
+                </div>
+              </Card>
+
+              <Card style={{ backgroundColor: "#8F9EFF" }}>
+                <div className="flex flex-col justify-center items-center text-2xl font-bold">
+                  <Image
+                    height={700}
+                    width={700}
+                    alt="sell_art_png"
+                    src="/sell-art.png"
+                    className="h-70 object-contain"
+                  />
+                  <h3>Buy Art</h3>
+                </div>
+              </Card>
+
+              <Card style={{ backgroundColor: "#8AFEB1" }}>
+                <div className="flex flex-col justify-center items-center text-2xl font-bold">
+                  <Image
+                    height={700}
+                    width={700}
+                    alt="sell_art_png"
+                    src="/buy-art.png"
+                    className="h-70 object-contain"
+                  />
+                  <h3>Explore Art</h3>
+                </div>
+              </Card>
+
+              <Card style={{ backgroundColor: "#FFE681" }}>
+                <div className="flex flex-col justify-center items-center text-2xl font-bold">
+                  <Image
+                    height={700}
+                    width={700}
+                    alt="sell_art_png"
+                    src="/request-commission.png"
+                    className="h-70 object-contain"
+                  />
+                  <h3>Request Art</h3>
+                </div>
+              </Card>
+            </CardSwap>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={fadeTransition}
+          className="flex flex-col space-y-4 md:w-1/2"
+        >
+          <p className="font-semibold">
+            GET MORE <span className="text-green-500">CLOSER</span>
+          </p>
+          <h3 className="text-2xl md:text-6xl font-bold">
+            Marketplace <br /> for Creativity
+          </h3>
+          <p className="w-full lg:w-80">
+            In the realm of ArtistryHub, creativity knows no bounds, eternal
+            marketplace celebrates the timeless nature of art.
+          </p>
+
+          <Link
+            href="/login"
+            className="bg-foreground w-fit text-background rounded-full px-8 py-2 cursor-pointer hover:opacity-80 transition"
+          >
+            Join Now
+          </Link>
+        </motion.div>
       </section>
     </main>
   );
