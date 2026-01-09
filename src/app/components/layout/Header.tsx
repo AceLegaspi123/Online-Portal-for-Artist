@@ -47,9 +47,7 @@ export default function Header() {
   };
 
   return (
-    <header className="z-30 sticky top-0 w-full bg-background  flex justify-between items-center px-5 md:px-10 lg:px-20 h-16">
-
-   
+    <header className="z-100 sticky top-0 w-full bg-background  flex justify-between items-center px-5 md:px-10 lg:px-20 h-16">
       <div className="flex items-center gap-3">
         <GiHamburgerMenu
           onClick={mobileMenu.open}
