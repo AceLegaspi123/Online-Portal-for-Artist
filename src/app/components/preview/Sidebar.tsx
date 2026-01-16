@@ -59,10 +59,7 @@ export function Sidebar(art: artwork) {
 
       <div className="flex justify-between items-center mt-20 mb-4">
         <h3>
-          More arts by{" "}
-          <Link href="#" className="font-bold">
-            SamDoesArt
-          </Link>
+          More to explore 
         </h3>
         <IoIosArrowForward />
       </div>
