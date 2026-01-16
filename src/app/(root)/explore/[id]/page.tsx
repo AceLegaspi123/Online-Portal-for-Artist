@@ -25,11 +25,11 @@ const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
     <div className='px-4 md:px-10 mt-10 lg:flex gap-18 '>
       <div className='md:w-full relative'>
         <div className='w-full h-[50em] bg-primary flex items-center justify-center'>
-            <img 
-              width={200}
-              height={200}
-              src={art?.art_file}
-              alt={art?.artwork_title}
+            <Image 
+              width={800}
+              height={800}
+              src={art?.art_file || "/placeholder-img.png"}
+              alt={art?.artwork_title || "art preview"}
               className='object-contain h-full w-full'  
             />
         </div>
