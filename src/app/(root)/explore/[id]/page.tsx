@@ -34,7 +34,7 @@ const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
             />
         </div>
 
-        <div className='flex flex-col gap-8 py-4 max-w-[1280px] w-full mx-auto'>
+        <div className='flex max-md:px-4 flex-col gap-8 py-4 max-w-[1280px] w-full mx-auto'>
           <div className='flex justify-between items-center w-full'>
             <ul className='flex gap-8'>
               <li className='flex items-center gap-2'>
@@ -68,8 +68,11 @@ const ArtPreview = async({ params }: { params: Promise<{ id: string }>}) => {
                       <p className='text-xs opacity-50 -mt-1'>20 followers</p>
                     </div>
 
-                    <div className='h-1 w-1 rounded-full m-auto bg-white'></div>
-                    <p className='text-blue-500'>Follow</p>
+                    <div>
+                      <div className='h-1 w-1 rounded-full m-auto bg-white'></div>
+                      <p className='text-blue-500'>Follow</p>
+                    </div>
+                    
                   </div>
 
                   <p className='opacity-50 w-fit text-sm'>{art?.created_at}</p>
