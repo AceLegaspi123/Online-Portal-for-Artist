@@ -61,35 +61,35 @@ const secondSectionImg = [
     alt: "anya",
     x: 160, // corresponds to translate-x-40 (40 * 4px)
     y: -200, // corresponds to -translate-y-50
-    class: "z-0 max-md:!translate-x-[-60px]",
+    class: "z-0 top-10 ",
   },
   {
     url: "https://i.pinimg.com/736x/7d/e0/ca/7de0ca17ed9fd367a96f2de92c62263c.jpg",
     alt: "anya",
     x: 40, // translate-x-10
     y: -160, // -translate-y-40
-    class: "z-10 max-md:!translate-x-[-60px]",
+    class: "z-10 top-10",
   },
   {
     url: "https://i.pinimg.com/736x/58/ab/fe/58abfe63e2c7a0838833cd6909ec69a0.jpg",
     alt: "anya",
     x: -60, // -translate-x-15
     y: -80, // -translate-y-20
-    class: "z-20 max-md:!translate-x-[-60px]",
+    class: "z-20 -top-20",
   },
   {
     url: "https://i.pinimg.com/736x/80/ee/92/80ee921a17d28db3b19b7d6c106cf8c2.jpg",
     alt: "anya",
     x: -140, // -translate-x-35
     y: 0, // -translate-y-0
-    class: "z-30 max-md:!translate-x-[-60px]",
+    class: "z-30 max-md:!translate-x-[-]",
   },
   {
     url: "https://i.pinimg.com/736x/80/6a/25/806a25cb58cb0ee9bd536c88b817af24.jpg",
     alt: "anya",
     x: -220, // -translate-x-55
     y: 80,
-    class: "z-40 max-md:!translate-x-[-60px]",
+    class: "z-40 max-md:!translate-x-[-]",
   },
 ];
 
@@ -200,13 +200,13 @@ const page = () => {
       {/* Second Section Banner */}
       <section
         id="second-banner"
-        className="h-[100dvh] flex justify-between items-center gap-14 -mt-20 w-full"
+        className="h-[100dvh] relative flex justify-between items-center gap-14 -mt-20 w-full"
       >
         <motion.div
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={fadeTransition}
-          className="w-[35%] text-start flex-col space-y-8"
+          className="md:w-[35%] max-md:w-[75%] text-start flex-col space-y-8 bg"
         >
           <h1 className="text-xl font-bold md:text-5xl">
             Showcase, Sell, <span className="text-red-500">& acquire arts</span>{" "}
@@ -235,14 +235,14 @@ const page = () => {
           </div>
         </motion.div>
 
-        <div className="flex-grow flex translate-y-20">
+        <div className="max-md:w-[20%] relative  md:flex-grow flex translate-y-20">
           {secondSectionImg.map((i, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: i.y + 20, x: i.x + 80 }}
               whileInView={{ opacity: 1, y: i.y, x: i.x }}
               transition={{ duration: 1, delay: 0, ease: "easeIn" }}
-              className={`${i.class} flex justify-center gap-2 h-20 w-20 md:h-50 md:w-50 rounded-md overflow-hidden shadow-xl`}
+              className={`${i.class} flex justify-center max-md:absolute gap-2 h-30 w-30 md:h-50 md:w-50 rounded-md overflow-hidden shadow-xl`}
             >
               <Image
                 height={200}

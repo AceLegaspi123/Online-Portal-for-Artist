@@ -15,12 +15,10 @@ const SearchHeader = () => {
   const scrollDirection = useScrollDirection();
   const isHidden = scrollDirection === 'down';
 
-  // Explicitly type the ref as HTMLDivElement or null
   const sliderRef = useRef<HTMLDivElement | null>(null);
   const [canScrollLeft, setCanScrollLeft] = useState<boolean>(false);
   const [canScrollRight, setCanScrollRight] = useState<boolean>(true);
 
-  // Check scroll boundaries
   const checkScroll = () => {
     if (sliderRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
@@ -37,7 +35,6 @@ const SearchHeader = () => {
     return () => slider.removeEventListener('scroll', checkScroll);
   }, []);
 
-  // Add type for direction parameter
   const handleSlide = (direction: 'left' | 'right') => {
     if (sliderRef.current) {
       const amount = direction === 'right' ? 200 : -200;
@@ -48,7 +45,7 @@ const SearchHeader = () => {
   return (
     <div
       className={clsx(
-        'absolute top-15 left-0 w-full z-0 bg-background pt-8 transition-transform duration-500 ease-in-out',
+        'absolute top-15 left-0 right-0 w-full z-0 bg-background pt-8 transition-transform duration-500 ease-in-out',
         {
           'transform -translate-y-[60%]': isHidden,
           'transform translate-y-0': !isHidden,

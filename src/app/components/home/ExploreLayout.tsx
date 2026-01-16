@@ -1,7 +1,6 @@
 "use client";
-import clsx from 'clsx';
+// import clsx from 'clsx';
 
-import React from "react";
 import ArtList from "../shared/ArtList";
 import { BsSearch } from 'react-icons/bs';
 import { ImSpinner2 } from "react-icons/im";
@@ -14,7 +13,7 @@ const ExploreLayout = () => {
 
   return (
     <div className="flex flex-col gap-4 relative mt-10">
-      <div className='fixed top-10 left-20 right-20 z-20 bg-background py-5 pt-10'>
+      <div className='fixed top-10 md:left-20 md:right-20 z-20 left-5 right-5 bg-background py-5 pt-10'>
         <div className='relative z-20 '>
           <input 
             type="text" 
@@ -45,8 +44,6 @@ const ExploreLayout = () => {
           <ImSpinner2 />
           <span>Loading</span>
         </div>
-
-
     </div>
   );
 };
