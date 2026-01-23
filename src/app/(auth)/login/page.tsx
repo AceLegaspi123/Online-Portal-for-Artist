@@ -6,17 +6,38 @@ import { TfiEmail } from "react-icons/tfi";
 import { CiLock } from "react-icons/ci";
 import Logo from "@/app/components/ui/Logo";
 import {login} from "@/lib/actions/auth"
+import { useState } from "react";
+import {validateUser} from "@/utils/validator"
+import { notify } from "@/utils/toastHelper";
+import {Authentication} from "@/app/modules/Authentication"
 
 export default function LoginPage() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   const {gmail, password} = e.target as typeof e.target & {
-  //     gmail: {value: string};
-  //     password: {value: string};
-  //   };
 
-  }
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const validated = validateUser(email.trim(), password.trim())
+
+    if (validated.length > 0) {
+      const message = validated.join(' ');
+      notify(message, 'error');
+      return;
+    } else {
+       let authUser = Authentication(email.trim(), password.trim());
+
+       if(authUser.success){
+        notify('Login successful!', 'success');
+        setTimeout(() => {
+          
+        }, 1500);
+       }
+    }
+
+    console.log('Form submitted with email:', email, 'and password:', password);
+  };
+
   return (
     <div className="w-full relative shadow-xl min-h-[100dvh] border-white border-2 shadow-white flex flex-col justify-center items-center h-[100dvh] bg-[url('https://static.vecteezy.com/system/resources/previews/006/595/713/non_2x/silhouettes-of-panoramic-mountains-view-landscape-vector.jpg')] bg-cover bg-center h-64 w-full)">
         <div className="z-20 flex justify-center  h-[40em] rounded-md overflow-hidden">
@@ -26,9 +47,9 @@ export default function LoginPage() {
           </div>
 
           <div className="w-[90dvw] md:w-1/2 bg-white py-10">
-            <form className="flex flex-col gap-5 p-10">
+            <form onSubmit={(e) => handleSubmit(e)} className="flex flex-col gap-5 p-10">
               <h3 className="text-3xl font-bold text-center text-black">Welcome back</h3>
-              <button onClick={() => login()} className="border border-cyan-500 p-5 text-black rounded-xl flex items-center justify-center gap-3">
+              <button className="border border-cyan-500 p-5 text-black rounded-xl flex items-center justify-center gap-3">
                 <FcGoogle />
                 <p>Continue with Google</p>
               </button>
@@ -41,12 +62,24 @@ export default function LoginPage() {
               
               <div className="relative w-full">
                 <TfiEmail className="absolute left-4 top-6 text-2xl text-gray-500"/>
-                <input className="flex border border-cyan-500 p-5 pl-14 w-full rounded-lg text-black outline-none" type="email" placeholder="Email" />
+                <input 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="flex border border-cyan-500 p-5 pl-14 w-full rounded-lg text-black outline-none" 
+                  type="email" 
+                  placeholder="Email" 
+                  name="email"/>
               </div>
               
               <div className="relative w-full">
                 <CiLock className="absolute left-4 top-6 text-2xl text-gray-700"/>
-                <input className="flex border border-cyan-500 p-5 pl-14 w-full rounded-lg text-black outline-none" type="password" placeholder="Password" />
+                <input 
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)} 
+                  className="flex border border-cyan-500 p-5 pl-14 w-full rounded-lg text-black outline-none" 
+                  type="password" 
+                  placeholder="Password" 
+                  name="password"/>
               </div>
 
               <div className="flex justify-between">
@@ -57,7 +90,7 @@ export default function LoginPage() {
                 <a className="text-blue-600" href="#">Forgot Password?</a>
               </div>
 
-              <button className="border p-5 bg-gradient-primary  rounded-xl" type="submit">Login</button>
+              <button type='submit' className="border p-5 bg-gradient-primary  rounded-xl bg-blue-500 text-white" typeof="submit">Login</button>
               <p className="text-center text-black">Don't have an account? <Link className="text-blue-600" href="/register">Create an account</Link></p>
             </form>
           </div>
