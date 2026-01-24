@@ -20,16 +20,20 @@ export default function LoginPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const validated = validateUser(email.trim(), password.trim());
+    const validated = validateUser(email, password);
 
+    console.log("Validated", validated);
     if (validated.length > 0) {
-      const message = validated.join(' ');
+      const message = validated.join(', ');
       notify(message, 'error');
       return;
-    } else {
+    } 
+    
+    if(validated.length > 0) {
       let authUser = Authentication(email.trim(), password.trim());
 
-      if (authUser.success && authUser.role === 'admin') {
+      console.log("Auth user" , authUser);
+      if (authUser.email === email && authUser.role === 'admin') {
         notify('Login successful!', 'success');
         setTimeout(() => {
           notify('Welcome to dashboard Admin', 'success');

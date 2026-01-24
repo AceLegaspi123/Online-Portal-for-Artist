@@ -10,7 +10,6 @@ export const Authentication = (email: string, password: string) => {
 
     return {
         email: user?.gmail,
-        role: user?.role,
-        success: true 
+        role: user?.role
     };
 }
