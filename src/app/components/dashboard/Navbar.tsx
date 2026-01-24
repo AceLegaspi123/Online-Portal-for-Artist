@@ -13,7 +13,9 @@ import { IoIosArrowDown } from "react-icons/io";
 import { LuClipboardList } from "react-icons/lu";
 import { RiShieldUserLine } from "react-icons/ri";
 import { SiMedibangpaint } from "react-icons/si";
+import { useRouter } from 'next/navigation';
 import Image from "next/image";
+import { notify } from "@/utils/toastHelper";
 
 
 const links = [
@@ -34,6 +36,7 @@ const links = [
 
 const Navbar = () => {
   const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = useState<string | null>(null);
 
   // auto-open dropdown if current pathname is inside a parent route
@@ -53,7 +56,13 @@ const Navbar = () => {
     return pathname.startsWith(href); // For items with sub-routes
   };
   
+  const handleLogOut = () => {
+    notify("Log out successfully", "success");
 
+    setTimeout(() => {
+      router.push("/login")
+    }, 1500)
+  }
   return (
     <nav className="fixed bg-primary top-0 bottom-0 left-0 w-[20em] border-r-1 border-primary-line px-2 -pt-10 flex flex-col justify-between z-10 mt-16">
         <Image
@@ -145,12 +154,11 @@ const Navbar = () => {
       </div>
 
       {/* LOGOUT */}
-      <Link href="/login" className="mt-auto">
-        <div className="flex items-center gap-2 p-4 opacity-50 hover:opacity-100 transition">
+      
+        <div onClick={handleLogOut} className="flex mt-auto items-center gap-2 p-4 opacity-50 hover:opacity-100 transition">
           <CgLogOut />
           <p>Logout</p>
         </div>
-      </Link>
     </nav>
   );
 };

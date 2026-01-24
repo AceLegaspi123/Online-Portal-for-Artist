@@ -9,7 +9,8 @@ export const Authentication = (email: string, password: string) => {
     } 
 
     return {
-        email: user.gmail,
+        email: user?.gmail,
+        role: user?.role,
         success: true 
     };
 }

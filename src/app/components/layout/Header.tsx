@@ -28,8 +28,8 @@ export const nav_links = [
 ];
 
 export const commission_links = [
-  { label: "My Client", href: "/my-client" },
-  { label: "My Request", href: "/my-request" },
+  { label: "Received Request", href: "/my-client" },
+  { label: "Sent Request", href: "/my-request" },
 ];
 
 
@@ -73,7 +73,7 @@ export default function Header() {
           {/* Commission Desktop */}
           <div className="relative group flex items-center gap-3 px-6 cursor-pointer">
             <FaRegUser />
-            <span>Commission</span>
+            <span>Art Request</span>
             <IoIosArrowDown />
 
             <div className="absolute left-0 top-6 hidden group-hover:block">
@@ -125,7 +125,7 @@ export default function Header() {
             className="flex items-center gap-4 px-4 py-2 rounded-md hover:bg-primary-line cursor-pointer"
           >
             <FaRegUser />
-            <span>Commission</span>
+            <span>Art Request</span>
             <MdOutlineArrowDropDown
               className={clsx("ml-auto transition", {
                 "rotate-180": commissionDropdown,
