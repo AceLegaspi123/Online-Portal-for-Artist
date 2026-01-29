@@ -19,6 +19,7 @@ import ProfileMenu from "../Menu/ProfileMenu";
 import LogoDark from "@/app/logo-dark.png";
 import Logo from "../ui/Logo";
 import { RiNotificationLine } from "react-icons/ri";
+import { RiMessengerLine } from "react-icons/ri";
 
 
 export const nav_links = [
@@ -57,7 +58,7 @@ export default function Header() {
         <div className=" md-block">
           <Logo />
         </div>
-       
+
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex gap-4">
@@ -163,11 +164,20 @@ export default function Header() {
       />
 
       {/* ---------------- RIGHT ---------------- */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-6">
         {isLogin && (
-          <Link href="/mail">
-            <RiNotificationLine className="text-2xl"/>
-          </Link>
+          <div className="flex items-center gap-6">
+            <Link href="/messages">
+              <RiMessengerLine className="text-2xl" />
+            </Link>
+
+            <Link href="/mail">
+              <RiNotificationLine className="text-2xl" />
+            </Link>
+          </div>
+
+
+
         )}
 
         {/* Avatar */}
