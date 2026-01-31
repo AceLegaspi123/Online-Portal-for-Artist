@@ -18,8 +18,8 @@ const Messages = ({ children }: { children: React.ReactNode }) => {
     return (
         <div className='h-[100vh] overflow-hidden mt-10 '>
             <h1 className='font-bold text-green-500 text-4xl ml-20 mb-5'>Messages</h1>
-            <div className="flex gap-5 w-full max-w-[3890px] px-5 md:px-20 mx-auto">
-                <section className="flex border-r-1 flex-col gap-4 w-[40%] px-4 bg-primary border-background py-6 rounded-xl">
+            <div className="max-md:block flex gap-5 w-full max-w-[3890px] px-5 md:px-20 mx-auto">
+                <section className="max-md:w-full flex border-r-1 flex-col gap-4 w-[40%] px-4 bg-primary border-background md:py-6 rounded-xl">
                     <div className="relative bg-background flex items-center justify-between gap-2 px-4 py-4 rounded-md cursor-pointer rounded-lg w-full">
                         <input type="text" placeholder="Search Messages" className="w-full px-4 pl-8 outline-none" />
                         <HiOutlineMagnifyingGlass className="absolute top-5 left-4 text-xl opacity-70" />
@@ -40,7 +40,7 @@ const Messages = ({ children }: { children: React.ReactNode }) => {
                     </div>
                 </section>
 
-                <section className=" w-full h-500 ">
+                <section className="max-md:hidden w-full h-500 ">
                     <ChatArea />
                 </section>
             </div>

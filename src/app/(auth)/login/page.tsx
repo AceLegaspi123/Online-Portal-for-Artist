@@ -22,14 +22,13 @@ export default function LoginPage() {
     e.preventDefault();
     const validated = validateUser(email, password);
 
-    console.log("Validated", validated);
-    if (validated.length > 0) {
+    if (validated.length !== 0) {
       const message = validated.join(', ');
       notify(message, 'error');
       return;
     } 
     
-    if(validated.length > 0) {
+    if(validated.length == 0) {
       let authUser = Authentication(email.trim(), password.trim());
 
       console.log("Auth user" , authUser);
@@ -39,7 +38,7 @@ export default function LoginPage() {
           notify('Welcome to dashboard Admin', 'success');
           router.push('/dashboard');
         }, 1500);
-      } else if (authUser.success) {
+      } else if (authUser.email === email && authUser.role === 'user') {
         notify('Login successful!', 'success');
         // getUser(authUser.email)
         setTimeout(() => {

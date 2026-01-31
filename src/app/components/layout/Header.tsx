@@ -4,9 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
 import { useState } from "react";
-
 import { usePopup } from "@/hooks/usePopup";
-
 import { CgMail } from "react-icons/cg";
 import { FaHome, FaShoppingBag, FaRegUser } from "react-icons/fa";
 import { GoGlobe } from "react-icons/go";
@@ -14,13 +12,13 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
-
+import { useRouter } from "next/navigation";
+import Notification from "@/app/components/ui/Notification";
 import ProfileMenu from "../Menu/ProfileMenu";
 import LogoDark from "@/app/logo-dark.png";
 import Logo from "../ui/Logo";
 import { RiNotificationLine } from "react-icons/ri";
 import { RiMessengerLine } from "react-icons/ri";
-
 
 export const nav_links = [
   { label: "Home", href: "/", icon: FaHome },
@@ -38,6 +36,9 @@ export const commission_links = [
 export default function Header() {
   const [isLogin, setIsLogin] = useState(true);
   const [commissionDropdown, setCommissionDropdown] = useState(false);
+  const [notificationDropdown, setNotificationDropdown] = useState(false);
+  const router = useRouter();
+
 
   const mobileMenu = usePopup();
   const profileMenu = usePopup();
@@ -45,6 +46,7 @@ export default function Header() {
   const handleLogOut = () => {
     setIsLogin(false);
     profileMenu.close();
+    router.push("/")
   };
 
   return (
@@ -72,7 +74,7 @@ export default function Header() {
           ))}
 
           {/* Commission Desktop */}
-          <div className="relative group flex items-center gap-3 px-6 cursor-pointer">
+          {/* <div className="relative group flex items-center gap-3 px-6 cursor-pointer">
             <FaRegUser />
             <span>Art Request</span>
             <IoIosArrowDown />
@@ -90,7 +92,7 @@ export default function Header() {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -167,17 +169,12 @@ export default function Header() {
       <div className="flex items-center gap-6">
         {isLogin && (
           <div className="flex items-center gap-6">
-            <Link href="/messages">
+          <Link href="/messages">
               <RiMessengerLine className="text-2xl" />
             </Link>
 
-            <Link href="/mail">
-              <RiNotificationLine className="text-2xl" />
-            </Link>
+            <RiNotificationLine className="text-2xl" onClick={() => setNotificationDropdown(true)}/>
           </div>
-
-
-
         )}
 
         {/* Avatar */}
@@ -215,6 +212,8 @@ export default function Header() {
           </div>
         )}
       </div>
+
+      <Notification func={setNotificationDropdown} isOpen={notificationDropdown}/>
     </header>
   );
 }
