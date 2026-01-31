@@ -8,17 +8,18 @@ import { FaPaperclip } from "react-icons/fa";
 import { MdProductionQuantityLimits } from "react-icons/md";
 import { HiOutlineComputerDesktop } from "react-icons/hi2";
 import { artwork } from "@/types/User";
-import Modal from "../ui/Modal";
-import {ModalProps} from "@/types/modal"
+import Checkout from "@/app/components/ui/Checkout";
 
 export function Sidebar(art: artwork) {
   const [isOpen, setIsOpen] = useState(false);
+  const [checkOutIsOpen, setCheckOutIsOpen] = useState(true)
+
 
   return (
     <div>
       {art?.status == "For Sale" && (
         <div className="w-full mt-5 p-4 rounded-md border-1 border-primary-line flex flex-col gap-4 bg-primary mb-10">
-          <button onClick={() => setIsOpen(false)} className="p-2 rounded-full cursor-pointer bg-green-500">
+          <button onClick={() => setCheckOutIsOpen(true)} className="p-2 rounded-full cursor-pointer bg-green-500">
             Buy for $10
           </button>
           <div className="flex items-center gap-2">
@@ -72,6 +73,18 @@ export function Sidebar(art: artwork) {
         <CardFeatured />
         <CardFeatured />
       </div>
+
+      {
+        checkOutIsOpen && (
+          <div className={`fixed top-0 left-0 w-full h-full bg-[rgba(0, 0, 0, 0.4)] flex justify-center items-center z-50`}>
+            <div className="fixed inset-0 bg-black opacity-50 z-20"></div>
+
+            <div className="opacity-100 z-30">
+              <Checkout  setIsOpen={setCheckOutIsOpen}/>
+            </div>        
+          </div>
+        )
+      }
     </div>
   );
 }

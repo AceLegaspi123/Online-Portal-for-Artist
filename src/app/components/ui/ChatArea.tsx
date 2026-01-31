@@ -43,8 +43,8 @@ const ChatArea = () => {
       </div>
 
 
-      <main className='flex flex-col p-4 mt-4 bg-primary h-[100vh] overflow-hidden'>
-        <div className='flex-grow overflow-y-auto p-4 rounded-lg mb-4 mt-10'>
+      <main className='relative flex pb-60 flex-col p-4 mt-4 bg-primary h-[100vh] overflow-hidden'>
+        <div className='relative flex-grow overflow-y-auto p-4 rounded-lg mb-4 mt-10'>
           {
             MessageItem.map((message, index) => (
               <div key={index} className={`mb-4 flex ${message.userId === userID ? 'justify-end' : 'justify-start'}`}>
@@ -56,10 +56,13 @@ const ChatArea = () => {
           }
         </div>
 
-        <form onSubmit={(e) => handleMessageSubmit(e)} className='z-40 h-80 w-full flex items-center gap-4'>
+        <form onSubmit={(e) => handleMessageSubmit(e)} className='absolute bottom-0 left-0 right-0 h-60 bg-secondary z-40 w-full flex items-center gap-4'>
           <input type="file" name="message" id="message" className='hidden'/>
-          <label htmlFor="message" className='text-xl cursor-pointer'><FaImage /></label>
-          <input type="text" placeholder='Send Message' className='w-full bg-secondary py-4 px-2 rounded-md pl-4 outline-none' />
+          
+          <div className='-mt-35 flex items-center w-full gap-4 px-4'>
+            <label htmlFor="message" className='text-xl cursor-pointer'><FaImage /></label>
+            <input type="text" placeholder='Send Message' className='w-full bg-primary py-4 px-2 rounded-md pl-4 outline-none' />
+          </div>
         </form>
       </main>
     </div>

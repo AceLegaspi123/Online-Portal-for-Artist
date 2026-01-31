@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import {LOGGED_IN_USER_ID} from "@/lib/auth"
 import { MdOutlineMail } from "react-icons/md";
 import { GoPlusCircle } from "react-icons/go";
@@ -30,7 +31,7 @@ const ButtonSubmission = ({userId}: NavLinksProps) => {
             <Menu />
             <button className="flex bg-white px-4 py-2 text-nowrap items-center text-black rounded-md gap-2 cursor-pointer hover:opacity-80 transition duration-200 ease-in-out hover:scale-102">
             <GoPlusCircle /> 
-                <span>Follow</span>
+                <Link href="/messages">Sent Message</Link>
                 </button>
 
                 <button 
