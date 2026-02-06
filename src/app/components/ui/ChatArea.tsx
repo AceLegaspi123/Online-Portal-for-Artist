@@ -16,9 +16,9 @@ const ChatArea = () => {
   }
 
   return (
-    <div className="flex flex-col bg-blue-400 w-full h-screen bg-primary">
+    <div className="flex flex-col w-full h-[97vh] bg-background overflow-hidden">
       {/* Header */}
-      <div className="flex items-center gap-4 border-b border-background p-3 bg-secondary">
+      <div className="flex items-center gap-4 p-3 bg-secondary rounded-t-lg">
         <div className="h-12 w-12 shrink-0">
           <Image
             height={48}
@@ -38,7 +38,7 @@ const ChatArea = () => {
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-primary">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-background">
         {MessageItem.map((message, index) => (
           <div
             key={index}
@@ -71,7 +71,7 @@ const ChatArea = () => {
       {/* Input */}
       <form
         onSubmit={handleMessageSubmit}
-        className="flex items-center gap-3 p-3 border-t bg-secondary"
+        className="flex items-center gap-3 p-3 bg-secondary"
       >
         <label htmlFor="file-upload" className="text-xl cursor-pointer">
           <FaImage />
