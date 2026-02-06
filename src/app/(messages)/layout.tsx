@@ -4,6 +4,7 @@ import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ChatArea from '@/app/components/ui/ChatArea';
+import Logo from '../components/ui/Logo';
 
 const navLinks = [
   { href: "/messages", label: "Messages" },
@@ -15,29 +16,30 @@ const Messages = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
 
   return (
-    <div className="h-screen flex flex-col ">
-      {/* Page Title */}
-      <h1 className="font-bold text-green-500 text-3xl md:text-4xl px-6 md:px-20 py-4">
-        Messages
-      </h1>
-
-      {/* Main Layout */}
-      <div className="flex flex-1 w-full max-w-[1980px] w-full mx-auto px-4 md:px-20 gap-6">
+    <div className="h-screen flex flex-col bg-primary">
+      <div className="flex p-2 flex-1 w-full max-w-[1980px] w-full mx-auto px-4 md:px-20 gap-6">
         
         {/* Sidebar */}
-        <section className="flex flex-col w-full md:w-[35%] bg-primary border-r border-background rounded-xl p-4">
+        <section className="h-[97vh] flex flex-col w-full md:w-[35%] bg-background border-r border-background rounded-xl p-4">
           {/* Search */}
+          <div className='flex justify-between items-center'>
+                      <h1 className="font-bold text-green-500 text-3xl md:text-4xl px-6 py-4">
+            Messages
+          </h1>
+            <Logo />
+          </div>
+
           <div className="relative bg-background flex items-center px-4 py-3 rounded-md">
             <HiOutlineMagnifyingGlass className="absolute left-6 text-xl opacity-70" />
             <input
               type="text"
               placeholder="Search Messages"
-              className="w-full pl-10 pr-4 bg-transparent outline-none"
+              className="w-full pl-10 pr-4 bg-primary py-4 rounded-md outline-none"
             />
           </div>
 
           {/* Nav Links */}
-          <div className="flex justify-between text-sm mt-4">
+          <div className="flex justify-between text-sm mt-4 gap-2">
             {navLinks.map(({ href, label }) => (
               <Link
                 key={label}
@@ -46,7 +48,7 @@ const Messages = ({ children }: { children: React.ReactNode }) => {
                   'px-4 py-2 rounded-md w-full text-center transition text-nowrap',
                   {
                     'bg-green-500 text-white font-medium': pathname === href,
-                    'hover:bg-gray-200': pathname !== href,
+                    'hover:bg-green-50 hover:text-black': pathname !== href,
                   }
                 )}
               >
