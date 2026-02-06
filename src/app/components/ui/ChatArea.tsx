@@ -16,9 +16,9 @@ const ChatArea = () => {
   }
 
   return (
-    <div className="flex flex-col w-full h-[97vh] bg-background overflow-hidden">
+    <div className="flex flex-col w-full h-[97vh] bg-background overflow-hidden rounded-lg">
       {/* Header */}
-      <div className="flex items-center gap-4 p-3 bg-secondary rounded-t-lg">
+      <div className="flex items-center gap-4 p-3 border-b-1 border-slate-200">
         <div className="h-12 w-12 shrink-0">
           <Image
             height={48}
@@ -71,7 +71,7 @@ const ChatArea = () => {
       {/* Input */}
       <form
         onSubmit={handleMessageSubmit}
-        className="flex items-center gap-3 p-3 bg-secondary"
+        className="flex items-center gap-3 p-5 border-t-1 border-slate-200 "
       >
         <label htmlFor="file-upload" className="text-xl cursor-pointer">
           <FaImage />
@@ -80,11 +80,11 @@ const ChatArea = () => {
         <input
           type="text"
           placeholder="Type a message..."
-          className="flex-1 bg-primary py-2 px-4 rounded-full outline-none"
+          className="flex-1 bg-primary py-3 px-4 rounded-full outline-none"
         />
         <button
           type="submit"
-          className="bg-green-500 text-white px-4 py-2 rounded-full"
+          className="bg-green-500 text-white px-4 py-2 rounded-md"
         >
           Send
         </button>
