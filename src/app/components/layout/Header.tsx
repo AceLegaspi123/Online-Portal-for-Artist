@@ -19,11 +19,13 @@ import LogoDark from "@/app/logo-dark.png";
 import Logo from "../ui/Logo";
 import { RiNotificationLine } from "react-icons/ri";
 import { RiMessengerLine } from "react-icons/ri";
+import { VscFeedback } from "react-icons/vsc";
 
 export const nav_links = [
   { label: "Home", href: "/", icon: FaHome },
   { label: "Explore", href: "/explore", icon: GoGlobe },
   { label: "Shop", href: "/shop", icon: FaShoppingBag },
+  { label: "Post", href: "/shop", icon: VscFeedback },
 ];
 
 export const commission_links = [

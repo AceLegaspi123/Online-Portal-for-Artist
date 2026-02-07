@@ -1,6 +1,5 @@
 // validation.ts
 import loginPatterns from './patterns';
-import { notify } from './toastHelper';
 
 export const validateUser = (email: string, password: string): string[] => {
     const errorMessages: string[] = [];

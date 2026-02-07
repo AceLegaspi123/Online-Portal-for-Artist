@@ -1,7 +1,11 @@
+'use client';
 import { RiImageLine } from "react-icons/ri";
 import { RiArrowDownSLine } from "react-icons/ri";
+import { useState } from "react";
+import FavouritesModal from "@/app/components/profile/favourite/FavouriteModal";
 
 const Favorites = () => {
+  const [isOpen, setOpenModal] = useState(false);
   return (
     <div>
       <div>
@@ -20,7 +24,7 @@ const Favorites = () => {
             </div>
           </div>
 
-          <div className="flex border-1 border-primary-line w-96 h-64 p-4 items-center justify-center bg-primary">
+          <div onClick={() => setOpenModal(true)} className="flex border-1 border-primary-line w-96 h-64 p-4 items-center justify-center bg-primary">
              <p>+ New Collection</p>
           </div>
         </div> <br />
@@ -39,6 +43,9 @@ const Favorites = () => {
           </div>
         </div>
       </div>
+       {isOpen && (
+  <FavouritesModal isOpen={isOpen} onClose={() => setOpenModal(false)} />
+)}
     </div>
   );
 };

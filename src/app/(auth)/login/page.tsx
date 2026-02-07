@@ -27,7 +27,7 @@ export default function LoginPage() {
       notify(message, 'error');
       return;
     } 
-    
+  
     if(validated.length == 0) {
       let authUser = Authentication(email.trim(), password.trim());
 
