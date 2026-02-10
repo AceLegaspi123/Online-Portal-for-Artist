@@ -1,53 +1,71 @@
 'use client';
-import { RiImageLine } from "react-icons/ri";
-import { RiArrowDownSLine } from "react-icons/ri";
-import { useState } from "react";
-import FavouritesModal from "@/app/components/profile/favourite/FavouriteModal";
 
-const Favorites = () => {
-  const [isOpen, setOpenModal] = useState(false);
+import { useEffect, useState } from "react";
+import FavoriteCard from "@/app/components/profile/favourite/FavoriteCard";
+import FavouriteModal from "@/app/components/profile/favourite/FavouriteModal";
+import { getData } from '@/utils/storage';
+import { favoriteArt } from "@/types/favoriteArt";
+import Image from "next/image";
+
+const GalleryPage = () => {
+  const [isCreateOpen, setIsCreateOpen] = useState(false);
+  const [favoriteData, setFavoriteData] = useState<favoriteArt[]>([]);
+
+  // Function to sync state with localStorage
+  const refreshGallery = () => {
+    const data = getData<favoriteArt>('gallery');
+    setFavoriteData(Array.isArray(data) ? data : []);
+  };
+
+  useEffect(() => {
+    refreshGallery();
+  }, []);
+
   return (
-    <div>
-      <div>
-        <div className="mb-2 -mt-6">
-            <h2>Collections</h2>
-          </div>
-        <div className="flex gap-5">
-          <div className="w-96 h-64 p-4 bg-primary border-1 border-primary-line">
-            <div className="bg-secondary w-full h-48 mb-2"></div>
-            <div className="flex justify-between items-center">
-              <p>All</p>
-              <div className="flex gap-3 items-center">
-                <RiImageLine className="translate-y-[1px]"/>
-                <p>5 arts</p>
-                </div> 
+    <div className="p-6">
+      <h1 className="text-xl font-bold mb-6">Gallery</h1>
+
+      <FavouriteModal 
+        isOpen={isCreateOpen}  
+        onClose={() => setIsCreateOpen(false)} 
+        galleryData={favoriteData}
+        onUpdate={refreshGallery} 
+      />
+
+      <div className="flex gap-4 flex-wrap">
+        {/* Default "All" Card */}
+        <div className="shop-card h-70 p-2 w-90 bg-primary rounded-sm opacity-80 ease-in-out duration-200 hover:opacity-100 cursor-pointer">
+          <div className="w-full h-full">
+            <Image
+              height={200}
+              width={200}
+              className="rounded-md object-cover h-50 w-full"
+              src="https://i.pinimg.com/736x/a1/f2/82/a1f28223598a486427a9e9cf5416fc24.jpg"
+              alt="All"
+            />
+            <div className="flex mt-2 px-2 pb-1">
+              <p className="font-bold mr-2">All</p>
+              <p className="opacity-50"><b>54</b></p>
             </div>
           </div>
+        </div>
+        
+        {/* Render Saved Galleries */}
+        {favoriteData.map((item, index) => (
+          <FavoriteCard key={index} {...item} />
+        ))}
 
-          <div onClick={() => setOpenModal(true)} className="flex border-1 border-primary-line w-96 h-64 p-4 items-center justify-center bg-primary">
-             <p>+ New Collection</p>
-          </div>
-        </div> <br />
-
-        <div>
-          <div className="flex gap-4 mb-2 text-lg">
-            <h5>All 5</h5>
-            <RiArrowDownSLine />
-          </div>
-          <div className="flex gap-5">
-            <div className="border-1 border-primary-line w-96 h-64 p-4 bg-primary"></div>
-            <div className="border-1 border-primary-line w-96 h-64 p-4 bg-primary"></div>
-            <div className="border-1 border-primary-line w-96 h-64 p-4 bg-primary"></div>
-            <div className="border-1 border-primary-line w-96 h-64 p-4 bg-primary"></div>
-            <div className="border-1 border-primary-line w-96 h-64 p-4 bg-primary"></div>
-          </div>
+        {/* Create new art shop button */}
+        <div 
+          onClick={() => setIsCreateOpen(true)}
+          className="shop-card w-90 h-70 bg-primary rounded-sm cursor-pointer border-2 border-dashed border-gray-600 flex flex-col items-center justify-center hover:border-white transition-all"
+        >
+          <p className="text-5xl opacity-50">+</p>
+          <p className="font-bold opacity-50">Create new Art Shop</p>
         </div>
       </div>
-       {isOpen && (
-  <FavouritesModal isOpen={isOpen} onClose={() => setOpenModal(false)} />
-)}
     </div>
   );
 };
 
-export default Favorites;
+export default GalleryPage;
