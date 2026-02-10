@@ -123,8 +123,6 @@ const CreateGalleryModal = ({ isOpen, onClose, onCreate }: Props) => {
                 </div>
             }
             
-
-
             <input
                 className="hidden"
                 id="img-reference"

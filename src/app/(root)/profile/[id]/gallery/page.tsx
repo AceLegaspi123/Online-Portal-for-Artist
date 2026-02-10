@@ -53,9 +53,7 @@ const GalleryPage = () => {
         
         {
           galleryData?.length > 0 &&  galleryData?.map((item, index) => <GalleryCard {...item} key={index}/>)
-         
         }
-        
 
         {/* Create new art shop button */}
         <div className="mt-4 shop-card w-90 h-70 bg-primary rounded-sm cursor-pointer">
