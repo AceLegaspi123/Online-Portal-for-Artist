@@ -19,7 +19,7 @@ const Modal = ({ isOpen, onClose, children, className }: ModalProps) => {
 
       {/* Modal Content */}
       <div
-        className={`relative z-[101] bg-[#1b1f23] rounded-lg shadow-xl ${className}`}
+        className={`relative z-[101] ${className}`}
       >
         {children}
       </div>

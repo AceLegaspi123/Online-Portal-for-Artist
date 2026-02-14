@@ -1,37 +1,41 @@
-import React from 'react'
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { CiImageOn } from "react-icons/ci";
-import { Dispatch, SetStateAction } from 'react';
+import Modal from "@/app/components/ui/Modal";
 
-interface MyComponentProps {
-  checkOutIsOpen: boolean;
-  setCheckOutIsOpen: Dispatch<SetStateAction<boolean>>;
+
+interface CheckoutProps {
+  isOpen: boolean;
+  onClose: () => void;
 }
 
-const Checkout = ({ setIsOpen }: { setIsOpen: Dispatch<SetStateAction<boolean>> }) => {
+const Checkout = ({ isOpen, onClose }: CheckoutProps) => {
   return (
-    <div>
-      <div>
-        <div onClick={() => setIsOpen(false)} className="text-white flex items-center gap-1 cursor-pointer max-w-screen-xl mx-auto translate-x-[14.7em]">
+    <Modal isOpen={isOpen} onClose={onClose} className="max-w-[1180px] w-full py-4 my-auto rounded-md">
+      <div className='flex  gap-4 px-6 w-[50em] text-white mx-auto justify-between'>
+        <div onClick={onClose} className="flex items-center cursor-pointer">
          <MdOutlineKeyboardArrowLeft className="text-sm" />
          <p >Back</p>
         </div>
-        <div className="flex items-center gap-1 cursor-pointer max-w-screen-xl mx-auto translate-x-[15em] mt-4">
+        <div className="">
          <h2 className="">CHECKOUT</h2>
         </div>
       </div>
 
-      <div className="grid grid-cols-2 bg-[#FFFFFF] h-[520px] w-[50em] mx-auto gap-5 mt-6 mb-10 text-base text-black">
+      <div className="grid grid-cols-2 h-[520px] w-[50em] mx-auto bg-primary mt-6 mb-10 text-base text-black rounded-md">
         <div className="py-6 px-20 gap-10 mt-8">
           <p className="text-center">Choose Payment Method</p>
-       <div className="mt-6 flex flex-col items-center">
+
+       <div className="mt-6">
+        <div className="mx-auto w-fit border-1 border-primary-line px-12 flex flex-col items-center justify-center rounded-md p-4 cursor-pointer">
           <img className="h-7 w-7" src="https://images.seeklogo.com/logo-png/52/1/gcash-logo-png_seeklogo-522261.png" alt="GCash Logo"/>
           <p className="font-bold mt-2">GCash</p>
+        </div>
+          
           <p className="text-sm mt-25 text-center">You’ll be redirected to GCash to complete this payment.</p>
         </div>
       </div>
 
-      <div className= "bg-[#F2F2F2] p-6">
+      <div className= "bg-secondary rounded-md p-6 text-sm ">
         <h2>Summary</h2>
         <hr className="mt-4 opacity-50" />
         <div className="flex justify-between mt-4 text-sm">
@@ -52,15 +56,10 @@ const Checkout = ({ setIsOpen }: { setIsOpen: Dispatch<SetStateAction<boolean>> 
           <p>Total</p>
           <p>$10</p>
         </div>
-        <button className="border rounded-md bg-secondary text-white w-full mt-3 cursor-pointer p-2">Pay with Gcash</button>
+        <button className=" rounded-md bg-green-500 text-white w-full mt-3 cursor-pointer p-2">Pay with Gcash</button>
       </div>
     </div>
-
-    <div className="flex items-center gap-1 cursor-pointer max-w-screen-xl mx-auto translate-x-[14.7em]">
-      <MdOutlineKeyboardArrowLeft className="text-sm" />
-      <p>Back</p>
-    </div>
-  </div>
+  </Modal>
   )
 }
 

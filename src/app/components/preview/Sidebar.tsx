@@ -10,9 +10,9 @@ import { HiOutlineComputerDesktop } from "react-icons/hi2";
 import { artwork } from "@/types/User";
 import Checkout from "@/app/components/ui/Checkout";
 
+
 export function Sidebar(art: artwork) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [checkOutIsOpen, setCheckOutIsOpen] = useState(true)
+  const [checkOutIsOpen, setCheckOutIsOpen] = useState(false); // Start closed
 
 
   return (
@@ -74,17 +74,12 @@ export function Sidebar(art: artwork) {
         <CardFeatured />
       </div>
 
-      {
-        checkOutIsOpen && (
-          <div className={`fixed top-0 left-0 w-full h-full bg-[rgba(0, 0, 0, 0.4)] flex justify-center items-center z-50`}>
-            <div className="fixed inset-0 bg-black opacity-50 z-20"></div>
+  
+              <Checkout
+                isOpen={checkOutIsOpen} 
+                onClose={() => setCheckOutIsOpen(false)}
+              />
 
-            <div className="opacity-100 z-30">
-              <Checkout  setIsOpen={setCheckOutIsOpen}/>
-            </div>        
-          </div>
-        )
-      }
     </div>
   );
 }
