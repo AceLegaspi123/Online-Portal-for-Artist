@@ -10,7 +10,6 @@ import GoBackBtn from "@/app/components/ui/GoBackBtn";
 import comments from "@/data/comments.json"
 import { MdKeyboardArrowDown } from "react-icons/md";
 import Image from "next/image";
-
 import Menu from "@/app/components/preview/Menu";
 
 
