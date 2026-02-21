@@ -25,7 +25,7 @@ export const nav_links = [
   { label: "Home", href: "/", icon: FaHome },
   { label: "Explore", href: "/explore", icon: GoGlobe },
   { label: "Shop", href: "/shop", icon: FaShoppingBag },
-  { label: "Post", href: "/shop", icon: VscFeedback },
+  // { label: "Post", href: "/shop", icon: VscFeedback },
 ];
 
 export const commission_links = [
