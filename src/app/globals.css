@@ -249,5 +249,27 @@ ul {
   transform: translateY(-4px);
 }
 
+/* Homepage */
+.hero-section {
+  background-image: url("/hero-bg.png");
+  background-size: cover; 
+  background-position: center;
+  position: relative;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  z-index: 20;
+}
+
+.hero-wrapper{
+  position: absolute;
+  width: 70%;
+  height: 100%; /* adjust shadow height */
+  background: #000000;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgb(68, 68, 68) 41%, rgba(112, 112, 112, 0.059) 100%);
+  z-index: 40;
+}
 
 /* explore */

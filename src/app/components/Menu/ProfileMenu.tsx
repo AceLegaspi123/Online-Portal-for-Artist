@@ -103,8 +103,6 @@ const ProfileMenu = ({ handleLogOut }: ProfileMenuProps) => {
                 🌙
               </button>
 
-             
-
               {/* Light */}
               <button
                 onClick={() => setTheme("light")}
