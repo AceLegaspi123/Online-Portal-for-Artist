@@ -44,8 +44,8 @@ const Favorites = () => {
         </div>
       </div>
        {isOpen && (
-  <FavouritesModal isOpen={isOpen} onClose={() => setOpenModal(false)} />
-)}
+          <FavouritesModal isOpen={isOpen} onClose={() => setOpenModal(false)} />
+        )}
     </div>
   );
 };
