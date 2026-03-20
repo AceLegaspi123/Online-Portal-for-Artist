@@ -1,71 +1,82 @@
 "use client";
-import React from "react";
-import Modal from "@/app/components/ui/Modal";
-import { useState } from "react";
-import { IoMdClose } from "react-icons/io";
-import AddNewFavorite from "./AddNewFavorite";
 
-interface FavouritesModalProps {
-  isOpen: boolean;
-  onClose: () => void;
+import { useState } from "react";
+import Modal from "../../ui/Modal";
+import AddNewFavorite from "./AddNewFavorite";
+import Image from "next/image";
+import { favoriteArt } from "@/types/favoriteArt";
+
+interface GalleryModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+    galleryData: favoriteArt[];
+    onUpdate: () => void;
 }
 
-const FavouritesModal: React.FC<FavouritesModalProps> = ({ isOpen, onClose }) => {
-  const [showAddModal, setShowAddModal] = useState(false);
-  const [collectionTitle, setCollectionTitle] = useState("");
+const FavouriteModal = ({ isOpen, onClose, galleryData, onUpdate }: GalleryModalProps) => {
+  const [createOpen, setCreateOpen] = useState(false);
 
-  console.log("Collection Title:", collectionTitle);
+  const handleCreated = () => {
+    onUpdate(); // Refresh the list in the parent
+  };
+
   return (
-    <Modal isOpen={isOpen} onClose={onClose} className="max-w-[980px] w-full p-4 bg-primary rounded-lg">
-      <div>
-         <h2 className="text-xl font-semibold mb-2">Favourites</h2>
-
-      </div>
-     
-      <p className="text-sm  mb-4">
-        Create, rename, and delete your Collections. Click and drag to rearrange them.
-      </p>
-
-      <div className="space-y-3">
-        <div className="flex justify-between items-center border p-2 rounded">
-          <span>All 🔒</span>
-          <span className="text-gray-500 text-sm">3 deviations</span>
+    <>
+      <Modal isOpen={isOpen} onClose={onClose} className="max-w-[1280px] w-full flex flex-col">
+        <div className="bg-secondary flex justify-between items-center px-6 py-4">
+          <h2 className="text-lg font-semibold">Favorite</h2>
+          <button onClick={onClose} className="text-xl cursor-pointer">✕</button>
         </div>
-        <div className="flex justify-between items-center border p-2 rounded">
-          <span>Featured 🔒</span>
-          <span className="text-gray-500 text-sm">3 deviations</span>
+
+        <div className="flex-1 p-6 bg-primary">
+          <div className="flex justify-between mb-4">
+            <div>
+              <p className="font-semibold">Your Favorite Arts Collection</p>
+              <p className="text-xs opacity-60">Create, rename, and delete your favorite collection.</p>
+            </div>
+            <button
+              onClick={() => setCreateOpen(true)}
+              className="border px-4 py-2 text-sm rounded hover:bg-white hover:text-black transition cursor-pointer"
+            >
+               + New Collection
+            </button>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {galleryData.map((item, idx) => (
+              <div key={idx} className='bg-secondary rounded-md overflow-hidden hover:ring-1 ring-white cursor-pointer'>
+                <div className="h-40 w-full p-2">
+                  <Image 
+                    height={160}
+                    width={160}
+                    className="rounded-md object-cover h-full w-full bg-primary" 
+                    src={item.coverImagePreview || ""}
+                    alt={item.title} 
+                  />
+                </div>
+                <div className='p-3'>
+                    <p className='font-bold'>{item.title}</p>
+                    <p className='text-xs opacity-50'>{item.visibility}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="flex justify-between items-center border p-2 rounded">
-          <span>Sketch</span>
-          <span className="text-gray-500 text-sm">0 deviations</span>
+
+        <div className="px-6 py-4 bg-secondary flex justify-end">
+          <button onClick={onClose} className="px-6 py-2 bg-green-400 text-black rounded font-semibold">
+            Done
+          </button>
         </div>
-      </div>
+      </Modal>
 
-      <button onClick={() => setShowAddModal(true)} className="mt-4 w-full border rounded p-2 text-blue-600 hover:bg-blue-50">
-        + New Collection
-      </button>
-
-      <div className="flex justify-end mt-4">
-        <button
-          onClick={onClose}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-        >
-          Done
-        </button>
-      </div>
-
-      {showAddModal && (
-        <AddNewFavorite
-          isOpen={showAddModal}
-            onClose={() => setShowAddModal(false)}
-            onCreate={(title) => {
-                setCollectionTitle(title)
-                setShowAddModal(false);
-            }}
-        />
-      )}
-    </Modal>
+      <AddNewFavorite
+        isOpen={createOpen}
+        onClose={() => setCreateOpen(false)}
+        onCreate={handleCreated}
+      />
+    </>
   );
 };
 
-export default FavouritesModal;
+export default FavouriteModal;

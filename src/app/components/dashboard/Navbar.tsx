@@ -64,7 +64,7 @@ const Navbar = () => {
     }, 1500)
   }
   return (
-    <nav className="fixed bg-primary top-0 bottom-0 left-0 w-[20em] border-r-1 border-primary-line px-2 -pt-10 flex flex-col justify-between z-10 mt-16">
+    <nav className="fixed bg-primary top-0 bottom-0 left-0 w-[18em] border-r-1 border-primary-line px-2 -pt-10 flex flex-col justify-between z-10 mt-16">
         <Image
           height={100}
           width={100}

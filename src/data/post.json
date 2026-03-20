@@ -1,0 +1,182 @@
+[
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b001",
+    "USER_PROFILE_ID": "USR001",
+    "CONTENT": "Testing out new brush textures in Procreate. The grain on this digital charcoal is incredible!",
+    "MEDIA": ["https://art-vault.com/ethan/brushes_test.jpg"],
+    "VISIBILITY": "public",
+    "DATE_POSTED": "2026-02-21T09:00:00Z",
+    "LAST_UPDATED": "2026-02-21T09:00:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b002",
+    "USER_PROFILE_ID": "USR002",
+    "CONTENT": "Found an old sketchbook from 2018. It's funny to see how much my anatomy has improved since then.",
+    "MEDIA": ["https://art-vault.com/ava/throwback_sketch.png"],
+    "VISIBILITY": "public",
+    "DATE_POSTED": "2026-02-21T10:15:00Z",
+    "LAST_UPDATED": "2026-02-21T10:15:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b003",
+    "USER_PROFILE_ID": "USR003",
+    "CONTENT": "Late night coloring session. Working with neon palettes is harder than it looks!",
+    "MEDIA": ["https://art-vault.com/liam/neon_palette.jpg"],
+    "VISIBILITY": "followers",
+    "DATE_POSTED": "2026-02-21T01:30:00Z",
+    "LAST_UPDATED": "2026-02-21T01:30:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b004",
+    "USER_PROFILE_ID": "USR004",
+    "CONTENT": "Portrait study of a friend. Focusing on the sub-surface scattering on the skin.",
+    "MEDIA": ["https://art-vault.com/mia/portrait_study.jpg"],
+    "VISIBILITY": "public",
+    "DATE_POSTED": "2026-02-20T14:45:00Z",
+    "LAST_UPDATED": "2026-02-20T15:00:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b005",
+    "USER_PROFILE_ID": "USR005",
+    "CONTENT": "Finished my first 3D render. Digital art is evolving so fast!",
+    "MEDIA": ["https://art-vault.com/noah/3d_render_final.mp4"],
+    "VISIBILITY": "public",
+    "DATE_POSTED": "2026-02-20T11:20:00Z",
+    "LAST_UPDATED": "2026-02-20T11:20:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b006",
+    "USER_PROFILE_ID": "USR006",
+    "CONTENT": "Inktober might be months away, but I'm practicing my line work every day.",
+    "MEDIA": ["https://art-vault.com/sophia/ink_practice.jpg"],
+    "VISIBILITY": "public",
+    "DATE_POSTED": "2026-02-19T16:10:00Z",
+    "LAST_UPDATED": "2026-02-19T16:10:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b007",
+    "USER_PROFILE_ID": "USR007",
+    "CONTENT": "Watercolor landscapes in Makati. The urban architecture is a great subject.",
+    "MEDIA": ["https://art-vault.com/lucas/makati_watercolor.png"],
+    "VISIBILITY": "public",
+    "DATE_POSTED": "2026-02-19T12:00:00Z",
+    "LAST_UPDATED": "2026-02-19T12:00:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b008",
+    "USER_PROFILE_ID": "USR008",
+    "CONTENT": "The lighting in this portrait is inspired by Rembrandt. Love that triangle of light.",
+    "MEDIA": ["https://art-vault.com/chloe/rembrandt_style.jpg"],
+    "VISIBILITY": "followers",
+    "DATE_POSTED": "2026-02-18T20:30:00Z",
+    "LAST_UPDATED": "2026-02-18T20:30:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b009",
+    "USER_PROFILE_ID": "USR009",
+    "CONTENT": "Character design sheet for a new comic project. Meet 'The Bulacan Sentinel'.",
+    "MEDIA": ["https://art-vault.com/jacob/char_sheet.jpg"],
+    "VISIBILITY": "public",
+    "DATE_POSTED": "2026-02-18T09:45:00Z",
+    "LAST_UPDATED": "2026-02-18T10:00:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b010",
+    "USER_PROFILE_ID": "USR010",
+    "CONTENT": "Digital speed painting of the Cebu shoreline. 30 minutes challenge!",
+    "MEDIA": ["https://art-vault.com/ella/speedpaint_cebu.jpg"],
+    "VISIBILITY": "public",
+    "DATE_POSTED": "2026-02-17T17:15:00Z",
+    "LAST_UPDATED": "2026-02-17T17:15:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b011",
+    "USER_PROFILE_ID": "USR011",
+    "CONTENT": "Oil painting progress. The drying time is a test of my patience.",
+    "MEDIA": ["https://art-vault.com/caleb/oil_progress.png"],
+    "VISIBILITY": "private",
+    "DATE_POSTED": "2026-02-17T14:00:00Z",
+    "LAST_UPDATED": "2026-02-17T14:00:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b012",
+    "USER_PROFILE_ID": "USR012",
+    "CONTENT": "Concept art for a sci-fi environment. Dreaming of future cities.",
+    "MEDIA": ["https://art-vault.com/isabella/scifi_concept.jpg"],
+    "VISIBILITY": "public",
+    "DATE_POSTED": "2026-02-16T11:50:00Z",
+    "LAST_UPDATED": "2026-02-16T11:50:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b013",
+    "USER_PROFILE_ID": "USR013",
+    "CONTENT": "Minimalist vector art is so satisfying to look at.",
+    "MEDIA": ["https://art-vault.com/zane/minimalist_vector.png"],
+    "VISIBILITY": "public",
+    "DATE_POSTED": "2026-02-16T08:30:00Z",
+    "LAST_UPDATED": "2026-02-16T08:30:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b014",
+    "USER_PROFILE_ID": "USR014",
+    "CONTENT": "Exploring traditional charcoal techniques. My hands are completely black!",
+    "MEDIA": ["https://art-vault.com/harper/charcoal_mess.jpg"],
+    "VISIBILITY": "public",
+    "DATE_POSTED": "2026-02-15T19:00:00Z",
+    "LAST_UPDATED": "2026-02-15T19:00:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b015",
+    "USER_PROFILE_ID": "USR015",
+    "CONTENT": "Abstract expressions using acrylic pouring. The patterns are mesmerizing.",
+    "MEDIA": ["https://art-vault.com/mason/acrylic_pour.jpg"],
+    "VISIBILITY": "followers",
+    "DATE_POSTED": "2026-02-15T13:40:00Z",
+    "LAST_UPDATED": "2026-02-15T13:40:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b016",
+    "USER_PROFILE_ID": "USR016",
+    "CONTENT": "Self-portrait in a surrealist style. A lot of hidden symbols here.",
+    "MEDIA": ["https://art-vault.com/layla/surreal_self.png"],
+    "VISIBILITY": "public",
+    "DATE_POSTED": "2026-02-14T21:20:00Z",
+    "LAST_UPDATED": "2026-02-14T21:20:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b017",
+    "USER_PROFILE_ID": "USR017",
+    "CONTENT": "Quick gesture drawings. 30 seconds each to capture the motion.",
+    "MEDIA": ["https://art-vault.com/owen/gesture_sheet.jpg"],
+    "VISIBILITY": "public",
+    "DATE_POSTED": "2026-02-14T10:00:00Z",
+    "LAST_UPDATED": "2026-02-14T10:00:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b018",
+    "USER_PROFILE_ID": "USR018",
+    "CONTENT": "Color theory study. Complementary colors really make the piece pop.",
+    "MEDIA": ["https://art-vault.com/zara/color_study.jpg"],
+    "VISIBILITY": "public",
+    "DATE_POSTED": "2026-02-13T15:55:00Z",
+    "LAST_UPDATED": "2026-02-13T15:55:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b019",
+    "USER_PROFILE_ID": "USR019",
+    "CONTENT": "Digital painting of a mythical creature. Part lion, part eagle.",
+    "MEDIA": ["https://art-vault.com/leo/griffin_concept.jpg"],
+    "VISIBILITY": "public",
+    "DATE_POSTED": "2026-02-13T12:00:00Z",
+    "LAST_UPDATED": "2026-02-13T12:00:00Z"
+  },
+  {
+    "ID": "65d4f2b1a1c4d5e6f7a8b020",
+    "USER_PROFILE_ID": "USR020",
+    "CONTENT": "Trying out pixel art for the first time. It's like digital cross-stitching!",
+    "MEDIA": ["https://art-vault.com/aria/pixel_art_debut.png"],
+    "VISIBILITY": "public",
+    "DATE_POSTED": "2026-02-12T18:30:00Z",
+    "LAST_UPDATED": "2026-02-12T18:30:00Z"
+  }
+]
