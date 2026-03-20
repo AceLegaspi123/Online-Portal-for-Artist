@@ -64,12 +64,6 @@ const GalleryPage = () => {
           <p className="font-bold opacity-50">Create new Art Shop</p>
         </div>
       </div>
-<<<<<<< HEAD
-       {isOpen && (
-          <FavouritesModal isOpen={isOpen} onClose={() => setOpenModal(false)} />
-        )}
-=======
->>>>>>> f4b836c133a770250d64a4646b2631854d4e6fe9
     </div>
   );
 };
