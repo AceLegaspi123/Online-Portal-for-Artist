@@ -124,8 +124,8 @@ const FAQPage = () => {
           <li key={index} className="w-full">
             <div
               onClick={() => handleToggle(item.question)}
-              className={`flex justify-between hover:bg-secondary transition-all w-full items-center bg-primary p-6 rounded-lg cursor-pointer ${
-                item.isOpen ? "rounded-b-none border-b border-white/10" : ""
+              className={`flex justify-between transition-all w-full items-center bg-primary p-6 rounded-lg cursor-pointer ${
+                item.isOpen ? "rounded-b-none border-b bg-secondary border-white/10" : " bg-primary"
               }`}
             >
               <p className="font-medium">{item.question}</p>
@@ -133,7 +133,7 @@ const FAQPage = () => {
             </div>
 
             {item.isOpen && (
-              <div className="bg-secondary p-6 rounded-b-lg animate-in fade-in slide-in-from-top-1 duration-200">
+              <div className="bg-primary p-6 rounded-b-lg animate-in fade-in slide-in-from-top-1 duration-200">
                 <p className="text-sm md:text-base leading-relaxed">{item.answer}</p>
               </div>
             )}

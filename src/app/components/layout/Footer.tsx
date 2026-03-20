@@ -20,7 +20,7 @@ export default function Footer(){
                     <h6>Learn More</h6>
                     <ul>
                         <li><Link href="/about">About Us</Link></li>
-                        <li><Link href="">FAQ</Link></li>
+                        <li><Link href="/FAQ">FAQ</Link></li>
                         <li><Link href="">Privacy Policy</Link></li>
                     </ul>
                 </div>
