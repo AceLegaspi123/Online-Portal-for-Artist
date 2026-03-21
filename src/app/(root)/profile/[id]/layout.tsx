@@ -64,9 +64,9 @@ export default async function Layout({ children, params }: LayoutProps) {
             />
           </div>
 
-          <div className="flex flex-col gap-1">
-            <h3 className="text-3xl font-bold">{`${user?.first_name} ${user?.last_name}`}</h3>
-            <p>{user?.username}</p>
+          <div className="flex flex-col text-white">
+            <h2 className="text-3xl font-bold">{`${user?.first_name} ${user?.last_name}`}</h2>
+            <p className="">{user?.username}</p>
 
             <ul className="flex gap-4">
               <li>1.8m followers</li>

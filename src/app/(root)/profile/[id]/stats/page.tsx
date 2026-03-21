@@ -3,19 +3,19 @@ const StatsPage = () => {
     <div>
       <div className="w-full max-w-[1440px] m-auto  -mt-4">
         <div className="mb-10 gap-3 flex flex-col h-auto">
-          <h1 className="text-2xl font-bold"> Your Art Analytics</h1>
+          <h3 className="text-2xl font-bold"> Your Art Analytics</h3>
           <p className="text-sm ">
             View a private overview of your activity, artworks, and community
             engagement.
           </p>
-          <p className="text-sm ">
+          <p className="text-sm -mt-2">
             {" "}
             These insights are visible only to you and refresh once per day.
           </p>
         </div>
 
         <div className="  gap-5 text-2xl mt-10 flex items-center justify-between pb-4 ">
-          <h2 className="font-bold h-10 gap-2">All time stats</h2>
+          <h3 className="font-bold h-10 gap-2">All time stats</h3>
         </div>
 
         <div className="border-1 p-10 border-primary-line rounded-lg bg-primary">

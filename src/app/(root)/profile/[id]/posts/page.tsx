@@ -11,7 +11,7 @@ const PostPage = () => {
   const [isPosting, setIsPosting] = useState(false);
 
   return (
-    <div>
+    <div className="-mt-10">
       {/* Create Post Modal */}
       <Modal 
         isOpen={isPosting} 
@@ -23,9 +23,9 @@ const PostPage = () => {
       </Modal>
 
       <div className="flex flex-col justify-center py-10">
-        <div className="flex gap-10 text-left w-full mb-2 max-w-screen-xl mx-auto translate-x-[7.4em]">
-          <p>All Post 3</p>
-          <div className="flex gap-2">
+        <div className="flex gap-10 text-left w-full mb-4 max-w-screen-xl text-lg font-semibold mx-auto translate-x-[7.4em]">
+          <div className="ml-27">All Post 3</div>
+          <div className="flex gap-2 items-center cursor-pointer">
             <p>Newest</p>
             <IoIosArrowDown />
           </div>
@@ -37,7 +37,7 @@ const PostPage = () => {
             <ProfileIcon /> 
             <div 
               onClick={() => setIsPosting(true)} 
-              className="border border-primary-line rounded-md bg-secondary w-[90%] py-4 ml-4 px-4 cursor-pointer hover:brightness-110 transition-all"
+              className="border border-primary-line rounded-md bg-primary w-[90%] py-4 ml-4 px-4 cursor-pointer hover:brightness-110 transition-all"
             >
               <p className="text-gray-400">What's on your mind, ChristianJay69?</p>
             </div>
@@ -51,14 +51,14 @@ const PostPage = () => {
               <div className="flex gap-4">
                 <ProfileIcon /> 
                 <div>
-                  <h3>ChristianJay69</h3>
+                  <p className="bold">ChristianJay69</p>
                   <p className="text-sm opacity-50">3 days ago</p>
                 </div>
               </div>
               <div className="-translate-y-6 hover:opacity-50 cursor-pointer">...</div>
             </div>
 
-            <h3 className="mt-2 mb-2">My Art</h3>
+            <h6 className="mt-6 mb-2 ">My Art</h6>
 
             <div className="w-full h-[450px] bg-secondary">
               <img 
