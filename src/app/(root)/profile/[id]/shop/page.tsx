@@ -11,11 +11,12 @@ const ShopPage = () => {
 
   return (
     <div>
-      <h1 className="text-xl font-bold -mt-6">
+      <h4 className="text-xl font-bold -mt-6 ">
         Your Artshop <span className="ml-4">2</span>
-      </h1>
+      </h4>
 
-      <div className="flex my-4 gap-6">
+
+      <div className="flex my-4 gap-6 ">
         <div className="shop-card p-2 w-90 bg-primary rounded-sm opacity-80 ease-in-out duration-200 hover:opacity-100 cursor-pointer">
           <div className="w-full h-full cursor-pointer">
             <div>

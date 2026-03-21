@@ -24,7 +24,7 @@ const GalleryPage = () => {
 
   return (
     <div>
-      <h1 className="text-xl font-bold -mt-6">Gallery</h1>
+      <h4 className="text-xl font-bold -mt-6">Gallery</h4>
 
       <GalleryModal isOpen={isCreateOpen}  onClose={() => setIsCreateOpen(false)} galleryData={galleryData}/>
 

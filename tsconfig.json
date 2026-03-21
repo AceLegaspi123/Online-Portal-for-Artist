@@ -37,7 +37,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
-, "src/app/(root)/page.jsx"  ],
+, "src/app/(root)/page.jsx", "src/app/(root)/profile/[id]/gallery/page.jsx", "src/app/components/profile/CreatePost.jsx"  ],
   "exclude": [
     "node_modules"
   ]

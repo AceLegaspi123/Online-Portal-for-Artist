@@ -51,7 +51,7 @@ const CreatePost = () => {
   return (
     <div className="max-w-[500px] mx-auto bg-white rounded-xl shadow-lg p-4 border border-gray-200">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-xl font-bold text-center w-full">Create post</h3>
+        <h5 className="text-xl font-bold text-center w-full">Create post</h5>
       </div>
 
       <hr className="mb-4" />

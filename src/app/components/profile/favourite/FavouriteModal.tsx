@@ -24,15 +24,15 @@ const FavouriteModal = ({ isOpen, onClose, galleryData, onUpdate }: GalleryModal
     <>
       <Modal isOpen={isOpen} onClose={onClose} className="max-w-[1280px] w-full flex flex-col">
         <div className="bg-secondary flex justify-between items-center px-6 py-4">
-          <h2 className="text-lg font-semibold">Favorite</h2>
+          <h4 className="text-lg font-semibold">Favorite</h4>
           <button onClick={onClose} className="text-xl cursor-pointer">✕</button>
         </div>
 
         <div className="flex-1 p-6 bg-primary">
           <div className="flex justify-between mb-4">
             <div>
-              <p className="font-semibold">Your Favorite Arts Collection</p>
-              <p className="text-xs opacity-60">Create, rename, and delete your favorite collection.</p>
+              <h6 className="bold">Your Favorite Arts Collection</h6>
+              <p className="light">Create, rename, and delete your favorite collection.</p>
             </div>
             <button
               onClick={() => setCreateOpen(true)}
