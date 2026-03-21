@@ -17,16 +17,16 @@ export default function Footer(){
 
             <div className=" flex gap-12 leading-10 z-10">
                 <div>
-                    <h2>Learn More</h2>
+                    <h6>Learn More</h6>
                     <ul>
                         <li><Link href="/about">About Us</Link></li>
-                        <li><Link href="">FAQ</Link></li>
+                        <li><Link href="/FAQ">FAQ</Link></li>
                         <li><Link href="">Privacy Policy</Link></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h2><Link href="">Contact Us</Link></h2>
+                    <h6><Link href="">Contact Us</Link></h6>
                     <ul>
                         <li><Link href="">Contact Number</Link></li>
                         <li><Link href="">Email Address</Link></li>
@@ -34,7 +34,7 @@ export default function Footer(){
                 </div>
 
                 <div>
-                    <h2><Link href="">Social Media</Link></h2>
+                    <h6><Link href="">Social Media</Link></h6>
                     <div className="flex gap-2">
                         <Link href=""><FaInstagram /></Link>
                         <Link href=""><RiGithubLine/></Link>

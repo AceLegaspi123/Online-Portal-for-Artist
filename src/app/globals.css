@@ -10,11 +10,12 @@ html{
 
 :root {
   --background: #ffffff;
-  --foreground: #000000;
-
-  --primary: #F2F2F2;
-  --secondary: #D9D9D9;
-  --tertiary: #D9D9D9;
+  --foreground: #111827;   /* soft black, easier on eyes */
+  
+  --primary:   #f1f1f1d7;    /* light gray */
+  --secondary: #d1d5db;    /* medium light gray */
+  --tertiary:  #9ca3af;    /* muted gray */
+  
 
   --primary-line: #e5e7eb;
   --primary-blue: #1e86d8;
@@ -92,7 +93,17 @@ body {
 
 h2 {
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 2.5em;
+}
+
+h4{
+  font-weight: bold;
+  font-size: 2em;
+}
+
+h6 {
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 footer {

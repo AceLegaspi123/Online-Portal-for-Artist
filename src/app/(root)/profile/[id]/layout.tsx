@@ -25,8 +25,8 @@ export default async function Layout({ children, params }: LayoutProps) {
   
 
   return (
-    <div className="relative z-10">
-        <div className="h-[23rem]  w-full -mt-10 relative bg-cover bg-center backdrop-grayscale-75 bg-no-repeat">
+    <div className="relative z-10 ">
+        <div className="h-[23rem] w-full -mt-10 relative backdrop-grayscale-75 bg-no-repeat">
           {
             user?.background_cover !== ""
             ? <img src={user?.background_cover} alt="" className=" not-last:inset-0 top-0 h-95 w-full object-cover object-center -z-10 absolute"/>
