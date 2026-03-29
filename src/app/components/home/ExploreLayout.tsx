@@ -10,10 +10,9 @@ import SearchHeader from '../ui/SearchHeader';
 
 
 const ExploreLayout = () => {
-
   return (
     <div className="flex flex-col gap-4 relative mt-10">
-      <div className='fixed top-10 md:left-5 md:right-5 z-20 left-2 right-2 bg-background py-5 pt-10'>
+      <div className='fixed top-12 md:left-5 md:right-5 z-20 left-2 right-2 bg-background py-5 pt-10'>
         <div className='relative z-20 '>
           <input 
             type="text" 
