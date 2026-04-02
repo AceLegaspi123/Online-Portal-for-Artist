@@ -37,7 +37,7 @@ const Checkout = ({ isOpen, onClose }: CheckoutProps) => {
 
       <div className= "bg-secondary rounded-md p-6 text-sm ">
         <h2>Summary</h2>
-        <hr className="mt-4 opacity-50" />
+        <hr className="opacity-50" />
         <div className="flex justify-between mt-4 text-sm">
           <p>Machine Gun car <span className="font-bold">by William Gomez</span></p>
           <p className="font-bold">$10</p>
