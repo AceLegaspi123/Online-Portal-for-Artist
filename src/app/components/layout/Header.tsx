@@ -12,8 +12,10 @@ import {
 
 import { usePopup } from "@/hooks/usePopup";
 import { useRouter } from "next/navigation";
+import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 import ProfileMenu from "../Menu/ProfileMenu";
 import Notification from "@/app/components/ui/Notification";
+import ChatPopUp from "../chat/ChatPopUp";
 import Logo from "../ui/Logo";
 
 export const nav_links = [
@@ -25,6 +27,8 @@ export const nav_links = [
 
 export default function Header() {
   const [isLogin, setIsLogin] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
   const [notificationDropdown, setNotificationDropdown] = useState(false);
   const router = useRouter();
 
@@ -36,6 +40,10 @@ export default function Header() {
     profileMenu.close();
     router.push("/");
   };
+
+  const handleCloseChat = () => {
+    setIsChatOpen(false);
+  }
 
   return (
     <header className="fixed top-0 left-0 w-full h-20 z-[100] border-b border-white/5 bg-primary/80 backdrop-blur-xl px-6 lg:px-12 flex items-center justify-between">
@@ -65,7 +73,7 @@ export default function Header() {
         {isLogin ? (
           <>
             <div className="hidden md:flex items-center gap-2 mr-4">
-              <HeaderActionLink href="/messages" icon={<MessageSquare size={20} />} />
+              <IoChatbubbleEllipsesOutline onClick={() => setIsChatOpen(i => !i)}/>
               <button 
                   onClick={(e) => {
                       e.stopPropagation();
@@ -161,6 +169,7 @@ export default function Header() {
       </AnimatePresence>
 
       <Notification func={setNotificationDropdown} isOpen={notificationDropdown}/>
+      <ChatPopUp isOpen={isChatOpen} onClose={handleCloseChat}/>
     </header>
   );
 }
