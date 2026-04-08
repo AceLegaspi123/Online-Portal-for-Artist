@@ -1,253 +1,164 @@
-import { LuShoppingBag } from "react-icons/lu";
-import { CiSearch } from "react-icons/ci";
-import { IoMdCard } from "react-icons/io";
-import { CiCalendar } from "react-icons/ci";
-import { FaPaperclip } from "react-icons/fa";
-import { BsBoxArrowUpRight } from "react-icons/bs";
-import { MdOutlineFileDownload } from "react-icons/md";
+"use client";
 
-const page = () => {
-    return (
-        <div className="max-w-screen-xl mx-auto p-6  min-h-screen">
-            <p className="font-bold text-2xl">My Purchases</p>
-            <p>View all purchases artworks and commissions</p>
+import React, { useState, useMemo } from "react";
+import clsx from "clsx";
+import { 
+  Download, 
+  Package, 
+  ExternalLink, 
+  Search, 
+  CheckCircle2,
+  Clock,
+  AlertCircle
+} from "lucide-react";
+import PurchaseDetailModal from "@/app/components/ui/PurchaseDetailModal";
 
-            <div className="flex justify-between mt-8 mb-4 gap-4">
+// MOCK DATA (Updated with Receipt/Notes for the Modal)
+const INITIAL_PURCHASES = [
+  {
+    id: "p_01HJV",
+    artworkName: "Cyberpunk Samurai",
+    artist: "Jeaven A. Paras",
+    type: "shop",
+    amount: 1500.00,
+    paymentStatus: "paid",
+    deliveryType: "digital",
+    deliveryStatus: "Delivered",
+    date: "Feb 12, 2026",
+    receiptUrl: "https://example.com/receipt1.pdf",
+    notes: "High-resolution PNG and layered PSD included.",
+  },
+  {
+    id: "p_02KML",
+    artworkName: "Custom Portrait",
+    artist: "Artistry Studio",
+    type: "commission",
+    amount: 3500.00,
+    paymentStatus: "paid",
+    deliveryType: "physical",
+    deliveryStatus: "In Progress",
+    date: "Jan 28, 2026",
+    receiptUrl: "https://example.com/receipt2.pdf",
+    notes: "Shipping to Atimonan, Quezon. Handle with care.",
+  }
+];
 
-                <div className="border-l-3 border-indigo-500 bg-primary shadow-md shadow-indigo-500/25  border-l-indigo-500 p-3 rounded-lg w-full gap-2">
-                    <div className="flex gap-2 items-center">
-                        <LuShoppingBag className="w-5 h-5 rounded-md bg-[#29AB87] p-1" />
-                        <p className="text-lg font-bold">
-                            6
-                        </p>
-                    </div>
-                    <p className="relative left-7 text-[10px]">
-                        Total Purchases
-                    </p>
-                </div>
+export default function PurchasedArts() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filterType, setFilterType] = useState("all types");
+  const [filterDelivery, setFilterDelivery] = useState("all delivery");
+  const [filterStatus, setFilterStatus] = useState("all status");
+  
+  // Modal State
+  const [selectedPurchase, setSelectedPurchase] = useState<any>(null);
 
-                <div className="border-l-3 border-indigo-500 bg-primary shadow-md shadow-indigo-500/25  border-l-indigo-500 p-3 rounded-lg w-full gap-2">
-                    <div className="flex gap-2 items-center">
-                        <LuShoppingBag className="w-5 h-5 rounded-md bg-[#29AB87] p-1" />
-                        <p className="text-lg font-bold">
-                            6
-                        </p>
-                    </div>
-                    <p className="relative left-7 text-[10px]">
-                        Shop Purchases
-                    </p>
-                </div>
+  const filteredPurchases = useMemo(() => {
+    return INITIAL_PURCHASES.filter((item) => {
+      const matchesSearch = item.artworkName.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                            item.artist.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesType = filterType === "all types" || item.type === filterType;
+      const matchesDelivery = filterDelivery === "all delivery" || item.deliveryType === filterDelivery;
+      const matchesStatus = filterStatus === "all status" || item.paymentStatus === filterStatus;
+      return matchesSearch && matchesType && matchesDelivery && matchesStatus;
+    });
+  }, [searchQuery, filterType, filterDelivery, filterStatus]);
 
-                <div className="border-l-3 border-indigo-500 bg-primary  shadow-md shadow-indigo-500/25  border-l-indigo-500 p-3 rounded-lg w-full gap-2">
-                    <div className="flex gap-2 items-center">
-                        <LuShoppingBag className="w-5 h-5 rounded-md bg-[#29AB87] p-1" />
-                        <p className="text-lg font-bold">
-                            6
-                        </p>
-                    </div>
-                    <p className="relative left-7 text-[10px]">
-                        Commissions
-                    </p>
-                </div>
+  return (
+    <div className="p-6 lg:p-10 bg-[#141518] min-h-screen text-white">
+      <div className="mb-10">
+        <h1 className="text-4xl font-black uppercase tracking-tighter">My Purchases</h1>
+        <p className="text-green-400 text-[10px] font-black uppercase tracking-[0.3em] mt-2">Transaction History</p>
+      </div>
 
-                <div className="border-l-3 border-indigo-500 bg-primary  shadow-md shadow-indigo-500/25  border-l-indigo-500 p-3 rounded-lg w-full gap-2">
-                    <div className="flex gap-2 items-center">
-                        <LuShoppingBag className="w-5 h-5 rounded-md bg-[#29AB87] p-1" />
-                        <p className="text-lg font-bold">
-                            6
-                        </p>
-                    </div>
-                    <p className="relative left-7 text-[10px]">
-                        Digital Arts
-                    </p>
-                </div>
-
-                <div className="border-l-3 border-indigo-500 bg-primary  shadow-md shadow-indigo-500/25  border-l-indigo-500 p-3 rounded-lg w-full gap-2">
-                    <div className="flex gap-2 items-center">
-                        <LuShoppingBag className="w-5 h-5 rounded-md bg-[#29AB87] p-1" />
-                        <p className="text-lg font-bold">
-                            $1,600
-                        </p>
-                    </div>
-                    <p className="relative left-7 text-[10px]">
-                        Total Spent
-                    </p>
-                </div>
-            </div>
-
-
-            <div className="flex gap-4 mt-8">
-
-                <div className="relative w-full">
-                    <input
-                        type="text"
-                        placeholder="Search by artwork name, artwork, or order ID..."
-                        className="pl-12 py-3 w-full  rounded-lg border border-gray-700 placeholder-gray-500"
-                    />
-                    <CiSearch className="absolute top-3.5 left-4 text-gray-400 text-xl" />
-                </div>
-
-                <div className="w-45 pl-1 py-3 rounded-lg border border-gray-700">
-                    <select className="opacity-50 font-thin outline-none" name="All types" id="all types">
-                        <option value="all types">All types</option>
-                        <option value="shop">Shop</option>
-                        <option value="commission">Commission</option>
-                    </select>
-                </div>
-
-                <div className="w-45 pl-1 py-3 rounded-lg bg border border-gray-700">
-                    <select className="opacity-50 font-thin outline-none" name="All Delivery" id="all delivery">
-                        <option value="all delivery">All Delivery</option>
-                        <option value="digital">Digital</option>
-                        <option value="physical">Physical</option>
-                    </select>
-                </div>
-
-                <div className="w-45 pl-1 py-3 rounded-lg border border-gray-700 placeholder-gray-500">
-                    <select className="opacity-50 font-thin outline-none" name="All Status" id="all status">
-                        <option value="all status">All Status</option>
-                        <option value="paid">Paid</option>
-                        <option value="pending">Pending</option>
-                        <option value="refunded">Refunded</option>
-                        <option value="failed">Failed</option>
-                    </select>
-                </div>
-
-            </div>
-
-
-            <div className="mt-8">
-                <div className="flex justify-between gap-4">
-                    <div className="rounded-[10px] border-t-4 bg-primary  border-[#00FF6A] shadow-xs shadow-gray-700 p-4 w-[50%]">
-
-                        <div className="flex gap-2">
-                            <img src="https://thumbs.dreamstime.com/b/cute-cat-portrait-square-photo-beautiful-white-closeup-105311158.jpg" alt="dispaly picture" className="w-13 h-13 rounded-full mt-1" />
-                            <div className="">
-                                <div className="flex mt-1">
-                                    <p className="font-bold text-md">Alex Morgan</p>
-                                    <p className="border w-12 rounded-xl text-center font-bold text-sm relative left-[26.5em] text-[#00FF6A] bg-[#00FF6A22] border-[#00FF6A] opacity-70">Shop</p>
-                                </div>
-                                <div className="flex gap-2 mt-1 opacity-70">
-                                    <p className="border w-12 rounded-xl text-center font-bold text-sm text-[#00FF6A] bg-[#00FF6A22] border-[#00FF6A]">Paid</p>
-                                    <p className="border w-20 rounded-xl text-center font-bold text-sm text-[#00FF6A] bg-[#00FF6A22] border-[#00FF6A]">Delivered</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h2 className="mt-4">Fantasy Character Portrait</h2>
-                        <hr className="mt-4 opacity-50" />
-
-                        <div className="mt-4 text-sm opacity-50">
-                            <div className="flex justify-between">
-                                <div className="flex gap-2 items-center">
-                                    <IoMdCard />
-                                    <p>Gcash</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <IoMdCard />
-                                    <p>Physical Delivery</p>
-                                </div>
-                            </div>
-
-                            <div className="flex justify-between">
-                                <div className="flex gap-2 items-center">
-                                    <CiCalendar />
-                                    <p>November 12, 2025</p>
-                                </div>
-                                <p className="text-[#00FF6A] font-bold">$120.00</p>
-                            </div>
-
-                        </div>
-
-
-                        <div className="mt-4 opacity-70 text-sm">
-                            <p className="bg-[#1D2939] rounded-md w-35 text-center p-1">ID:PUR-1241EWASD</p>
-
-                            <p className="bg-[#1D2939] rounded-md w-59 text-center mt-4 p-1">"Handle with care - framed artwork"</p>
-
-                            <p className="mt-4">Completed: December 1, 2025</p>
-                        </div>
-
-                        <div className="flex mt-4 border border-gray-500 w-30 items-center justify-center gap-2 p-1 rounded-md text-sm cursor-pointer">
-                            <FaPaperclip />
-                            <p>Reciept</p>
-                            <BsBoxArrowUpRight />
-                        </div>
-
-                    </div>
-
-
-                    <div className="rounded-[10px] border-t-4 bg-primary  border-[#00FF6A] shadow-xs shadow-gray-700 p-4 w-[50%]">
-
-                        <div className="flex gap-2">
-                            <img src="https://thumbs.dreamstime.com/b/cute-cat-portrait-square-photo-beautiful-white-closeup-105311158.jpg" alt="dispaly picture" className="w-13 h-13 rounded-full mt-1" />
-                            <div className="">
-                                <div className="flex mt-1">
-                                    <p className="font-bold text-md">Alex Morgan</p>
-                                    <p className="border w-12 rounded-xl text-center font-bold text-sm relative left-[26.5em] text-[#00FF6A] bg-[#00FF6A22] border-[#00FF6A] opacity-70">Shop</p>
-                                </div>
-                                <div className="flex gap-2 mt-1 opacity-70">
-                                    <p className="border w-12 rounded-xl text-center font-bold text-sm text-[#00FF6A] bg-[#00FF6A22] border-[#00FF6A]">Paid</p>
-                                    <p className="border w-20 rounded-xl text-center font-bold text-sm text-[#00FF6A] bg-[#00FF6A22] border-[#00FF6A]">Delivered</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h2 className="mt-4">Fantasy Character Portrait</h2>
-                        <hr className="mt-4 opacity-50" />
-
-                        <div className="mt-4 text-sm opacity-50">
-                            <div className="flex justify-between">
-                                <div className="flex gap-2 items-center">
-                                    <IoMdCard />
-                                    <p>Gcash</p>
-                                </div>
-
-                                <div className="flex gap-2 items-center">
-                                    <IoMdCard />
-                                    <p>Digital Download</p>
-                                </div>
-                            </div>
-
-                            <div className="flex justify-between">
-                                <div className="flex gap-2 items-center">
-                                    <CiCalendar />
-                                    <p>November 12, 2025</p>
-                                </div>
-                                <p className="text-[#00FF6A] font-bold">$120.00</p>
-                            </div>
-
-                        </div>
-
-
-                        <div className="mt-4 opacity-70 text-sm">
-                            <p className="bg-[#1D2939] rounded-md w-35 text-center p-1">ID:PUR-1241EWASD</p>
-
-                            <p className="bg-[#1D2939] rounded-md w-59 text-center mt-4 p-1">"Handle with care - framed artwork"</p>
-
-                            <p className="mt-4">Completed: December 1, 2025</p>
-                        </div>
-
-                        <div className="flex justify-between gap-4">
-                            <div className="flex mt-4 border bg-[#00BE5F] border-gray-500 w-[430px] items-center justify-center gap-2 p-1 rounded-md text-sm font-semibold text-black cursor-pointer">
-                                <MdOutlineFileDownload />
-                                <p>Download</p>
-                            </div>
-                            <div className="flex mt-4 border border-gray-500 w-30 items-center justify-center gap-2 p-1 rounded-md text-sm cursor-pointer">
-                                <FaPaperclip />
-                                <p>Receipt</p>
-                                <BsBoxArrowUpRight />
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
+      {/* Filters */}
+      <div className="flex flex-wrap items-center gap-4 mb-8">
+        <div className="relative flex-1 min-w-[280px]">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500" size={18} />
+          <input 
+            type="text" 
+            placeholder="Search..." 
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full bg-transparent border border-gray-700 rounded-lg py-3 pl-12 pr-6 text-sm outline-none focus:border-green-400/50"
+          />
         </div>
-    )
+
+        <FilterDropdown value={filterType} onChange={setFilterType} options={["all types", "shop", "commission"]} />
+        <FilterDropdown value={filterDelivery} onChange={setFilterDelivery} options={["all delivery", "digital", "physical"]} />
+        <FilterDropdown value={filterStatus} onChange={setFilterStatus} options={["all status", "paid", "pending", "failed"]} />
+      </div>
+
+      {/* Table */}
+      <div className="bg-[#1C1D21] border border-white/5 rounded-[2rem] overflow-hidden shadow-2xl">
+        <div className="overflow-x-auto">
+          <table className="w-full text-left">
+            <thead>
+              <tr className="border-b border-white/5 bg-white/[0.02] text-[10px] font-black uppercase tracking-widest text-zinc-500">
+                <th className="p-6">Artwork / Artist</th>
+                <th className="p-6">Amount</th>
+                <th className="p-6">Status</th>
+                <th className="p-6 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/5">
+              {filteredPurchases.map((item) => (
+                <tr key={item.id} className="hover:bg-white/[0.02] transition-colors group">
+                  <td className="p-6">
+                    <p className="font-bold uppercase">{item.artworkName}</p>
+                    <p className="text-xs text-zinc-500">{item.artist}</p>
+                  </td>
+                  <td className="p-6 font-bold">₱{item.amount.toLocaleString()}</td>
+                  <td className="p-6"><StatusBadge status={item.paymentStatus} /></td>
+                  <td className="p-6 text-right">
+                    <button 
+                      onClick={() => setSelectedPurchase(item)}
+                      className="p-3 bg-white/5 hover:bg-green-400 hover:text-black rounded-xl transition-all text-[10px] font-black uppercase tracking-widest inline-flex items-center gap-2"
+                    >
+                      Details <ExternalLink size={14} />
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Detail Modal */}
+      {selectedPurchase && (
+        <PurchaseDetailModal 
+          data={selectedPurchase} 
+          onClose={() => setSelectedPurchase(null)} 
+        />
+      )}
+    </div>
+  );
 }
 
-export default page
+// Helper Components
+function FilterDropdown({ value, onChange, options }: any) {
+  return (
+    <div className="w-45 pl-1 py-3 rounded-lg border border-gray-700 bg-[#141518]">
+      <select 
+        className="bg-transparent text-white opacity-70 font-thin outline-none w-full cursor-pointer px-2 capitalize"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+      >
+        {options.map((opt: string) => <option key={opt} className="bg-[#1C1D21]" value={opt}>{opt}</option>)}
+      </select>
+    </div>
+  );
+}
+
+function StatusBadge({ status }: { status: string }) {
+  const isPaid = status === "paid";
+  return (
+    <span className={clsx(
+      "px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest flex items-center gap-1.5 w-fit border",
+      isPaid ? "bg-green-400/10 text-green-400 border-green-400/20" : "bg-yellow-400/10 text-yellow-400 border-yellow-400/20"
+    )}>
+      {isPaid ? <CheckCircle2 size={12} /> : <Clock size={12} />}
+      {status}
+    </span>
+  );
+}

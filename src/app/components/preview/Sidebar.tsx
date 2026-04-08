@@ -75,10 +75,10 @@ export function Sidebar(art: artwork) {
       </div>
 
   
-              <Checkout
-                isOpen={checkOutIsOpen} 
-                onClose={() => setCheckOutIsOpen(false)}
-              />
+      <Checkout
+        isOpen={checkOutIsOpen} 
+        onClose={() => setCheckOutIsOpen(false)}
+      />
 
     </div>
   );

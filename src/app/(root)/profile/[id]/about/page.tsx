@@ -3,12 +3,15 @@ import AboutContent from "@/app/components/profile/about/AboutContent";
 
 const AboutPage = () => {
   return (
-    <div>
-      <div  className="flex gap-20 relative">
-        <AboutList/>
-        <AboutContent/>
-      </div>
-    </div>
+<div className="flex flex-col lg:flex-row gap-12 items-start py-10 px-6">
+  {/* The Sidebar will stick because the parent is a flex container and we used self-start */}
+  <AboutList /> 
+  
+  {/* The Main Content Area */}
+  <div className="flex-1">
+     <AboutContent />
+  </div>
+</div>
   );
 };
 
