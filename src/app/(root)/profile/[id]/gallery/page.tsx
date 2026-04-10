@@ -14,7 +14,7 @@ const GalleryPage = () => {
 
 
   useEffect(() => {
-    const data = getData<CreateGalleryData>('gallery');
+    const data = getData<CreateGalleryData[]>('gallery');
     if (data) {
       setGalleryData(data);
     } else {

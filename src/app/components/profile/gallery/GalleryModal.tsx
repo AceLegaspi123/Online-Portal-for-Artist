@@ -105,7 +105,7 @@ const GalleryModal = ({ isOpen, onClose, galleryData }: GalleryModalProps) => {
             <span className="text-xs text-zinc-600 font-medium">Total Collections: {galleryData.length}</span>
             <button
               onClick={handleMainClose}
-              className="px-10 py-3 bg-zinc-800 text-white rounded-2xl font-bold border border-white/10 hover:border-[#00d26a] transition-all"
+              className="px-10 py-3 bg-green-500 text-white rounded-2xl font-bold border border-white/10 hover:border-[#00d26a] transition-all"
             >
               Close Studio
             </button>

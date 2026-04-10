@@ -8,6 +8,7 @@ const layout = ({children}: {children: React.ReactNode}) => {
     <div className='flex flex-col min-h-screen'>
       <Header />
       
+      
       <main className='flex-grow mt-18'>
         {children}
       </main>

@@ -73,7 +73,9 @@ const ModernHomepage = () => {
              <FeaturedArts />
              <FeaturedArts />
              <FeaturedArts />
+
              <FeaturedArts />
+             
              <FeaturedArts />
              <FeaturedArts />
              <FeaturedArts />
