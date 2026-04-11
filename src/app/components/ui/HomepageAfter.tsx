@@ -231,7 +231,7 @@ const ModernHomepage = () => {
                 />
               ))
             }
-          </div>
+        </div>
         </div>
       </section>
 

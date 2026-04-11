@@ -117,17 +117,17 @@ export default function UploadArtworkModal({ onClose }: {onClose: () => void }) 
   };
 
   return (
-    <div className="z-50 flex items-center justify-center w-full mx-auto  p-4">
-      <div className="bg-white dark:bg-zinc-900 w-full   rounded-xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+    <div className="z-50 flex text-foreground items-center justify-center w-full mx-auto  p-4">
+      <div className="bg-background w-full   rounded-xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
         
         {/* Header */}
-        <div className="px-6 py-4 border-b border-zinc-200 dark:border-zinc-800 flex justify-between items-center">
+        <div className="px-6 py-4 border-b border-zinc-200 bg-background flex justify-between items-center">
           <div>
-             <h2 className="text-xl font-bold text-zinc-800 dark:text-white">Create New Artwork</h2>
-             <p className="text-xs text-zinc-500">Share your masterpiece with the community</p>
+             <h2 className="text-xl font-bold text-foreground">Create New Artwork</h2>
+             <p className="text-xs text-foreground">Share your masterpiece with the community</p>
           </div>
           
-          <button onClick={onClose} className="p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-full transition-colors">
+          <button onClick={onClose} className="p-2 rounded-full transition-colors">
             <X size={20} />
           </button>
         </div>
@@ -142,14 +142,14 @@ export default function UploadArtworkModal({ onClose }: {onClose: () => void }) 
               <label className="text-sm font-medium">Cover Photo (Thumbnail)</label>
               <div 
                 onClick={() => coverInputRef.current?.click()}
-                className="relative border-2 border-dashed border-zinc-300 dark:border-zinc-700 rounded-lg h-40 flex flex-col items-center justify-center hover:border-blue-500 cursor-pointer overflow-hidden transition-colors"
+                className="relative border-2 border-dashed  border-primary-line rounded-lg h-40 flex flex-col items-center justify-center hover:border-blue-500 cursor-pointer overflow-hidden transition-colors"
               >
                 {coverPreview ? (
                   <img src={coverPreview} alt="Cover Preview" className="w-full h-full object-cover" />
                 ) : (
                   <>
-                    <ImageIcon className="text-zinc-400 mb-2" />
-                    <span className="text-xs text-zinc-500">Click to upload cover</span>
+                    <ImageIcon className="text-foreground mb-2" />
+                    <span className="text-xs text-foreground">Click to upload cover</span>
                   </>
                 )}
               </div>
@@ -158,32 +158,32 @@ export default function UploadArtworkModal({ onClose }: {onClose: () => void }) 
 
             {/* Main Art File */}
             <div className="space-y-2">
-              <label className="text-sm font-semibold text-zinc-700 dark:text-zinc-300">Main Art File</label>
+              <label className="text-sm font-semibold text-foreground">Main Art File</label>
               <div 
                 onClick={() => artInputRef.current?.click()}
-                className="group relative border-2 border-dashed border-zinc-300 dark:border-zinc-800 rounded-xl overflow-hidden h-40 flex flex-col items-center justify-center hover:border-blue-500 hover:bg-blue-50/50 dark:hover:bg-blue-900/10 cursor-pointer transition-all"
+                className="group relative border-2 border-dashed border-primary-line  rounded-xl overflow-hidden h-40 flex flex-col items-center justify-center hover:border-blue-500 hover:bg-blue-50/50 dark:hover:bg-blue-900/10 cursor-pointer transition-all"
               >
                 {artPreview ? (
                   <div className="flex flex-col items-center p-4">
                     <img src={artPreview} alt="Art Preview" className="w-20 h-20 object-cover rounded-lg mb-2 shadow-md border border-white/20" />
-                    <p className="text-[10px] text-zinc-500 truncate max-w-[150px] font-mono">{formData.art_file?.name}</p>
+                    <p className="text-[10px] text-foreground truncate max-w-[150px] font-mono">{formData.art_file?.name}</p>
                     <button 
                       onClick={(e) => { 
                         e.stopPropagation(); 
                         setArtPreview(null); 
                         setFormData(prev => ({ ...prev, art_file: null })); 
                       }}
-                      className="mt-2 text-red-500 hover:text-red-600 flex items-center gap-1 text-[10px] uppercase font-bold tracking-wider"
+                      className="mt-2 text-foreground flex items-center gap-1 text-[10px] uppercase font-bold tracking-wider"
                     >
                       <Trash2 size={12} /> Remove
                     </button>
                   </div>
                 ) : (
                   <>
-                    <div className="p-3 bg-zinc-100 dark:bg-zinc-900 rounded-full mb-2 group-hover:scale-110 transition-transform">
-                      <Upload className="text-zinc-400 group-hover:text-blue-500" size={24} />
+                    <div className=" p-3  text-foreground mb-2 group-hover:scale-110 transition-transform">
+                      <Upload className=" group-hover:text-500" size={24} />
                     </div>
-                    <span className="text-xs text-zinc-500 font-medium">Upload high-res artwork</span>
+                    <span className="text-xs  font-medium">Upload high-res artwork</span>
                   </>
                 )}
               </div>
@@ -215,7 +215,7 @@ export default function UploadArtworkModal({ onClose }: {onClose: () => void }) 
             <div className="space-y-2">
               <label className="text-sm font-medium">Type</label>
               <select 
-                className="w-full p-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800"
+                className="w-full p-2 rounded-lg bg-secondary text-foreground "
                 value={formData.artwork_type}
                 onChange={(e) => setFormData({...formData, artwork_type: e.target.value as any})}
               >
@@ -226,7 +226,7 @@ export default function UploadArtworkModal({ onClose }: {onClose: () => void }) 
             <div className="space-y-2">
               <label className="text-sm font-medium">Status</label>
               <select 
-                className="w-full p-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800"
+                className="w-full p-2 rounded-lg  bg-secondary text-foreground "
                 value={formData.status}
                 onChange={(e) => setFormData({...formData, status: e.target.value as any})}
               >
@@ -255,7 +255,7 @@ export default function UploadArtworkModal({ onClose }: {onClose: () => void }) 
               <input 
                 type="number" 
                 disabled={formData.status !== 'For Sale'}
-                className="w-full px-4 py-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-transparent disabled:opacity-50 transition-opacity"
+                className="w-full px-4 py-2 rounded-lg bg-secondary text-foreground  transition-opacity"
                 placeholder="1"
                 value={formData.stocks}
                 onChange={(e) => setFormData({...formData, stocks: Number(e.target.value)})}
@@ -265,10 +265,10 @@ export default function UploadArtworkModal({ onClose }: {onClose: () => void }) 
 
           {/* Tags Section */}
           <div className="space-y-2">
-            <label className="text-sm font-medium flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+            <label className="text-sm font-medium flex items-center gap-2 text-foreground">
               <Tag size={16} /> Tags (Press Enter)
             </label>
-            <div className="flex flex-wrap gap-2 p-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus-within:ring-2 focus-within:ring-blue-500 transition-all">
+            <div className="flex flex-wrap gap-2 p-2 rounded-lg bg-secondary text-foreground  focus-within:ring-2 focus-within:ring-blue-500 transition-all">
               {formData.tags.map((tag, index) => (
                 <span 
                   key={index} 
@@ -299,7 +299,7 @@ export default function UploadArtworkModal({ onClose }: {onClose: () => void }) 
           </button>
           <button 
             onClick={handlePublish}
-            className="px-8 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold shadow-lg shadow-blue-500/30 transition-all"
+            className="px-8 py-2 bg-blue-600 hover:bg-blue-700  rounded-lg font-semibold shadow-lg shadow-blue-500/30 transition-all"
           >
             Publish Art
           </button>

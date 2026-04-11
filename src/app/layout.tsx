@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import Providers from "@/app/components/Providers";
 import { Inter, Archivo_Black, JetBrains_Mono } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
+import { ImageKitProvider } from "@imagekit/next";
 
 export const metadata: Metadata = {
   title: "ArtistryHub",
@@ -25,10 +26,12 @@ export default function RootLayout({ children }: {children: ReactNode}) {
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased ${archivo.variable} font-sans`}>
-        <Providers>
-          {children}
-          <Toaster position="top-center" />
-        </Providers>
+        <ImageKitProvider urlEndpoint={process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT}>
+          <Providers>
+            {children}
+            <Toaster position="top-center" />
+          </Providers>
+        </ImageKitProvider>
       </body>
     </html>
   );

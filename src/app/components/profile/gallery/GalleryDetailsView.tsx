@@ -21,9 +21,9 @@ interface GalleryDetailsViewProps {
 
 const GalleryDetailsView = ({ folder, onBack }: GalleryDetailsViewProps) => {
   return (
-    <div className="h-full flex flex-col bg-[#0a0a0a] text-white">
+    <div className="h-full flex flex-col bg-primary text-white">
       {/* --- TOP WORKSPACE TOOLBAR --- */}
-      <div className="px-8 py-4 bg-zinc-900/40 backdrop-blur-xl border-b border-white/5 flex justify-between items-center z-20">
+      <div className="px-8 py-4 bg-primary/40 backdrop-blur-xl border-b border-white/5 flex justify-between items-center z-20">
         <button 
           onClick={onBack}
           className="group flex items-center gap-3 text-zinc-500 hover:text-[#00d26a] transition-all font-bold text-sm uppercase tracking-widest"
@@ -53,8 +53,8 @@ const GalleryDetailsView = ({ folder, onBack }: GalleryDetailsViewProps) => {
         <div className="relative px-12 pt-16 pb-12 flex flex-col md:flex-row gap-10 items-center md:items-start bg-gradient-to-b from-[#00d26a]/5 to-transparent">
           <div className="relative w-56 h-56 shrink-0">
              {/* Decorative Stack Effect */}
-             <div className="absolute inset-0 bg-zinc-800 rounded-[3rem] rotate-6 translate-x-2" />
-             <div className="absolute inset-0 bg-zinc-700 rounded-[3rem] -rotate-3 -translate-x-1" />
+             <div className="absolute inset-0 bg-primary rounded-[3rem] rotate-6 translate-x-2" />
+             <div className="absolute inset-0 bg-primary rounded-[3rem] -rotate-3 -translate-x-1" />
              
              <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden border-4 border-zinc-900 shadow-2xl group">
                 <Image 
@@ -100,16 +100,16 @@ const GalleryDetailsView = ({ folder, onBack }: GalleryDetailsViewProps) => {
             {[1, 2, 3, 4].map((i) => (
               <div 
                 key={i} 
-                className="group relative aspect-[3/4] rounded-3xl overflow-hidden bg-zinc-900 border border-white/5 hover:border-[#00d26a]/30 transition-all cursor-pointer"
+                className="group relative aspect-[3/4] rounded-3xl overflow-hidden bg-primary border border-white/5 hover:border-[#00d26a]/30 transition-all cursor-pointer"
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
                 
                 {/* Actions Overlay */}
                 <div className="absolute top-4 right-4 z-20 flex flex-col gap-2 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                   <button className="p-2.5 bg-zinc-900/80 backdrop-blur-md rounded-xl text-white hover:bg-red-500/80 transition-colors">
+                   <button className="p-2.5 bg-primary backdrop-blur-md rounded-xl text-white hover:bg-red-500/80 transition-colors">
                       <Trash2 size={16}/>
                    </button>
-                   <button className="p-2.5 bg-zinc-900/80 backdrop-blur-md rounded-xl text-white hover:bg-[#00d26a]/80 transition-colors">
+                   <button className="p-2.5 bg-primary backdrop-blur-md rounded-xl text-white hover:bg-[#00d26a]/80 transition-colors">
                       <Edit3 size={16}/>
                    </button>
                 </div>

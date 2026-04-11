@@ -9,7 +9,7 @@ const Shop = ({artDetails}: {artDetails: artList}) => {
             <img src={artDetails?.avatar} alt={artDetails?.alt} className="border-1 border-primary-line h-full w-full object-cover mx-auto rounded-full"/>
         </div>
 
-        <div className='flex flex-col gap-6 w-full '>
+        <div className='flex flex-col gap-6 w-full '>   
             <div>
                 <h4 className="font-semibold">{artDetails.user}</h4>
                 <p className="opacity-70">39 followers</p>
