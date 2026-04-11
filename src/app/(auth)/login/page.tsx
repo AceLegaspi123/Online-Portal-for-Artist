@@ -18,6 +18,7 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const router = useRouter();
 
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const validated = validateUser(email, password);
@@ -40,7 +41,7 @@ export default function LoginPage() {
         }, 1500);
       } else if (authUser.email === email && authUser.role === 'user') {
         notify('Login successful!', 'success');
-        // getUser(authUser.email)
+        getUser(authUser.email)
         setTimeout(() => {
           router.push('/');
         }, 1500);
