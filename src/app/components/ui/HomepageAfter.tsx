@@ -162,7 +162,7 @@ const ModernHomepage = () => {
   return (
     <main className="min-h-screen w-full  selection:bg-[#00d26a] selection:text-black overflow-x-hidden">
       {/* 1. IMMERSIVE HERO SECTION (70dvh) */}
-      <section className="relative w-[100dvw] h-[100dvh] flex items-center px-6 lg:px-20 overflow-hidden -mt-2">
+      <section className="relative w-[100dvw] h-[100dvh] flex items-center px-6 lg:px-20 overflow-hidden -mt-2ost">
         {/* Ambient Background Glows */}
         <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#00d26a]/10 rounded-full blur-[120px] z-0" />
         <div className="absolute bottom-[10%] right-[-5%] w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[100px] z-0" />

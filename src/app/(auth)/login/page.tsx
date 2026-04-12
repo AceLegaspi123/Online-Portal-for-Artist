@@ -1,5 +1,5 @@
 // src/app/login/page.tsx
-'use client'
+"use client";
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { TfiEmail } from "react-icons/tfi";
@@ -10,40 +10,41 @@ import { useState } from "react";
 import { validateUser } from "@/utils/validator";
 import { notify } from "@/utils/toastHelper";
 import { Authentication } from "@/app/modules/Authentication";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 import { getUser } from "@/lib/auth";
+import { setData } from "@/utils/storage";
 
 export default function LoginPage() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const router = useRouter();
-
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const validated = validateUser(email, password);
 
     if (validated.length !== 0) {
-      const message = validated.join(', ');
-      notify(message, 'error');
+      const message = validated.join(", ");
+      notify(message, "error");
       return;
-    } 
-  
-    if(validated.length == 0) {
+    }
+
+    if (validated.length == 0) {
       let authUser = Authentication(email.trim(), password.trim());
 
-      console.log("Auth user" , authUser);
-      if (authUser.email === email && authUser.role === 'admin') {
-        notify('Login successful!', 'success');
+      console.log("Auth user", authUser);
+      if (authUser.email === email && authUser.role === "admin") {
+        notify("Login successful!", "success");
         setTimeout(() => {
-          notify('Welcome to dashboard Admin', 'success');
-          router.push('/dashboard');
+          notify("Welcome to dashboard Admin", "success");
+          router.push("/dashboard");
         }, 1500);
-      } else if (authUser.email === email && authUser.role === 'user') {
-        notify('Login successful!', 'success');
-        getUser(authUser.email)
+      } else if (authUser.email === email && authUser.role === "user") {
+        setData("token", true);
+        notify("Login successful!", "success");
+        getUser(authUser.email);
         setTimeout(() => {
-          router.push('/');
+          router.push("/");
         }, 1500);
       }
     }
@@ -111,7 +112,8 @@ export default function LoginPage() {
               <div>
                 <input type="checkbox" id="remember" />
                 <label className="text-black" htmlFor="remember">
-                  {' '}Remember me
+                  {" "}
+                  Remember me
                 </label>
               </div>
               <a className="text-blue-600" href="#">
@@ -126,7 +128,7 @@ export default function LoginPage() {
               Login
             </button>
             <p className="text-center text-black">
-              Don't have an account?{' '}
+              Don't have an account?{" "}
               <Link className="text-blue-600" href="/register">
                 Create an account
               </Link>
