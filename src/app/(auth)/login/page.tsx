@@ -157,6 +157,10 @@ import { notify } from "@/utils/toastHelper";
 import { Authentication } from "@/app/modules/Authentication";
 import { useRouter } from "next/navigation";
 import { getUser } from "@/lib/auth";
+import { getCredentials } from "@/lib/actions/credentials";
+import { useEffect } from "react";
+import { seedCredentials } from "@/lib/actions/credentials";
+import { createSession } from "@/app/actions/auth";
 import { setData } from "@/utils/storage";
 
 // ✅ Import Supabase client
@@ -166,19 +170,30 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
+  
+  useEffect(() => {
+    // Fetch credentials when the component mounts
+    getCredentials()
+      .then(credentials => {
+        console.log("Fetched Credentials:", credentials);
+      })
+      .catch(error => {
+        console.error("Error fetching credentials:", error);
+      });
+  }, []);
 
-  // ✅ Supabase Google login handler
-  // const handleGoogleLogin = async () => {
-  //   const { error } = await supabase.auth.signInWithOAuth({
-  //     provider: "google",
-  //     options: {
-  //       redirectTo: `${window.location.origin}/dashboard`, // redirect after login
-  //     },
-  //   });
-  //   if (error) {
-  //     notify(error.message, "error");
-  //   }
-  // };
+  ✅ Supabase Google login handler
+  const handleGoogleLogin = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: `${window.location.origin}/dashboard`, // redirect after login
+      },
+    });
+    if (error) {
+      notify(error.message, "error");
+    }
+  };
 
   const handleGoogleLogin = async () => {
     await supabase.auth.signInWithOAuth({
@@ -189,7 +204,7 @@ export default function LoginPage() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const validated = validateUser(email, password);
 
@@ -197,6 +212,14 @@ export default function LoginPage() {
       const message = validated.join(", ");
       notify(message, "error");
       return;
+    } 
+  
+    if(validated.length == 0) {
+      let authUser = await Authentication(email.trim(), password.trim());
+
+      if (authUser?.email == email && authUser.role == 'Admin') {
+        await createSession({ email: authUser.email, role: authUser.role });
+        notify('Login successful!', 'success');
     }
 
     if (validated.length == 0) {
@@ -209,6 +232,10 @@ export default function LoginPage() {
           notify("Welcome to dashboard Admin", "success");
           router.push("/dashboard");
         }, 1500);
+      } else if (authUser?.email === email && authUser.role === 'User') {
+        await createSession({ email: authUser.email, role: authUser.role });
+        notify('Login successful!', 'success');
+        // getUser(authUser.email)
       } else if (authUser.email === email && authUser.role === "user") {
         setData("token", true);
         notify("Login successful!", "success");
@@ -221,7 +248,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="w-full relative shadow-xl min-h-[100dvh] border-white border-2 shadow-white flex flex-col justify-center items-center h-[100dvh] bg-[url('https://static.vecteezy.com/system/resources/previews/006/595/713/non_2x/silhouettes-of-panoramic-mountains-view-landscape-vector.jpg')] bg-cover bg-center h-64 w-full">
+    <div className="w-full relative shadow-xl min-h-[100dvh] border-white border-2 shadow-white flex flex-col justify-center items-center  bg-[url('https://static.vecteezy.com/system/resources/previews/006/595/713/non_2x/silhouettes-of-panoramic-mountains-view-landscape-vector.jpg')] bg-cover bg-center h-64 w-full">
       <div className="z-20 flex justify-center h-[40em] rounded-md overflow-hidden">
         <div
           className="hidden text-white md:block w-1/2 bg-cover p-8 pt-24 leading-6"
@@ -302,6 +329,15 @@ export default function LoginPage() {
               className="border p-5 bg-gradient-primary rounded-xl bg-blue-500 text-white"
             >
               Login
+            </button>
+
+            <button 
+            type="button"
+            onClick={async () => {
+          await seedCredentials();
+          alert("Data Seeded! Refreshing...");
+        }}>   
+              hello
             </button>
             <p className="text-center text-black">
               Don't have an account?{" "}

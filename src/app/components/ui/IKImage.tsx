@@ -2,22 +2,28 @@
 import { Image } from "@imagekit/next";
 
 interface IKImageProps {
-  src: string | undefined;
+  path: string; // Changed from src to path
+  width: number;
+  height: number;
+  className?: string;
+  alt: string;
 }
 
-export default function MyIKImage({ src }: IKImageProps) {
-  console.log(`Rendering IKImage with src: ${src}`);
-  const link = `${process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT}${src}`;
-  console.log(`Full image URL: ${link}`);
+export default function MyIKImage({ path, width, height, className, alt }: IKImageProps) {
+  console.log(`Testing path ${process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT}${path}`);
+  console.log("Test src", path); 
+  console.log("Test width", width);
+  console.log("Test height", height);
+  console.log("Test alt", alt);
+
   return (
     <Image
-      path={"https://ik.imagekit.io/pdxjkqgyn/ArtistryHub/pic1"} 
-      alt="Artwork"
-      width={400}
-      height={300}
-      transformation={[{ width: 400, height: 300, quality: 90 }]}
-      loading="lazy"
-      className="mt-4"
+      // urlEndpoint={process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT}
+      path={`${path}`} // Use path instead of src
+      width={width}
+      height={height}
+      alt={alt}
+      className={className}
     />
   );
 }

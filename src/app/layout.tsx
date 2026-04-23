@@ -5,6 +5,7 @@ import Providers from "@/app/components/Providers";
 import { Inter, Archivo_Black, JetBrains_Mono } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 import { ImageKitProvider } from "@imagekit/next";
+import { getTheme } from "@/app/actions/theme";
 
 export const metadata: Metadata = {
   title: "ArtistryHub",
@@ -22,16 +23,15 @@ const archivo = Archivo_Black({
   variable: '--font-archivo',
 });
 
-export default function RootLayout({ children }: {children: ReactNode}) {
+export default async function RootLayout({ children }: {children: ReactNode}) {
+  const theme = await getTheme();
   return (
-    <html lang="en">
+    <html lang="en" className={theme}>
       <body className={`${inter.variable} antialiased ${archivo.variable} font-sans`}>
-        <ImageKitProvider urlEndpoint={process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT}>
           <Providers>
             {children}
             <Toaster position="top-center" />
           </Providers>
-        </ImageKitProvider>
       </body>
     </html>
   );

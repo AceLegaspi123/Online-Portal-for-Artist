@@ -15,7 +15,5 @@ export const validateUser = (email: string, password: string): string[] => {
         }
     });
 
-    console.log(errorMessages)
-
     return errorMessages;
 }
