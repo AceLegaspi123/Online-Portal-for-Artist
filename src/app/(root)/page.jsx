@@ -1,17 +1,22 @@
-import HomepageBefore from "@/app/components/ui/HomepageBefore"
+import HomepageBefore from "@/app/components/ui/HomepageBefore";
 import HomepageAfter from "../components/ui/HomepageAfter";
-import IKImage from "@/app/components/ui/IKImage";
+import { getSession } from "@/app/actions/auth";
 
-const page = () => {
- 
+const Page = async () => {
+  // Fetch the session data from the server
+  const session = await getSession();
+
   return (
-    <div>
-      {/* <HomepageBefore /> */}
+    <main>
+      {session ? (
+        /* If session exists, show the logged-in homepage */
+        <HomepageAfter />
+      ) : (
+        /* If no session, show the guest homepage */
+        <HomepageBefore />
+      )}
+    </main>
+  );
+};
 
-      {/* <IKImage src="pic1"/> */}
-      <HomepageAfter />
-    </div>
-  )
-}
-
-export default page;
+export default Page;
