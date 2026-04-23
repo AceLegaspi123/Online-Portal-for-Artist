@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 import { FaImage, FaXmark } from "react-icons/fa6";
@@ -25,15 +25,15 @@ const CreatePost = () => {
     // Check if adding these new files exceeds the limit
     if (currentCount + files.length > maxAllowed) {
       setError(`You can only upload a maximum of ${maxAllowed} images.`);
-      
+
       // Optional: Only take enough files to reach the limit instead of blocking all
       // const remainingSlots = maxAllowed - currentCount;
       // const limitedFiles = files.slice(0, remainingSlots);
-      return; 
+      return;
     }
 
     setError(""); // Clear error if successful
-    const newMedia = files.map(file => URL.createObjectURL(file));
+    const newMedia = files.map((file) => URL.createObjectURL(file));
     setPost({ ...post, media: [...post.media, ...newMedia] });
   };
 
@@ -49,7 +49,7 @@ const CreatePost = () => {
   };
 
   return (
-    <div className="max-w-[500px] mx-auto bg-white rounded-xl shadow-lg p-4 border border-gray-200">
+    <div className="max-w-[500px] mx-auto bg-background rounded-xl shadow-lg p-4 border border-primary-line">
       <div className="flex items-center justify-between mb-4">
         <h5 className="text-xl font-bold text-center w-full">Create post</h5>
       </div>
@@ -62,10 +62,10 @@ const CreatePost = () => {
         </div>
         <div>
           <p className="font-semibold text-sm">Jeaven Anda</p>
-          <select 
+          <select
             value={post.visibility}
-            onChange={(e) => setPost({...post, visibility: e.target.value})}
-            className="text-xs bg-gray-100 p-1 rounded font-medium cursor-pointer outline-none"
+            onChange={(e) => setPost({ ...post, visibility: e.target.value })}
+            className="text-xs bg-secondary p-1 rounded font-medium cursor-pointer outline-none"
           >
             <option value="public">Public</option>
             <option value="followers">Followers</option>
@@ -82,18 +82,20 @@ const CreatePost = () => {
       />
 
       {/* Error Message Display */}
-      {error && (
-        <p className="text-red-500 text-xs mb-2 italic">{error}</p>
-      )}
+      {error && <p className="text-red-500 text-xs mb-2 italic">{error}</p>}
 
       {post.media.length > 0 && (
         <div className="grid grid-cols-3 gap-2 mb-4 relative">
           {post.media.map((url, index) => (
             <div key={index} className="relative group">
-              <img src={url} className="rounded-lg h-24 w-full object-cover border" alt="upload" />
-              <button 
+              <img
+                src={url}
+                className="rounded-lg h-24 w-full object-cover border"
+                alt="upload"
+              />
+              <button
                 onClick={() => removeMedia(index)}
-                className="absolute top-1 right-1 bg-black/50 text-white p-1 rounded-full hover:bg-black"
+                className="absolute top-1 right-1 bg-black/50 p-1 rounded-full hover:bg-black"
               >
                 <FaXmark size={10} />
               </button>
@@ -105,27 +107,33 @@ const CreatePost = () => {
       <div className="border border-gray-300 rounded-lg p-3 flex items-center justify-between mb-4">
         <div className="flex flex-col">
           <span className="font-semibold text-sm">Add to your post</span>
-          <span className={`text-[10px] ${post.media.length >= 10 ? 'text-red-500 font-bold' : 'text-gray-400'}`}>
+          <span
+            className={`text-[10px] ${post.media.length >= 10 ? "text-red-500 font-bold" : "text-gray-400"}`}
+          >
             {post.media.length} / 10 images
           </span>
         </div>
         <div className="flex gap-4">
-          <label className={`p-2 rounded-full transition-all ${post.media.length >= 10 ? 'opacity-30 cursor-not-allowed' : 'cursor-pointer hover:bg-gray-100'}`}>
+          <label
+            className={`p-2 rounded-full transition-all ${post.media.length >= 10 ? "opacity-30 cursor-not-allowed" : "cursor-pointer hover:bg-gray-100"}`}
+          >
             <FaImage className="text-green-500 text-xl" />
-            <input 
-              type="file" 
-              multiple 
-              className="hidden" 
+            <input
+              type="file"
+              multiple
+              className="hidden"
               accept="image/*,video/*"
               disabled={post.media.length >= 10}
-              onChange={handleMediaUpload} 
+              onChange={handleMediaUpload}
             />
           </label>
         </div>
       </div>
 
       <button
-        disabled={(!post.content && post.media.length === 0) || post.media.length > 10}
+        disabled={
+          (!post.content && post.media.length === 0) || post.media.length > 10
+        }
         onClick={handlePublish}
         className={`w-full py-2 rounded-lg font-bold transition-all ${
           (post.content || post.media.length > 0) && post.media.length <= 10
