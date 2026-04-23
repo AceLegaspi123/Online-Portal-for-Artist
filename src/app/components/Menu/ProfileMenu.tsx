@@ -1,18 +1,17 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { 
   Moon, Sun, LogOut, ShoppingBag, 
-  User, Settings, ChevronRight, Monitor
+  User, ChevronRight, Monitor
 } from "lucide-react";
 
-import { LOGGED_IN_USER_ID } from "@/lib/auth";
-import UserProfile from "@/data/user_profile.json";
-import credentials from "@/data/credentials.json";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
+import { getSession } from "@/app/actions/auth";
+import { setTheme as setCookieTheme } from "@/app/actions/theme";
 
 interface ProfileMenuProps {
   handleLogOut: () => void;
@@ -21,35 +20,39 @@ interface ProfileMenuProps {
 type Theme = "light" | "dark";
 
 const ProfileMenu = ({ handleLogOut }: ProfileMenuProps) => {
-  const owner = UserProfile.find((user) => user.id === LOGGED_IN_USER_ID);
-  const credential = credentials.find(
-    (cred) => cred.account_id === owner?.account_id
-  );
+  const [session, setSession] = useState<{ email: string; Role: string } | null>(null);
+  const { value: theme, setValue: setLocalTheme } = useLocalStorage<Theme>("theme", "dark");
 
-  const { value: theme, setValue: setTheme } = useLocalStorage<Theme>("theme", "dark");
+  useEffect(() => {
+    const fetchSession = async () => {
+      const data = await getSession();
+      if (data) setSession(data);
+    };
+    fetchSession();
+  }, []);
 
+  // Synchronize CSS class with current theme state
   useEffect(() => {
     const root = document.documentElement;
     root.classList.remove("light", "dark");
     root.classList.add(theme);
   }, [theme]);
 
-  // Fixed System Preference Detection
-  useEffect(() => {
-    if (typeof window === "undefined" || localStorage.getItem("theme")) return;
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    setTheme(prefersDark ? "dark" : "light");
-  }, [setTheme]);
+  // Combined toggle: Updates LocalStorage, CSS Class, and Server Cookie
+  const handleThemeChange = async (newTheme: Theme) => {
+    setLocalTheme(newTheme);
+    await setCookieTheme(newTheme);
+    // Note: MutationObserver in Logo component will handle the logo swap automatically
+  };
 
   return (
     <div className="flex items-center justify-center">
       <div className="relative w-[320px] overflow-hidden rounded-[2.5rem] border border-white/10 bg-primary backdrop-blur-2xl shadow-2xl">
         
-        {/* --- TOP PROFILE SECTION --- */}
         <div className="p-8 pb-6 flex flex-col items-center border-b border-white/5 bg-gradient-to-b from-white/[0.02] to-transparent">
           <div className="relative mb-4 group">
             <div className="absolute inset-0 bg-green-400 blur-2xl opacity-20 group-hover:opacity-40 transition-opacity" />
-            <Link href={`/profile/${owner?.id}`} className="relative block">
+            <Link href="/profile" className="relative block">
               <div className="rounded-full p-1 bg-gradient-to-tr from-green-400 to-emerald-600">
                 <Image
                   width={80}
@@ -62,22 +65,26 @@ const ProfileMenu = ({ handleLogOut }: ProfileMenuProps) => {
             </Link>
           </div>
 
-          <h1 className="text-xl font-heading italic uppercase tracking-tighter ">
-            {owner?.first_name} {owner?.last_name}
+          <h1 className="text-xl font-heading italic uppercase tracking-tighter">
+            {session?.email.split('@')[0] || "Artist"}
           </h1>
           <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mt-1">
-            {credential?.gmail}
+            {session?.email || "fetching account..."}
           </p>
+          {session?.Role && (
+            <span className="mt-2 text-[9px] font-black text-green-400 border border-green-400/20 px-2 py-0.5 rounded-full uppercase">
+              {session.Role}
+            </span>
+          )}
         </div>
 
-        {/* --- MENU ACTIONS --- */}
         <div className="p-4 space-y-1">
-          <MenuLink href={`/profile/${owner?.id}`} icon={<User size={16}/>} label="My Portfolio" />
+          <MenuLink href="/profile" icon={<User size={16}/>} label="My Portfolio" />
           <MenuLink href="/my-purchases" icon={<ShoppingBag size={16}/>} label="Purchases" />
           
           <div className="h-px bg-white/5 my-2 mx-4" />
 
-          {/* --- THEME SWITCHER (MODERN SLIDER) --- */}
+          {/* THEME SWITCHER */}
           <div className="px-4 py-3 flex items-center justify-between">
             <div className="flex items-center gap-3 text-zinc-400">
               <Sun size={16} />
@@ -91,13 +98,13 @@ const ProfileMenu = ({ handleLogOut }: ProfileMenuProps) => {
                 className="absolute inset-y-1 left-1 w-8 bg-green-400 rounded-full -z-10"
               />
               <button 
-                onClick={() => setTheme("light")}
+                onClick={() => handleThemeChange("light")}
                 className={`p-1.5 rounded-full transition-colors ${theme === 'light' ? 'text-black' : 'text-zinc-500'}`}
               >
                 <Sun size={14} />
               </button>
               <button 
-                onClick={() => setTheme("dark")}
+                onClick={() => handleThemeChange("dark")}
                 className={`p-1.5 rounded-full transition-colors ${theme === 'dark' ? 'text-black' : 'text-zinc-500'}`}
               >
                 <Moon size={14} />
@@ -113,7 +120,6 @@ const ProfileMenu = ({ handleLogOut }: ProfileMenuProps) => {
             <span className="text-[10px] font-black text-green-400 bg-green-400/10 px-2 py-0.5 rounded-md">PRO</span>
           </div>
 
-          {/* --- LOGOUT --- */}
           <button
             onClick={handleLogOut}
             className="w-full flex items-center gap-3 px-4 py-4 mt-2 text-red-400 hover:bg-red-500/10 rounded-[1.5rem] transition-all group"
@@ -127,7 +133,6 @@ const ProfileMenu = ({ handleLogOut }: ProfileMenuProps) => {
   );
 };
 
-// Sub-component for cleaner code
 const MenuLink = ({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) => (
   <Link 
     href={href} 
