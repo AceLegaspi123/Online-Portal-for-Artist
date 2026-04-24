@@ -7,6 +7,7 @@ import { Toaster } from 'react-hot-toast';
 import { ImageKitProvider } from "@imagekit/next";
 import { getTheme } from "@/app/actions/theme";
 
+
 export const metadata: Metadata = {
   title: "ArtistryHub",
   description: "Connect artists and clients through commissions",

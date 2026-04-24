@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import { RxDashboard } from "react-icons/rx";
@@ -13,10 +13,10 @@ import { IoIosArrowDown } from "react-icons/io";
 import { LuClipboardList } from "react-icons/lu";
 import { RiShieldUserLine } from "react-icons/ri";
 import { SiMedibangpaint } from "react-icons/si";
-import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import { notify } from "@/utils/toastHelper";
-
+import { deleteSession, getSession } from "@/app/actions/auth"; // Import your session deleter
+import { supabase } from "@/lib/supabaseClient";
 
 const links = [
   { name: "Dashboard", href: "/dashboard", icon: <RxDashboard /> },
@@ -35,13 +35,14 @@ const links = [
 ];
 
 const Navbar = () => {
+
   const pathname = usePathname();
   const router = useRouter();
   const [open, setOpen] = useState<string | null>(null);
 
-  // auto-open dropdown if current pathname is inside a parent route
+
   useEffect(() => {
-    const opened = links.find((l) => l.children && pathname.startsWith(l.href));
+    const opened = links.find((l) => l.children && pathname?.startsWith(l.href));
     setOpen(opened ? opened.name : null);
   }, [pathname]);
 
@@ -50,29 +51,29 @@ const Navbar = () => {
   };
 
   const isActive = (href: string) => {
-    if (href === "/dashboard") {
-      return pathname === "/dashboard"; // EXACT MATCH ONLY
-    }
-    return pathname.startsWith(href); // For items with sub-routes
+    return href === "/dashboard" ? pathname === "/dashboard" : pathname?.startsWith(href);
   };
   
-  const handleLogOut = () => {
-    notify("Log out successfully", "success");
+  const handleLogOut = async () => {
+    // Clear Supabase Client Session
+    await supabase.auth.signOut();
+    // Clear Server-side HTTP-only Cookie
+    await deleteSession();
+    
+    notify("Logged out successfully", "success");
 
     setTimeout(() => {
-      router.push("/login")
-    }, 1500)
-  }
+      router.push("/login");
+    }, 1500);
+  };
+
   return (
-    <nav className="fixed bg-primary top-0 bottom-0 left-0 w-[18em] border-r-1 border-primary-line px-2 -pt-10 flex flex-col justify-between z-10 mt-16">
-        <Image
-          height={100}
-          width={100}
-          src={logo}
-          alt="logo"
-          className="w-fit h-12 -translate-y-2 -mt-10 ml-2"
-        />
+    <nav className="fixed bg-primary top-0 bottom-0 left-0 w-[18em] border-r-1 border-primary-line px-2 flex flex-col justify-between z-10 mt-16">
       <div>
+        <div className="flex justify-start px-2 -mt-10">
+           <Image height={100} width={100} src={logo} alt="logo" className="w-fit h-12" />
+        </div>
+
         <ul className="flex flex-col gap-4 mt-8">
           {links.map((item) => {
             const dropdownOpen = open === item.name;
@@ -80,72 +81,57 @@ const Navbar = () => {
 
             return (
               <li key={item.name}>
-                {/* If item has children, show Link for navigation and a separate button to toggle dropdown */}
                 {item.children ? (
-                  <div className={clsx("flex items-center gap-2", { "bg-bg-active rounded-xl": activeParent })}>
-                    <Link
-                      href={item.href}
-                      className={clsx(
-                        "px-4 py-2 flex justify-between items-center gap-2 w-full transition-opacity opacity-80 hover:opacity-100",
-                        { "text-text-active font-semibold": activeParent }
-                      )}
-                    >
-                      <div className="flex items-center gap-2">
+                  <div className={clsx("flex flex-col", { "bg-bg-active rounded-xl": activeParent })}>
+                    <div className="flex items-center justify-between w-full">
+                      <Link
+                        href={item.href}
+                        className={clsx(
+                          "px-4 py-2 flex items-center gap-2 w-full transition-opacity opacity-80 hover:opacity-100",
+                          { "text-text-active font-semibold": activeParent }
+                        )}
+                      >
                         {item.icon}
                         <span>{item.name}</span>
-                      </div>
+                      </Link>
+                      <button
+                        onClick={() => handleToggle(item.name)}
+                        className={clsx("p-3 mr-2 transition-transform", { "rotate-180": dropdownOpen })}
+                      >
+                        <IoIosArrowDown />
+                      </button>
+                    </div>
 
-                    <button
-                      onClick={() => handleToggle(item.name)}
-                      aria-expanded={dropdownOpen}
-                      className={clsx("p-3 mr-2 rounded-full hover:bg-[rgba(0,0,0,0.03)]", {
-                        "rotate-180": dropdownOpen,
-                      })}
-                      title={dropdownOpen ? "Collapse" : "Expand"}
-                    >
-                      <IoIosArrowDown className={clsx("transition-transform", { "rotate-360 text-text-active": dropdownOpen })} />
-                    </button>
-                    </Link>
+                    {dropdownOpen && (
+                      <ul className="ml-6 mb-2 flex flex-col">
+                        {item.children.map((child) => (
+                          <li key={child.href}>
+                            <Link
+                              href={child.href}
+                              className={clsx(
+                                "flex items-center gap-2 py-3 px-2 rounded-md text-sm transition-all",
+                                pathname === child.href ? "bg-bg-active text-text-active opacity-100" : "opacity-60 hover:opacity-100"
+                              )}
+                            >
+                              {child.icon}
+                              {child.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 ) : (
-                  // Items without children are simple Links
                   <Link
                     href={item.href}
                     className={clsx(
                       "px-4 py-4 w-full flex items-center gap-2 transition-all opacity-80 hover:opacity-100",
-                      {
-                        "bg-bg-active text-text-active font-semibold rounded-xl": activeParent,
-                      }
+                      { "bg-bg-active text-text-active font-semibold rounded-xl": activeParent }
                     )}
                   >
                     {item.icon}
                     <span>{item.name}</span>
                   </Link>
-                )}
-
-                {/* Render children if open */}
-                {item.children && dropdownOpen && (
-                  <ul className="ml-6 mt-2 flex flex-col ">
-                    {item.children.map((child) => (
-                      <li key={child.href}>
-                        <Link
-                          href={child.href}
-                          className={clsx(
-                            "block text-sm py-2 opacity-60 hover:opacity-100 transition-all",
-                            { "text-text-active font-semibold opacity-100": pathname === child.href }
-                          )}
-                        >
-                          <div className={clsx('flex items-center gap-2 py-3 rounded-md px-2', {
-                            "bg-bg-active text-text-active" : child.href == pathname
-                          })}>
-                            {child.icon}
-                            {child.name}
-                          </div>
-
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
                 )}
               </li>
             );
@@ -153,12 +139,14 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* LOGOUT */}
-      
-        <div onClick={handleLogOut} className="flex mt-auto items-center gap-2 p-4 opacity-50 hover:opacity-100 transition">
-          <CgLogOut />
-          <p>Logout</p>
-        </div>
+      {/* LOGOUT BUTTON */}
+      <button 
+        onClick={handleLogOut} 
+        className="flex mt-auto items-center gap-2 p-4 opacity-50 hover:opacity-100 hover:text-red-500 transition cursor-pointer w-full text-left"
+      >
+        <CgLogOut className="text-xl" />
+        <span className="font-medium">Logout</span>
+      </button>
     </nav>
   );
 };

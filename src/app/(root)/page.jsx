@@ -5,6 +5,7 @@ import { getSession } from "@/app/actions/auth";
 const Page = async () => {
   // Fetch the session data from the server
   const session = await getSession();
+  console.log("Session in Page Component:", session);
 
   return (
     <main>
